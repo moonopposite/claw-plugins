@@ -80,10 +80,9 @@ function getVisitorInfoSync() {
     if (_visitorCache && (now - _visitorCacheTs) < 20 * 60 * 1000) {
         return _visitorCache;
     }
-    var res = req({
-        url:    YT_BASE,
+    var res = req(YT_BASE, {
         method: 'GET',
-        header: {
+        headers: {
             'User-Agent':      'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36',
             'Accept':          'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
             'Accept-Language': 'en-us,en;q=0.5',
@@ -103,11 +102,10 @@ function getVisitorInfoSync() {
 
 function ytPost(path, body, hdrs) {
     var url = YT_API + '/' + path + '?prettyPrint=false';
-    var res = req({
-        url:    url,
-        method: 'POST',
-        header: hdrs,
-        body:   JSON.stringify(body),
+    var res = req(url, {
+        method:  'POST',
+        headers: hdrs,
+        body:    JSON.stringify(body),
     });
     if (!res || res.code < 200 || res.code >= 300) return null;
     try { return JSON.parse(res.content); } catch (e) { return null; }
@@ -308,11 +306,10 @@ function _play(flag, id, vipFlags) {
     };
     if (visitor.visitorId) hdrs['X-Goog-Visitor-Id'] = visitor.visitorId;
 
-    var res = req({
-        url:    YT_API + '/player?prettyPrint=false',
-        method: 'POST',
-        header: hdrs,
-        body:   JSON.stringify({
+    var res = req(YT_API + '/player?prettyPrint=false', {
+        method:  'POST',
+        headers: hdrs,
+        body:    JSON.stringify({
             videoId: videoId,
             context: { client: CLIENT_PLAYER },
             playbackContext: {
