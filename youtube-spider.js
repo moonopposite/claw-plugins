@@ -1,6 +1,6 @@
 /**
  * OK影视 / FongMi TV — YouTube Spider
- * 版本：1.0.0
+ * 版本：1.1.0
  *
  * 已验证（2026-03）：
  *   搜索  ：WEB 客户端（gl=HK）—— 可正常搜索中英文视频
@@ -19,7 +19,11 @@
  */
 
 // ── 常量 ──────────────────────────────────────────────────────
-var YT_KEY = 'AIzaSyDCU8hByM-4DrUqRUYnGn-3llEO78bcxq8';
+var YT_BASE   = 'https://www.youtube.com';
+var YT_API    = YT_BASE + '/youtubei/v1';
+
+var AVR_VERSION = '1.65.10';
+var AVR_UA      = 'com.google.android.apps.youtube.vr.oculus/' + AVR_VERSION + ' (Linux; U; Android 12L; eureka-user Build/SQ3A.220605.009.A1) gzip';
 
 var CLIENT_SEARCH = {
     clientName:    'WEB',
@@ -30,8 +34,12 @@ var CLIENT_SEARCH = {
 
 var CLIENT_PLAYER = {
     clientName:        'ANDROID_VR',
-    clientVersion:     '1.65.10',
-    androidSdkVersion: 30,
+    clientVersion:     AVR_VERSION,
+    androidSdkVersion: 32,
+    deviceMake:        'Oculus',
+    deviceModel:       'Quest 3',
+    osName:            'Android',
+    osVersion:         '12L',
     hl: 'en',
     gl: 'US',
 };
@@ -47,25 +55,68 @@ var HEADERS_SEARCH = {
 var HEADERS_PLAYER = {
     'Content-Type':             'application/json',
     'X-YouTube-Client-Name':    '28',
-    'X-YouTube-Client-Version': CLIENT_PLAYER.clientVersion,
-    'User-Agent':               'com.google.android.apps.youtube.vr.oculus/1.65.10 (Linux; U; Android 10; eureka-user Build/OPR1.170623.032) gzip',
-    'Accept-Language':          'en-US,en;q=0.9',
+    'X-YouTube-Client-Version': AVR_VERSION,
+    'User-Agent':               AVR_UA,
+    'Accept':                   'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+    'Accept-Language':          'en-us,en;q=0.5',
+    'Origin':                   YT_BASE,
 };
 
 // 分类配置（categoryContent 中的搜索关键词）
 var CATEGORIES = {
-    'search_cn':   { name: '中文热门',     query: '中文 热门视频 2024' },
-    'search_music':{ name: '华语音乐',     query: '华语流行 歌曲 2024 非官方' },
-    'search_en':   { name: '英文热门',     query: 'popular videos 2024' },
-    'search_game': { name: '游戏',         query: 'gaming highlights 2024' },
-    'search_tech': { name: '科技',         query: 'tech review 2024' },
-    'search_learn':{ name: '学习',         query: '知识 教育 科普 中文' },
+    'search_cn':   { name: '中文热门',  query: '中文 热门视频 2025' },
+    'search_music':{ name: '华语音乐',  query: '华语流行 歌曲 2025 非官方' },
+    'search_en':   { name: '英文热门',  query: 'popular videos 2025' },
+    'search_game': { name: '游戏',      query: 'gaming highlights 2025' },
+    'search_tech': { name: '科技',      query: 'tech review 2025' },
+    'search_learn':{ name: '学习',      query: '知识 教育 科普 中文' },
 };
+
+// ── 访客信息缓存（每次 playerContent 调用时获取一次）──────────
+var _visitorCache = null;
+var _visitorCacheTs = 0;
+
+/**
+ * 同步访问 YouTube 首页，提取 visitorId、sts、Cookie
+ * 缓存 20 分钟
+ */
+function getVisitorInfoSync() {
+    var now = Date.now ? Date.now() : new Date().getTime();
+    if (_visitorCache && (now - _visitorCacheTs) < 20 * 60 * 1000) {
+        return _visitorCache;
+    }
+
+    var res = req({
+        url:    YT_BASE,
+        method: 'GET',
+        header: {
+            'User-Agent':      'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36',
+            'Accept':          'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+            'Accept-Language': 'en-us,en;q=0.5',
+        },
+    });
+
+    var html = (res && res.content) ? res.content : '';
+
+    // 提取 visitorId
+    var visitorId = '';
+    var vidM = html.match(/"visitorData"\s*:\s*"([^"]+)"/);
+    if (vidM) visitorId = vidM[1];
+
+    // 提取 sts (signatureTimestamp)
+    var sts = 20522;
+    var stsM = html.match(/"STS"\s*:\s*(\d+)/);
+    if (stsM) sts = parseInt(stsM[1]);
+
+    _visitorCache = { visitorId: visitorId, sts: sts };
+    _visitorCacheTs = now;
+    return _visitorCache;
+}
 
 // ── 工具函数 ──────────────────────────────────────────────────
 
 function ytPost(path, body, hdrs) {
-    var url = 'https://www.youtube.com/youtubei/v1/' + path + '?key=' + YT_KEY;
+    var url = YT_API + '/' + path + '?prettyPrint=false';
     var res = req({
         url:    url,
         method: 'POST',
@@ -106,7 +157,6 @@ function extractVideos(obj, results) {
         }
 
         var thumbs = (vr.thumbnail && vr.thumbnail.thumbnails) ? vr.thumbnail.thumbnails : [];
-        // 选最高分辨率缩略图
         var thumb = 'https://i.ytimg.com/vi/' + vr.videoId + '/hqdefault.jpg';
         if (thumbs.length > 0) {
             thumbs.sort(function(a, b) { return (b.width || 0) - (a.width || 0); });
@@ -139,8 +189,8 @@ function parseSeconds(str) {
 // video 数据 → VOD item
 function videoToVod(v) {
     var remarks = v.channel || '';
-    if (v.durationStr) remarks += '  ' + v.durationStr;
-    if (v.viewCount) remarks += '  ' + v.viewCount;
+    if (v.durationStr) remarks += (remarks ? '  ' : '') + v.durationStr;
+    if (v.viewCount)   remarks += (remarks ? '  ' : '') + v.viewCount;
     return {
         vod_id:       v.videoId,
         vod_name:     v.title,
@@ -149,28 +199,6 @@ function videoToVod(v) {
         vod_year:     v.channel,
         vod_duration: parseSeconds(v.durationStr),
     };
-}
-
-// 提取 continuation token（用于翻页）
-function extractContinuation(obj) {
-    if (!obj || typeof obj !== 'object') return null;
-    if (Array.isArray(obj)) {
-        for (var i = 0; i < obj.length; i++) {
-            var r = extractContinuation(obj[i]);
-            if (r) return r;
-        }
-        return null;
-    }
-    if (obj.continuationItemRenderer && obj.continuationItemRenderer.continuationEndpoint) {
-        var token = obj.continuationItemRenderer.continuationEndpoint.continuationCommand && obj.continuationItemRenderer.continuationEndpoint.continuationCommand.token;
-        if (token) return token;
-    }
-    var keys = Object.keys(obj);
-    for (var j = 0; j < keys.length; j++) {
-        var res = extractContinuation(obj[keys[j]]);
-        if (res) return res;
-    }
-    return null;
 }
 
 // ── Spider 接口 ────────────────────────────────────────────────
@@ -188,13 +216,10 @@ function categoryContent(tid, pg, filter, extend) {
     var cat = CATEGORIES[tid];
     if (!cat) return JSON.stringify({ list: [], pagecount: 0 });
 
-    var query = cat.query;
-    var pgInt = parseInt(pg) || 1;
-
     var data = ytPost('search', {
-        query:   query,
+        query:   cat.query,
         context: { client: CLIENT_SEARCH },
-        params:  'CAASAhAB', // 仅视频
+        params:  'CAASAhAB',  // 仅视频
     }, HEADERS_SEARCH);
 
     if (!data) return JSON.stringify({ list: [], pagecount: 1 });
@@ -202,11 +227,8 @@ function categoryContent(tid, pg, filter, extend) {
     var videos = [];
     extractVideos(data.contents, videos);
 
-    // 尝试拿 continuation token（备用，此版本不实现翻页以保持简单）
-    // var nextToken = extractContinuation(data.contents);
-
     return JSON.stringify({
-        page:      pgInt,
+        page:      parseInt(pg) || 1,
         pagecount: 1,
         list:      videos.map(videoToVod),
     });
@@ -215,7 +237,6 @@ function categoryContent(tid, pg, filter, extend) {
 function detailContent(ids) {
     var videoId = Array.isArray(ids) ? ids[0] : String(ids);
 
-    // 用 next API 拿视频详情
     var data = ytPost('next', {
         videoId: videoId,
         context: { client: CLIENT_SEARCH },
@@ -262,18 +283,17 @@ function detailContent(ids) {
         } catch (e) {}
     }
 
-    var vod = {
-        vod_id:        videoId,
-        vod_name:      title,
-        vod_pic:       thumb,
-        vod_content:   desc,
-        vod_year:      channel,
-        // 播放列表：格式为 "集名$视频ID"
-        vod_play_from: 'YouTube',
-        vod_play_url:  title + '$' + videoId,
-    };
-
-    return JSON.stringify({ list: [vod] });
+    return JSON.stringify({
+        list: [{
+            vod_id:        videoId,
+            vod_name:      title,
+            vod_pic:       thumb,
+            vod_content:   desc,
+            vod_year:      channel,
+            vod_play_from: 'YouTube',
+            vod_play_url:  title + '$' + videoId,
+        }],
+    });
 }
 
 function searchContent(key, quick, pg) {
@@ -293,22 +313,55 @@ function searchContent(key, quick, pg) {
     return JSON.stringify({ list: videos.map(videoToVod) });
 }
 
-// ── 播放解析（核心）─────────────────────────────────────────
+// ── 播放解析（核心）─────────────────────────────────────────────
+/**
+ * 关键：必须先访问 YouTube 首页获取 Cookie/visitorId/sts，
+ * 才能用 ANDROID_VR 客户端拿到真实直链 URL（adaptiveFormats）。
+ * signatureTimestamp (sts) 用于 playbackContext。
+ */
 function playerContent(flag, id, vipFlags) {
-    // id = videoId（来自 vod_play_url 中 $ 后面的部分）
     var videoId = id;
 
-    var data = ytPost('player', {
-        videoId: videoId,
-        context: { client: CLIENT_PLAYER },
-        playbackContext: {
-            contentPlaybackContext: { html5Preference: 'HTML5_PREF_WANTS' }
-        },
-        racyCheckOk:    true,
-        contentCheckOk: true,
-    }, HEADERS_PLAYER);
+    // 1. 获取访客信息（Cookie + visitorId + sts）
+    var visitor = getVisitorInfoSync();
 
-    if (!data) return JSON.stringify({ parse: 0, url: '' });
+    // 2. 构建带访客信息的请求头
+    var hdrs = {
+        'Content-Type':             'application/json',
+        'X-YouTube-Client-Name':    '28',
+        'X-YouTube-Client-Version': AVR_VERSION,
+        'User-Agent':               AVR_UA,
+        'Accept':                   'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+        'Accept-Language':          'en-us,en;q=0.5',
+        'Origin':                   YT_BASE,
+    };
+    if (visitor.visitorId) hdrs['X-Goog-Visitor-Id'] = visitor.visitorId;
+
+    // 3. 调用 player API（ANDROID_VR 客户端，无需 poToken）
+    var res = req({
+        url:    YT_API + '/player?prettyPrint=false',
+        method: 'POST',
+        header: hdrs,
+        body:   JSON.stringify({
+            videoId: videoId,
+            context: { client: CLIENT_PLAYER },
+            playbackContext: {
+                contentPlaybackContext: {
+                    html5Preference:     'HTML5_PREF_WANTS',
+                    signatureTimestamp:  visitor.sts,
+                },
+            },
+            contentCheckOk: true,
+            racyCheckOk:    true,
+        }),
+    });
+
+    if (!res || res.code < 200 || res.code >= 300) {
+        return JSON.stringify({ parse: 0, url: '' });
+    }
+
+    var data;
+    try { data = JSON.parse(res.content); } catch (e) { return JSON.stringify({ parse: 0, url: '' }); }
 
     var status = data.playabilityStatus && data.playabilityStatus.status;
     if (status !== 'OK') {
@@ -328,21 +381,20 @@ function playerContent(flag, id, vipFlags) {
             return JSON.stringify({
                 parse:  0,
                 url:    f.url,
-                header: { 'User-Agent': HEADERS_PLAYER['User-Agent'] },
+                header: { 'User-Agent': AVR_UA },
             });
         }
     }
 
-    // 回退：adaptive video mp4（可能无音频，取决于播放器）
+    // 回退：adaptive video mp4（纯视频流，部分播放器支持）
     adaptive.sort(function(a, b) { return (b.width || 0) - (a.width || 0); });
     for (var j = 0; j < adaptive.length; j++) {
         var af = adaptive[j];
-        if (af.url && af.mimeType && af.mimeType.indexOf('video/mp4') >= 0
-            && af.mimeType.indexOf('video/') >= 0) {
+        if (af.url && af.mimeType && af.mimeType.indexOf('video/mp4') >= 0) {
             return JSON.stringify({
                 parse:  0,
                 url:    af.url,
-                header: { 'User-Agent': HEADERS_PLAYER['User-Agent'] },
+                header: { 'User-Agent': AVR_UA },
             });
         }
     }

@@ -1,0 +1,13 @@
+{
+  "sites": [
+    {
+      "key": "youtube",
+      "name": "YouTube",
+      "type": 3,
+      "api": "https://raw.githubusercontent.com/moonopposite/claw-plugins/master/youtube-spider.js",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 0
+    }
+  ]
+}
