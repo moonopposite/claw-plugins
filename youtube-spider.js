@@ -1,5 +1,5 @@
 /**
- * OK影视 / FongMi TV — YouTube Spider  v2.3.0
+ * OK影视 / FongMi TV — YouTube Spider  v2.4.0
  *
  * 格式：ES Module（export default）
  * 运行环境：FongMi/TV 内置 QuickJS（com.fongmi.quickjs）
@@ -259,17 +259,25 @@ function _homeVod() {
 function _category(tid, pg, filter, extend) {
 
     // ── 情况1：订阅频道聚合页 ──────────────────────────────────
-    // 展示所有订阅频道的最新一条视频，类似"订阅动态"
+    // 策略：每次取前 N 个频道各拉一次最新视频，按时间混排
+    // 为避免 QuickJS 同步请求超时，分批处理：每页取 6 个频道，共约 5 页
     if (tid === 'cat_subscriptions') {
+        var page     = parseInt(pg) || 1;
+        var batchSz  = 6;                              // 每页请求几个频道
+        var start    = (page - 1) * batchSz;
+        var end      = Math.min(start + batchSz, SUBSCRIPTIONS.length);
+        var pagecount = Math.ceil(SUBSCRIPTIONS.length / batchSz);
+
         var latestList = [];
-        for (var si = 0; si < SUBSCRIPTIONS.length; si++) {
+        for (var si = start; si < end; si++) {
             var sub = SUBSCRIPTIONS[si];
             var chVids = getChannelVideos(sub.channelId);
-            if (chVids.length > 0) {
-                // 取最新一条，解析成 vod
-                var entry = chVids[0]; // "标题  时间  时长$videoId"
+            // 取该频道最新 5 条加入列表
+            var take = Math.min(5, chVids.length);
+            for (var vi = 0; vi < take; vi++) {
+                var entry = chVids[vi];
                 var parts = entry.split('$');
-                var vid = parts[parts.length - 1];
+                var vid   = parts[parts.length - 1];
                 var label = parts.slice(0, parts.length - 1).join('$');
                 latestList.push({
                     vod_id:      vid,
@@ -281,8 +289,8 @@ function _category(tid, pg, filter, extend) {
             }
         }
         return JSON.stringify({
-            page:      1,
-            pagecount: 1,
+            page:      page,
+            pagecount: pagecount,
             list:      latestList,
         });
     }
