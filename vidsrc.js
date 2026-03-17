@@ -145,21 +145,48 @@ function getImdbId(mediaType, tmdbId) {
     return d.imdb_id || '';
 }
 
-function getSubZipUrl(imdbId) {
-    var html = get(YIFY + '/movie-imdb/' + imdbId, YIFY + '/');
-    if (!html) return '';
-    var rows = html.match(/<tr[^>]*>[\s\S]*?<\/tr>/g) || [];
-    var chiPath = '';
+// 从 yify 列表页提取某语言的第一条字幕 zip URL
+// langKeywords: 匹配 tr 行的关键字数组（如 ['Chinese', 'flag-cn']）
+function yifyFindSubZip(rows, langKeywords) {
+    var subPath = '';
     for (var i = 0; i < rows.length; i++) {
-        if (rows[i].indexOf('Chinese') >= 0 || rows[i].indexOf('flag-cn') >= 0) {
-            var lm = rows[i].match(/href="(\/subtitles\/[^"]+)"/);
-            if (lm) { chiPath = lm[1]; break; }
+        var row = rows[i];
+        var matched = false;
+        for (var k = 0; k < langKeywords.length; k++) {
+            if (row.indexOf(langKeywords[k]) >= 0) { matched = true; break; }
+        }
+        if (matched) {
+            var lm = row.match(/href="(\/subtitles\/[^"]+)"/);
+            if (lm) { subPath = lm[1]; break; }
         }
     }
-    if (!chiPath) return '';
-    var detail = get(YIFY + chiPath, YIFY + '/');
+    if (!subPath) return '';
+    var detail = get(YIFY + subPath, YIFY + '/');
     var dm = detail && detail.match(/href="(\/subtitle\/[^"]+\.zip)"/);
     return dm ? YIFY + dm[1] : '';
+}
+
+// 返回 subs 数组：中文 + 英文（有则加，无则跳过）
+function getSubsArray(imdbId) {
+    var html = get(YIFY + '/movie-imdb/' + imdbId, YIFY + '/');
+    if (!html) return [];
+    var rows = html.match(/<tr[^>]*>[\s\S]*?<\/tr>/g) || [];
+
+    var subs = [];
+
+    // 中文字幕
+    var zhUrl = yifyFindSubZip(rows, ['Chinese', 'flag-cn']);
+    if (zhUrl) {
+        subs.push({ name: '中文', url: zhUrl, lang: 'zh', format: 'zip' });
+    }
+
+    // 英文字幕
+    var enUrl = yifyFindSubZip(rows, ['English', 'flag-en']);
+    if (enUrl) {
+        subs.push({ name: 'English', url: enUrl, lang: 'en', format: 'zip' });
+    }
+
+    return subs;
 }
 
 // ── Spider 接口 ────────────────────────────────────────────────
@@ -297,12 +324,12 @@ function _play(flag, id, vipFlags) {
         header: { 'User-Agent': UA, 'Referer': CNESTRA + '/' },
     };
 
-    // 字幕（仅电影）
+    // 字幕（仅电影，中文 + 英文可选）
     if (mediaType === 'movie') {
         var imdbId = getImdbId('movie', tmdbId);
         if (imdbId) {
-            var subUrl = getSubZipUrl(imdbId);
-            if (subUrl) result.subf = subUrl;
+            var subsArr = getSubsArray(imdbId);
+            if (subsArr.length > 0) result.subs = subsArr;
         }
     }
 
