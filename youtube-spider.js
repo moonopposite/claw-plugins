@@ -149,6 +149,7 @@ function extractVideos(obj, results) {
             viewCount = vr.viewCountText.simpleText || '';
             if (!viewCount && vr.viewCountText.runs && vr.viewCountText.runs[0]) viewCount = vr.viewCountText.runs[0].text;
         }
+        var published = (vr.publishedTimeText && vr.publishedTimeText.simpleText) || '';
         var thumb = 'https://i.ytimg.com/vi/' + vr.videoId + '/hqdefault.jpg';
         var thumbs = (vr.thumbnail && vr.thumbnail.thumbnails) ? vr.thumbnail.thumbnails : [];
         if (thumbs.length > 0) {
@@ -161,6 +162,7 @@ function extractVideos(obj, results) {
             channel:     channel,
             durationStr: durationStr,
             viewCount:   viewCount,
+            published:   published,
             thumb:       thumb,
         });
         return;
@@ -186,7 +188,7 @@ function videoToVod(v) {
         vod_name:     v.title,
         vod_pic:      v.thumb,
         vod_remarks:  remarks,
-        vod_year:     v.channel,
+        vod_year:     v.published || '',  // 发布时间（如 "3 天前"）
         vod_duration: parseSeconds(v.durationStr),
     };
 }
@@ -231,18 +233,64 @@ function _category(tid, pg, filter, extend) {
     });
 }
 
+// 从 browse API 抓频道最近 30 条视频
+function getChannelVideos(channelId) {
+    var data = ytPost('browse', {
+        browseId: channelId,
+        params:   'EgZ2aWRlb3PyBgQKAjoA',  // 频道 Videos 标签，按最新排序
+        context:  { client: CLIENT_SEARCH },
+    }, HEADERS_SEARCH);
+    if (!data) return [];
+
+    var results = [];
+    function findVids(obj) {
+        if (!obj || typeof obj !== 'object') return;
+        if (Array.isArray(obj)) {
+            for (var i = 0; i < obj.length; i++) findVids(obj[i]);
+            return;
+        }
+        // richItemRenderer（频道主页新版布局）
+        var rvr = obj.richItemRenderer && obj.richItemRenderer.content && obj.richItemRenderer.content.videoRenderer;
+        if (rvr && rvr.videoId) {
+            var t = (rvr.title && rvr.title.runs && rvr.title.runs[0] && rvr.title.runs[0].text) || rvr.videoId;
+            var pub = (rvr.publishedTimeText && rvr.publishedTimeText.simpleText) || '';
+            var dur = (rvr.lengthText && rvr.lengthText.simpleText) || '';
+            var ep = t + (pub ? '  ' + pub : '') + (dur ? '  ' + dur : '');
+            results.push(ep + '$' + rvr.videoId);
+            return;
+        }
+        // gridVideoRenderer（旧版布局）
+        if (obj.gridVideoRenderer && obj.gridVideoRenderer.videoId) {
+            var gvr = obj.gridVideoRenderer;
+            var t2 = (gvr.title && (gvr.title.runs ? gvr.title.runs[0].text : gvr.title.simpleText)) || gvr.videoId;
+            var pub2 = (gvr.publishedTimeText && gvr.publishedTimeText.simpleText) || '';
+            var dur2 = (gvr.lengthText && gvr.lengthText.simpleText) || '';
+            var ep2 = t2 + (pub2 ? '  ' + pub2 : '') + (dur2 ? '  ' + dur2 : '');
+            results.push(ep2 + '$' + gvr.videoId);
+            return;
+        }
+        var keys = Object.keys(obj);
+        for (var j = 0; j < keys.length; j++) findVids(obj[keys[j]]);
+    }
+    findVids(data);
+    return results.slice(0, 30);
+}
+
 function _detail(ids) {
     var videoId = Array.isArray(ids) ? ids[0] : String(ids);
 
+    // ── 1. next API：拿标题、发布日期、频道名、channelId ──────────
     var data = ytPost('next', {
         videoId: videoId,
         context: { client: CLIENT_SEARCH },
     }, HEADERS_SEARCH);
 
-    var title   = videoId;
-    var desc    = '';
-    var channel = '';
-    var thumb   = 'https://i.ytimg.com/vi/' + videoId + '/maxresdefault.jpg';
+    var title     = videoId;
+    var desc      = '';
+    var channel   = 'YouTube';   // 线路名 = 频道名
+    var channelId = '';
+    var pubDate   = '';          // 发布日期
+    var thumb     = 'https://i.ytimg.com/vi/' + videoId + '/maxresdefault.jpg';
 
     if (data) {
         try {
@@ -252,11 +300,15 @@ function _detail(ids) {
                 data.contents.twoColumnWatchNextResults.results.results &&
                 data.contents.twoColumnWatchNextResults.results.results.contents;
             results = results || [];
+
             for (var i = 0; i < results.length; i++) {
                 var pc = results[i].videoPrimaryInfoRenderer;
                 if (pc) {
+                    // 标题
                     var titleRuns = pc.title && pc.title.runs;
                     if (titleRuns && titleRuns[0]) title = titleRuns[0].text;
+                    // 发布日期（dateText = "2026年3月16日"）
+                    if (pc.dateText && pc.dateText.simpleText) pubDate = pc.dateText.simpleText;
                     break;
                 }
             }
@@ -264,8 +316,13 @@ function _detail(ids) {
                 var sc = results[j].videoSecondaryInfoRenderer;
                 if (sc) {
                     var owner = sc.owner && sc.owner.videoOwnerRenderer;
+                    // 频道名
                     var ownerRuns = owner && owner.title && owner.title.runs;
                     if (ownerRuns && ownerRuns[0]) channel = ownerRuns[0].text;
+                    // channelId（用于查频道视频列表）
+                    var browseEp = owner && owner.navigationEndpoint && owner.navigationEndpoint.browseEndpoint;
+                    if (browseEp && browseEp.browseId) channelId = browseEp.browseId;
+                    // 简介
                     var descRuns = sc.description && sc.description.runs;
                     if (descRuns) {
                         var parts = [];
@@ -278,15 +335,32 @@ function _detail(ids) {
         } catch (e) {}
     }
 
+    // ── 2. 当前视频条目 ───────────────────────────────────────────
+    var currentEntry = title + '$' + videoId;
+
+    // ── 3. browse API：频道最近视频列表作为选集 ────────────────────
+    var playList = [currentEntry];   // 默认至少有当前视频
+    if (channelId) {
+        var chVideos = getChannelVideos(channelId);
+        if (chVideos.length > 0) {
+            // 如果频道列表里包含当前视频就直接用，否则把当前视频插到最前
+            var found = false;
+            for (var m = 0; m < chVideos.length; m++) {
+                if (chVideos[m].indexOf('$' + videoId) >= 0) { found = true; break; }
+            }
+            playList = found ? chVideos : [currentEntry].concat(chVideos);
+        }
+    }
+
     return JSON.stringify({
         list: [{
             vod_id:        videoId,
             vod_name:      title,
             vod_pic:       thumb,
             vod_content:   desc,
-            vod_year:      channel,
-            vod_play_from: 'YouTube',
-            vod_play_url:  title + '$' + videoId,
+            vod_year:      pubDate,           // 年份 → 发布日期
+            vod_play_from: channel,           // 线路 → 频道名
+            vod_play_url:  playList.join('#'), // 选集 → 频道视频列表
         }],
     });
 }
