@@ -1,5 +1,5 @@
 /**
- * OK影视 / FongMi TV — YouTube Spider  v2.2.0
+ * OK影视 / FongMi TV — YouTube Spider  v2.3.0
  *
  * 格式：ES Module（export default）
  * 运行环境：FongMi/TV 内置 QuickJS（com.fongmi.quickjs）
@@ -58,6 +58,38 @@ var HEADERS_PLAYER = {
     'Accept-Language':          'en-us,en;q=0.5',
     'Origin':                   YT_BASE,
 };
+
+// 订阅频道列表（按用户指定顺序）
+var SUBSCRIPTIONS = [
+    { id: 'ch_wenzhaoofficial', name: '文昭談古論今',          channelId: 'UCtAIPjABiQD3qjlEl1T5VpA' },
+    { id: 'ch_henren778',       name: '一个狠人',              channelId: 'UCJAPsTtcJJWGk8e-_CJL8TQ' },
+    { id: 'ch_torontobigface',  name: '多伦多方脸',            channelId: 'UCzYYzigb1vXR0GQXXBja2kg' },
+    { id: 'ch_chaijing2023',    name: '柴静',                  channelId: 'UCjuNibFJ21MiSNpu8LZyV4w' },
+    { id: 'ch_aranshu0',        name: '阿冉',                  channelId: 'UCHm2gs42CdHzq_-jrvRQuMg' },
+    { id: 'ch_weizhichao',      name: '魏知超啥书都读',         channelId: 'UCFTZu3WRjMYI7euMZ5R9BbA' },
+    { id: 'ch_dashengmedia',    name: 'Dasheng Community',    channelId: 'UC7FLWk8SH7UJ2zmeLXbE2LA' },
+    { id: 'ch_wentingting',     name: '我是文婷',              channelId: 'UC9tu25aEyuAusxJiZNjWS4w' },
+    { id: 'ch_sunlao',          name: '政經孫老師',             channelId: 'UC1Lk6WO-eKuYc6GHYbKVY2g' },
+    { id: 'ch_wenzhaostudio',   name: '文昭思緒飛揚',          channelId: 'UCTu_hTaVf3DJMpMIyOAq2Ew' },
+    { id: 'ch_01coder30',       name: '01Coder',              channelId: 'UCAVDRj14A9W2Zix1Y5EUm7Q' },
+    { id: 'ch_macro_alpha_cn',  name: '宏观阿尔法',            channelId: 'UC9oosAco7nIVZwuGhnC0FKg' },
+    { id: 'ch_anzhengming',     name: '安争鸣',                channelId: 'UCBNpk9A7simOnmlcJPkxg5w' },
+    { id: 'ch_hi5hi5',          name: '李肅Hi5',              channelId: 'UCvpX0E9dK-40zwYShv186oA' },
+    { id: 'ch_bumingbai',       name: '不明白播客',             channelId: 'UCAf2O_wWu1YCS9YLUqnyqDA' },
+    { id: 'ch_fangfeitime',     name: '方菲時間',              channelId: 'UCNcZAhkdRR0oZegCB9u7seQ' },
+    { id: 'ch_zhenguandian',    name: '真觀點',                channelId: 'UCAwVpzgGI9sEu4O4ZlB5ZWQ' },
+    { id: 'ch_libertas1984',    name: 'Cao Cao日常观察',       channelId: 'UCEHllJN5YYp6R-jB-6rbnQw' },
+    { id: 'ch_stboss',          name: '自说自话的总裁',         channelId: 'UCgo_-fjJxnLwwwq5dSY72rg' },
+    { id: 'ch_freeharbor2022',  name: 'Anthony看世界',         channelId: 'UCxN_H2tFQD-0B4d9wGdAVuA' },
+    { id: 'ch_ndwtb',           name: '脑洞乌托邦',            channelId: 'UC2tQpW0dPiyWPebwBSksJ_g' },
+    { id: 'ch_vexilla01',       name: 'VEXILLA潮時務所',       channelId: 'UCpC2D7JdcB8nlfzhX08i7fg' },
+    { id: 'ch_liutalks',        name: '徒步的騎手',            channelId: 'UCETfu038u78m_aOzpZ8EIcQ' },
+    { id: 'ch_cui_news',        name: '小翠時政財經',           channelId: 'UCOhck8oLoIwSJzmwYMXsSnQ' },
+    { id: 'ch_fanxinaozhuanjia',name: '专反洗脑',              channelId: 'UCQlxjRwTqoAwi-R1OtHau5g' },
+    { id: 'ch_thevalley101',    name: '硅谷101',               channelId: 'UCKV2yWPB3wn0RTZh3cTD8YA' },
+    { id: 'ch_indigo11',        name: 'INDIGO数字镜像',        channelId: 'UCXnTA5wXW0aiDWdEllZI_pQ' },
+    { id: 'ch_mrbrain',         name: '脑总MrBrain',           channelId: 'UChJh7Nh4XQfnHPoTZHk18Bw' },
+];
 
 // 分类配置
 var CATEGORIES = {
@@ -201,10 +233,22 @@ function _init(cfg) {
 
 function _home(filter) {
     var classList = [];
+
+    // 第一项：订阅频道（聚合入口）
+    classList.push({ type_id: 'cat_subscriptions', type_name: '📺 订阅频道' });
+
+    // 剩余关键词分类
     var keys = Object.keys(CATEGORIES);
     for (var i = 0; i < keys.length; i++) {
         classList.push({ type_id: keys[i], type_name: CATEGORIES[keys[i]].name });
     }
+
+    // 每个订阅频道也作为独立子分类（排在最后，方便按频道浏览）
+    for (var j = 0; j < SUBSCRIPTIONS.length; j++) {
+        var s = SUBSCRIPTIONS[j];
+        classList.push({ type_id: s.id, type_name: '  └ ' + s.name });
+    }
+
     return JSON.stringify({ class: classList, list: [] });
 }
 
@@ -213,6 +257,67 @@ function _homeVod() {
 }
 
 function _category(tid, pg, filter, extend) {
+
+    // ── 情况1：订阅频道聚合页 ──────────────────────────────────
+    // 展示所有订阅频道的最新一条视频，类似"订阅动态"
+    if (tid === 'cat_subscriptions') {
+        var latestList = [];
+        for (var si = 0; si < SUBSCRIPTIONS.length; si++) {
+            var sub = SUBSCRIPTIONS[si];
+            var chVids = getChannelVideos(sub.channelId);
+            if (chVids.length > 0) {
+                // 取最新一条，解析成 vod
+                var entry = chVids[0]; // "标题  时间  时长$videoId"
+                var parts = entry.split('$');
+                var vid = parts[parts.length - 1];
+                var label = parts.slice(0, parts.length - 1).join('$');
+                latestList.push({
+                    vod_id:      vid,
+                    vod_name:    label,
+                    vod_pic:     'https://i.ytimg.com/vi/' + vid + '/hqdefault.jpg',
+                    vod_remarks: sub.name,
+                    vod_year:    '',
+                });
+            }
+        }
+        return JSON.stringify({
+            page:      1,
+            pagecount: 1,
+            list:      latestList,
+        });
+    }
+
+    // ── 情况2：单个订阅频道（ch_ 开头）→ 频道视频列表 ──────────
+    if (tid.indexOf('ch_') === 0) {
+        var subInfo = null;
+        for (var ci = 0; ci < SUBSCRIPTIONS.length; ci++) {
+            if (SUBSCRIPTIONS[ci].id === tid) { subInfo = SUBSCRIPTIONS[ci]; break; }
+        }
+        if (!subInfo) return JSON.stringify({ list: [], pagecount: 0 });
+
+        var chVideos = getChannelVideos(subInfo.channelId);
+        var vodList = [];
+        for (var vi = 0; vi < chVideos.length; vi++) {
+            var ep = chVideos[vi];
+            var epParts = ep.split('$');
+            var videoId = epParts[epParts.length - 1];
+            var epLabel = epParts.slice(0, epParts.length - 1).join('$');
+            vodList.push({
+                vod_id:      videoId,
+                vod_name:    epLabel,
+                vod_pic:     'https://i.ytimg.com/vi/' + videoId + '/hqdefault.jpg',
+                vod_remarks: subInfo.name,
+                vod_year:    '',
+            });
+        }
+        return JSON.stringify({
+            page:      1,
+            pagecount: 1,
+            list:      vodList,
+        });
+    }
+
+    // ── 情况3：关键词搜索分类 ──────────────────────────────────
     var cat = CATEGORIES[tid];
     if (!cat) return JSON.stringify({ list: [], pagecount: 0 });
 
