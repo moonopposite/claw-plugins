@@ -1,5 +1,5 @@
 {
-  "spider": "",
+  "spider": "https://github.com/YuanHsing/freed/raw/master/TVBox/MaooXB2/XBiubiuLA4.jar",
   "sites": [
     {
       "key": "youtube",
@@ -7,11 +7,11 @@
       "type": 3,
       "api": "https://raw.githubusercontent.com/moonopposite/claw-plugins/master/youtube-spider.js",
       "searchable": 1,
-      "changeable": 1,
-      "ext": ""
+      "quickSearch": 1,
+      "filterable": 0
     }
   ],
   "parses": [],
   "lives": [],
-  "flags": []
+  "flags": ["youku", "qq", "iqiyi", "bilibili", "pptv", "mgtv", "sohu"]
 }
