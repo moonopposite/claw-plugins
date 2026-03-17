@@ -1,5 +1,5 @@
 /**
- * OK影视 / FongMi TV — YouTube Spider  v2.0.0
+ * OK影视 / FongMi TV — YouTube Spider  v2.2.0
  *
  * 格式：ES Module（export default）
  * 运行环境：FongMi/TV 内置 QuickJS（com.fongmi.quickjs）
@@ -61,12 +61,26 @@ var HEADERS_PLAYER = {
 
 // 分类配置
 var CATEGORIES = {
-    'search_cn':    { name: '中文热门',  query: '中文 热门视频 2025' },
-    'search_music': { name: '华语音乐',  query: '华语流行 歌曲 2025 非官方' },
-    'search_en':    { name: '英文热门',  query: 'popular videos 2025' },
-    'search_game':  { name: '游戏',      query: 'gaming highlights 2025' },
-    'search_tech':  { name: '科技',      query: 'tech review 2025' },
-    'search_learn': { name: '学习',      query: '知识 教育 科普 中文' },
+    'cat_politics': {
+        name:  '政治与文化',
+        query: '政治 时事 文化 评论 自媒体 2025',
+    },
+    'cat_economy': {
+        name:  '经济与投资',
+        query: '经济 投资 财经 股市 理财 自媒体 2025',
+    },
+    'cat_ai': {
+        name:  '科技 AI',
+        query: 'AI 人工智能 大模型 ChatGPT 科技 2025',
+    },
+    'cat_crypto': {
+        name:  'Crypto 加密',
+        query: 'crypto bitcoin 加密货币 比特币 2025',
+    },
+    'cat_film': {
+        name:  '影视综艺',
+        query: '影视 剧情 综艺 解说 电影 2025',
+    },
 };
 
 // 访客信息缓存
