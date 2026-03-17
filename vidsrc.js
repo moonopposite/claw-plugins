@@ -8,7 +8,7 @@
  * 数据流：
  *   搜索/分类  → TMDB API
  *   播放       → vidsrc embed → cloudnestra rcp → prorcp → m3u8 直链
- *   字幕       → yifysubtitles.ch (电影, zip)
+ *   字幕       → OpenSubtitles REST API（电影+剧集）；电影额外兜底 yifysubtitles.ch
  */
 
 var TMDB_KEY  = '8265bd1679663a7ea12ac168da84d2e8';
@@ -18,6 +18,13 @@ var VIDSRC    = 'https://vidsrc.net';
 var CNESTRA   = 'https://cloudnestra.com';
 var YIFY      = 'https://yifysubtitles.ch';
 var UA        = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/120';
+
+// ── OpenSubtitles 配置（可在 init 里覆盖）────────────────────
+var OSUB_KEY  = '';   // Consumer API Key
+var OSUB_USER = '';   // 用户名
+var OSUB_PASS = '';   // 密码
+var OSUB_BASE = 'https://api.opensubtitles.com/api/v1';
+var _osubToken = '';  // 运行时缓存 JWT，同一次 play 调用中复用
 
 var CDN_DOMAINS = ['neonhorizonworkshops.com', 'orchidpixelgardens.com', 'cloudnestra.com'];
 var RES_ORDER   = ['1920x1080', '1280x720', '854x480', '640x360'];
@@ -35,8 +42,27 @@ function get(url, referer) {
     return (res && res.code >= 200 && res.code < 300) ? (res.content || '') : '';
 }
 
+function post(url, body, extraHeaders) {
+    var hdrs = { 'User-Agent': UA, 'Content-Type': 'application/json' };
+    if (extraHeaders) {
+        for (var k in extraHeaders) hdrs[k] = extraHeaders[k];
+    }
+    var res = req(url, {
+        method: 'POST',
+        headers: hdrs,
+        body: typeof body === 'string' ? body : JSON.stringify(body),
+    });
+    return (res && res.code >= 200 && res.code < 300) ? (res.content || '') : '';
+}
+
 function getJson(url) {
     var text = get(url);
+    if (!text) return {};
+    try { return JSON.parse(text); } catch (e) { return {}; }
+}
+
+function postJson(url, body, extraHeaders) {
+    var text = post(url, body, extraHeaders);
     if (!text) return {};
     try { return JSON.parse(text); } catch (e) { return {}; }
 }
@@ -138,35 +164,153 @@ function getPlayUrl(mediaType, tmdbId, season, episode) {
     return '';
 }
 
-// ── 字幕（电影，yifysubtitles） ────────────────────────────────
+// ── 字幕（OpenSubtitles REST API）────────────────────────────
+
+// 构造 OSub 请求头
+function osubHeaders() {
+    var h = { 'Api-Key': OSUB_KEY, 'Content-Type': 'application/json', 'User-Agent': 'FongMiTV v2.0' };
+    if (_osubToken) h['Authorization'] = 'Bearer ' + _osubToken;
+    return h;
+}
+
+// 登录，返回 token；失败返回空串
+function osubLogin() {
+    if (!OSUB_KEY || !OSUB_USER || !OSUB_PASS) return '';
+    var data = postJson(OSUB_BASE + '/login', { username: OSUB_USER, password: OSUB_PASS }, osubHeaders());
+    return data.token || '';
+}
+
+// 搜索字幕，返回条目数组（已按 download_count 降序）
+// type: 'movie' | 'episode'
+function osubSearch(imdbId, lang, type) {
+    if (!_osubToken) return [];
+    var params = 'imdb_id=' + encodeURIComponent(imdbId)
+        + '&languages=' + encodeURIComponent(lang)
+        + '&type=' + (type || 'movie')
+        + '&order_by=download_count&order_direction=desc';
+    var res = req(OSUB_BASE + '/subtitles?' + params, {
+        method: 'GET',
+        headers: osubHeaders(),
+    });
+    if (!res || res.code < 200 || res.code >= 300) return [];
+    try {
+        var d = JSON.parse(res.content || '{}');
+        return d.data || [];
+    } catch (e) { return []; }
+}
+
+// 获取下载直链，返回 { url, fileName } 或 null
+// 每次消耗 1 次配额（免费 5/天）
+function osubDownloadLink(fileId) {
+    if (!_osubToken || !fileId) return null;
+    var res = req(OSUB_BASE + '/download', {
+        method: 'POST',
+        headers: osubHeaders(),
+        body: JSON.stringify({ file_id: fileId }),
+    });
+    if (!res || res.code < 200 || res.code >= 300) return null;
+    try {
+        var d = JSON.parse(res.content || '{}');
+        if (!d.link) return null;
+        return { url: d.link, fileName: d.file_name || '' };
+    } catch (e) { return null; }
+}
+
+// 从 OSub 条目中按语言偏好找 fileId（中文优先，其次英文）
+function osubPickFileId(items, langPref) {
+    for (var i = 0; i < items.length; i++) {
+        var a = items[i].attributes || {};
+        if (a.language === langPref && a.files && a.files[0]) {
+            return a.files[0].file_id;
+        }
+    }
+    // 宽松匹配（zh / zh-CN / zh-TW 都算中文）
+    if (langPref === 'zh-CN' || langPref === 'zh') {
+        for (var j = 0; j < items.length; j++) {
+            var b = items[j].attributes || {};
+            if ((b.language || '').indexOf('zh') === 0 && b.files && b.files[0]) {
+                return b.files[0].file_id;
+            }
+        }
+    }
+    return 0;
+}
+
+// 构建 subs 数组（OpenSubtitles，电影或剧集）
+// 返回 [{ name, url, lang, format }]，供 _play 使用
+function getSubsOsub(imdbId, mediaType) {
+    // 懒加载登录
+    if (!_osubToken) {
+        _osubToken = osubLogin();
+        if (!_osubToken) return [];
+    }
+
+    var type = (mediaType === 'movie') ? 'movie' : 'episode';
+    // 同时取中英文（一次请求，OSub 支持逗号分隔）
+    var items = osubSearch(imdbId, 'zh-CN,en', type);
+    if (!items.length) return [];
+
+    var subs = [];
+
+    // 中文字幕
+    var zhFileId = osubPickFileId(items, 'zh-CN');
+    if (zhFileId) {
+        var zhLink = osubDownloadLink(zhFileId);
+        if (zhLink) {
+            // 根据文件名判断格式（srt/ass/ssa/vtt）
+            var fmt = 'text/plain';
+            var fn = (zhLink.fileName || '').toLowerCase();
+            if (fn.indexOf('.srt') >= 0) fmt = 'text/srt';
+            else if (fn.indexOf('.ass') >= 0 || fn.indexOf('.ssa') >= 0) fmt = 'text/ass';
+            else if (fn.indexOf('.vtt') >= 0) fmt = 'text/vtt';
+            subs.push({ name: '中文', url: zhLink.url, lang: 'zh', format: fmt });
+        }
+    }
+
+    // 英文字幕（不额外消耗配额，复用同一批搜索结果，只在已有中文的情况下添加）
+    // 注意：每次调用 osubDownloadLink 都消耗配额，按需开启
+    // 此处暂只取中文，英文留给 yify 兜底
+    return subs;
+}
+
+// ── 字幕（电影，yifysubtitles 兜底）─────────────────────────
 
 function getImdbId(mediaType, tmdbId) {
     var d = getJson(tmdbUrl('/' + mediaType + '/' + tmdbId + '/external_ids'));
     return d.imdb_id || '';
 }
 
-// 从 yify 列表页提取某语言的第一条字幕 zip URL
+// 从 yify 列表页提取某语言评分最高的字幕 zip URL
 // langKeywords: 匹配 tr 行的关键字数组（如 ['Chinese', 'flag-cn']）
 function yifyFindSubZip(rows, langKeywords) {
-    var subPath = '';
+    // 找到所有匹配的行，取评分最高的
+    var bestScore = -999;
+    var bestPath = '';
     for (var i = 0; i < rows.length; i++) {
         var row = rows[i];
         var matched = false;
         for (var k = 0; k < langKeywords.length; k++) {
             if (row.indexOf(langKeywords[k]) >= 0) { matched = true; break; }
         }
-        if (matched) {
-            var lm = row.match(/href="(\/subtitles\/[^"]+)"/);
-            if (lm) { subPath = lm[1]; break; }
+        if (!matched) continue;
+        var lm = row.match(/href="(\/subtitles\/[^"]+)"/);
+        if (!lm) continue;
+        // 提取评分
+        var sm = row.match(/<span class="label[^"]*">(-?\d+)<\/span>/);
+        var score = sm ? parseInt(sm[1]) : 0;
+        if (score > bestScore) {
+            bestScore = score;
+            bestPath = lm[1];
         }
     }
-    if (!subPath) return '';
-    var detail = get(YIFY + subPath, YIFY + '/');
+    if (!bestPath) return '';
+    var detail = get(YIFY + bestPath, YIFY + '/');
     var dm = detail && detail.match(/href="(\/subtitle\/[^"]+\.zip)"/);
     return dm ? YIFY + dm[1] : '';
 }
 
 // 返回 subs 数组：中文 + 英文（有则加，无则跳过）
+// 注意：英文字幕 yify 用的是 flag-gb（英国国旗），不是 flag-en
 function getSubsArray(imdbId) {
     var html = get(YIFY + '/movie-imdb/' + imdbId, YIFY + '/');
     if (!html) return [];
@@ -174,16 +318,16 @@ function getSubsArray(imdbId) {
 
     var subs = [];
 
-    // 中文字幕
+    // 中文字幕（flag-cn）
     var zhUrl = yifyFindSubZip(rows, ['Chinese', 'flag-cn']);
     if (zhUrl) {
-        subs.push({ name: '中文', url: zhUrl, lang: 'zh', format: 'zip' });
+        subs.push({ name: '中文', url: zhUrl, lang: 'zh', format: 'application/zip' });
     }
 
-    // 英文字幕
-    var enUrl = yifyFindSubZip(rows, ['English', 'flag-en']);
+    // 英文字幕（flag-gb，不是 flag-en！）
+    var enUrl = yifyFindSubZip(rows, ['English', 'flag-gb']);
     if (enUrl) {
-        subs.push({ name: 'English', url: enUrl, lang: 'en', format: 'zip' });
+        subs.push({ name: 'English', url: enUrl, lang: 'en', format: 'application/zip' });
     }
 
     return subs;
@@ -191,7 +335,19 @@ function getSubsArray(imdbId) {
 
 // ── Spider 接口 ────────────────────────────────────────────────
 
-function _init(cfg) {}
+function _init(cfg) {
+    // FongMi/TV 会将 Spider 配置 JSON 传入 cfg
+    // 支持在 Spider 配置里填写 OSub 凭据：
+    // { "osub_key": "...", "osub_user": "...", "osub_pass": "..." }
+    if (cfg) {
+        try {
+            var c = typeof cfg === 'string' ? JSON.parse(cfg) : cfg;
+            if (c.osub_key)  OSUB_KEY  = c.osub_key;
+            if (c.osub_user) OSUB_USER = c.osub_user;
+            if (c.osub_pass) OSUB_PASS = c.osub_pass;
+        } catch (e) {}
+    }
+}
 
 function _home(filter) {
     var cats = [
@@ -324,13 +480,22 @@ function _play(flag, id, vipFlags) {
         header: { 'User-Agent': UA, 'Referer': CNESTRA + '/' },
     };
 
-    // 字幕（仅电影，中文 + 英文可选）
-    if (mediaType === 'movie') {
-        var imdbId = getImdbId('movie', tmdbId);
-        if (imdbId) {
-            var subsArr = getSubsArray(imdbId);
-            if (subsArr.length > 0) result.subs = subsArr;
+    // 字幕：yify 首选（仅电影），OSub 备用（电影+剧集）
+    var imdbId = getImdbId(mediaType, tmdbId);
+    if (imdbId) {
+        var subsArr = [];
+
+        // 1. yify 首选（仅电影）
+        if (mediaType === 'movie') {
+            subsArr = getSubsArray(imdbId);
         }
+
+        // 2. OSub 备用（yify 无结果时，或剧集）
+        if (subsArr.length === 0 && OSUB_KEY && OSUB_USER && OSUB_PASS) {
+            subsArr = getSubsOsub(imdbId, mediaType);
+        }
+
+        if (subsArr.length > 0) result.subs = subsArr;
     }
 
     return JSON.stringify(result);
