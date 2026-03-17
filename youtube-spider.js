@@ -1,5 +1,5 @@
 /**
- * OK影视 / FongMi TV — YouTube Spider  v2.4.0
+ * OK影视 / FongMi TV — YouTube Spider  v2.4.1
  *
  * 格式：ES Module（export default）
  * 运行环境：FongMi/TV 内置 QuickJS（com.fongmi.quickjs）
@@ -88,7 +88,7 @@ var SUBSCRIPTIONS = [
     { id: 'ch_fanxinaozhuanjia',name: '专反洗脑',              channelId: 'UCQlxjRwTqoAwi-R1OtHau5g' },
     { id: 'ch_thevalley101',    name: '硅谷101',               channelId: 'UCKV2yWPB3wn0RTZh3cTD8YA' },
     { id: 'ch_indigo11',        name: 'INDIGO数字镜像',        channelId: 'UCXnTA5wXW0aiDWdEllZI_pQ' },
-    { id: 'ch_mrbrain',         name: '脑总MrBrain',           channelId: 'UChJh7Nh4XQfnHPoTZHk18Bw' },
+    { id: 'ch_mrbrain',         name: '脑总MrBrain',           channelId: 'UC26hLZoe-haxcuLYxzWAiNg' },
 ];
 
 // 分类配置
@@ -272,8 +272,8 @@ function _category(tid, pg, filter, extend) {
         for (var si = start; si < end; si++) {
             var sub = SUBSCRIPTIONS[si];
             var chVids = getChannelVideos(sub.channelId);
-            // 取该频道最新 5 条加入列表
-            var take = Math.min(5, chVids.length);
+            // 取该频道最新 1 条加入列表
+            var take = Math.min(1, chVids.length);
             for (var vi = 0; vi < take; vi++) {
                 var entry = chVids[vi];
                 var parts = entry.split('$');
