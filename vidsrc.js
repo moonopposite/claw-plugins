@@ -20,9 +20,9 @@ var CNESTRA   = 'https://cloudnestra.com';
 var UA        = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/120';
 
 // ── OpenSubtitles 配置（可在 init 里覆盖）────────────────────
-var OSUB_KEY  = '';   // Consumer API Key
-var OSUB_USER = '';   // 用户名
-var OSUB_PASS = '';   // 密码
+var OSUB_KEY  = 'KTOXUTWosKdzcjrcMr87VWy6WkiOcUE0';
+var OSUB_USER = 'moonopposite';
+var OSUB_PASS = '1114@sub';
 var OSUB_BASE = 'https://api.opensubtitles.com/api/v1';
 var _osubToken = '';  // 运行时缓存 JWT，同一次 play 调用中复用
 
