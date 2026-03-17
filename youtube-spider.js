@@ -401,3 +401,20 @@ function playerContent(flag, id, vipFlags) {
 
     return JSON.stringify({ parse: 0, url: '' });
 }
+
+// ── init（FongMi/TV 加载 spider 时调用一次）──────────────────
+function init(context, extend) {
+    // 无需初始化，保留空实现
+}
+
+// ── 短函数名别名（兼容 FongMi/TV 内置 QuickJS 调用规范）────────
+// FongMi/TV 新版内置 QuickJS 在 type=3 无 JAR 时，
+// 调用的是 home / category / detail / search / play
+// 而 JAR 体系调用的是 homeContent / categoryContent 等
+// 这里同时提供两套，两种环境都能正常工作
+
+var home     = homeContent;
+var category = categoryContent;
+var detail   = detailContent;
+var search   = searchContent;
+var play     = playerContent;
