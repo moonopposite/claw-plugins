@@ -590,7 +590,7 @@ function _play(flag, id, vipFlags) {
         }
         
         if (selectedVideo && selectedVideo.url && selectedAudio && selectedAudio.url) {
-            // 生成 proxy:// URL 格式（使用 MPD/DASH 格式）
+            // 生成 proxy:// URL 格式（必须使用 ?do=js 格式，FongMi才会调用proxy方法）
             // 参数使用 BASE64 编码以避免 URL 特殊字符问题
             var params = {
                 video: selectedVideo.url,
@@ -601,7 +601,8 @@ function _play(flag, id, vipFlags) {
                 audioBitrate: selectedAudio.bitrate
             };
             var encoded = _btoa(JSON.stringify(params));
-            var proxyUrl = 'proxy://youtube/mpd/' + encoded;
+            // 正确格式：proxy://?do=js&data=xxx
+            var proxyUrl = 'proxy://?do=js&data=' + encoded;
             
             return JSON.stringify({
                 parse: 0,
@@ -763,12 +764,13 @@ function _generateMPD(videoUrl, audioUrl, width, height, videoBitrate, audioBitr
 // ── Proxy 方法（处理 MPD/DASH 请求）───────────────────
 function _proxy(params) {
     try {
+        // FongMi/TV 会将整个 URL 作为 params.url 传入
         var url = params.url || '';
         
-        // 检查是否是 MPD proxy URL
-        if (url.indexOf('proxy://youtube/mpd/') === 0) {
-            // 格式：proxy://youtube/mpd/{base64-encoded-params}
-            var encoded = url.substring('proxy://youtube/mpd/'.length);
+        // 检查是否是正确格式的 proxy URL
+        // 格式：proxy://?do=js&data={base64-encoded-params}
+        if (url.indexOf('proxy://?do=js&data=') === 0) {
+            var encoded = url.substring('proxy://?do=js&data='.length);
             var jsonStr = _atob(encoded);
             var data = JSON.parse(jsonStr);
             
@@ -784,14 +786,14 @@ function _proxy(params) {
             // 返回 MPD 内容 (DASH 格式)
             return JSON.stringify([
                 200,                          // HTTP status
-                'application/dash+xml',       // content-type for DASH MPD
+                'application/dash+xml',        // content-type for DASH MPD
                 mpdContent                    // content
             ]);
         }
         
-        // 兼容旧版 m3u8 URL（重定向到 mpd）
-        if (url.indexOf('proxy://youtube/m3u8/') === 0) {
-            var encoded = url.substring('proxy://youtube/m3u8/'.length);
+        // 兼容旧格式
+        if (url.indexOf('proxy://youtube/mpd/') === 0) {
+            var encoded = url.substring('proxy://youtube/mpd/'.length);
             var jsonStr = _atob(encoded);
             var data = JSON.parse(jsonStr);
             
