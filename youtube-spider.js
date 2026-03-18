@@ -541,6 +541,19 @@ function _play(flag, id, vipFlags) {
     var streamingData = data.streamingData || {};
     var formats       = streamingData.formats || [];
     var adaptive      = streamingData.adaptiveFormats || [];
+    var hlsUrl       = streamingData.hlsManifestUrl || '';
+
+    // 方案0：如果有 HLS 流，直接返回 m3u8
+    if (hlsUrl) {
+        return JSON.stringify({
+            parse: 0,
+            url: hlsUrl,
+            header: {
+                'User-Agent': AVR_UA,
+                'Referer': YT_BASE,
+            },
+        });
+    }
 
     var videoTracks = [];
     var audioTracks = [];
@@ -558,57 +571,28 @@ function _play(flag, id, vipFlags) {
         }
     }
     
-    // 方案1：有视频和音频时，返回 proxy:// URL 让 FongMi/TV 回调我们生成 M3U8
-    if (videoTracks.length > 0 && audioTracks.length > 0) {
-        var selectedVideo = null;
-        for (var v1 = 0; v1 < videoTracks.length; v1++) {
-            if (videoTracks[v1].width === 1920 && videoTracks[v1].height === 1080) {
-                selectedVideo = videoTracks[v1];
-                break;
+    // 方案1：有视频和音频时，返回预合并的 formats 流（如果有）
+    // 找到最高质量的预合并流（包含音视频）
+    if (formats && formats.length > 0) {
+        var bestFormat = null;
+        var maxRes = 0;
+        for (var fi = 0; fi < formats.length; fi++) {
+            var f = formats[fi];
+            if (!f.url || !f.mimeType) continue;
+            if (f.mimeType.indexOf('video/mp4') < 0) continue;
+            var res = (f.width || 0) * (f.height || 0);
+            if (res > maxRes) {
+                maxRes = res;
+                bestFormat = f;
             }
         }
-        
-        if (!selectedVideo) {
-            var maxRes = videoTracks[0];
-            for (var v2 = 1; v2 < videoTracks.length; v2++) {
-                var area1 = (maxRes.width || 0) * (maxRes.height || 0);
-                var area2 = (videoTracks[v2].width || 0) * (videoTracks[v2].height || 0);
-                if (area2 > area1) {
-                    maxRes = videoTracks[v2];
-                }
-            }
-            selectedVideo = maxRes;
-        }
-        
-        var selectedAudio = audioTracks[0];
-        for (var a1 = 1; a1 < audioTracks.length; a1++) {
-            var bitrate1 = selectedAudio.bitrate || 0;
-            var bitrate2 = audioTracks[a1].bitrate || 0;
-            if (bitrate2 > bitrate1) {
-                selectedAudio = audioTracks[a1];
-            }
-        }
-        
-        if (selectedVideo && selectedVideo.url && selectedAudio && selectedAudio.url) {
-            // 使用 getProxy(true) 获取本地代理 URL，然后附加参数
-            // 参数使用 BASE64 编码以避免 URL 特殊字符问题
-            var params = {
-                video: selectedVideo.url,
-                audio: selectedAudio.url,
-                width: selectedVideo.width,
-                height: selectedVideo.height,
-                videoBitrate: selectedVideo.bitrate,
-                audioBitrate: selectedAudio.bitrate
-            };
-            var encoded = _btoa(JSON.stringify(params));
-            // 正确格式：getProxy(true) + "&data=xxx"
-            var proxyUrl = getProxy(true) + '&data=' + encoded;
-            
+        if (bestFormat && bestFormat.url) {
             return JSON.stringify({
                 parse: 0,
-                url: proxyUrl,
+                url: bestFormat.url,
                 header: {
                     'User-Agent': AVR_UA,
+                    'Referer': YT_BASE,
                     'Range': 'bytes=0-',
                 },
             });
