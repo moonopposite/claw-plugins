@@ -540,61 +540,187 @@ function _play(flag, id, vipFlags) {
 
     var streamingData = data.streamingData || {};
     var formats       = streamingData.formats || [];
+    var adaptive      = streamingData.adaptiveFormats || [];
 
-    // ── 策略：从 formats 预合并流中选择最高分辨率的 MP4 格式 ──
-    // 说明：YouTube API 返回的 formats 包含预合并的音视频
-    //      不同 itag 对应不同分辨率：itag 22 (720p), itag 18 (360p) 等
-    //      FongMi/TV 不支持管道符音视频分离，需要返回直接可播放的 URL
+    // ────────────────────────────────────────────────────────────────
+    // 策略1：优先从 adaptiveFormats 提取高分辨率视频 + 高品质音频
+    //       通过 FongMi/TV proxy() 机制合并播放
+    // ────────────────────────────────────────────────────────────────
     
-    var selectedFormat = null;
-    var maxResolution = 0;
-
-    // 遍历所有 formats，找最高分辨率的 MP4
-    for (var i = 0; i < formats.length; i++) {
-        var f = formats[i];
-        if (!f.url || !f.mimeType) continue;
+    var videoTracks = [];
+    var audioTracks = [];
+    
+    // 从 adaptiveFormats 提取所有视频和音频轨道
+    for (var idx = 0; idx < adaptive.length; idx++) {
+        var af = adaptive[idx];
+        if (!af.url || !af.mimeType) continue;
         
-        // 必须是 video/mp4（包含音视频的预合并格式）
-        if (f.mimeType.indexOf('video/mp4') < 0) continue;
+        // 视频轨道：video/mp4，必须有分辨率
+        if (af.mimeType.indexOf('video/mp4') >= 0 && (af.width || 0) > 0 && (af.height || 0) > 0) {
+            videoTracks.push(af);
+        }
         
-        // 计算分辨率（宽度 × 高度）
-        var resolution = (f.width || 0) * (f.height || 0);
-        if (resolution > maxResolution) {
-            maxResolution = resolution;
-            selectedFormat = f;
+        // 音频轨道：audio/mp4
+        if (af.mimeType.indexOf('audio/mp4') >= 0) {
+            audioTracks.push(af);
         }
     }
 
-    if (selectedFormat && selectedFormat.url) {
-        return JSON.stringify({
-            parse:  0,
-            url:    selectedFormat.url,
-            header: { 'User-Agent': AVR_UA },
-        });
+    // 如果有视频轨道和音频轨道，优先使用 adaptiveFormats
+    if (videoTracks.length > 0 && audioTracks.length > 0) {
+        // 选择视频：优先 1080p (1920x1080)，其次最高分辨率
+        var selectedVideo = null;
+        
+        // 先找 1080p
+        for (var v1 = 0; v1 < videoTracks.length; v1++) {
+            if (videoTracks[v1].width === 1920 && videoTracks[v1].height === 1080) {
+                selectedVideo = videoTracks[v1];
+                break;
+            }
+        }
+        
+        // 如果没有 1080p，找最高分辨率
+        if (!selectedVideo) {
+            var maxRes = videoTracks[0];
+            for (var v2 = 1; v2 < videoTracks.length; v2++) {
+                var area1 = (maxRes.width || 0) * (maxRes.height || 0);
+                var area2 = (videoTracks[v2].width || 0) * (videoTracks[v2].height || 0);
+                if (area2 > area1) {
+                    maxRes = videoTracks[v2];
+                }
+            }
+            selectedVideo = maxRes;
+        }
+        
+        // 选择音频：按码率排序，选最高的
+        var selectedAudio = audioTracks[0];
+        for (var a1 = 1; a1 < audioTracks.length; a1++) {
+            var bitrate1 = selectedAudio.bitrate || 0;
+            var bitrate2 = audioTracks[a1].bitrate || 0;
+            if (bitrate2 > bitrate1) {
+                selectedAudio = audioTracks[a1];
+            }
+        }
+        
+        if (selectedVideo && selectedVideo.url && selectedAudio && selectedAudio.url) {
+            // 返回代理 URL，由 proxy() 方法处理合并
+            var proxyUrl = 'proxy://youtube?video=' + encodeURIComponent(selectedVideo.url) + 
+                          '&audio=' + encodeURIComponent(selectedAudio.url);
+            return JSON.stringify({
+                parse:  0,
+                url:    proxyUrl,
+                header: { 'User-Agent': AVR_UA },
+            });
+        }
     }
 
-    // ── 备选策略：formats 中没有合适的 MP4，尝试其他格式 ──
-    if (formats && formats.length > 0) {
-        // 按分辨率排序
-        formats.sort(function(a, b) {
-            var aRes = (a.width || 0) * (a.height || 0);
-            var bRes = (b.width || 0) * (b.height || 0);
-            return bRes - aRes;
-        });
-        
-        // 返回最高分辨率的格式（无论什么类型）
-        for (var j = 0; j < formats.length; j++) {
-            if (formats[j].url) {
-                return JSON.stringify({
-                    parse:  0,
-                    url:    formats[j].url,
-                    header: { 'User-Agent': AVR_UA },
-                });
+    // ────────────────────────────────────────────────────────────────
+    // 备选策略2：从 adaptiveFormats 只返回最高分辨率视频（无音频）
+    //          这会导致无声，但至少能播放
+    // ────────────────────────────────────────────────────────────────
+    if (videoTracks.length > 0) {
+        var selected = null;
+        // 先找 1080p
+        for (var v3 = 0; v3 < videoTracks.length; v3++) {
+            if (videoTracks[v3].width === 1920 && videoTracks[v3].height === 1080) {
+                selected = videoTracks[v3];
+                break;
             }
+        }
+        // 找最高分辨率
+        if (!selected) {
+            var maxRes2 = videoTracks[0];
+            for (var v4 = 1; v4 < videoTracks.length; v4++) {
+                if ((videoTracks[v4].width || 0) > (maxRes2.width || 0)) {
+                    maxRes2 = videoTracks[v4];
+                }
+            }
+            selected = maxRes2;
+        }
+        if (selected && selected.url) {
+            return JSON.stringify({
+                parse:  0,
+                url:    selected.url,
+                header: { 'User-Agent': AVR_UA },
+            });
+        }
+    }
+
+    // ────────────────────────────────────────────────────────────────
+    // 备选策略3：从 formats 预合并流中选择最高分辨率
+    //          formats 有音视频但分辨率受限（通常最高 720p 或 480p）
+    // ────────────────────────────────────────────────────────────────
+    if (formats && formats.length > 0) {
+        var selectedFormat = null;
+        var maxResolution = 0;
+        
+        for (var i = 0; i < formats.length; i++) {
+            var f = formats[i];
+            if (!f.url || !f.mimeType) continue;
+            if (f.mimeType.indexOf('video/mp4') < 0) continue;
+            
+            var resolution = (f.width || 0) * (f.height || 0);
+            if (resolution > maxResolution) {
+                maxResolution = resolution;
+                selectedFormat = f;
+            }
+        }
+        
+        if (selectedFormat && selectedFormat.url) {
+            return JSON.stringify({
+                parse:  0,
+                url:    selectedFormat.url,
+                header: { 'User-Agent': AVR_UA },
+            });
         }
     }
 
     return JSON.stringify({ parse: 0, url: '' });
+}
+
+// ────────────────────────────────────────────────────────────────
+// _proxy() 函数：处理音视频合并和代理转发
+// FongMi/TV 在收到 proxy:// URL 时会调用此方法
+// ────────────────────────────────────────────────────────────────
+function _proxy(params) {
+    // 参数来自 proxy:// URL 的查询字符串
+    var videoUrl = params.video ? decodeURIComponent(params.video) : null;
+    var audioUrl = params.audio ? decodeURIComponent(params.audio) : null;
+
+    // 简单策略：先尝试返回视频流，让播放器处理
+    // FongMi/TV 可能自己支持音视频分离播放
+    if (videoUrl) {
+        try {
+            var videoResponse = http.get(videoUrl, { 
+                headers: { 'User-Agent': AVR_UA }
+            });
+            
+            if (videoResponse) {
+                // 返回 [statusCode, mimeType, inputStream]
+                return [200, 'video/mp4', videoResponse];
+            }
+        } catch (e) {
+            // 如果获取失败，继续备选
+        }
+    }
+
+    // 备选：如果只有音频，返回音频
+    if (audioUrl && !videoUrl) {
+        try {
+            var audioResponse = http.get(audioUrl, { 
+                headers: { 'User-Agent': AVR_UA }
+            });
+            
+            if (audioResponse) {
+                return [200, 'audio/mp4', audioResponse];
+            }
+        } catch (e) {
+            // 继续
+        }
+    }
+
+    // 都失败了，返回错误
+    return [404, 'text/plain', null];
 }
 
 // ── ES Module 导出（FongMi/TV QuickJS 必须）────────────────────
@@ -609,4 +735,5 @@ export default {
     detail:   _detail,
     search:   _search,
     play:     _play,
+    proxy:    _proxy,
 };
