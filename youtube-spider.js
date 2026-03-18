@@ -540,112 +540,57 @@ function _play(flag, id, vipFlags) {
 
     var streamingData = data.streamingData || {};
     var formats       = streamingData.formats || [];
-    var adaptive      = streamingData.adaptiveFormats || [];
 
-    // ── 优先策略1：从 adaptiveFormats 提取高分辨率视频 + 音频（音视频分离）──
-    var videoTracks = [];
-    var audioTracks = [];
+    // ── 策略：从 formats 预合并流中选择最高分辨率的 MP4 格式 ──
+    // 说明：YouTube API 返回的 formats 包含预合并的音视频
+    //      不同 itag 对应不同分辨率：itag 22 (720p), itag 18 (360p) 等
+    //      FongMi/TV 不支持管道符音视频分离，需要返回直接可播放的 URL
     
-    for (var idx = 0; idx < adaptive.length; idx++) {
-        var af = adaptive[idx];
-        if (!af.url || !af.mimeType) continue;
+    var selectedFormat = null;
+    var maxResolution = 0;
+
+    // 遍历所有 formats，找最高分辨率的 MP4
+    for (var i = 0; i < formats.length; i++) {
+        var f = formats[i];
+        if (!f.url || !f.mimeType) continue;
         
-        // 视频轨道：video/mp4，有分辨率
-        if (af.mimeType.indexOf('video/mp4') >= 0 && (af.width || 0) > 0 && (af.height || 0) > 0) {
-            videoTracks.push(af);
-        }
+        // 必须是 video/mp4（包含音视频的预合并格式）
+        if (f.mimeType.indexOf('video/mp4') < 0) continue;
         
-        // 音频轨道：audio/mp4
-        if (af.mimeType.indexOf('audio/mp4') >= 0) {
-            audioTracks.push(af);
+        // 计算分辨率（宽度 × 高度）
+        var resolution = (f.width || 0) * (f.height || 0);
+        if (resolution > maxResolution) {
+            maxResolution = resolution;
+            selectedFormat = f;
         }
     }
 
-    // 如果有视频轨道和音频轨道，进行音视频分离
-    if (videoTracks.length > 0 && audioTracks.length > 0) {
-        // 选择视频轨道：优先 1080p (1920x1080)，其次最高分辨率
-        var selectedVideo = null;
-        
-        // 先找 1080p
-        for (var v1 = 0; v1 < videoTracks.length; v1++) {
-            if (videoTracks[v1].width === 1920 && videoTracks[v1].height === 1080) {
-                selectedVideo = videoTracks[v1];
-                break;
-            }
-        }
-        
-        // 如果没有 1080p，找最高分辨率
-        if (!selectedVideo) {
-            var maxRes = videoTracks[0];
-            for (var v2 = 1; v2 < videoTracks.length; v2++) {
-                var area1 = (maxRes.width || 0) * (maxRes.height || 0);
-                var area2 = (videoTracks[v2].width || 0) * (videoTracks[v2].height || 0);
-                if (area2 > area1) {
-                    maxRes = videoTracks[v2];
-                }
-            }
-            selectedVideo = maxRes;
-        }
-        
-        // 选择音频轨道：按码率排序，选最高的
-        var selectedAudio = audioTracks[0];
-        for (var a1 = 1; a1 < audioTracks.length; a1++) {
-            var bitrate1 = selectedAudio.bitrate || 0;
-            var bitrate2 = audioTracks[a1].bitrate || 0;
-            if (bitrate2 > bitrate1) {
-                selectedAudio = audioTracks[a1];
-            }
-        }
-        
-        if (selectedVideo && selectedVideo.url && selectedAudio && selectedAudio.url) {
-            var combinedUrl = selectedVideo.url + '|' + selectedAudio.url;
-            return JSON.stringify({
-                parse:  0,
-                url:    combinedUrl,
-                header: { 'User-Agent': AVR_UA },
-            });
-        }
+    if (selectedFormat && selectedFormat.url) {
+        return JSON.stringify({
+            parse:  0,
+            url:    selectedFormat.url,
+            header: { 'User-Agent': AVR_UA },
+        });
     }
 
-    // ── 备选策略2：如果没有音视频分离，尝试预合并的 formats ──
+    // ── 备选策略：formats 中没有合适的 MP4，尝试其他格式 ──
     if (formats && formats.length > 0) {
-        formats.sort(function(a, b) { return (b.width || 0) - (a.width || 0); });
-        for (var i = 0; i < formats.length; i++) {
-            var f = formats[i];
-            if (f.url && f.mimeType && f.mimeType.indexOf('video/mp4') >= 0) {
+        // 按分辨率排序
+        formats.sort(function(a, b) {
+            var aRes = (a.width || 0) * (a.height || 0);
+            var bRes = (b.width || 0) * (b.height || 0);
+            return bRes - aRes;
+        });
+        
+        // 返回最高分辨率的格式（无论什么类型）
+        for (var j = 0; j < formats.length; j++) {
+            if (formats[j].url) {
                 return JSON.stringify({
                     parse:  0,
-                    url:    f.url,
+                    url:    formats[j].url,
                     header: { 'User-Agent': AVR_UA },
                 });
             }
-        }
-    }
-
-    // ── 备选策略3：只有视频没有音频（不推荐，会没有声音）
-    if (videoTracks.length > 0) {
-        var selected = null;
-        for (var v3 = 0; v3 < videoTracks.length; v3++) {
-            if (videoTracks[v3].width === 1920 && videoTracks[v3].height === 1080) {
-                selected = videoTracks[v3];
-                break;
-            }
-        }
-        if (!selected) {
-            var maxRes2 = videoTracks[0];
-            for (var v4 = 1; v4 < videoTracks.length; v4++) {
-                if ((videoTracks[v4].width || 0) > (maxRes2.width || 0)) {
-                    maxRes2 = videoTracks[v4];
-                }
-            }
-            selected = maxRes2;
-        }
-        if (selected && selected.url) {
-            return JSON.stringify({
-                parse:  0,
-                url:    selected.url,
-                header: { 'User-Agent': AVR_UA },
-            });
         }
     }
 
