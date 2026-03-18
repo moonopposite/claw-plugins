@@ -571,59 +571,9 @@ function _play(flag, id, vipFlags) {
         }
     }
     
-    // 方案1：优先 1080p - 使用 url.values 数组格式
-    if (videoTracks.length > 0 && audioTracks.length > 0) {
-        // 找 1080p
-        var selectedVideo = null;
-        for (var v1 = 0; v1 < videoTracks.length; v1++) {
-            if (videoTracks[v1].width === 1920 && videoTracks[v1].height === 1080) {
-                selectedVideo = videoTracks[v1];
-                break;
-            }
-        }
-        
-        // 没 1080p 就用最高分辨率
-        if (!selectedVideo) {
-            var maxRes = videoTracks[0];
-            for (var v2 = 1; v2 < videoTracks.length; v2++) {
-                var area1 = (maxRes.width || 0) * (maxRes.height || 0);
-                var area2 = (videoTracks[v2].width || 0) * (videoTracks[v2].height || 0);
-                if (area2 > area1) {
-                    maxRes = videoTracks[v2];
-                }
-            }
-            selectedVideo = maxRes;
-        }
-        
-        // 选最高音质音频
-        var selectedAudio = audioTracks[0];
-        for (var a1 = 1; a1 < audioTracks.length; a1++) {
-            if ((audioTracks[a1].bitrate || 0) > (selectedAudio.bitrate || 0)) {
-                selectedAudio = audioTracks[a1];
-            }
-        }
-        
-        if (selectedVideo && selectedVideo.url && selectedAudio && selectedAudio.url) {
-            // 使用 url.values 数组格式
-            return JSON.stringify({
-                parse: 0,
-                url: {
-                    values: [
-                        { url: selectedVideo.url, name: 'video' },
-                        { url: selectedAudio.url, name: 'audio' }
-                    ]
-                },
-                header: {
-                    'User-Agent': AVR_UA,
-                    'Referer': YT_BASE,
-                    'Origin': YT_BASE,
-                },
-            });
-        }
-    }
-    
-    // 方案2：次选预合并流
+    // 方案1：预合并流（formats）- 包含音视频的 MP4，直接可用
     if (formats && formats.length > 0) {
+        // 找最高分辨率的预合并流
         var bestFormat = null;
         var maxRes = 0;
         for (var fi = 0; fi < formats.length; fi++) {
