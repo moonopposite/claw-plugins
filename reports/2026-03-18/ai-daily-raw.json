@@ -1,0 +1,28 @@
+[INFO] Fetching 21 RSS sources (window: 24h)...
+ [RSS] TechCrunch AI: 10 entries
+ [RSS] The Verge AI: 0 entries
+ [RSS] MIT Technology Review AI: 1 entries
+ [RSS] Microsoft AI Blog: 0 entries
+ [RSS] DeepMind Blog: 0 entries
+ [RSS] VentureBeat AI: 0 entries
+ [RSS] Google AI Blog: 2 entries
+ [RSS] OpenAI Blog: 1 entries
+ [RSS] The Batch (Andrew Ng): 0 entries
+ [RSS] Meta AI Blog: 0 entries
+ [RSS] Interconnects: 0 entries
+ [RSS] ChinAI: 0 entries
+ [RSS] Simon Willison: 4 entries
+ [RSS] One Useful Thing: 0 entries
+ [RSS] Latent Space AINews: 0 entries
+ [RSS] Gary Marcus: 0 entries
+ [RSS] Product Hunt: 0 entries
+ [RSS] AI News: 2 entries
+ [RSS] Arxiv cs.LG: 0 entries
+ [RSS] Arxiv cs.AI: 0 entries
+ [RSS] Anthropic: 0 entries
+[INFO] Fetching HN, GitHub Trending, HF Papers...
+ [HN] 20 entries
+ [GitHub] 3 entries
+ [HF Papers] 20 entries
+[DONE] 9 sources | 63 entries
+[SAVED] C:\Users\HW\WorkBuddy\Claw\reports\2026-03-18\ai-news-2026-03-18.json

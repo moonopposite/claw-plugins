@@ -1,0 +1,598 @@
+[
+  {
+    "source": "GitHub Trending",
+    "category": "tools",
+    "title": "langchain-ai/deepagents",
+    "url": "https://github.com/langchain-ai/deepagents",
+    "time": "2026-03-18T01:24:53.233427+00:00",
+    "summary": "Agent harness built with LangChain and LangGraph. Equipped with a planning tool, a filesystem backend, and the ability to spawn subagents - well-equipped to handle complex agentic tasks.",
+    "readme": "<div align=\"center\">\n  <a href=\"https://docs.langchain.com/oss/python/deepagents/overview#deep-agents-overview\">\n    <picture>\n      <source media=\"(prefers-color-scheme: dark)\" srcset=\".github/images/logo-dark.svg\">\n      <source media=\"(prefers-color-scheme: light)\" srcset=\".github/images/logo-light.svg\">\n      <img alt=\"Deep Agents Logo\" src=\".github/images/logo-dark.svg\" width=\"50%\">\n    </picture>\n  </a>\n</div>\n\n<div align=\"center\">\n  <h3>The batteries-included agent harness.</h3>\n</div>\n\n<",
+    "github_url": "https://github.com/langchain-ai/deepagents",
+    "lang": "Python",
+    "stars": "14163"
+  },
+  {
+    "source": "GitHub Trending",
+    "category": "tools",
+    "title": "abhigyanpatwari/GitNexus",
+    "url": "https://github.com/abhigyanpatwari/GitNexus",
+    "time": "2026-03-18T01:24:53.231918+00:00",
+    "summary": "GitNexus: The Zero-Server Code Intelligence Engine - GitNexus is a client-side knowledge graph creator that runs entirely in your browser. Drop in a GitHub repo or ZIP file, and get an interactive knowledge graph wit a built in Graph RAG Agent. Perfect for code exploration",
+    "readme": "# GitNexus\n⚠️ Important Notice:** GitNexus has NO official cryptocurrency, token, or coin. Any token/coin using the GitNexus name on Pump.fun or any other platform is **not affiliated with, endorsed by, or created by** this project or its maintainers. Do not purchase any cryptocurrency claiming association with GitNexus.\n\n<div align=\"center\">\n\n  <a href=\"https://trendshift.io/repositories/19809\" target=\"_blank\">\n    <img src=\"https://trendshift.io/api/badge/repositories/19809\" alt=\"abhigyanpatwa",
+    "github_url": "https://github.com/abhigyanpatwari/GitNexus",
+    "lang": "TypeScript",
+    "stars": "16744"
+  },
+  {
+    "source": "GitHub Trending",
+    "category": "tools",
+    "title": "jarrodwatts/claude-hud",
+    "url": "https://github.com/jarrodwatts/claude-hud",
+    "time": "2026-03-18T01:24:53.216553+00:00",
+    "summary": "A Claude Code plugin that shows what's happening - context usage, active tools, running agents, and todo progress",
+    "readme": "# Claude HUD\n\nA Claude Code plugin that shows what's happening — context usage, active tools, running agents, and todo progress. Always visible below your input.\n\n[![License](https://img.shields.io/github/license/jarrodwatts/claude-hud?v=2)](LICENSE)\n[![Stars](https://img.shields.io/github/stars/jarrodwatts/claude-hud)](https://github.com/jarrodwatts/claude-hud/stargazers)\n\n![Claude HUD in action](claude-hud-preview-5-2.png)\n\n## Install\n\nInside a Claude Code instance, run the following commands:",
+    "github_url": "https://github.com/jarrodwatts/claude-hud",
+    "lang": "JavaScript",
+    "stars": "5646"
+  },
+  {
+    "source": "Hacker News",
+    "category": "community",
+    "title": "Why AI systems don't learn – On autonomous learning from cognitive science",
+    "url": "https://news.ycombinator.com/item?id=47418722",
+    "time": "2026-03-17T21:42:39Z",
+    "heat": "17",
+    "summary": "",
+    "hn_url": "https://news.ycombinator.com/item?id=47418722"
+  },
+  {
+    "source": "Hacker News",
+    "category": "community",
+    "title": "Garry Tan's Claude Code Setup",
+    "url": "https://news.ycombinator.com/item?id=47418576",
+    "time": "2026-03-17T21:28:35Z",
+    "heat": "46",
+    "summary": "",
+    "hn_url": "https://news.ycombinator.com/item?id=47418576"
+  },
+  {
+    "source": "Hacker News",
+    "category": "community",
+    "title": "Mistral AI Releases Forge",
+    "url": "https://news.ycombinator.com/item?id=47418295",
+    "time": "2026-03-17T21:04:26Z",
+    "heat": "111",
+    "summary": "",
+    "hn_url": "https://news.ycombinator.com/item?id=47418295"
+  },
+  {
+    "source": "Hacker News",
+    "category": "community",
+    "title": "It feels like Claude goes down almost daily now",
+    "url": "https://news.ycombinator.com/item?id=47418243",
+    "time": "2026-03-17T21:00:50Z",
+    "heat": "19",
+    "summary": "",
+    "hn_url": "https://news.ycombinator.com/item?id=47418243"
+  },
+  {
+    "source": "Hacker News",
+    "category": "community",
+    "title": "Elevated errors on Claude Opus 4.6",
+    "url": "https://news.ycombinator.com/item?id=47418180",
+    "time": "2026-03-17T20:56:04Z",
+    "heat": "21",
+    "summary": "",
+    "hn_url": "https://news.ycombinator.com/item?id=47418180"
+  },
+  {
+    "source": "Hacker News",
+    "category": "community",
+    "title": "Warranty void if regenerated",
+    "url": "https://news.ycombinator.com/item?id=47417983",
+    "time": "2026-03-17T20:39:19Z",
+    "heat": "85",
+    "summary": "",
+    "hn_url": "https://news.ycombinator.com/item?id=47417983"
+  },
+  {
+    "source": "Hacker News",
+    "category": "community",
+    "title": "Get Shit Done: A Meta-Prompting, Context Engineering and Spec-Driven Dev System",
+    "url": "https://news.ycombinator.com/item?id=47417804",
+    "time": "2026-03-17T20:23:39Z",
+    "heat": "177",
+    "summary": "",
+    "hn_url": "https://news.ycombinator.com/item?id=47417804"
+  },
+  {
+    "source": "Hacker News",
+    "category": "community",
+    "title": "Claude Is Having an Outage",
+    "url": "https://news.ycombinator.com/item?id=47417470",
+    "time": "2026-03-17T19:55:54Z",
+    "heat": "41",
+    "summary": "",
+    "hn_url": "https://news.ycombinator.com/item?id=47417470"
+  },
+  {
+    "source": "Hacker News",
+    "category": "community",
+    "title": "Solid-state EV batteries that can achieve 800 miles of range becoming a reality",
+    "url": "https://news.ycombinator.com/item?id=47417376",
+    "time": "2026-03-17T19:49:08Z",
+    "heat": "30",
+    "summary": "",
+    "hn_url": "https://news.ycombinator.com/item?id=47417376"
+  },
+  {
+    "source": "Hacker News",
+    "category": "community",
+    "title": "Claude Code 500s",
+    "url": "https://news.ycombinator.com/item?id=47417316",
+    "time": "2026-03-17T19:45:09Z",
+    "heat": "14",
+    "summary": "",
+    "hn_url": "https://news.ycombinator.com/item?id=47417316"
+  },
+  {
+    "source": "Hacker News",
+    "category": "community",
+    "title": "Nvidia's DLSS 5 uses generative AI to boost photorealism in video games",
+    "url": "https://news.ycombinator.com/item?id=47417181",
+    "time": "2026-03-17T19:35:24Z",
+    "heat": "15",
+    "summary": "",
+    "hn_url": "https://news.ycombinator.com/item?id=47417181"
+  },
+  {
+    "source": "Hacker News",
+    "category": "community",
+    "title": "Show HN: Horizon – GPU-accelerated infinite-canvas terminal in Rust",
+    "url": "https://news.ycombinator.com/item?id=47416227",
+    "time": "2026-03-17T18:14:24Z",
+    "heat": "52",
+    "summary": "",
+    "hn_url": "https://news.ycombinator.com/item?id=47416227"
+  },
+  {
+    "source": "Hacker News",
+    "category": "community",
+    "title": "Why refusing AI is a fight for the soul",
+    "url": "https://news.ycombinator.com/item?id=47415447",
+    "time": "2026-03-17T17:07:32Z",
+    "heat": "19",
+    "summary": "",
+    "hn_url": "https://news.ycombinator.com/item?id=47415447"
+  },
+  {
+    "source": "Hacker News",
+    "category": "community",
+    "title": "GPT‑5.4 Mini and Nano",
+    "url": "https://news.ycombinator.com/item?id=47415441",
+    "time": "2026-03-17T17:07:06Z",
+    "heat": "205",
+    "summary": "",
+    "hn_url": "https://news.ycombinator.com/item?id=47415441"
+  },
+  {
+    "source": "Hacker News",
+    "category": "community",
+    "title": "'The Secret Agent': Exploring a Vibrant, yet Violent Brazil (2025)",
+    "url": "https://news.ycombinator.com/item?id=47414440",
+    "time": "2026-03-17T15:56:09Z",
+    "heat": "121",
+    "summary": "",
+    "hn_url": "https://news.ycombinator.com/item?id=47414440"
+  },
+  {
+    "source": "Hacker News",
+    "category": "community",
+    "title": "Show HN: Antfly: Distributed, Multimodal Search and Memory and Graphs in Go",
+    "url": "https://news.ycombinator.com/item?id=47414291",
+    "time": "2026-03-17T15:45:15Z",
+    "heat": "79",
+    "summary": "",
+    "hn_url": "https://news.ycombinator.com/item?id=47414291"
+  },
+  {
+    "source": "MIT Technology Review AI",
+    "category": "research",
+    "title": "The Pentagon is planning for AI companies to train on classified data, defense official says",
+    "url": "https://www.technologyreview.com/2026/03/17/1134351/the-pentagon-is-planning-for-ai-companies-to-train-on-classified-data-defense-official-says/",
+    "time": "2026-03-17T14:30:46+00:00",
+    "summary": "The Pentagon is discussing plans to set up secure environments for generative AI companies to train military-specific versions of their models on classified data, MIT Technology Review has learned.  AI models like Anthropic’s Claude are already used to answer questions in classified settings; applications include analyzing targets in Iran. But allowing models to train on…"
+  },
+  {
+    "source": "Simon Willison",
+    "category": "tools",
+    "title": "Quoting Ken Jin",
+    "url": "https://simonwillison.net/2026/Mar/17/ken-jin/#atom-everything",
+    "time": "2026-03-17T13:48:26+00:00",
+    "summary": "Great news—we’ve hit our (very modest) performance goals for the CPython JIT over a year early for macOS AArch64, and a few months early for x86_64 Linux. The 3.15 alpha JIT is about 11-12% faster on macOS AArch64 than the tail calling interpreter, and 5-6%faster than the standard interpreter on x86_64 Linux.\n— Ken Jin, Python 3.15’s JIT is now back on track\nTags: python"
+  },
+  {
+    "source": "TechCrunch AI",
+    "category": "industry",
+    "title": "Mistral bets on ‘build-your-own AI’ as it takes on OpenAI, Anthropic in the enterprise",
+    "url": "https://techcrunch.com/2026/03/17/mistral-forge-nvidia-gtc-build-your-own-ai-enterprise/",
+    "time": "2026-03-17T13:00:00+00:00",
+    "summary": "Mistral Forge lets enterprises train custom AI models from scratch on their own data, challenging rivals that rely on fine-tuning and retrieval-based approaches."
+  },
+  {
+    "source": "Hacker News",
+    "category": "community",
+    "title": "OpenAI to Cut Back on Side Projects in Push to 'Nail' Core Business",
+    "url": "https://news.ycombinator.com/item?id=47412039",
+    "time": "2026-03-17T12:58:53Z",
+    "heat": "15",
+    "summary": "",
+    "hn_url": "https://news.ycombinator.com/item?id=47412039"
+  },
+  {
+    "source": "Hacker News",
+    "category": "community",
+    "title": "Show HN: March Madness Bracket Challenge for AI Agents Only",
+    "url": "https://news.ycombinator.com/item?id=47412015",
+    "time": "2026-03-17T12:56:24Z",
+    "heat": "57",
+    "summary": "",
+    "hn_url": "https://news.ycombinator.com/item?id=47412015"
+  },
+  {
+    "source": "TechCrunch AI",
+    "category": "industry",
+    "title": "Why Garry Tan’s Claude Code setup has gotten so much love, and hate",
+    "url": "https://techcrunch.com/2026/03/17/why-garry-tans-claude-code-setup-has-gotten-so-much-love-and-hate/",
+    "time": "2026-03-17T12:50:04+00:00",
+    "summary": "Thousands of people are trying Garry Tan's Claude Code setup, which was shared on GitHub. And everyone has an opinion: even Claude, ChatGPT, and Gemini."
+  },
+  {
+    "source": "Hacker News",
+    "category": "community",
+    "title": "Show HN: Real-time observability for coding agents",
+    "url": "https://news.ycombinator.com/item?id=47411512",
+    "time": "2026-03-17T12:03:35Z",
+    "heat": "14",
+    "summary": "",
+    "hn_url": "https://news.ycombinator.com/item?id=47411512"
+  },
+  {
+    "source": "Simon Willison",
+    "category": "tools",
+    "title": "GPT-5.4 mini and GPT-5.4 nano, which can describe 76,000 photos for $52",
+    "url": "https://simonwillison.net/2026/Mar/17/mini-and-nano/#atom-everything",
+    "time": "2026-03-17T11:39:17+00:00",
+    "summary": "OpenAI today: Introducing GPT‑5.4 mini and nano. These models join GPT-5.4 which was released two weeks ago.\nOpenAI's self-reported benchmarks show the new 5.4-nano out-performing their previous GPT-5 mini model when run at maximum reasoning effort. The new mini is also 2x faster than the previous mini.\nHere's how the pricing looks - all prices are per million tokens. gpt-5.4-nano is notably even cheaper than Google's Gemini 3.1 Flash-Lite:\n\n\n\nModel\nInput\nCached input\nOutput\n\n\n\n\ngpt-5.4\n$2.50\n$0"
+  },
+  {
+    "source": "TechCrunch AI",
+    "category": "industry",
+    "title": "The Pentagon is developing alternatives to Anthropic, report says",
+    "url": "https://techcrunch.com/2026/03/17/the-pentagon-is-developing-alternatives-to-anthropic-report-says/",
+    "time": "2026-03-17T10:20:15+00:00",
+    "summary": "After their dramatic falling-out, it doesn't seem as though Anthropic and the Pentagon are getting back together."
+  },
+  {
+    "source": "TechCrunch AI",
+    "category": "industry",
+    "title": "BuzzFeed debuts AI slop apps in bid for new revenue",
+    "url": "https://techcrunch.com/2026/03/17/buzzfeed-ai-slop-apps-sxsw-bf-island-conjure/",
+    "time": "2026-03-17T09:17:15+00:00",
+    "summary": "BuzzFeed unveiled new AI-powered social apps at SXSW, but its demos drew muted reactions."
+  },
+  {
+    "source": "Simon Willison",
+    "category": "tools",
+    "title": "Quoting Tim Schilling",
+    "url": "https://simonwillison.net/2026/Mar/17/tim-schilling/#atom-everything",
+    "time": "2026-03-17T08:13:37+00:00",
+    "summary": "If you do not understand the ticket, if you do not understand the solution, or if you do not understand the feedback on your PR, then your use of LLM is hurting Django as a whole. [...]\nFor a reviewer, it’s demoralizing to communicate with a facade of a human.\nThis is because contributing to open source, especially Django, is a communal endeavor. Removing your humanity from that experience makes that endeavor more difficult. If you use an LLM to contribute to Django, it needs to be as a compleme"
+  },
+  {
+    "source": "TechCrunch AI",
+    "category": "industry",
+    "title": "Google’s Personal Intelligence feature is expanding to all US users",
+    "url": "https://techcrunch.com/2026/03/17/googles-personal-intelligence-feature-is-expanding-to-all-us-users/",
+    "time": "2026-03-17T08:00:00+00:00",
+    "summary": "Personal Intelligence allows Google's AI assistant to tap into your Google ecosystem, such as Gmail and Google Photos, to provide more tailored responses."
+  },
+  {
+    "source": "Google AI Blog",
+    "category": "announcements",
+    "title": "Bringing the power of Personal Intelligence to more people",
+    "url": "https://blog.google/products-and-platforms/products/search/personal-intelligence-expansion/",
+    "time": "2026-03-17T08:00:00+00:00",
+    "summary": "Bubble that says \"Personal Intelligence\" with Google G, Google Photos logo, and Gmail logo around it"
+  },
+  {
+    "source": "Google AI Blog",
+    "category": "announcements",
+    "title": "Our latest investment in open source security for the AI era",
+    "url": "https://blog.google/innovation-and-ai/technology/safety-security/ai-powered-open-source-security/",
+    "time": "2026-03-17T08:00:00+00:00",
+    "summary": "A collage including security icons and photos of hands clasped, a man looking at a computer, and two people pointing at something off camera"
+  },
+  {
+    "source": "TechCrunch AI",
+    "category": "industry",
+    "title": "OpenAI expands government footprint with AWS deal, report says",
+    "url": "https://techcrunch.com/2026/03/17/openai-expands-government-footprint-with-aws-deal/",
+    "time": "2026-03-17T07:37:03+00:00",
+    "summary": "OpenAI has reportedly signed a partnership with AWS to sell its AI systems to the U.S. government for classified and unclassified work, marking an expansion beyond its Pentagon deal last month."
+  },
+  {
+    "source": "TechCrunch AI",
+    "category": "industry",
+    "title": "AI’s ‘boys’ club’ could widen the wealth gap for women, says Rana el Kaliouby",
+    "url": "https://techcrunch.com/2026/03/17/ais-boys-club-could-widen-the-wealth-gap-for-women-says-rana-el-kaliouby/",
+    "time": "2026-03-17T07:16:21+00:00",
+    "summary": "AI investor Rana el Kaliouby warns that if women are shut out of AI funding and leadership, the consequences will be grim."
+  },
+  {
+    "source": "Hacker News",
+    "category": "community",
+    "title": "Encyclopedia Britannica sues OpenAI over AI training",
+    "url": "https://news.ycombinator.com/item?id=47409495",
+    "time": "2026-03-17T07:00:48Z",
+    "heat": "18",
+    "summary": "",
+    "hn_url": "https://news.ycombinator.com/item?id=47409495"
+  },
+  {
+    "source": "TechCrunch AI",
+    "category": "industry",
+    "title": "World launches tool to verify humans behind AI shopping agents",
+    "url": "https://techcrunch.com/2026/03/17/world-launches-tool-to-verify-humans-behind-ai-shopping-agents/",
+    "time": "2026-03-17T07:00:00+00:00",
+    "summary": "As AI agents take the reins for online shoppers, Sam Altman's unconventional startup is looking to expand its verification offerings to support agentic commerce."
+  },
+  {
+    "source": "TechCrunch AI",
+    "category": "industry",
+    "title": "Niv-AI exits stealth to wring more power performance out of GPUs",
+    "url": "https://techcrunch.com/2026/03/17/niv-ai-exits-stealth-to-wring-more-power-performance-out-of-gpus/",
+    "time": "2026-03-17T05:00:00+00:00",
+    "summary": "The company raised $12 million in seed funding to measure and manage GPU power surges."
+  },
+  {
+    "source": "TechCrunch AI",
+    "category": "industry",
+    "title": "Gamma adds AI image-generation tools in bid to take on Canva and Adobe",
+    "url": "https://techcrunch.com/2026/03/17/gamma-adds-ai-image-generation-tools-in-bid-to-take-on-canva-and-adobe/",
+    "time": "2026-03-17T05:00:00+00:00",
+    "summary": "The company's new product, called Gamma Imagine, will let users employ text prompts to create brand-specific assets like interactive charts and visualizations, marketing collateral, social graphics, and infographics."
+  },
+  {
+    "source": "Simon Willison",
+    "category": "tools",
+    "title": "Subagents",
+    "url": "https://simonwillison.net/guides/agentic-engineering-patterns/subagents/#atom-everything",
+    "time": "2026-03-17T04:32:28+00:00",
+    "summary": "Agentic Engineering Patterns >\nLLMs are restricted by their context limit - how many tokens they can fit in their working memory at any given time. These values have not increased much over the past two years even as the LLMs themselves have seen dramatic improvements in their abilities - they generally top out at around 1,000,000, and benchmarks frequently report better quality results below 200,000.\nCarefully managing the context such that it fits within those limits is critical to getting gre"
+  },
+  {
+    "source": "AI News",
+    "category": "announcements",
+    "title": "Trustpilot partners with AI companies as traditional search declines",
+    "url": "https://www.artificialintelligence-news.com/news/ai-in-ecommerce-trustpilot-partnerships-integration-news-trad-search-declines/",
+    "time": "2026-03-17T04:26:00+00:00",
+    "summary": "Trustpilot is reported to be pursuing partnerships with large eCommerce companies as AI-driven shopping gains traction. In an interview with Bloomberg News [paywall], chief executive Adrian Blair said that AI agents acting on behalf of consumers require lots of information about the businesses they’re willing to interact with. He said the most effective systems will […]\nThe post Trustpilot partners with AI companies as traditional search declines appeared first on AI News."
+  },
+  {
+    "source": "OpenAI Blog",
+    "category": "announcements",
+    "title": "Introducing GPT-5.4 mini and nano",
+    "url": "https://openai.com/index/introducing-gpt-5-4-mini-and-nano",
+    "time": "2026-03-17T02:00:00+00:00",
+    "summary": "GPT-5.4 mini and nano are smaller, faster versions of GPT-5.4 optimized for coding, tool use, multimodal reasoning, and high-volume API and sub-agent workloads."
+  },
+  {
+    "source": "AI News",
+    "category": "announcements",
+    "title": "Goldman Sachs sees AI investment shift to data centres",
+    "url": "https://www.artificialintelligence-news.com/news/goldman-sachs-sees-ai-investment-shift-to-data-centres/",
+    "time": "2026-03-17T02:00:00+00:00",
+    "summary": "Artificial intelligence investment is entering a more selective phase as companies and investors look beyond early excitement and focus on the data centre infrastructure required to run AI systems. Recent analysis from Goldman Sachs suggests the market is moving toward what the firm describes as a “flight to quality.” In practice, investors are paying closer […]\nThe post Goldman Sachs sees AI investment shift to data centres appeared first on AI News."
+  },
+  {
+    "source": "HuggingFace Papers",
+    "category": "research",
+    "title": "Towards Generalizable Robotic Manipulation in Dynamic Environments",
+    "url": "https://huggingface.co/papers/2603.15620",
+    "time": "2026-03-16T17:59:57.000Z",
+    "summary": "Vision-Language-Action (VLA) models excel in static manipulation but struggle in dynamic environments with moving targets. This performance gap primarily stems from a scarcity of dynamic manipulation datasets and the reliance of mainstream VLAs on single-frame observations, restricting their spatiotemporal reasoning capabilities. To address this, we introduce DOMINO, a large-scale dataset and benchmark for generalizable dynamic manipulation, featuring 35 tasks with hierarchical complexities, ove",
+    "heat": "3",
+    "github_url": "https://arxiv.org/abs/2603.15620"
+  },
+  {
+    "source": "HuggingFace Papers",
+    "category": "research",
+    "title": "HorizonMath: Measuring AI Progress Toward Mathematical Discovery with Automatic Verification",
+    "url": "https://huggingface.co/papers/2603.15617",
+    "time": "2026-03-16T17:59:53.000Z",
+    "summary": "Can AI make progress on important, unsolved mathematical problems? Large language models are now capable of sophisticated mathematical and scientific reasoning, but whether they can perform novel research is still widely debated and underexplored. We introduce HorizonMath, a benchmark of over 100 predominantly unsolved problems spanning 8 domains in computational and applied mathematics, paired with an open-source evaluation framework for automated verification. Our benchmark targets a class of ",
+    "heat": "4",
+    "github_url": "https://arxiv.org/abs/2603.15617"
+  },
+  {
+    "source": "HuggingFace Papers",
+    "category": "research",
+    "title": "Tri-Prompting: Video Diffusion with Unified Control over Scene, Subject, and Motion",
+    "url": "https://huggingface.co/papers/2603.15614",
+    "time": "2026-03-16T17:59:05.000Z",
+    "summary": "Recent video diffusion models have made remarkable strides in visual quality, yet precise, fine-grained control remains a key bottleneck that limits practical customizability for content creation. For AI video creators, three forms of control are crucial: (i) scene composition, (ii) multi-view consistent subject customization, and (iii) camera-pose or object-motion adjustment. Existing methods typically handle these dimensions in isolation, with limited support for multi-view subject synthesis a",
+    "heat": "1",
+    "github_url": "https://arxiv.org/abs/2603.15614"
+  },
+  {
+    "source": "HuggingFace Papers",
+    "category": "research",
+    "title": "Effective Distillation to Hybrid xLSTM Architectures",
+    "url": "https://huggingface.co/papers/2603.15590",
+    "time": "2026-03-16T17:49:04.000Z",
+    "summary": "There have been numerous attempts to distill quadratic attention-based large language models (LLMs) into sub-quadratic linearized architectures. However, despite extensive research, such distilled models often fail to match the performance of their teacher LLMs on various downstream tasks. We set out the goal of lossless distillation, which we define in terms of tolerance-corrected Win-and-Tie rates between student and teacher on sets of tasks. To this end, we introduce an effective distillation",
+    "heat": "30",
+    "github_url": "https://arxiv.org/abs/2603.15590"
+  },
+  {
+    "source": "HuggingFace Papers",
+    "category": "research",
+    "title": "The PokeAgent Challenge: Competitive and Long-Context Learning at Scale",
+    "url": "https://huggingface.co/papers/2603.15563",
+    "time": "2026-03-16T17:25:42.000Z",
+    "summary": "We present the PokeAgent Challenge, a large-scale benchmark for decision-making research built on Pokemon's multi-agent battle system and expansive role-playing game (RPG) environment. Partial observability, game-theoretic reasoning, and long-horizon planning remain open problems for frontier AI, yet few benchmarks stress all three simultaneously under realistic conditions. PokeAgent targets these limitations at scale through two complementary tracks: our Battling Track, which calls for strategi",
+    "heat": "6",
+    "github_url": "https://arxiv.org/abs/2603.15563"
+  },
+  {
+    "source": "HuggingFace Papers",
+    "category": "research",
+    "title": "Anatomy of a Lie: A Multi-Stage Diagnostic Framework for Tracing Hallucinations in Vision-Language Models",
+    "url": "https://huggingface.co/papers/2603.15557",
+    "time": "2026-03-16T17:20:38.000Z",
+    "summary": "Vision-Language Models (VLMs) frequently \"hallucinate\" - generate plausible yet factually incorrect statements - posing a critical barrier to their trustworthy deployment. In this work, we propose a new paradigm for diagnosing hallucinations, recasting them from static output errors into dynamic pathologies of a model's computational cognition. Our framework is grounded in a normative principle of computational rationality, allowing us to model a VLM's generation as a dynamic cognitive trajector",
+    "heat": "25",
+    "github_url": "https://arxiv.org/abs/2603.15557"
+  },
+  {
+    "source": "HuggingFace Papers",
+    "category": "research",
+    "title": "When Does Sparsity Mitigate the Curse of Depth in LLMs",
+    "url": "https://huggingface.co/papers/2603.15389",
+    "time": "2026-03-16T15:04:16.000Z",
+    "summary": "Recent work has demonstrated the curse of depth in large language models (LLMs), where later layers contribute less to learning and representation than earlier layers. Such under-utilization is linked to the accumulated growth of variance in Pre-Layer Normalization, which can push deep blocks toward near-identity behavior. In this paper, we demonstrate that, sparsity, beyond enabling efficiency, acts as a regulator of variance propagation and thereby improves depth utilization. Our investigation",
+    "heat": "3",
+    "github_url": "https://arxiv.org/abs/2603.15389"
+  },
+  {
+    "source": "HuggingFace Papers",
+    "category": "research",
+    "title": "Riemannian Motion Generation: A Unified Framework for Human Motion Representation and Generation via Riemannian Flow Matching",
+    "url": "https://huggingface.co/papers/2603.15016",
+    "time": "2026-03-16T09:19:10.000Z",
+    "summary": "Human motion generation is often learned in Euclidean spaces, although valid motions follow structured non-Euclidean geometry. We present Riemannian Motion Generation (RMG), a unified framework that represents motion on a product manifold and learns dynamics via Riemannian flow matching. RMG factorizes motion into several manifold factors, yielding a scale-free representation with intrinsic normalization, and uses geodesic interpolation, tangent-space supervision, and manifold-preserving ODE int",
+    "heat": "8",
+    "github_url": "https://arxiv.org/abs/2603.15016"
+  },
+  {
+    "source": "HuggingFace Papers",
+    "category": "research",
+    "title": "RS-WorldModel: a Unified Model for Remote Sensing Understanding and Future Sense Forecasting",
+    "url": "https://huggingface.co/papers/2603.14941",
+    "time": "2026-03-16T07:45:15.000Z",
+    "summary": "Remote sensing world models aim to both explain observed changes and forecast plausible futures, two tasks that share spatiotemporal priors. Existing methods, however, typically address them separately, limiting cross-task transfer. We present RS-WorldModel, a unified world model for remote sensing that jointly handles spatiotemporal change understanding and text-guided future scene forecasting, and we build RSWBench-1.1M, a 1.1 million sample dataset with rich language annotations covering both",
+    "heat": "6",
+    "github_url": "https://arxiv.org/abs/2603.14941"
+  },
+  {
+    "source": "HuggingFace Papers",
+    "category": "research",
+    "title": "POLCA: Stochastic Generative Optimization with LLM",
+    "url": "https://huggingface.co/papers/2603.14769",
+    "time": "2026-03-16T03:07:44.000Z",
+    "summary": "Optimizing complex systems, ranging from LLM prompts to multi-turn agents, traditionally requires labor-intensive manual iteration. We formalize this challenge as a stochastic generative optimization problem where a generative language model acts as the optimizer, guided by numerical rewards and text feedback to discover the best system. We introduce Prioritized Optimization with Local Contextual Aggregation (POLCA), a scalable framework designed to handle stochasticity in optimization -- such a",
+    "heat": "16",
+    "github_url": "https://arxiv.org/abs/2603.14769"
+  },
+  {
+    "source": "HuggingFace Papers",
+    "category": "research",
+    "title": "VisionCoach: Reinforcing Grounded Video Reasoning via Visual-Perception Prompting",
+    "url": "https://huggingface.co/papers/2603.14659",
+    "time": "2026-03-15T23:32:02.000Z",
+    "summary": "Video reasoning requires models to locate and track question-relevant evidence across frames. While reinforcement learning (RL) with verifiable rewards improves accuracy, it still struggles to achieve reliable spatio-temporal grounding during the reasoning process. Moreover, improving grounding typically relies on scaled training data or inference-time perception tools, which increases annotation cost or computational cost. To address this challenge, we propose VisonCoach, an input-adaptive RL f",
+    "heat": "5",
+    "github_url": "https://arxiv.org/abs/2603.14659"
+  },
+  {
+    "source": "HuggingFace Papers",
+    "category": "research",
+    "title": "Spectrum Matching: a Unified Perspective for Superior Diffusability in Latent Diffusion",
+    "url": "https://huggingface.co/papers/2603.14645",
+    "time": "2026-03-15T22:47:43.000Z",
+    "summary": "In this paper, we study the diffusability (learnability) of variational autoencoders (VAE) in latent diffusion. First, we show that pixel-space diffusion trained with an MSE objective is inherently biased toward learning low and mid spatial frequencies, and that the power-law power spectral density (PSD) of natural images makes this bias perceptually beneficial. Motivated by this result, we propose the Spectrum Matching Hypothesis: latents with superior diffusability should (i) follow a flattene",
+    "heat": "2",
+    "github_url": "https://arxiv.org/abs/2603.14645"
+  },
+  {
+    "source": "HuggingFace Papers",
+    "category": "research",
+    "title": "Make it SING: Analyzing Semantic Invariants in Classifiers",
+    "url": "https://huggingface.co/papers/2603.14610",
+    "time": "2026-03-15T21:13:14.000Z",
+    "summary": "All classifiers, including state-of-the-art vision models, possess invariants, partially rooted in the geometry of their linear mappings. These invariants, which reside in the null-space of the classifier, induce equivalent sets of inputs that map to identical outputs. The semantic content of these invariants remains vague, as existing approaches struggle to provide human-interpretable information. To address this gap, we present Semantic Interpretation of the Null-space Geometry (SING), a metho",
+    "heat": "15",
+    "github_url": "https://arxiv.org/abs/2603.14610"
+  },
+  {
+    "source": "HuggingFace Papers",
+    "category": "research",
+    "title": "OxyGen: Unified KV Cache Management for Vision-Language-Action Models under Multi-Task Parallelism",
+    "url": "https://huggingface.co/papers/2603.14371",
+    "time": "2026-03-15T13:23:56.000Z",
+    "summary": "Embodied AI agents increasingly require parallel execution of multiple tasks, such as manipulation, conversation, and memory construction, from shared observations under distinct time constraints. Recent Mixture-of-Transformers (MoT) Vision-Language-Action Models (VLAs) architecturally support such heterogeneous outputs, yet existing inference systems fail to achieve efficient multi-task parallelism for on-device deployment due to redundant computation and resource contention. We identify isolat",
+    "heat": "3",
+    "github_url": "https://arxiv.org/abs/2603.14371"
+  },
+  {
+    "source": "HuggingFace Papers",
+    "category": "research",
+    "title": "Motivation in Large Language Models",
+    "url": "https://huggingface.co/papers/2603.14347",
+    "time": "2026-03-15T12:30:36.000Z",
+    "summary": "Motivation is a central driver of human behavior, shaping decisions, goals, and task performance. As large language models (LLMs) become increasingly aligned with human preferences, we ask whether they exhibit something akin to motivation. We examine whether LLMs \"report\" varying levels of motivation, how these reports relate to their behavior, and whether external factors can influence them. Our experiments reveal consistent and structured patterns that echo human psychology: self-reported moti",
+    "heat": "3",
+    "github_url": "https://arxiv.org/abs/2603.14347"
+  },
+  {
+    "source": "HuggingFace Papers",
+    "category": "research",
+    "title": "Autonomous Agents Coordinating Distributed Discovery Through Emergent Artifact Exchange",
+    "url": "https://huggingface.co/papers/2603.14312",
+    "time": "2026-03-15T10:06:57.000Z",
+    "summary": "We present ScienceClaw + Infinite, a framework for autonomous scientific investigation in which independent agents conduct research without central coordination, and any contributor can deploy new agents into a shared ecosystem. The system is built around three components: an extensible registry of over 300 interoperable scientific skills, an artifact layer that preserves full computational lineage as a directed acyclic graph (DAG), and a structured platform for agent-based scientific discourse ",
+    "heat": "3",
+    "github_url": "https://arxiv.org/abs/2603.14312"
+  },
+  {
+    "source": "HuggingFace Papers",
+    "category": "research",
+    "title": "Garments2Look: A Multi-Reference Dataset for High-Fidelity Outfit-Level Virtual Try-On with Clothing and Accessories",
+    "url": "https://huggingface.co/papers/2603.14153",
+    "time": "2026-03-14T23:30:32.000Z",
+    "summary": "Virtual try-on (VTON) has advanced single-garment visualization, yet real-world fashion centers on full outfits with multiple garments, accessories, fine-grained categories, layering, and diverse styling, remaining beyond current VTON systems. Existing datasets are category-limited and lack outfit diversity. We introduce Garments2Look, the first large-scale multimodal dataset for outfit-level VTON, comprising 80K many-garments-to-one-look pairs across 40 major categories and 300+ fine-grained su",
+    "heat": "2",
+    "github_url": "https://arxiv.org/abs/2603.14153"
+  },
+  {
+    "source": "HuggingFace Papers",
+    "category": "research",
+    "title": "sebis at ArchEHR-QA 2026: How Much Can You Do Locally? Evaluating Grounded EHR QA on a Single Notebook",
+    "url": "https://huggingface.co/papers/2603.13962",
+    "time": "2026-03-14T14:17:55.000Z",
+    "summary": "Clinical question answering over electronic health records (EHRs) can help clinicians and patients access relevant medical information more efficiently. However, many recent approaches rely on large cloud-based models, which are difficult to deploy in clinical environments due to privacy constraints and computational requirements. In this work, we investigate how far grounded EHR question answering can be pushed when restricted to a single notebook. We participate in all four subtasks of the Arc",
+    "heat": "",
+    "github_url": "https://arxiv.org/abs/2603.13962"
+  },
+  {
+    "source": "HuggingFace Papers",
+    "category": "research",
+    "title": "EnterpriseOps-Gym: Environments and Evaluations for Stateful Agentic Planning and Tool Use in Enterprise Settings",
+    "url": "https://huggingface.co/papers/2603.13594",
+    "time": "2026-03-13T21:09:39.000Z",
+    "summary": "Large language models are shifting from passive information providers to active agents intended for complex workflows. However, their deployment as reliable AI workers in enterprise is stalled by benchmarks that fail to capture the intricacies of professional environments, specifically, the need for long-horizon planning amidst persistent state changes and strict access protocols. In this work, we introduce EnterpriseOps-Gym, a benchmark designed to evaluate agentic planning in realistic enterpr",
+    "heat": "117",
+    "github_url": "https://arxiv.org/abs/2603.13594"
+  },
+  {
+    "source": "HuggingFace Papers",
+    "category": "research",
+    "title": "VoXtream2: Full-stream TTS with dynamic speaking rate control",
+    "url": "https://huggingface.co/papers/2603.13518",
+    "time": "2026-03-13T18:49:25.000Z",
+    "summary": "Full-stream text-to-speech (TTS) for interactive systems must start speaking with minimal delay while remaining controllable as text arrives incrementally. We present VoXtream2, a zero-shot full-stream TTS model with dynamic speaking-rate control that can be updated mid-utterance on the fly. VoXtream2 combines a distribution matching mechanism over duration states with classifier-free guidance across conditioning signals to improve controllability and synthesis quality. Prompt-text masking enabl",
+    "heat": "1",
+    "github_url": "https://arxiv.org/abs/2603.13518"
+  }
+]

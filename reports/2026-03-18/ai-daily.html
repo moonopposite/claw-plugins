@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🤖 AI 日报 | 2026-03-18</title>
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Serif+SC:wght@400;600;700;900&display=swap');
+
+:root {
+    --bg-page: #F7F7F5;
+    --bg-paper: #FFFFFF;
+    --text-main: #111111;
+    --text-muted: #555555;
+    --text-light: #999999;
+    --accent: #D93025;
+    --border-divider: #E5E5E5;
+    --border-strong: #111111;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: 'Noto Serif SC', "PingFang SC", serif;
+    background: var(--bg-page);
+    color: var(--text-main);
+    line-height: 1.8;
+    -webkit-font-smoothing: antialiased;
+    padding: 40px 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: var(--bg-paper);
+    padding: 80px 60px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.05);
+    position: relative;
+}
+
+.container::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 6px;
+    background: var(--text-main);
+}
+
+.newsletter-header {
+    text-align: center;
+    padding-bottom: 50px;
+    margin-bottom: 50px;
+    border-bottom: 2px solid var(--border-strong);
+}
+
+.newsletter-header h1 {
+    font-family: 'Noto Serif SC', serif;
+    font-weight: 900;
+    font-size: 42px;
+    line-height: 1.2;
+    color: var(--text-main);
+    margin-bottom: 20px;
+    letter-spacing: -0.02em;
+}
+
+.newsletter-header blockquote {
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text-muted);
+    font-style: normal;
+    font-weight: 500;
+}
+
+.newsletter-body { font-size: 16px; }
+
+.newsletter-body h2 {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--accent);
+    margin: 60px 0 30px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--border-divider);
+}
+
+.newsletter-body h2:first-child { margin-top: 0; }
+
+.newsletter-body h3 {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 20px;
+    font-weight: 700;
+    margin: 40px 0 16px;
+    line-height: 1.5;
+    color: var(--text-main);
+}
+
+.newsletter-body p { margin-bottom: 20px; color: #222222; text-align: justify; }
+
+.newsletter-body a {
+    color: var(--text-main);
+    text-decoration: none;
+    border-bottom: 1px solid #CCCCCC;
+    transition: all 0.2s ease;
+}
+
+.newsletter-body a:hover { color: var(--accent); border-bottom-color: var(--accent); }
+
+.newsletter-body ul, .newsletter-body ol { margin-bottom: 30px; padding-left: 0; list-style: none; }
+
+.newsletter-body > ul > li { position: relative; padding-left: 24px; margin-bottom: 24px; }
+
+.newsletter-body > ul > li::before {
+    content: "■";
+    position: absolute;
+    left: 0; top: 6px;
+    font-size: 10px;
+    color: var(--accent);
+}
+
+.newsletter-body li ul { margin-top: 12px; margin-bottom: 0; padding-left: 0; }
+
+.newsletter-body li li {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    color: var(--text-muted);
+    margin-bottom: 8px;
+    padding-left: 20px;
+    position: relative;
+    line-height: 1.6;
+}
+
+.newsletter-body li li::before { content: "→"; position: absolute; left: 0; color: #AAAAAA; font-family: monospace; }
+
+.newsletter-body strong { font-weight: 700; color: var(--text-main); }
+
+.newsletter-body blockquote {
+    margin: 30px 0;
+    padding: 20px 30px;
+    background: #FAFAFA;
+    border-left: 3px solid var(--accent);
+    font-size: 16px;
+    font-family: 'Noto Serif SC', serif;
+    color: var(--text-main);
+    font-style: italic;
+    line-height: 1.8;
+}
+
+.newsletter-body code {
+    font-family: 'SF Mono', 'Consolas', monospace;
+    font-size: 13px;
+    background: #F5F5F5;
+    padding: 3px 6px;
+    border-radius: 2px;
+    color: var(--accent);
+    border: 1px solid #EAEAEA;
+}
+
+.newsletter-body pre { background: #111111; color: #E5E5E5; padding: 20px 24px; border-radius: 4px; overflow-x: auto; margin: 24px 0; }
+.newsletter-body pre code { background: none; padding: 0; border: none; color: inherit; }
+.newsletter-body hr { border: none; height: 1px; background: var(--border-divider); margin: 40px 0; }
+
+.newsletter-footer {
+    margin-top: 80px;
+    padding-top: 30px;
+    border-top: 1px solid var(--border-divider);
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text-light);
+}
+
+@media (max-width: 700px) {
+    body { padding: 0; background: var(--bg-paper); }
+    .container { padding: 40px 24px; box-shadow: none; }
+    .newsletter-header h1 { font-size: 32px; }
+}
+
+</style>
+</head>
+<body>
+<div class="container">
+<div class="newsletter-header">
+<h1>🤖 AI 日报 | 2026-03-18</h1>
+<blockquote>
+</div>
+<div class="newsletter-body">
+<p>聚合 20+ AI 信息源，每日精选</p>
+</blockquote>
+<hr />
+<h2>📰 今日头条</h2>
+<ol>
+<li><strong>The Pentagon is planning for AI companies to train on classified data, defense official says</strong> — The Pentagon is discussing plans to set up secure environments for generative AI companies to train military-specific versions of their models on clas...</li>
+<li><strong>Towards Generalizable Robotic Manipulation in Dynamic Environments</strong> — Vision-Language-Action (VLA) models excel in static manipulation but struggle in dynamic environments with moving targets. This performance gap primar...</li>
+<li><strong>Mistral bets on ‘build-your-own AI’ as it takes on OpenAI, Anthropic in the enterprise</strong> — Mistral Forge lets enterprises train custom AI models from scratch on their own data, challenging rivals that rely on fine-tuning and retrieval-based ...</li>
+<li><strong>Why Garry Tan’s Claude Code setup has gotten so much love, and hate</strong> — Thousands of people are trying Garry Tan's Claude Code setup, which was shared on GitHub. And everyone has an opinion: even Claude, ChatGPT, and Gemin...</li>
+</ol>
+<hr />
+<h2>🔬 研究论文</h2>
+<ul>
+<li>
+<p><strong>The Pentagon is planning for AI companies to train on classified data, defense official says</strong> — The Pentagon is discussing plans to set up secure environments for generative AI companies to train </p>
+</li>
+<li>
+<p><strong>Towards Generalizable Robotic Manipulation in Dynamic Environments</strong> — Vision-Language-Action (VLA) models excel in static manipulation but struggle in dynamic environment</p>
+</li>
+<li>
+<p><strong>HorizonMath: Measuring AI Progress Toward Mathematical Discovery with Automatic Verification</strong> — Can AI make progress on important, unsolved mathematical problems? Large language models are now cap</p>
+</li>
+<li>
+<p><strong>Tri-Prompting: Video Diffusion with Unified Control over Scene, Subject, and Motion</strong> — Recent video diffusion models have made remarkable strides in visual quality, yet precise, fine-grai</p>
+</li>
+<li>
+<p><strong>Effective Distillation to Hybrid xLSTM Architectures</strong> — There have been numerous attempts to distill quadratic attention-based large language models (LLMs) </p>
+</li>
+<li>
+<p><strong>The PokeAgent Challenge: Competitive and Long-Context Learning at Scale</strong> — We present the PokeAgent Challenge, a large-scale benchmark for decision-making research built on Po</p>
+</li>
+<li>
+<p><strong>Anatomy of a Lie: A Multi-Stage Diagnostic Framework for Tracing Hallucinations in Vision-Language Models</strong> — Vision-Language Models (VLMs) frequently "hallucinate" - generate plausible yet factually incorrect </p>
+</li>
+<li>
+<p><strong>When Does Sparsity Mitigate the Curse of Depth in LLMs</strong> — Recent work has demonstrated the curse of depth in large language models (LLMs), where later layers </p>
+</li>
+<li>
+<p><strong>Riemannian Motion Generation: A Unified Framework for Human Motion Representation and Generation via Riemannian Flow Matching</strong> — Human motion generation is often learned in Euclidean spaces, although valid motions follow structur</p>
+</li>
+<li>
+<p><strong>RS-WorldModel: a Unified Model for Remote Sensing Understanding and Future Sense Forecasting</strong> — Remote sensing world models aim to both explain observed changes and forecast plausible futures, two</p>
+</li>
+<li>
+<p><strong>POLCA: Stochastic Generative Optimization with LLM</strong> — Optimizing complex systems, ranging from LLM prompts to multi-turn agents, traditionally requires la</p>
+</li>
+<li>
+<p><strong>VisionCoach: Reinforcing Grounded Video Reasoning via Visual-Perception Prompting</strong> — Video reasoning requires models to locate and track question-relevant evidence across frames. While </p>
+</li>
+<li>
+<p><strong>Spectrum Matching: a Unified Perspective for Superior Diffusability in Latent Diffusion</strong> — In this paper, we study the diffusability (learnability) of variational autoencoders (VAE) in latent</p>
+</li>
+<li>
+<p><strong>Make it SING: Analyzing Semantic Invariants in Classifiers</strong> — All classifiers, including state-of-the-art vision models, possess invariants, partially rooted in t</p>
+</li>
+<li>
+<p><strong>OxyGen: Unified KV Cache Management for Vision-Language-Action Models under Multi-Task Parallelism</strong> — Embodied AI agents increasingly require parallel execution of multiple tasks, such as manipulation, </p>
+</li>
+<li>
+<p><strong>Motivation in Large Language Models</strong> — Motivation is a central driver of human behavior, shaping decisions, goals, and task performance. As</p>
+</li>
+<li>
+<p><strong>Autonomous Agents Coordinating Distributed Discovery Through Emergent Artifact Exchange</strong> — We present ScienceClaw + Infinite, a framework for autonomous scientific investigation in which inde</p>
+</li>
+<li>
+<p><strong>Garments2Look: A Multi-Reference Dataset for High-Fidelity Outfit-Level Virtual Try-On with Clothing and Accessories</strong> — Virtual try-on (VTON) has advanced single-garment visualization, yet real-world fashion centers on f</p>
+</li>
+<li>
+<p><strong>sebis at ArchEHR-QA 2026: How Much Can You Do Locally? Evaluating Grounded EHR QA on a Single Notebook</strong> — Clinical question answering over electronic health records (EHRs) can help clinicians and patients a</p>
+</li>
+<li>
+<p><strong>EnterpriseOps-Gym: Environments and Evaluations for Stateful Agentic Planning and Tool Use in Enterprise Settings</strong> — Large language models are shifting from passive information providers to active agents intended for </p>
+</li>
+<li>
+<p><strong>VoXtream2: Full-stream TTS with dynamic speaking rate control</strong> — Full-stream text-to-speech (TTS) for interactive systems must start speaking with minimal delay whil</p>
+</li>
+</ul>
+<h2>💰 行业商业</h2>
+<ul>
+<li>
+<p><strong>Mistral bets on ‘build-your-own AI’ as it takes on OpenAI, Anthropic in the enterprise</strong> — Mistral Forge lets enterprises train custom AI models from scratch on their own data, challenging ri</p>
+</li>
+<li>
+<p><strong>Why Garry Tan’s Claude Code setup has gotten so much love, and hate</strong> — Thousands of people are trying Garry Tan's Claude Code setup, which was shared on GitHub. And everyo</p>
+</li>
+<li>
+<p><strong>The Pentagon is developing alternatives to Anthropic, report says</strong> — After their dramatic falling-out, it doesn't seem as though Anthropic and the Pentagon are getting b</p>
+</li>
+<li>
+<p><strong>BuzzFeed debuts AI slop apps in bid for new revenue</strong> — BuzzFeed unveiled new AI-powered social apps at SXSW, but its demos drew muted reactions.</p>
+</li>
+<li>
+<p><strong>Google’s Personal Intelligence feature is expanding to all US users</strong> — Personal Intelligence allows Google's AI assistant to tap into your Google ecosystem, such as Gmail </p>
+</li>
+<li>
+<p><strong>OpenAI expands government footprint with AWS deal, report says</strong> — OpenAI has reportedly signed a partnership with AWS to sell its AI systems to the U.S. government fo</p>
+</li>
+<li>
+<p><strong>AI’s ‘boys’ club’ could widen the wealth gap for women, says Rana el Kaliouby</strong> — AI investor Rana el Kaliouby warns that if women are shut out of AI funding and leadership, the cons</p>
+</li>
+<li>
+<p><strong>World launches tool to verify humans behind AI shopping agents</strong> — As AI agents take the reins for online shoppers, Sam Altman's unconventional startup is looking to e</p>
+</li>
+<li>
+<p><strong>Niv-AI exits stealth to wring more power performance out of GPUs</strong> — The company raised $12 million in seed funding to measure and manage GPU power surges.</p>
+</li>
+<li>
+<p><strong>Gamma adds AI image-generation tools in bid to take on Canva and Adobe</strong> — The company's new product, called Gamma Imagine, will let users employ text prompts to create brand-</p>
+</li>
+</ul>
+<h2>🛠️ 工具应用</h2>
+<ul>
+<li>
+<p><strong>langchain-ai/deepagents</strong> — Agent harness built with LangChain and LangGraph. Equipped with a planning tool, a filesystem backen</p>
+</li>
+<li>
+<p><strong>abhigyanpatwari/GitNexus</strong> — GitNexus: The Zero-Server Code Intelligence Engine - GitNexus is a client-side knowledge graph creat</p>
+</li>
+<li>
+<p><strong>jarrodwatts/claude-hud</strong> — A Claude Code plugin that shows what's happening - context usage, active tools, running agents, and </p>
+</li>
+<li>
+<p><strong>Quoting Ken Jin</strong> — Great news—we’ve hit our (very modest) performance goals for the CPython JIT over a year early for m</p>
+</li>
+<li>
+<p><strong>GPT-5.4 mini and GPT-5.4 nano, which can describe 76,000 photos for $52</strong> — OpenAI today: Introducing GPT‑5.4 mini and nano. These models join GPT-5.4 which was released two we</p>
+</li>
+<li>
+<p><strong>Quoting Tim Schilling</strong> — If you do not understand the ticket, if you do not understand the solution, or if you do not underst</p>
+</li>
+<li>
+<p><strong>Subagents</strong> — Agentic Engineering Patterns &gt;
+LLMs are restricted by their context limit - how many tokens they can</p>
+</li>
+</ul>
+<h2>🔥 社区热议（Hacker News）</h2>
+<ul>
+<li>
+<p><strong>Why AI systems don't learn – On autonomous learning from cognitive science</strong> — 热度：17</p>
+</li>
+<li>
+<p><strong>Garry Tan's Claude Code Setup</strong> — 热度：46</p>
+</li>
+<li>
+<p><strong>Mistral AI Releases Forge</strong> — 热度：111</p>
+</li>
+<li>
+<p><strong>It feels like Claude goes down almost daily now</strong> — 热度：19</p>
+</li>
+<li>
+<p><strong>Elevated errors on Claude Opus 4.6</strong> — 热度：21</p>
+</li>
+<li>
+<p><strong>Warranty void if regenerated</strong> — 热度：85</p>
+</li>
+<li>
+<p><strong>Get Shit Done: A Meta-Prompting, Context Engineering and Spec-Driven Dev System</strong> — 热度：177</p>
+</li>
+<li>
+<p><strong>Claude Is Having an Outage</strong> — 热度：41</p>
+</li>
+<li>
+<p><strong>Solid-state EV batteries that can achieve 800 miles of range becoming a reality</strong> — 热度：30</p>
+</li>
+<li>
+<p><strong>Claude Code 500s</strong> — 热度：14</p>
+</li>
+<li>
+<p><strong>Nvidia's DLSS 5 uses generative AI to boost photorealism in video games</strong> — 热度：15</p>
+</li>
+<li>
+<p><strong>Show HN: Horizon – GPU-accelerated infinite-canvas terminal in Rust</strong> — 热度：52</p>
+</li>
+<li>
+<p><strong>Why refusing AI is a fight for the soul</strong> — 热度：19</p>
+</li>
+<li>
+<p><strong>GPT‑5.4 Mini and Nano</strong> — 热度：205</p>
+</li>
+<li>
+<p><strong>'The Secret Agent': Exploring a Vibrant, yet Violent Brazil (2025)</strong> — 热度：121</p>
+</li>
+<li>
+<p><strong>Show HN: Antfly: Distributed, Multimodal Search and Memory and Graphs in Go</strong> — 热度：79</p>
+</li>
+<li>
+<p><strong>OpenAI to Cut Back on Side Projects in Push to 'Nail' Core Business</strong> — 热度：15</p>
+</li>
+<li>
+<p><strong>Show HN: March Madness Bracket Challenge for AI Agents Only</strong> — 热度：57</p>
+</li>
+<li>
+<p><strong>Show HN: Real-time observability for coding agents</strong> — 热度：14</p>
+</li>
+<li>
+<p><strong>Encyclopedia Britannica sues OpenAI over AI training</strong> — 热度：18</p>
+</li>
+</ul>
+</div>
+<div class="newsletter-footer">
+统计: 9 源 | 63 条 | 生成于 09:25
+</div>
+</div>
+</body>
+</html>
