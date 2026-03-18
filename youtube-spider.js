@@ -542,22 +542,24 @@ function _play(flag, id, vipFlags) {
     var formats       = streamingData.formats || [];
     var adaptive      = streamingData.adaptiveFormats || [];
 
-    // ────────────────────────────────────────────────────────────────
-    // 策略1：优先从 adaptiveFormats 提取最高分辨率的 MP4 视频轨道
-    //       adaptiveFormats 中的 URL 是真实的可播放 URL（有时间戳）
-    // ────────────────────────────────────────────────────────────────
     var videoTracks = [];
+    var audioTracks = [];
+    
     for (var idx = 0; idx < adaptive.length; idx++) {
         var af = adaptive[idx];
         if (!af.url || !af.mimeType) continue;
-        // video/mp4 且有分辨率信息
+        
         if (af.mimeType.indexOf('video/mp4') >= 0 && (af.width || 0) > 0 && (af.height || 0) > 0) {
             videoTracks.push(af);
         }
+        
+        if (af.mimeType.indexOf('audio/mp4') >= 0) {
+            audioTracks.push(af);
+        }
     }
     
-    if (videoTracks.length > 0) {
-        // 优先找 1080p
+    // 方案1：有视频和音频时，返回标准的多轨道结构
+    if (videoTracks.length > 0 && audioTracks.length > 0) {
         var selectedVideo = null;
         for (var v1 = 0; v1 < videoTracks.length; v1++) {
             if (videoTracks[v1].width === 1920 && videoTracks[v1].height === 1080) {
@@ -566,7 +568,6 @@ function _play(flag, id, vipFlags) {
             }
         }
         
-        // 如果没有 1080p，找最高分辨率
         if (!selectedVideo) {
             var maxRes = videoTracks[0];
             for (var v2 = 1; v2 < videoTracks.length; v2++) {
@@ -579,10 +580,62 @@ function _play(flag, id, vipFlags) {
             selectedVideo = maxRes;
         }
         
-        if (selectedVideo && selectedVideo.url) {
+        var selectedAudio = audioTracks[0];
+        for (var a1 = 1; a1 < audioTracks.length; a1++) {
+            var bitrate1 = selectedAudio.bitrate || 0;
+            var bitrate2 = audioTracks[a1].bitrate || 0;
+            if (bitrate2 > bitrate1) {
+                selectedAudio = audioTracks[a1];
+            }
+        }
+        
+        if (selectedVideo && selectedVideo.url && selectedAudio && selectedAudio.url) {
+            // 返回 FongMi/TV 标准的多轨道结构
+            // url.values 是一个列表，每个元素有 n(名称) 和 v(值/URL)
+            return JSON.stringify({
+                parse: 0,
+                url: {
+                    values: [
+                        {
+                            n: selectedVideo.width + 'x' + selectedVideo.height + ' 视频',
+                            v: selectedVideo.url
+                        },
+                        {
+                            n: '音频',
+                            v: selectedAudio.url
+                        }
+                    ],
+                    position: 0
+                },
+                header: {
+                    'User-Agent': AVR_UA,
+                    'Range': 'bytes=0-',
+                },
+            });
+        }
+    }
+    
+    // 备选方案2：只有视频没音频时，尝试用预合并流
+    if (videoTracks.length > 0 && audioTracks.length === 0 && formats && formats.length > 0) {
+        var selectedFormat = null;
+        var maxResolution = 0;
+        
+        for (var i = 0; i < formats.length; i++) {
+            var f = formats[i];
+            if (!f.url || !f.mimeType) continue;
+            if (f.mimeType.indexOf('video/mp4') < 0) continue;
+            
+            var resolution = (f.width || 0) * (f.height || 0);
+            if (resolution > maxResolution) {
+                maxResolution = resolution;
+                selectedFormat = f;
+            }
+        }
+        
+        if (selectedFormat && selectedFormat.url) {
             return JSON.stringify({
                 parse:  0,
-                url:    selectedVideo.url,
+                url:    selectedFormat.url,
                 header: {
                     'User-Agent': AVR_UA,
                     'Range': 'bytes=0-',
@@ -591,10 +644,6 @@ function _play(flag, id, vipFlags) {
         }
     }
 
-    // ────────────────────────────────────────────────────────────────
-    // 备选策略2：从 formats 预合并流中选择最高分辨率
-    //          （formats 虽然通常没 URL，但备份保险）
-    // ────────────────────────────────────────────────────────────────
     if (formats && formats.length > 0) {
         var selectedFormat = null;
         var maxResolution = 0;
@@ -615,6 +664,28 @@ function _play(flag, id, vipFlags) {
             return JSON.stringify({
                 parse:  0,
                 url:    selectedFormat.url,
+                header: {
+                    'User-Agent': AVR_UA,
+                    'Range': 'bytes=0-',
+                },
+            });
+        }
+    }
+
+    if (videoTracks.length > 0) {
+        var selected = videoTracks[0];
+        for (var v = 1; v < videoTracks.length; v++) {
+            var a1 = (selected.width || 0) * (selected.height || 0);
+            var a2 = (videoTracks[v].width || 0) * (videoTracks[v].height || 0);
+            if (a2 > a1) {
+                selected = videoTracks[v];
+            }
+        }
+        
+        if (selected && selected.url) {
+            return JSON.stringify({
+                parse:  0,
+                url:    selected.url,
                 header: {
                     'User-Agent': AVR_UA,
                     'Range': 'bytes=0-',
