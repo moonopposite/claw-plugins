@@ -554,16 +554,32 @@ function _play(flag, id, vipFlags) {
         }
     }
 
-    adaptive.sort(function(a, b) { return (b.width || 0) - (a.width || 0); });
+    // 优先选 1080p，其次选最高可用分辨率
+    var target1080 = null;
+    var targetHighest = null;
+    
     for (var j = 0; j < adaptive.length; j++) {
         var af = adaptive[j];
         if (af.url && af.mimeType && af.mimeType.indexOf('video/mp4') >= 0) {
-            return JSON.stringify({
-                parse:  0,
-                url:    af.url,
-                header: { 'User-Agent': AVR_UA },
-            });
+            // 记录最高分辨率
+            if (!targetHighest || (af.width || 0) > (targetHighest.width || 0)) {
+                targetHighest = af;
+            }
+            // 检查是否为 1080p（1920x1080）
+            if (!target1080 && (af.width || 0) === 1920 && (af.height || 0) === 1080) {
+                target1080 = af;
+            }
         }
+    }
+    
+    // 优先返回 1080p，否则返回最高分辨率
+    var selected = target1080 || targetHighest;
+    if (selected) {
+        return JSON.stringify({
+            parse:  0,
+            url:    selected.url,
+            header: { 'User-Agent': AVR_UA },
+        });
     }
 
     return JSON.stringify({ parse: 0, url: '' });
