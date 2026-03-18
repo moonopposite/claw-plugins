@@ -590,7 +590,7 @@ function _play(flag, id, vipFlags) {
         }
         
         if (selectedVideo && selectedVideo.url && selectedAudio && selectedAudio.url) {
-            // 生成 proxy:// URL 格式（必须使用 ?do=js 格式，FongMi才会调用proxy方法）
+            // 使用 getProxy(true) 获取本地代理 URL，然后附加参数
             // 参数使用 BASE64 编码以避免 URL 特殊字符问题
             var params = {
                 video: selectedVideo.url,
@@ -601,8 +601,8 @@ function _play(flag, id, vipFlags) {
                 audioBitrate: selectedAudio.bitrate
             };
             var encoded = _btoa(JSON.stringify(params));
-            // 正确格式：proxy://?do=js&data=xxx
-            var proxyUrl = 'proxy://?do=js&data=' + encoded;
+            // 正确格式：getProxy(true) + "&data=xxx"
+            var proxyUrl = getProxy(true) + '&data=' + encoded;
             
             return JSON.stringify({
                 parse: 0,
