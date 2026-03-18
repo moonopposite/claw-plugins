@@ -764,49 +764,34 @@ function _generateMPD(videoUrl, audioUrl, width, height, videoBitrate, audioBitr
 // ── Proxy 方法（处理 MPD/DASH 请求）───────────────────
 function _proxy(params) {
     try {
-        // FongMi/TV 会将整个 URL 作为 params.url 传入
-        var url = params.url || '';
-        
-        // 检查是否是正确格式的 proxy URL
+        // FongMi/TV 会将 Query String 参数作为对象传入
         // 格式：proxy://?do=js&data={base64-encoded-params}
-        if (url.indexOf('proxy://?do=js&data=') === 0) {
-            var encoded = url.substring('proxy://?do=js&data='.length);
-            var jsonStr = _atob(encoded);
-            var data = JSON.parse(jsonStr);
-            
-            var videoUrl = data.video;
-            var audioUrl = data.audio;
-            var width = data.width || 1920;
-            var height = data.height || 1080;
-            var videoBitrate = data.videoBitrate || 5000000;
-            var audioBitrate = data.audioBitrate || 128000;
-            
-            var mpdContent = _generateMPD(videoUrl, audioUrl, width, height, videoBitrate, audioBitrate);
-            
-            // 返回 MPD 内容 (DASH 格式)
-            return JSON.stringify([
-                200,                          // HTTP status
-                'application/dash+xml',        // content-type for DASH MPD
-                mpdContent                    // content
-            ]);
+        // params = { do: "js", data: "xxx" }
+        
+        var encoded = params.data || '';
+        
+        if (!encoded) {
+            return JSON.stringify([404, 'text/plain', 'No data parameter']);
         }
         
-        // 兼容旧格式
-        if (url.indexOf('proxy://youtube/mpd/') === 0) {
-            var encoded = url.substring('proxy://youtube/mpd/'.length);
-            var jsonStr = _atob(encoded);
-            var data = JSON.parse(jsonStr);
-            
-            var mpdContent = _generateMPD(data.video, data.audio, data.width || 1920, data.height || 1080, data.videoBitrate, data.audioBitrate);
-            
-            return JSON.stringify([
-                200,
-                'application/dash+xml',
-                mpdContent
-            ]);
-        }
+        var jsonStr = _atob(encoded);
+        var data = JSON.parse(jsonStr);
         
-        return JSON.stringify([404, 'text/plain', 'Not Found']);
+        var videoUrl = data.video;
+        var audioUrl = data.audio;
+        var width = data.width || 1920;
+        var height = data.height || 1080;
+        var videoBitrate = data.videoBitrate || 5000000;
+        var audioBitrate = data.audioBitrate || 128000;
+        
+        var mpdContent = _generateMPD(videoUrl, audioUrl, width, height, videoBitrate, audioBitrate);
+        
+        // 返回 MPD 内容 (DASH 格式)
+        return JSON.stringify([
+            200,                          // HTTP status
+            'application/dash+xml',       // content-type for DASH MPD
+            mpdContent                    // content
+        ]);
     } catch (e) {
         return JSON.stringify([500, 'text/plain', 'Error: ' + e.message]);
     }
