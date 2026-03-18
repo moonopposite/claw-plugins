@@ -558,7 +558,7 @@ function _play(flag, id, vipFlags) {
         }
     }
     
-    // 方案1：有视频和音频时，返回标准的多轨道结构
+    // 方案1：有视频和音频时，返回 proxy:// URL 让 FongMi/TV 回调我们生成 M3U8
     if (videoTracks.length > 0 && audioTracks.length > 0) {
         var selectedVideo = null;
         for (var v1 = 0; v1 < videoTracks.length; v1++) {
@@ -590,23 +590,20 @@ function _play(flag, id, vipFlags) {
         }
         
         if (selectedVideo && selectedVideo.url && selectedAudio && selectedAudio.url) {
-            // 返回 FongMi/TV 标准的多轨道结构
-            // url.values 是一个列表，每个元素有 n(名称) 和 v(值/URL)
+            // 生成 proxy:// URL 格式
+            // 参数使用 BASE64 编码以避免 URL 特殊字符问题
+            var params = {
+                video: selectedVideo.url,
+                audio: selectedAudio.url,
+                width: selectedVideo.width,
+                height: selectedVideo.height
+            };
+            var encoded = _btoa(JSON.stringify(params));
+            var proxyUrl = 'proxy://youtube/m3u8/' + encoded;
+            
             return JSON.stringify({
                 parse: 0,
-                url: {
-                    values: [
-                        {
-                            n: selectedVideo.width + 'x' + selectedVideo.height + ' 视频',
-                            v: selectedVideo.url
-                        },
-                        {
-                            n: '音频',
-                            v: selectedAudio.url
-                        }
-                    ],
-                    position: 0
-                },
+                url: proxyUrl,
                 header: {
                     'User-Agent': AVR_UA,
                     'Range': 'bytes=0-',
@@ -697,7 +694,86 @@ function _play(flag, id, vipFlags) {
     return JSON.stringify({ parse: 0, url: '' });
 }
 
-// ── ES Module 导出（FongMi/TV QuickJS 必须）────────────────────
+// ── Base64 编码/解码工具（用于在 URL 中安全传递参数）──────────────
+function _btoa(str) {
+    var chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/';
+    var buf = [];
+    for (var i = 0; i < str.length; i += 3) {
+        var a = str.charCodeAt(i);
+        var b = i + 1 < str.length ? str.charCodeAt(i + 1) : 0;
+        var c = i + 2 < str.length ? str.charCodeAt(i + 2) : 0;
+        var bitmap = (a << 16) | (b << 8) | c;
+        for (var j = 0; j < 4; j++) {
+            if (i * 8 + j * 6 <= str.length * 8) {
+                buf.push(chars.charAt((bitmap >>> (18 - j * 6)) & 0x3F));
+            } else {
+                buf.push('=');
+            }
+        }
+    }
+    return buf.join('');
+}
+
+function _atob(str) {
+    var chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/';
+    var buf = [];
+    for (var i = 0; i < str.length; i += 4) {
+        var b1 = chars.indexOf(str.charAt(i));
+        var b2 = chars.indexOf(str.charAt(i + 1));
+        var b3 = chars.indexOf(str.charAt(i + 2));
+        var b4 = chars.indexOf(str.charAt(i + 3));
+        buf.push(String.fromCharCode(((b1 << 2) | (b2 >> 4)) & 0xFF));
+        if (b3 < 64) buf.push(String.fromCharCode(((b2 << 4) | (b3 >> 2)) & 0xFF));
+        if (b4 < 64) buf.push(String.fromCharCode(((b3 << 6) | b4) & 0xFF));
+    }
+    return buf.join('');
+}
+
+// ── M3U8 生成函数（用于返回多轨道清单）──────────────────────────
+function _generateM3U8(videoUrl, audioUrl, width, height) {
+    // 生成标准的 HLS M3U8 清单，包含视频和音频轨道
+    var m3u8 = '#EXTM3U\r\n';
+    m3u8 += '#EXT-X-VERSION:3\r\n';
+    m3u8 += '#EXT-X-STREAM-INF:BANDWIDTH=5000000,RESOLUTION=' + width + 'x' + height + ',AUDIO="audio"\r\n';
+    m3u8 += videoUrl + '\r\n';
+    m3u8 += '#EXT-X-MEDIA:TYPE=AUDIO,GROUP-ID="audio",LANGUAGE="und",NAME="audio",URI="' + audioUrl + '"\r\n';
+    return m3u8;
+}
+
+// ── Proxy 方法（处理 M3U8 请求和 proxy:// URL）───────────────────
+function _proxy(params) {
+    try {
+        var url = params.url || '';
+        
+        // 检查是否是我们的特殊 proxy:// URL
+        if (url.indexOf('proxy://youtube/m3u8/') === 0) {
+            // 格式：proxy://youtube/m3u8/{base64-encoded-params}
+            var encoded = url.substring('proxy://youtube/m3u8/'.length);
+            var jsonStr = _atob(encoded);
+            var data = JSON.parse(jsonStr);
+            
+            var videoUrl = data.video;
+            var audioUrl = data.audio;
+            var width = data.width || 1920;
+            var height = data.height || 1080;
+            
+            var m3u8Content = _generateM3U8(videoUrl, audioUrl, width, height);
+            
+            // 返回 M3U8 内容
+            return JSON.stringify([
+                200,                                 // HTTP status
+                'application/vnd.apple.mpegurl',    // content-type
+                m3u8Content                         // content
+            ]);
+        }
+        
+        return JSON.stringify([404, 'text/plain', 'Not Found']);
+    } catch (e) {
+        return JSON.stringify([500, 'text/plain', 'Error: ' + e.message]);
+    }
+}
+
+// ── ES Module 导出（FongMi/TV QuickJS 必须）────────────────────────
 // spider.js 包装器会执行：
 //   globalThis.__JS_SPIDER__ = spider.default
 // 然后调用 __JS_SPIDER__.home() / .category() / .detail() / .search() / .play()
@@ -709,4 +785,5 @@ export default {
     detail:   _detail,
     search:   _search,
     play:     _play,
+    proxy:    _proxy,
 };
