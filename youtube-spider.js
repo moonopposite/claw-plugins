@@ -571,8 +571,54 @@ function _play(flag, id, vipFlags) {
         }
     }
     
-    // 方案1：有视频和音频时，返回预合并的 formats 流（如果有）
-    // 找到最高质量的预合并流（包含音视频）
+    // 方案1：优先 1080p - 使用 pipe 分割视频和音频 URL
+    // 格式：videoUrl|audioUrl，FongMi 会用 ExoPlayer 播放
+    if (videoTracks.length > 0 && audioTracks.length > 0) {
+        // 找 1080p
+        var selectedVideo = null;
+        for (var v1 = 0; v1 < videoTracks.length; v1++) {
+            if (videoTracks[v1].width === 1920 && videoTracks[v1].height === 1080) {
+                selectedVideo = videoTracks[v1];
+                break;
+            }
+        }
+        
+        // 没 1080p 就用最高分辨率
+        if (!selectedVideo) {
+            var maxRes = videoTracks[0];
+            for (var v2 = 1; v2 < videoTracks.length; v2++) {
+                var area1 = (maxRes.width || 0) * (maxRes.height || 0);
+                var area2 = (videoTracks[v2].width || 0) * (videoTracks[v2].height || 0);
+                if (area2 > area1) {
+                    maxRes = videoTracks[v2];
+                }
+            }
+            selectedVideo = maxRes;
+        }
+        
+        // 选最高音质音频
+        var selectedAudio = audioTracks[0];
+        for (var a1 = 1; a1 < audioTracks.length; a1++) {
+            if ((audioTracks[a1].bitrate || 0) > (selectedAudio.bitrate || 0)) {
+                selectedAudio = audioTracks[a1];
+            }
+        }
+        
+        if (selectedVideo && selectedVideo.url && selectedAudio && selectedAudio.url) {
+            // 用 pipe 分割：videoUrl|audioUrl
+            return JSON.stringify({
+                parse: 0,
+                url: selectedVideo.url + '|' + selectedAudio.url,
+                header: {
+                    'User-Agent': AVR_UA,
+                    'Referer': YT_BASE,
+                    'Origin': YT_BASE,
+                },
+            });
+        }
+    }
+    
+    // 方案2：次选预合并流
     if (formats && formats.length > 0) {
         var bestFormat = null;
         var maxRes = 0;
@@ -599,7 +645,7 @@ function _play(flag, id, vipFlags) {
         }
     }
     
-    // 备选方案2：只有视频没音频时，尝试用预合并流
+    // 备选方案3：只有视频没音频时
     if (videoTracks.length > 0 && audioTracks.length === 0 && formats && formats.length > 0) {
         var selectedFormat = null;
         var maxResolution = 0;
