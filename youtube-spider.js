@@ -543,18 +543,65 @@ function _play(flag, id, vipFlags) {
     var adaptive      = streamingData.adaptiveFormats || [];
 
     // ────────────────────────────────────────────────────────────────
-    // 策略1：优先从 formats 预合并流中选择最高分辨率
-    //       formats 包含音视频，通常 720p 是最高分辨率
+    // 策略1：优先从 adaptiveFormats 提取最高分辨率的 MP4 视频轨道
+    //       adaptiveFormats 中的 URL 是真实的可播放 URL（有时间戳）
+    // ────────────────────────────────────────────────────────────────
+    var videoTracks = [];
+    for (var idx = 0; idx < adaptive.length; idx++) {
+        var af = adaptive[idx];
+        if (!af.url || !af.mimeType) continue;
+        // video/mp4 且有分辨率信息
+        if (af.mimeType.indexOf('video/mp4') >= 0 && (af.width || 0) > 0 && (af.height || 0) > 0) {
+            videoTracks.push(af);
+        }
+    }
+    
+    if (videoTracks.length > 0) {
+        // 优先找 1080p
+        var selectedVideo = null;
+        for (var v1 = 0; v1 < videoTracks.length; v1++) {
+            if (videoTracks[v1].width === 1920 && videoTracks[v1].height === 1080) {
+                selectedVideo = videoTracks[v1];
+                break;
+            }
+        }
+        
+        // 如果没有 1080p，找最高分辨率
+        if (!selectedVideo) {
+            var maxRes = videoTracks[0];
+            for (var v2 = 1; v2 < videoTracks.length; v2++) {
+                var area1 = (maxRes.width || 0) * (maxRes.height || 0);
+                var area2 = (videoTracks[v2].width || 0) * (videoTracks[v2].height || 0);
+                if (area2 > area1) {
+                    maxRes = videoTracks[v2];
+                }
+            }
+            selectedVideo = maxRes;
+        }
+        
+        if (selectedVideo && selectedVideo.url) {
+            return JSON.stringify({
+                parse:  0,
+                url:    selectedVideo.url,
+                header: {
+                    'User-Agent': AVR_UA,
+                    'Range': 'bytes=0-',
+                },
+            });
+        }
+    }
+
+    // ────────────────────────────────────────────────────────────────
+    // 备选策略2：从 formats 预合并流中选择最高分辨率
+    //          （formats 虽然通常没 URL，但备份保险）
     // ────────────────────────────────────────────────────────────────
     if (formats && formats.length > 0) {
         var selectedFormat = null;
         var maxResolution = 0;
         
-        // 遍历所有 formats，找最高分辨率的 MP4
         for (var i = 0; i < formats.length; i++) {
             var f = formats[i];
             if (!f.url || !f.mimeType) continue;
-            // 优先选 video/mp4（包含音视频）
             if (f.mimeType.indexOf('video/mp4') < 0) continue;
             
             var resolution = (f.width || 0) * (f.height || 0);
@@ -568,45 +615,14 @@ function _play(flag, id, vipFlags) {
             return JSON.stringify({
                 parse:  0,
                 url:    selectedFormat.url,
-                header: { 'User-Agent': AVR_UA },
+                header: {
+                    'User-Agent': AVR_UA,
+                    'Range': 'bytes=0-',
+                },
             });
         }
     }
 
-    // ────────────────────────────────────────────────────────────────
-    // 备选策略2：从 adaptiveFormats 返回最高分辨率视频
-    //          （无音频，但分辨率可能更高）
-    // ────────────────────────────────────────────────────────────────
-    var videoTracks = [];
-    for (var idx = 0; idx < adaptive.length; idx++) {
-        var af = adaptive[idx];
-        if (!af.url || !af.mimeType) continue;
-        if (af.mimeType.indexOf('video/mp4') >= 0 && (af.width || 0) > 0 && (af.height || 0) > 0) {
-            videoTracks.push(af);
-        }
-    }
-    
-    if (videoTracks.length > 0) {
-        // 找最高分辨率的视频
-        var selectedVideo = videoTracks[0];
-        for (var v = 1; v < videoTracks.length; v++) {
-            var area1 = (selectedVideo.width || 0) * (selectedVideo.height || 0);
-            var area2 = (videoTracks[v].width || 0) * (videoTracks[v].height || 0);
-            if (area2 > area1) {
-                selectedVideo = videoTracks[v];
-            }
-        }
-        
-        if (selectedVideo && selectedVideo.url) {
-            return JSON.stringify({
-                parse:  0,
-                url:    selectedVideo.url,
-                header: { 'User-Agent': AVR_UA },
-            });
-        }
-    }
-
-    // 都找不到，返回空
     return JSON.stringify({ parse: 0, url: '' });
 }
 
