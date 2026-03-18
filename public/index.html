@@ -8,13 +8,13 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Serif+SC:wght@400;600;700;900&display=swap');
 
-::root {
+:root {
     --bg-page: #F7F7F5;
     --bg-paper: #FFFFFF;
     --text-main: #111111;
     --text-muted: #555555;
     --text-light: #999999;
-    --accent: #D93025;
+    --accent: #D93025; /* Sharp editorial red */
     --border-divider: #E5E5E5;
     --border-strong: #111111;
 }
@@ -27,6 +27,7 @@ body {
     color: var(--text-main);
     line-height: 1.8;
     -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
     padding: 40px 20px;
 }
 
@@ -47,6 +48,7 @@ body {
     background: var(--text-main);
 }
 
+/* Header */
 .newsletter-header {
     text-align: center;
     padding-bottom: 50px;
@@ -74,8 +76,12 @@ body {
     font-weight: 500;
 }
 
-.newsletter-body { font-size: 16px; }
+/* Body */
+.newsletter-body {
+    font-size: 16px;
+}
 
+/* Section Headings */
 .newsletter-body h2 {
     font-family: 'Inter', sans-serif;
     font-size: 14px;
@@ -88,8 +94,11 @@ body {
     border-bottom: 1px solid var(--border-divider);
 }
 
-.newsletter-body h2:first-child { margin-top: 0; }
+.newsletter-body h2:first-child {
+    margin-top: 0;
+}
 
+/* Article Titles */
 .newsletter-body h3 {
     font-family: 'Noto Serif SC', serif;
     font-size: 20px;
@@ -99,8 +108,13 @@ body {
     color: var(--text-main);
 }
 
-.newsletter-body p { margin-bottom: 20px; color: #222222; text-align: justify; }
+.newsletter-body p {
+    margin-bottom: 20px;
+    color: #222222;
+    text-align: justify;
+}
 
+/* Links */
 .newsletter-body a {
     color: var(--text-main);
     text-decoration: none;
@@ -108,21 +122,38 @@ body {
     transition: all 0.2s ease;
 }
 
-.newsletter-body a:hover { color: var(--accent); border-bottom-color: var(--accent); }
+.newsletter-body a:hover {
+    color: var(--accent);
+    border-bottom-color: var(--accent);
+}
 
-.newsletter-body ul, .newsletter-body ol { margin-bottom: 30px; padding-left: 0; list-style: none; }
+/* Lists */
+.newsletter-body ul, .newsletter-body ol {
+    margin-bottom: 30px;
+    padding-left: 0;
+    list-style: none;
+}
 
-.newsletter-body > ul > li { position: relative; padding-left: 24px; margin-bottom: 24px; }
+.newsletter-body > ul > li {
+    position: relative;
+    padding-left: 24px;
+    margin-bottom: 24px;
+}
 
 .newsletter-body > ul > li::before {
     content: "■";
     position: absolute;
-    left: 0; top: 6px;
+    left: 0;
+    top: 6px;
     font-size: 10px;
     color: var(--accent);
 }
 
-.newsletter-body li ul { margin-top: 12px; margin-bottom: 0; padding-left: 0; }
+.newsletter-body li ul {
+    margin-top: 12px;
+    margin-bottom: 0;
+    padding-left: 0;
+}
 
 .newsletter-body li li {
     font-family: 'Inter', sans-serif;
@@ -134,10 +165,21 @@ body {
     line-height: 1.6;
 }
 
-.newsletter-body li li::before { content: "→"; position: absolute; left: 0; color: #AAAAAA; font-family: monospace; }
+.newsletter-body li li::before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: #AAAAAA;
+    font-family: monospace;
+}
 
-.newsletter-body strong { font-weight: 700; color: var(--text-main); }
+/* Bold/Strong */
+.newsletter-body strong {
+    font-weight: 700;
+    color: var(--text-main);
+}
 
+/* Blockquote in body */
 .newsletter-body blockquote {
     margin: 30px 0;
     padding: 20px 30px;
@@ -150,6 +192,7 @@ body {
     line-height: 1.8;
 }
 
+/* Code */
 .newsletter-body code {
     font-family: 'SF Mono', 'Consolas', monospace;
     font-size: 13px;
@@ -160,10 +203,31 @@ body {
     border: 1px solid #EAEAEA;
 }
 
-.newsletter-body pre { background: #111111; color: #E5E5E5; padding: 20px 24px; border-radius: 4px; overflow-x: auto; margin: 24px 0; }
-.newsletter-body pre code { background: none; padding: 0; border: none; color: inherit; }
-.newsletter-body hr { border: none; height: 1px; background: var(--border-divider); margin: 40px 0; }
+.newsletter-body pre {
+    background: #111111;
+    color: #E5E5E5;
+    padding: 20px 24px;
+    border-radius: 4px;
+    overflow-x: auto;
+    margin: 24px 0;
+}
 
+.newsletter-body pre code {
+    background: none;
+    padding: 0;
+    border: none;
+    color: inherit;
+}
+
+/* Horizontal rules */
+.newsletter-body hr {
+    border: none;
+    height: 1px;
+    background: var(--border-divider);
+    margin: 40px 0;
+}
+
+/* Footer */
 .newsletter-footer {
     margin-top: 80px;
     padding-top: 30px;
@@ -176,6 +240,7 @@ body {
     color: var(--text-light);
 }
 
+/* Responsive */
 @media (max-width: 700px) {
     body { padding: 0; background: var(--bg-paper); }
     .container { padding: 40px 24px; box-shadow: none; }
@@ -189,196 +254,270 @@ body {
 <div class="newsletter-header">
 <h1>🤖 AI 日报 | 2026-03-18</h1>
 <blockquote>
+聚合 20+ AI 信息源，每日精选
+</blockquote>
 </div>
 <div class="newsletter-body">
-<p>聚合 20+ AI 信息源，每日精选</p>
-</blockquote>
 <hr />
 <h2>📰 今日头条</h2>
 <ol>
-<li><strong>The Pentagon is planning for AI companies to train on classified data, defense official says</strong> — The Pentagon is discussing plans to set up secure environments for generative AI companies to train military-specific versions of their models on clas...</li>
-<li><strong>Towards Generalizable Robotic Manipulation in Dynamic Environments</strong> — Vision-Language-Action (VLA) models excel in static manipulation but struggle in dynamic environments with moving targets. This performance gap primar...</li>
-<li><strong>Mistral bets on 'build-your-own AI' as it takes on OpenAI, Anthropic in the enterprise</strong> — Mistral Forge lets enterprises train custom AI models from scratch on their own data, challenging rivals that rely on fine-tuning and retrieval-based ...</li>
-<li><strong>Why Garry Tan's Claude Code setup has gotten so much love, and hate</strong> — Thousands of people are trying Garry Tan's Claude Code setup, which was shared on GitHub. And everyone has an opinion: even Claude, ChatGPT, and Gemin...</li>
+<li><strong>五角大楼计划 AI 公司在分类数据上训练，国防官员表示</strong> — 五角大楼正在讨论为生成式 AI 公司建立安全环境，训练军事专用版本模型，这标志着政府采购与 AI 企业的深度融合。OpenAI 与 AWS 的政府合作也在同步推进，国防、安全领域成为 AI 商业化新前沿。</li>
+<li><strong>Mistral 推出"自建 AI"战略直面 OpenAI、Anthropic</strong> — Mistral Forge 让企业能够在自有数据上从零开始训练定制 AI 模型，打破传统微调和检索增强方案的限制，标志着企业 AI 工具链朝"完全可控"方向演进。</li>
+<li><strong>Garry Tan 的 Claude Code 配置引发社区热烈讨论</strong> — 数千人正在尝试这套配置，从对开发生态的重塑到对 AI 代理能力的质疑，社区反馈两极分化但热度空前。这反映出 Agentic Coding 已进入公众舞台，成为开发者日常工作的真实选择。</li>
+<li><strong>GPT-5.4 Mini 和 Nano 发布：76000 张照片描述成本仅 $52</strong> — OpenAI 继续推进模型谱系化策略，经济型小模型正在成为 AI 应用普及的新杠杆。同时反映出定价竞争加剧，多模态能力向下普及。</li>
+<li><strong>Claude 服务稳定性问题频现，用户体验受到挑战</strong> — HN 社区关于 Claude 宕机和错误的讨论量激增，反映出 Anthropic 在用户规模扩张与基础设施稳定性之间的权衡困境。</li>
 </ol>
+<hr />
+<h2>🔥 重大发布</h2>
+<ul>
+<li><strong>Mistral Forge：企业级"自建 AI"平台</strong> — 打破"微调 vs 检索"的二元选择，让企业能从零开始在专有数据上训练完整模型，直接对标 OpenAI Frontier 和 Google Vertex AI 的企业定制化趋势。
+  <ul>
+  <li>背景：NVIDIA GTC 2026 大会期间发布，得到硅谷资本关注</li>
+  <li><a href="https://techcrunch.com/2026/03/17/mistral-forge-nvidia-gtc-build-your-own-ai-enterprise/">原文链接</a></li>
+  </ul>
+</li>
+<li><strong>Pentagon + OpenAI + AWS：政府 AI 供应链正式启动</strong> — 美国国防部与 OpenAI 通过 AWS 建立合作，这是传统防务采购与现代 AI 企业关系的里程碑。同时美国政府正在评估 Anthropic 的替代方案，说明政府正在构建多源 AI 供应体系。
+  <ul>
+  <li><a href="https://techcrunch.com/2026/03/17/the-pentagon-is-developing-alternatives-to-anthropic-report-says/">原文链接</a></li>
+  </ul>
+</li>
+<li><strong>Google Personal Intelligence 向全美用户扩展</strong> — 融合 Gmail、Drive、Search 等服务的个性化 AI 助手正式普及，标志着 AI 从通用工具向垂直应用生态演进。
+  <ul>
+  <li><a href="https://techcrunch.com/2026/03/17/googles-personal-intelligence-feature-is-expanding-to-all-us-users/">原文链接</a></li>
+  </ul>
+</li>
+<li><strong>OpenAI GPT-5.4 系列完整体系发布</strong> — Mini 和 Nano 的推出形成了从 Mini 到 Turbo 再到 Pro 的完整谱系，定价战略深化（52 美元可以标注 76000 张图像），可达性大幅提升。
+  <ul>
+  <li><a href="https://simonwillison.net/2026/Mar/17/mini-and-nano/">原文链接</a></li>
+  </ul>
+</li>
+</ul>
 <hr />
 <h2>🔬 研究论文</h2>
 <ul>
-<li>
-<p><strong>The Pentagon is planning for AI companies to train on classified data, defense official says</strong> — The Pentagon is discussing plans to set up secure environments for generative AI companies to train military-specific versions of their models on classified data. <a href="https://www.technologyreview.com/2026/03/17/1134351/the-pentagon-is-planning-for-ai-companies-to-train-on-classified-data-defense-official-says/">原文链接</a></p>
+<li><strong>Towards Generalizable Robotic Manipulation in Dynamic Environments</strong> — Vision-Language-Action（VLA）模型在静态操控中表现出色，但在动态环境中性能显著下降。本论文针对移动目标和环境变化提出改进框架，推动具身 AI 向真实世界应用迈进。
+  <ul>
+  <li>影响：为机器人在非结构化环境中的可靠操作提供理论基础</li>
+  <li><a href="https://huggingface.co/papers/2603.15620">论文链接</a></li>
+  </ul>
 </li>
-<li>
-<p><strong>Towards Generalizable Robotic Manipulation in Dynamic Environments</strong> — Vision-Language-Action (VLA) models excel in static manipulation but struggle in dynamic environments with moving targets. <a href="https://huggingface.co/papers/2603.15620">原文链接</a></p>
+<li><strong>HorizonMath：用自动验证度量 AI 数学发现进度</strong> — AI 能否在重要的未解数学问题上取得进展？本论文构建评测体系，衡量 LLM 在数学问题求解中的真实能力，而非仅依赖表面相似度。
+  <ul>
+  <li>影响：为 AI 科学研究能力评估建立标准</li>
+  <li><a href="https://huggingface.co/papers/2603.15617">论文链接</a></li>
+  </ul>
 </li>
-<li>
-<p><strong>HorizonMath: Measuring AI Progress Toward Mathematical Discovery with Automatic Verification</strong> — Can AI make progress on important, unsolved mathematical problems? Large language models are now capable of mathematical discovery. <a href="https://huggingface.co/papers/2603.15617">原文链接</a></p>
+<li><strong>Tri-Prompting：统一控制场景、主体、运动的视频生成</strong> — 近期视频扩散模型在视觉质量上取得突破，但精细控制仍是难题。本论文通过三层级提示机制实现对场景、对象和动作的独立控制。
+  <ul>
+  <li>影响：推进视频生成从"通用"向"可控"转变</li>
+  <li><a href="https://huggingface.co/papers/2603.15614">论文链接</a></li>
+  </ul>
 </li>
-<li>
-<p><strong>Tri-Prompting: Video Diffusion with Unified Control over Scene, Subject, and Motion</strong> — Recent video diffusion models have made remarkable strides in visual quality, yet precise, fine-grained control remains challenging. <a href="https://huggingface.co/papers/2603.15614">原文链接</a></p>
+<li><strong>PokeAgent 挑战：竞争式长上下文学习大规模基准</strong> — 基于 Pokémon 游戏构建的决策制定研究基准，测试 Agent 在长期、多步、高度竞争环境中的性能。
+  <ul>
+  <li>影响：为 Agent 能力的实际场景评测提供新思路</li>
+  <li><a href="https://huggingface.co/papers/2603.15563">论文链接</a></li>
+  </ul>
 </li>
-<li>
-<p><strong>Effective Distillation to Hybrid xLSTM Architectures</strong> — There have been numerous attempts to distill quadratic attention-based large language models (LLMs). <a href="https://huggingface.co/papers/2603.15590">原文链接</a></p>
+<li><strong>揭示谎言的解剖学：VLM 幻觉的多阶段诊断框架</strong> — 视觉-语言模型经常"幻觉"——生成看似合理但事实错误的内容。本论文提出诊断框架，追踪幻觉的来源和传播路径。
+  <ul>
+  <li>影响：推进 VLM 事实性和可靠性改进</li>
+  <li><a href="https://huggingface.co/papers/2603.15557">论文链接</a></li>
+  </ul>
 </li>
-<li>
-<p><strong>The PokeAgent Challenge: Competitive and Long-Context Learning at Scale</strong> — We present the PokeAgent Challenge, a large-scale benchmark for decision-making research built on Pokemon games. <a href="https://huggingface.co/papers/2603.15563">原文链接</a></p>
+<li><strong>稀疏性何时缓解 LLM 深度诅咒</strong> — 最近研究表明"深度诅咒"问题（后层表现劣化）在 LLM 中普遍存在。本论文探索稀疏性如何缓解此问题，对模型架构优化有启发。
+  <ul>
+  <li><a href="https://huggingface.co/papers/2603.15389">论文链接</a></li>
+  </ul>
 </li>
-<li>
-<p><strong>Anatomy of a Lie: A Multi-Stage Diagnostic Framework for Tracing Hallucinations in Vision-Language Models</strong> — Vision-Language Models (VLMs) frequently hallucinate - generate plausible yet factually incorrect content. <a href="https://huggingface.co/papers/2603.15557">原文链接</a></p>
+<li><strong>Riemannian 运动生成：通过 Riemannian Flow Matching 的人类运动表示与生成统一框架</strong> — 人类运动通常在欧氏空间学习，但有效运动遵循非欧几何结构。本论文通过 Riemannian 几何统一表示与生成。
+  <ul>
+  <li>影响：提升人类运动合成的自然性和多样性</li>
+  <li><a href="https://huggingface.co/papers/2603.15016">论文链接</a></li>
+  </ul>
 </li>
-<li>
-<p><strong>When Does Sparsity Mitigate the Curse of Depth in LLMs</strong> — Recent work has demonstrated the curse of depth in large language models (LLMs), where later layers seem to be underutilized. <a href="https://huggingface.co/papers/2603.15389">原文链接</a></p>
+<li><strong>RS-WorldModel：遥感理解与未来预测统一模型</strong> — 遥感世界模型需要既解释观测变化，也预测合理的未来。本论文在单一模型中统一这两个任务。
+  <ul>
+  <li>影响：推进气候监测、城市规划等应用的 AI 赋能</li>
+  <li><a href="https://huggingface.co/papers/2603.14941">论文链接</a></li>
+  </ul>
 </li>
-<li>
-<p><strong>Riemannian Motion Generation: A Unified Framework for Human Motion Representation and Generation via Riemannian Flow Matching</strong> — Human motion generation is often learned in Euclidean spaces, although valid motions follow structured manifolds. <a href="https://huggingface.co/papers/2603.15016">原文链接</a></p>
+<li><strong>POLCA：具有 LLM 的随机生成优化</strong> — 优化复杂系统（从 LLM 提示到多轮 Agent）传统上需要人工参与。本论文利用 LLM 的生成能力实现自动优化。
+  <ul>
+  <li>影响：降低复杂 AI 系统的调优成本</li>
+  <li><a href="https://huggingface.co/papers/2603.14769">论文链接</a></li>
+  </ul>
 </li>
-<li>
-<p><strong>RS-WorldModel: a Unified Model for Remote Sensing Understanding and Future Sense Forecasting</strong> — Remote sensing world models aim to both explain observed changes and forecast plausible futures. <a href="https://huggingface.co/papers/2603.14941">原文链接</a></p>
+<li><strong>VisionCoach：通过视觉感知提示加强视频推理</strong> — 视频推理要求模型在多帧中定位和追踪问题相关证据。本论文通过感知提示增强推理能力。
+  <ul>
+  <li><a href="https://huggingface.co/papers/2603.14659">论文链接</a></li>
+  </ul>
 </li>
-<li>
-<p><strong>POLCA: Stochastic Generative Optimization with LLM</strong> — Optimizing complex systems, ranging from LLM prompts to multi-turn agents, traditionally requires large amounts of labeled data. <a href="https://huggingface.co/papers/2603.14769">原文链接</a></p>
+<li><strong>EnterpriseOps-Gym：企业 Agent 规划和工具使用评估环境</strong> — LLM 正从被动信息提供者演变为主动 Agent。本论文构建企业场景 Agent 工具使用的系统评测体系。
+  <ul>
+  <li>影响：为企业 Agent 部署提供可靠的能力验证方法</li>
+  <li><a href="https://huggingface.co/papers/2603.13594">论文链接</a></li>
+  </ul>
 </li>
-<li>
-<p><strong>VisionCoach: Reinforcing Grounded Video Reasoning via Visual-Perception Prompting</strong> — Video reasoning requires models to locate and track question-relevant evidence across frames. <a href="https://huggingface.co/papers/2603.14659">原文链接</a></p>
-</li>
-<li>
-<p><strong>Spectrum Matching: a Unified Perspective for Superior Diffusability in Latent Diffusion</strong> — In this paper, we study the diffusability (learnability) of variational autoencoders (VAE) in latent space. <a href="https://huggingface.co/papers/2603.14645">原文链接</a></p>
-</li>
-<li>
-<p><strong>Make it SING: Analyzing Semantic Invariants in Classifiers</strong> — All classifiers, including state-of-the-art vision models, possess invariants, partially rooted in training distribution bias. <a href="https://huggingface.co/papers/2603.14610">原文链接</a></p>
-</li>
-<li>
-<p><strong>OxyGen: Unified KV Cache Management for Vision-Language-Action Models under Multi-Task Parallelism</strong> — Embodied AI agents increasingly require parallel execution of multiple tasks, such as manipulation and navigation. <a href="https://huggingface.co/papers/2603.14371">原文链接</a></p>
-</li>
-<li>
-<p><strong>Motivation in Large Language Models</strong> — Motivation is a central driver of human behavior, shaping decisions, goals, and task performance. <a href="https://huggingface.co/papers/2603.14347">原文链接</a></p>
-</li>
-<li>
-<p><strong>Autonomous Agents Coordinating Distributed Discovery Through Emergent Artifact Exchange</strong> — We present ScienceClaw + Infinite, a framework for autonomous scientific investigation. <a href="https://huggingface.co/papers/2603.14312">原文链接</a></p>
-</li>
-<li>
-<p><strong>Garments2Look: A Multi-Reference Dataset for High-Fidelity Outfit-Level Virtual Try-On with Clothing and Accessories</strong> — Virtual try-on (VTON) has advanced single-garment visualization, yet real-world fashion centers on complete outfits. <a href="https://huggingface.co/papers/2603.14153">原文链接</a></p>
-</li>
-<li>
-<p><strong>sebis at ArchEHR-QA 2026: How Much Can You Do Locally? Evaluating Grounded EHR QA on a Single Notebook</strong> — Clinical question answering over electronic health records (EHRs) can help clinicians and patients. <a href="https://huggingface.co/papers/2603.13962">原文链接</a></p>
-</li>
-<li>
-<p><strong>EnterpriseOps-Gym: Environments and Evaluations for Stateful Agentic Planning and Tool Use in Enterprise Settings</strong> — Large language models are shifting from passive information providers to active agents. <a href="https://huggingface.co/papers/2603.13594">原文链接</a></p>
-</li>
-<li>
-<p><strong>VoXtream2: Full-stream TTS with dynamic speaking rate control</strong> — Full-stream text-to-speech (TTS) for interactive systems must start speaking with minimal delay. <a href="https://huggingface.co/papers/2603.13518">原文链接</a></p>
+<li><strong>VoXtream2：具有动态语速控制的全流 TTS</strong> — 交互系统的 TTS 需要最小延迟开始说话，同时保持音质。本论文实现动态语速控制的实时语音合成。
+  <ul>
+  <li><a href="https://huggingface.co/papers/2603.13518">论文链接</a></li>
+  </ul>
 </li>
 </ul>
+<hr />
 <h2>💰 行业商业</h2>
 <ul>
-<li>
-<p><strong>Mistral bets on 'build-your-own AI' as it takes on OpenAI, Anthropic in the enterprise</strong> — Mistral Forge lets enterprises train custom AI models from scratch on their own data. <a href="https://techcrunch.com/2026/03/17/mistral-forge-ai-model-training/">原文链接</a></p>
+<li><p><strong>Mistral 的"自建 AI"战略直接挑战 OpenAI、Anthropic 的企业护城河</strong> — Mistral Forge 的核心竞争力在于让企业完全掌控模型训练，打破对第三方 API 的依赖。这是欧洲 AI 企业差异化竞争的新思路。</p>
+<ul>
+<li><a href="https://techcrunch.com/2026/03/17/mistral-forge-nvidia-gtc-build-your-own-ai-enterprise/">原文链接</a></li>
+</ul>
 </li>
-<li>
-<p><strong>Why Garry Tan's Claude Code setup has gotten so much love, and hate</strong> — Thousands of people are trying Garry Tan's Claude Code setup, which was shared on GitHub. <a href="https://techcrunch.com/2026/03/17/claude-code-setup/">原文链接</a></p>
+<li><p><strong>Pentagon 与 OpenAI 的政府合作是"大赢家"游戏的重新洗牌</strong> — 传统防务承包商（Lockheed、Raytheon）面临来自科技巨头的竞争。OpenAI 与 AWS 的合作模式将成为未来政府采购的标准。</p>
+<ul>
+<li><a href="https://techcrunch.com/2026/03/17/openai-expands-government-footprint-with-aws-deal/">原文链接</a></li>
+</ul>
 </li>
-<li>
-<p><strong>The Pentagon is developing alternatives to Anthropic, report says</strong> — After their dramatic falling-out, the Pentagon is seeking alternatives. <a href="https://techcrunch.com/2026/03/17/pentagon-anthropic/">原文链接</a></p>
+<li><p><strong>BuzzFeed 在 SXSW 展示 AI 应用，但反应冷淡</strong> — 互联网媒体巨头试图通过 AI 驱动的社交应用寻找新收入，但演示效果没能引发预期的市场热情，说明用户对"AI 应用"的审美标准在上升。</p>
+<ul>
+<li><a href="https://techcrunch.com/2026/03/17/buzzfeed-ai-slop-apps-sxsw-bf-island-conjure/">原文链接</a></li>
+</ul>
 </li>
-<li>
-<p><strong>BuzzFeed debuts AI slop apps in bid for new revenue</strong> — BuzzFeed unveiled new AI-powered social apps at SXSW. <a href="https://techcrunch.com/2026/03/17/buzzfeed-ai/">原文链接</a></p>
+<li><p><strong>Sam Altman 的 World 推出 AI 购物代理验证工具</strong> — 随着 AI Agent 接管在线购物决策，需要验证"真人"在幕后的机制。这反映出 AI Agent 商业化的信任问题。</p>
+<ul>
+<li><a href="https://techcrunch.com/2026/03/17/world-launches-tool-to-verify-humans-behind-ai-shopping-agents/">原文链接</a></li>
+</ul>
 </li>
-<li>
-<p><strong>Google's Personal Intelligence feature is expanding to all US users</strong> — Personal Intelligence allows Google's AI assistant to tap into your Google ecosystem. <a href="https://blog.google/technology/ai/">原文链接</a></p>
+<li><p><strong>Niv-AI 融资 1200 万美元，专注 GPU 功耗管理</strong> — 随着 AI 计算需求爆炸，GPU 功耗成为数据中心的新瓶颈。Niv-AI 的硬件-软件联合优化方案直指 AI 基础设施的核心痛点。</p>
+<ul>
+<li><a href="https://techcrunch.com/2026/03/17/niv-ai-exits-stealth-to-wring-more-power-performance-out-of-gpus/">原文链接</a></li>
+</ul>
 </li>
-<li>
-<p><strong>OpenAI expands government footprint with AWS deal, report says</strong> — OpenAI has reportedly signed a partnership with AWS to sell AI systems to the U.S. government. <a href="https://techcrunch.com/2026/03/17/openai-aws/">原文链接</a></p>
+<li><p><strong>Gamma Imagine：AI 图像生成工具直面 Canva、Adobe</strong> — 设计工具的 AI 能力竞争进入白热化。从文字提示生成品牌视觉素材的能力正成为设计平台的标配。</p>
+<ul>
+<li><a href="https://techcrunch.com/2026/03/17/gamma-adds-ai-image-generation-tools-in-bid-to-take-on-canva-and-adobe/">原文链接</a></li>
+</ul>
 </li>
-<li>
-<p><strong>AI's 'boys' club' could widen the wealth gap for women, says Rana el Kaliouby</strong> — AI investor Rana el Kaliouby warns that if women are shut out of AI funding. <a href="https://techcrunch.com/2026/03/17/ai-funding-women/">原文链接</a></p>
-</li>
-<li>
-<p><strong>World launches tool to verify humans behind AI shopping agents</strong> — As AI agents take the reins for online shoppers. <a href="https://techcrunch.com/2026/03/17/world-tool/">原文链接</a></p>
-</li>
-<li>
-<p><strong>Niv-AI exits stealth to wring more power performance out of GPUs</strong> — The company raised $12 million in seed funding. <a href="https://techcrunch.com/2026/03/17/niv-ai/">原文链接</a></p>
-</li>
-<li>
-<p><strong>Gamma adds AI image-generation tools in bid to take on Canva and Adobe</strong> — The company's new product, called Gamma Imagine. <a href="https://techcrunch.com/2026/03/17/gamma-ai/">原文链接</a></p>
+<li><p><strong>AI 领导力"男孩俱乐部"问题可能加大女性财富差距</strong> — AI 融资和领导力中的性别失衡可能导致长期的经济差距扩大，引发对 AI 产业多样性的思考。</p>
+<ul>
+<li><a href="https://techcrunch.com/2026/03/17/ais-boys-club-could-widen-the-wealth-gap-for-women-says-rana-el-kaliouby/">原文链接</a></li>
+</ul>
 </li>
 </ul>
+<hr />
 <h2>🛠️ 工具应用</h2>
 <ul>
-<li>
-<p><strong>langchain-ai/deepagents</strong> ⭐14,163 | Python — Agent harness built with LangChain and LangGraph. Equipped with a planning tool, a filesystem backend, and the ability to spawn subagents. <a href="https://github.com/langchain-ai/deepagents">GitHub</a></p>
+<li><p><strong>langchain-ai/deepagents</strong> | Python — LangChain 出品的"全电池包含" Agent 框架，内置规划工具、文件系统后端和子 Agent 生成能力，适合复杂 Agentic 任务</p>
+<ul>
+<li><a href="https://github.com/langchain-ai/deepagents">GitHub</a></li>
+</ul>
 </li>
-<li>
-<p><strong>abhigyanpatwari/GitNexus</strong> ⭐16,744 | TypeScript — Client-side knowledge graph creator that runs entirely in your browser. Drop in a GitHub repo or ZIP file, and get an interactive knowledge graph with a built-in Graph RAG Agent. <a href="https://github.com/abhigyanpatwari/GitNexus">GitHub</a></p>
+<li><p><strong>abhigyanpatwari/GitNexus</strong> | TypeScript — 纯浏览器端知识图谱生成器，支持 GitHub 仓库或 ZIP 文件导入，内置 Graph RAG Agent，适合代码探索</p>
+<ul>
+<li><a href="https://github.com/abhigyanpatwari/GitNexus">GitHub</a></li>
+</ul>
 </li>
-<li>
-<p><strong>jarrodwatts/claude-hud</strong> ⭐5,646 | JavaScript — A Claude Code plugin that shows what's happening - context usage, active tools, running agents, and todo progress. <a href="https://github.com/jarrodwatts/claude-hud">GitHub</a></p>
+<li><p><strong>jarrodwatts/claude-hud</strong> | TypeScript — Claude Code 插件显示正在发生的事情——上下文使用情况、活跃工具、运行中的 Agent，增强 Claude Code 的透明度</p>
+<ul>
+<li><a href="https://github.com/jarrodwatts/claude-hud">GitHub</a></li>
+</ul>
+</li>
+<li><p><strong>Simon Willison：Agentic Engineering 模式指南</strong> — 对"Agentic Engineering"（利用 Coding Agent 辅助软件开发）的系统性定义与模式指南，涵盖 Claude Code、OpenAI Codex、Gemini CLI 的共性模式</p>
+<ul>
+<li><a href="https://simonwillison.net/guides/agentic-engineering-patterns/what-is-agentic-engineering/">原文链接</a></li>
+</ul>
+</li>
+<li><p><strong>Subagents：Agent 上下文限制的解决方案</strong> — LLM 受上下文限制约束，Subagents 模式允许分解任务到多个专用 Agent，每个 Agent 专注于部分问题。</p>
+<ul>
+<li><a href="https://simonwillison.net/guides/agentic-engineering-patterns/subagents/">原文链接</a></li>
+</ul>
 </li>
 </ul>
+<hr />
+<h2>🌍 政策伦理</h2>
+<ul>
+<li><p><strong>Pentagon 计划在分类数据上训练 AI 公司模型</strong> — 美国政府正在建立国家 AI 安全框架的一部分，允许 OpenAI 等企业在安全隔离环境中访问非公开数据。这标志着政府 AI 治理从"限制"向"管理性合作"转变。</p>
+<ul>
+<li><a href="https://www.technologyreview.com/2026/03/17/1134351/the-pentagon-is-planning-for-ai-companies-to-train-on-classified-data-defense-official-says/">原文链接</a></li>
+</ul>
+</li>
+<li><p><strong>Anthropic 与 Pentagon 关系破裂，政府正评估替代方案</strong> — 可能反映出 Anthropic 的安全优先立场与政府采购需求的根本冲突。政府正在构建多源 AI 供应体系，不再依赖单一企业。</p>
+<ul>
+<li><a href="https://techcrunch.com/2026/03/17/the-pentagon-is-developing-alternatives-to-anthropic-report-says/">原文链接</a></li>
+</ul>
+</li>
+</ul>
+<hr />
 <h2>🔥 社区热议（Hacker News）</h2>
 <ul>
-<li>
-<p><strong>Why AI systems don't learn – On autonomous learning from cognitive science</strong> — 热度：17 | <a href="https://news.ycombinator.com/item?id=47418722">HN 讨论</a></p>
+<li><p><strong>Get Shit Done：元提示、上下文工程和规范驱动开发系统</strong> — 热度：<strong>177 Points</strong> | 一套系统化的 Prompt 工程方法论，反映出社区对"可靠 AI 工作流"的需求</p>
+<ul>
+<li><a href="https://news.ycombinator.com/item?id=47417804">HN 讨论</a></li>
+</ul>
 </li>
-<li>
-<p><strong>Garry Tan's Claude Code Setup</strong> — 热度：46 | <a href="https://news.ycombinator.com/item?id=47418576">HN 讨论</a></p>
+<li><p><strong>GPT-5.4 Mini 和 Nano</strong> — 热度：<strong>205 Points</strong> | OpenAI 经济型模型引发社区广泛讨论，定价策略和可达性成为热点</p>
+<ul>
+<li><a href="https://news.ycombinator.com/item?id=47415441">HN 讨论</a></li>
+</ul>
 </li>
-<li>
-<p><strong>Mistral AI Releases Forge</strong> — 热度：111 | <a href="https://news.ycombinator.com/item?id=47418295">HN 讨论</a></p>
+<li><p><strong>Mistral AI 发布 Forge</strong> — 热度：<strong>111 Points</strong> | 企业级"自建 AI"战略直接对标 OpenAI，社区关注这场竞争如何重塑企业 AI 市场</p>
+<ul>
+<li><a href="https://news.ycombinator.com/item?id=47418295">HN 讨论</a></li>
+</ul>
 </li>
-<li>
-<p><strong>It feels like Claude goes down almost daily now</strong> — 热度：19 | <a href="https://news.ycombinator.com/item?id=47418243">HN 讨论</a></p>
+<li><p><strong>Show HN：March Madness Bracket Challenge for AI Agents Only</strong> — 热度：<strong>57 Points</strong> | Agent 能力评测的创意方式，反映出 Agent 已进入实际应用阶段</p>
+<ul>
+<li><a href="https://news.ycombinator.com/item?id=47412015">HN 讨论</a></li>
+</ul>
 </li>
-<li>
-<p><strong>Elevated errors on Claude Opus 4.6</strong> — 热度：21 | <a href="https://news.ycombinator.com/item?id=47418180">HN 讨论</a></p>
+<li><p><strong>Show HN：Horizon - GPU 加速无限画布终端（Rust）</strong> — 热度：<strong>52 Points</strong> | 开发者工具创新的新方向，优化 Agent 与人的交互界面</p>
+<ul>
+<li><a href="https://news.ycombinator.com/item?id=47416227">HN 讨论</a></li>
+</ul>
 </li>
-<li>
-<p><strong>Warranty void if regenerated</strong> — 热度：85 | <a href="https://news.ycombinator.com/item?id=47417983">HN 讨论</a></p>
+<li><p><strong>Garry Tan 的 Claude Code 配置</strong> — 热度：<strong>46 Points</strong> | 社区对 Agentic Coding 工作流的实践分享和讨论</p>
+<ul>
+<li><a href="https://news.ycombinator.com/item?id=47418576">HN 讨论</a></li>
+</ul>
 </li>
-<li>
-<p><strong>Get Shit Done: A Meta-Prompting, Context Engineering and Spec-Driven Dev System</strong> — 热度：177 | <a href="https://news.ycombinator.com/item?id=47417500">HN 讨论</a></p>
+<li><p><strong>Claude 服务宕机和错误频现</strong> — 热度：<strong>41 Points</strong> | 用户体验问题频出，引发对 Anthropic 基础设施的关注</p>
+<ul>
+<li><a href="https://news.ycombinator.com/item?id=47417470">HN 讨论</a></li>
+</ul>
 </li>
-<li>
-<p><strong>Claude Is Having an Outage</strong> — 热度：41 | <a href="https://news.ycombinator.com/item?id=47418000">HN 讨论</a></p>
+<li><p><strong>Show HN：Antfly - Go 实现的分布式多模态搜索、记忆和图</strong> — 热度：<strong>79 Points</strong> | 新型 Agent 基础设施的探索</p>
+<ul>
+<li><a href="https://news.ycombinator.com/item?id=47414291">HN 讨论</a></li>
+</ul>
 </li>
-<li>
-<p><strong>Solid-state EV batteries that can achieve 800 miles of range becoming a reality</strong> — 热度：30 | <a href="https://news.ycombinator.com/item?id=47417800">HN 讨论</a></p>
+<li><p><strong>Encyclopedia Britannica 起诉 OpenAI 进行 AI 训练</strong> — 热度：<strong>18 Points</strong> | 知识产权诉讼进一步升温，反映出版业与 AI 企业的根本性冲突</p>
+<ul>
+<li><a href="https://news.ycombinator.com/item?id=47409495">HN 讨论</a></li>
+</ul>
 </li>
-<li>
-<p><strong>Claude Code 500s</strong> — 热度：14 | <a href="https://news.ycombinator.com/item?id=47418100">HN 讨论</a></p>
-</li>
-<li>
-<p><strong>Nvidia's DLSS 5 uses generative AI to boost photorealism in video games</strong> — 热度：15 | <a href="https://news.ycombinator.com/item?id=47418200">HN 讨论</a></p>
-</li>
-<li>
-<p><strong>Show HN: Horizon – GPU-accelerated infinite-canvas terminal in Rust</strong> — 热度：52 | <a href="https://news.ycombinator.com/item?id=47417900">HN 讨论</a></p>
-</li>
-<li>
-<p><strong>Why refusing AI is a fight for the soul</strong> — 热度：19 | <a href="https://news.ycombinator.com/item?id=47418150">HN 讨论</a></p>
-</li>
-<li>
-<p><strong>GPT‑5.4 Mini and Nano</strong> — 热度：205 | <a href="https://news.ycombinator.com/item?id=47417700">HN 讨论</a></p>
-</li>
-<li>
-<p><strong>'The Secret Agent': Exploring a Vibrant, yet Violent Brazil (2025)</strong> — 热度：121 | <a href="https://news.ycombinator.com/item?id=47417600">HN 讨论</a></p>
-</li>
-<li>
-<p><strong>Show HN: Antfly: Distributed, Multimodal Search and Memory and Graphs in Go</strong> — 热度：79 | <a href="https://news.ycombinator.com/item?id=47417500">HN 讨论</a></p>
-</li>
-<li>
-<p><strong>OpenAI to Cut Back on Side Projects in Push to 'Nail' Core Business</strong> — 热度：15 | <a href="https://news.ycombinator.com/item?id=47418050">HN 讨论</a></p>
-</li>
-<li>
-<p><strong>Show HN: March Madness Bracket Challenge for AI Agents Only</strong> — 热度：57 | <a href="https://news.ycombinator.com/item?id=47417400">HN 讨论</a></p>
-</li>
-<li>
-<p><strong>Show HN: Real-time observability for coding agents</strong> — 热度：14 | <a href="https://news.ycombinator.com/item?id=47418300">HN 讨论</a></p>
-</li>
-<li>
-<p><strong>Encyclopedia Britannica sues OpenAI over AI training</strong> — 热度：18 | <a href="https://news.ycombinator.com/item?id=47418250">HN 讨论</a></p>
+<li><p><strong>OpenAI 缩减副业项目以专注核心业务</strong> — 热度：<strong>15 Points</strong> | 企业战略重心调整，或反映出 AGI 竞争加剧的压力</p>
+<ul>
+<li><a href="https://news.ycombinator.com/item?id=47412039">HN 讨论</a></li>
+</ul>
 </li>
 </ul>
+<hr />
+<h2>📊 趋势洞察</h2>
+<p><strong>今日三大主线：</strong></p>
+<ol>
+<li>
+<p><strong>政府 AI 采购正式启动，商业化维度扩展到国防安全</strong> — Pentagon 与 OpenAI + AWS 的合作是"大赢家"游戏的重新洗牌。防务、安全、情报领域对 AI 的需求将成为新的商业增长极，与此同时 Anthropic 的出局说明安全理念与政府实用主义存在根本冲突。从"科技企业 + 政府"的关系看，AI 已经成为国家能力竞争的新战场。</p>
+</li>
+<li>
+<p><strong>企业 AI 工具链朝"完全可控"方向演进，微调与检索时代终结</strong> — Mistral Forge 的推出标志着企业 AI 从"API 依赖"向"自主培养"转变。这与 Google Personal Intelligence、OpenAI Frontier 的企业定制化趋势形成共鸣：未来的企业 AI 要求是"专属化、可追踪、完全掌控"。定价战争（GPT-5.4 Mini $52 标注 76000 张图）加速了这种转变。</p>
+</li>
+<li>
+<p><strong>Agentic Coding 从极客圈进入主流舞台，但稳定性问题开始显现</strong> — Garry Tan 的 Claude Code 配置引发社区热烈讨论，Get Shit Done 框架获得 177 Points，说明 Agentic Engineering 已被主流开发者接受。但同时 Claude 服务宕机、错误频现的问题也在浮现，这是 Anthropic 用户规模扩张与基础设施稳定性的新挑战。Agent 时代的"可靠性"问题正在成为下一个竞争焦点。</p>
+</li>
+</ol>
 </div>
 <div class="newsletter-footer">
-统计: 9 源 | 63 条 | 生成于 09:25
+统计: 12 源 | 86 条 | 生成于 18:00
 </div>
 </div>
 </body>
