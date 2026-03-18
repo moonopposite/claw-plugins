@@ -571,8 +571,7 @@ function _play(flag, id, vipFlags) {
         }
     }
     
-    // 方案1：优先 1080p - 使用 pipe 分割视频和音频 URL
-    // 格式：videoUrl|audioUrl，FongMi 会用 ExoPlayer 播放
+    // 方案1：优先 1080p - 使用 url.values 数组格式
     if (videoTracks.length > 0 && audioTracks.length > 0) {
         // 找 1080p
         var selectedVideo = null;
@@ -605,10 +604,15 @@ function _play(flag, id, vipFlags) {
         }
         
         if (selectedVideo && selectedVideo.url && selectedAudio && selectedAudio.url) {
-            // 用 pipe 分割：videoUrl|audioUrl
+            // 使用 url.values 数组格式
             return JSON.stringify({
                 parse: 0,
-                url: selectedVideo.url + '|' + selectedAudio.url,
+                url: {
+                    values: [
+                        { url: selectedVideo.url, name: 'video' },
+                        { url: selectedAudio.url, name: 'audio' }
+                    ]
+                },
                 header: {
                     'User-Agent': AVR_UA,
                     'Referer': YT_BASE,
