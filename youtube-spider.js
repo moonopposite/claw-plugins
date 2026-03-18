@@ -542,58 +542,58 @@ function _play(flag, id, vipFlags) {
     var formats       = streamingData.formats || [];
     var adaptive      = streamingData.adaptiveFormats || [];
 
-    // 从 adaptiveFormats 中找高分辨率视频轨道
+    // 优先返回预合并的 formats（有音视频但分辨率固定）
+    if (formats && formats.length > 0) {
+        // 按分辨率排序，选最高的
+        formats.sort(function(a, b) { return (b.width || 0) - (a.width || 0); });
+        for (var i = 0; i < formats.length; i++) {
+            var f = formats[i];
+            if (f.url && f.mimeType && f.mimeType.indexOf('video/mp4') >= 0) {
+                return JSON.stringify({
+                    parse:  0,
+                    url:    f.url,
+                    header: { 'User-Agent': AVR_UA },
+                });
+            }
+        }
+    }
+
+    // 备选：尝试从 adaptiveFormats 中提取高分辨率视频
+    // 注：这种情况下会没有声音，建议用户升级 FongMi/TV 或使用其他播放器
     var videoTracks = [];
-    
     for (var idx = 0; idx < adaptive.length; idx++) {
         var af = adaptive[idx];
         if (!af.url || !af.mimeType) continue;
-        
-        // 只关心视频轨道（有宽高信息的 video/mp4）
         if (af.mimeType.indexOf('video/mp4') >= 0 && (af.width || 0) > 0 && (af.height || 0) > 0) {
             videoTracks.push(af);
         }
     }
 
-    // 优先找 1080p，其次找最高分辨率
-    var selected = null;
-    
-    // 先找 1920x1080
-    for (var v1 = 0; v1 < videoTracks.length; v1++) {
-        if (videoTracks[v1].width === 1920 && videoTracks[v1].height === 1080) {
-            selected = videoTracks[v1];
-            break;
-        }
-    }
-    
-    // 如果没找到 1080p，找最高分辨率
-    if (!selected && videoTracks.length > 0) {
-        var maxRes = videoTracks[0];
-        for (var v2 = 1; v2 < videoTracks.length; v2++) {
-            if ((videoTracks[v2].width || 0) > (maxRes.width || 0)) {
-                maxRes = videoTracks[v2];
+    if (videoTracks.length > 0) {
+        // 找 1080p
+        var selected = null;
+        for (var v1 = 0; v1 < videoTracks.length; v1++) {
+            if (videoTracks[v1].width === 1920 && videoTracks[v1].height === 1080) {
+                selected = videoTracks[v1];
+                break;
             }
         }
-        selected = maxRes;
-    }
+        
+        // 如果没有 1080p，找最高分辨率
+        if (!selected && videoTracks.length > 0) {
+            var maxRes = videoTracks[0];
+            for (var v2 = 1; v2 < videoTracks.length; v2++) {
+                if ((videoTracks[v2].width || 0) > (maxRes.width || 0)) {
+                    maxRes = videoTracks[v2];
+                }
+            }
+            selected = maxRes;
+        }
 
-    // 返回选中的视频 URL
-    if (selected && selected.url) {
-        return JSON.stringify({
-            parse:  0,
-            url:    selected.url,
-            header: { 'User-Agent': AVR_UA },
-        });
-    }
-
-    // 备选：使用预合并的 formats（有音频但低分辨率）
-    formats.sort(function(a, b) { return (b.width || 0) - (a.width || 0); });
-    for (var i = 0; i < formats.length; i++) {
-        var f = formats[i];
-        if (f.url && f.mimeType && f.mimeType.indexOf('video/mp4') >= 0) {
+        if (selected && selected.url) {
             return JSON.stringify({
                 parse:  0,
-                url:    f.url,
+                url:    selected.url,
                 header: { 'User-Agent': AVR_UA },
             });
         }
