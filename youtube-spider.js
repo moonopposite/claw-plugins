@@ -1,5 +1,5 @@
 /**
- * OK影视 / FongMi TV — YouTube Spider  v2.4.1
+ * OK影视 / FongMi TV — YouTube Spider  v2.5.0
  *
  * 格式：ES Module（export default）
  * 运行环境：FongMi/TV 内置 QuickJS（com.fongmi.quickjs）
@@ -590,16 +590,18 @@ function _play(flag, id, vipFlags) {
         }
         
         if (selectedVideo && selectedVideo.url && selectedAudio && selectedAudio.url) {
-            // 生成 proxy:// URL 格式
+            // 生成 proxy:// URL 格式（使用 MPD/DASH 格式）
             // 参数使用 BASE64 编码以避免 URL 特殊字符问题
             var params = {
                 video: selectedVideo.url,
                 audio: selectedAudio.url,
                 width: selectedVideo.width,
-                height: selectedVideo.height
+                height: selectedVideo.height,
+                videoBitrate: selectedVideo.bitrate,
+                audioBitrate: selectedAudio.bitrate
             };
             var encoded = _btoa(JSON.stringify(params));
-            var proxyUrl = 'proxy://youtube/m3u8/' + encoded;
+            var proxyUrl = 'proxy://youtube/mpd/' + encoded;
             
             return JSON.stringify({
                 parse: 0,
@@ -729,26 +731,44 @@ function _atob(str) {
     return buf.join('');
 }
 
-// ── M3U8 生成函数（用于返回多轨道清单）──────────────────────────
-function _generateM3U8(videoUrl, audioUrl, width, height) {
-    // 生成标准的 HLS M3U8 清单，包含视频和音频轨道
-    var m3u8 = '#EXTM3U\r\n';
-    m3u8 += '#EXT-X-VERSION:3\r\n';
-    m3u8 += '#EXT-X-STREAM-INF:BANDWIDTH=5000000,RESOLUTION=' + width + 'x' + height + ',AUDIO="audio"\r\n';
-    m3u8 += videoUrl + '\r\n';
-    m3u8 += '#EXT-X-MEDIA:TYPE=AUDIO,GROUP-ID="audio",LANGUAGE="und",NAME="audio",URI="' + audioUrl + '"\r\n';
-    return m3u8;
+// ── MPD 生成函数（用于返回多轨道清单）──────────────────────────
+// DASH MPD 格式：ExoPlayer 原生支持，可正确处理分离的音视频轨道
+function _generateMPD(videoUrl, audioUrl, width, height, videoBitrate, audioBitrate) {
+    var bandwidthV = videoBitrate || 5000000;
+    var bandwidthA = audioBitrate || 128000;
+    
+    var mpd = '<?xml version="1.0" encoding="UTF-8"?>\r\n';
+    mpd += '<MPD xmlns="urn:mpeg:dash:schema:mpd:2011" type="static" mediaPresentationDuration="PT1H0M0.000S" minBufferTime="PT1.0S" profiles="urn:mpeg:dash:profile:isoff-on-demand:2011">\r\n';
+    
+    // 视频 AdaptationSet
+    mpd += '  <Period>\r\n';
+    mpd += '    <AdaptationSet mimeType="video/mp4" segmentAlignment="true" startWithSAP="1">\r\n';
+    mpd += '      <Representation id="video" bandwidth="' + bandwidthV + '" width="' + width + '" height="' + height + '">\r\n';
+    mpd += '        <BaseURL>' + videoUrl + '</BaseURL>\r\n';
+    mpd += '      </Representation>\r\n';
+    mpd += '    </AdaptationSet>\r\n';
+    
+    // 音频 AdaptationSet
+    mpd += '    <AdaptationSet mimeType="audio/mp4" segmentAlignment="true" startWithSAP="1">\r\n';
+    mpd += '      <Representation id="audio" bandwidth="' + bandwidthA + '">\r\n';
+    mpd += '        <BaseURL>' + audioUrl + '</BaseURL>\r\n';
+    mpd += '      </Representation>\r\n';
+    mpd += '    </AdaptationSet>\r\n';
+    mpd += '  </Period>\r\n';
+    mpd += '</MPD>';
+    
+    return mpd;
 }
 
-// ── Proxy 方法（处理 M3U8 请求和 proxy:// URL）───────────────────
+// ── Proxy 方法（处理 MPD/DASH 请求）───────────────────
 function _proxy(params) {
     try {
         var url = params.url || '';
         
-        // 检查是否是我们的特殊 proxy:// URL
-        if (url.indexOf('proxy://youtube/m3u8/') === 0) {
-            // 格式：proxy://youtube/m3u8/{base64-encoded-params}
-            var encoded = url.substring('proxy://youtube/m3u8/'.length);
+        // 检查是否是 MPD proxy URL
+        if (url.indexOf('proxy://youtube/mpd/') === 0) {
+            // 格式：proxy://youtube/mpd/{base64-encoded-params}
+            var encoded = url.substring('proxy://youtube/mpd/'.length);
             var jsonStr = _atob(encoded);
             var data = JSON.parse(jsonStr);
             
@@ -756,14 +776,31 @@ function _proxy(params) {
             var audioUrl = data.audio;
             var width = data.width || 1920;
             var height = data.height || 1080;
+            var videoBitrate = data.videoBitrate || 5000000;
+            var audioBitrate = data.audioBitrate || 128000;
             
-            var m3u8Content = _generateM3U8(videoUrl, audioUrl, width, height);
+            var mpdContent = _generateMPD(videoUrl, audioUrl, width, height, videoBitrate, audioBitrate);
             
-            // 返回 M3U8 内容
+            // 返回 MPD 内容 (DASH 格式)
             return JSON.stringify([
-                200,                                 // HTTP status
-                'application/vnd.apple.mpegurl',    // content-type
-                m3u8Content                         // content
+                200,                          // HTTP status
+                'application/dash+xml',       // content-type for DASH MPD
+                mpdContent                    // content
+            ]);
+        }
+        
+        // 兼容旧版 m3u8 URL（重定向到 mpd）
+        if (url.indexOf('proxy://youtube/m3u8/') === 0) {
+            var encoded = url.substring('proxy://youtube/m3u8/'.length);
+            var jsonStr = _atob(encoded);
+            var data = JSON.parse(jsonStr);
+            
+            var mpdContent = _generateMPD(data.video, data.audio, data.width || 1920, data.height || 1080, data.videoBitrate, data.audioBitrate);
+            
+            return JSON.stringify([
+                200,
+                'application/dash+xml',
+                mpdContent
             ]);
         }
         
