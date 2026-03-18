@@ -1,0 +1,15 @@
+{
+  "build": {
+    "command": "echo 'No build required'",
+    "cwd": "public/",
+    "destination": "."
+  },
+  "env": {
+    "production": {
+      "vars": {}
+    },
+    "preview": {
+      "vars": {}
+    }
+  }
+}
