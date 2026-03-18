@@ -539,21 +539,9 @@ function _play(flag, id, vipFlags) {
     }
 
     var streamingData = data.streamingData || {};
-    var formats       = streamingData.formats || [];
     var adaptive      = streamingData.adaptiveFormats || [];
 
-    formats.sort(function(a, b) { return (b.width || 0) - (a.width || 0); });
-    for (var i = 0; i < formats.length; i++) {
-        var f = formats[i];
-        if (f.url && f.mimeType && f.mimeType.indexOf('video/mp4') >= 0) {
-            return JSON.stringify({
-                parse:  0,
-                url:    f.url,
-                header: { 'User-Agent': AVR_UA },
-            });
-        }
-    }
-
+    // ⚠️ 跳过低分辨率的 formats，直接用 adaptiveFormats 获取高分辨率视频
     // 优先选 1080p，其次选最高可用分辨率
     var target1080 = null;
     var targetHighest = null;
@@ -561,23 +549,33 @@ function _play(flag, id, vipFlags) {
     for (var j = 0; j < adaptive.length; j++) {
         var af = adaptive[j];
         if (af.url && af.mimeType && af.mimeType.indexOf('video/mp4') >= 0) {
-            // 记录最高分辨率
-            if (!targetHighest || (af.width || 0) > (targetHighest.width || 0)) {
-                targetHighest = af;
-            }
-            // 检查是否为 1080p（1920x1080）
-            if (!target1080 && (af.width || 0) === 1920 && (af.height || 0) === 1080) {
-                target1080 = af;
+            // 只考虑有宽高信息的视频轨道（排除纯音频）
+            if ((af.width || 0) > 0 && (af.height || 0) > 0) {
+                // 检查是否为 1080p（1920x1080）
+                if (!target1080 && af.width === 1920 && af.height === 1080) {
+                    target1080 = af;
+                }
+                // 记录最高分辨率
+                if (!targetHighest || af.width > (targetHighest.width || 0)) {
+                    targetHighest = af;
+                }
             }
         }
     }
     
     // 优先返回 1080p，否则返回最高分辨率
-    var selected = target1080 || targetHighest;
-    if (selected) {
+    if (target1080) {
         return JSON.stringify({
             parse:  0,
-            url:    selected.url,
+            url:    target1080.url,
+            header: { 'User-Agent': AVR_UA },
+        });
+    }
+    
+    if (targetHighest) {
+        return JSON.stringify({
+            parse:  0,
+            url:    targetHighest.url,
             header: { 'User-Agent': AVR_UA },
         });
     }
