@@ -764,10 +764,6 @@ function _generateMPD(videoUrl, audioUrl, width, height, videoBitrate, audioBitr
 // ── Proxy 方法（处理 MPD/DASH 请求）───────────────────
 function _proxy(params) {
     try {
-        // FongMi/TV 会将 Query String 参数作为对象传入
-        // 格式：proxy://?do=js&data={base64-encoded-params}
-        // params = { do: "js", data: "xxx" }
-        
         var encoded = params.data || '';
         
         if (!encoded) {
@@ -786,11 +782,18 @@ function _proxy(params) {
         
         var mpdContent = _generateMPD(videoUrl, audioUrl, width, height, videoBitrate, audioBitrate);
         
-        // 返回 MPD 内容 (DASH 格式)
+        // 返回 MPD 内容，同时返回必要的 header
+        var headers = {
+            'User-Agent': AVR_UA,
+            'Referer': YT_BASE,
+            'Origin': YT_BASE
+        };
+        
         return JSON.stringify([
             200,                          // HTTP status
             'application/dash+xml',       // content-type for DASH MPD
-            mpdContent                    // content
+            mpdContent,                   // content
+            headers                       // headers for media requests
         ]);
     } catch (e) {
         return JSON.stringify([500, 'text/plain', 'Error: ' + e.message]);
