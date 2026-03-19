@@ -1,5 +1,5 @@
 /**
- * OK影视 / FongMi TV — YouTube Spider  v2.9.0
+ * OK影视 / FongMi TV — YouTube Spider  v2.9.1
  *
  * 格式：ES Module（export default）
  * 运行环境：FongMi/TV 内置 QuickJS（com.fongmi.quickjs）
@@ -13,7 +13,7 @@
  * 播放：
  *   1. 返回标准 YouTube URL，交由 FongMi 内置 Youtube.java extractor（NewPipe）
  *      处理 → 自动生成 DASH MPD → ExoPlayer 播放 1080p+
- *   2. 自动提取字幕（优先中文/英文），下载 XML → 转 SRT → 上传 file.io
+ *   2. 自动提取字幕（ANDROID_VR 客户端），下载 XML → 转 SRT → 上传 file.io
  * 搜索：WEB 客户端（gl=HK）
  */
 
@@ -459,15 +459,29 @@ function _play(flag, id, vipFlags) {
     return JSON.stringify(result);
 }
 
-// 获取 YouTube 字幕列表
+// 获取 YouTube 字幕列表（使用 ANDROID_VR 客户端 + Cookie）
 function getSubtitles(videoId) {
-    // 用 WEB 客户端获取字幕轨道信息
     var visitor = getVisitorInfo();
+
+    // ANDROID_VR 客户端配置（与 MusicFree 相同）
+    var vrClient = {
+        clientName:    'ANDROID_VR',
+        clientVersion: '1.65.10',
+        deviceMake:    'Oculus',
+        deviceModel:   'Quest 3',
+        androidSdkVersion: 32,
+        hl:            'en',
+        gl:            'US',
+    };
+
     var hdrs = {
         'Content-Type':             'application/json',
-        'X-YouTube-Client-Name':    '1',
-        'X-YouTube-Client-Version': CLIENT_SEARCH.clientVersion,
-        'User-Agent':               'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
+        'X-YouTube-Client-Name':    '28',
+        'X-YouTube-Client-Version': '1.65.10',
+        'User-Agent':               'com.google.android.apps.youtube.vr.oculus/1.65.10 (Linux; U; Android 12L; eureka-user Build/SQ3A.220605.009.A1) gzip',
+        'Accept':                   'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+        'Accept-Language':          'en-us,en;q=0.5',
+        'Origin':                   YT_BASE,
     };
     if (visitor.visitorId) hdrs['X-Goog-Visitor-Id'] = visitor.visitorId;
 
@@ -476,8 +490,15 @@ function getSubtitles(videoId) {
         headers: hdrs,
         body:    JSON.stringify({
             videoId: videoId,
-            context: { client: CLIENT_SEARCH },
-            playbackContext: { contentPlaybackContext: { signatureTimestamp: visitor.sts } },
+            context: { client: vrClient },
+            playbackContext: {
+                contentPlaybackContext: {
+                    html5Preference:    'HTML5_PREF_WANTS',
+                    signatureTimestamp: visitor.sts || 20522,
+                },
+            },
+            contentCheckOk: true,
+            racyCheckOk:    true,
         }),
     });
     if (!res || res.code !== 200) return [];
@@ -492,7 +513,6 @@ function getSubtitles(videoId) {
     if (captionTracks.length === 0) return [];
 
     // 优先选择非 ASR 的字幕（手动字幕优先）
-    var results = [];
     var manualTracks = [];
     var asrTracks = [];
     for (var i = 0; i < captionTracks.length; i++) {
@@ -503,22 +523,22 @@ function getSubtitles(videoId) {
             manualTracks.push(track);
         }
     }
-    
+
     // 优先用手动字幕，最多 2 个
     var selected = manualTracks.slice(0, 2);
-    // 如果不够，用 ASR 补上
     if (selected.length < 2) {
         for (var j = 0; j < asrTracks.length && selected.length < 2; j++) {
             selected.push(asrTracks[j]);
         }
     }
 
+    var results = [];
     for (var k = 0; k < selected.length; k++) {
         var track = selected[k];
         var lang = track.languageCode || 'unknown';
         var name = (track.name && track.name.simpleText) || lang;
 
-        // 下载字幕并转 SRT，然后上传到 file.io
+        // 下载字幕并转 SRT，然后上传
         var srtUrl = fetchAndUploadSubtitle(track.baseUrl, videoId, lang);
         if (srtUrl) {
             results.push({ url: srtUrl, lang: lang, name: name });
