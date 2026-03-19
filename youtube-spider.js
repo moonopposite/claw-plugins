@@ -1,5 +1,5 @@
 /**
- * OK影视 / FongMi TV — YouTube Spider  v2.8.1
+ * OK影视 / FongMi TV — YouTube Spider  v2.9.0
  *
  * 格式：ES Module（export default）
  * 运行环境：FongMi/TV 内置 QuickJS（com.fongmi.quickjs）
@@ -13,7 +13,7 @@
  * 播放：
  *   1. 返回标准 YouTube URL，交由 FongMi 内置 Youtube.java extractor（NewPipe）
  *      处理 → 自动生成 DASH MPD → ExoPlayer 播放 1080p+
- *   2. 自动提取字幕（优先中文/英文），直接返回 YouTube WebVTT 字幕 URL
+ *   2. 自动提取字幕（优先中文/英文），下载 XML → 转 SRT → 上传 file.io
  * 搜索：WEB 客户端（gl=HK）
  */
 
@@ -517,11 +517,106 @@ function getSubtitles(videoId) {
         var track = selected[k];
         var lang = track.languageCode || 'unknown';
         var name = (track.name && track.name.simpleText) || lang;
-        // 直接使用 YouTube 的字幕 URL（FongMi 可以直接播放 WebVTT）
-        var subUrl = track.baseUrl + '&fmt=vtt';
-        results.push({ url: subUrl, lang: lang, name: name });
+
+        // 下载字幕并转 SRT，然后上传到 file.io
+        var srtUrl = fetchAndUploadSubtitle(track.baseUrl, videoId, lang);
+        if (srtUrl) {
+            results.push({ url: srtUrl, lang: lang, name: name });
+        }
     }
     return results;
+}
+
+// 下载字幕（fmt=srv3）并转 SRT，然后上传到 file.io
+function fetchAndUploadSubtitle(baseUrl, videoId, lang) {
+    // 使用 srv3 格式获取 XML 字幕
+    var url = baseUrl + (baseUrl.indexOf('?') >= 0 ? '&' : '?') + 'fmt=srv3';
+    var res = req(url, {
+        method: 'GET',
+        headers: {
+            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
+            'Referer': YT_BASE + '/watch?v=' + videoId,
+        },
+    });
+    if (!res || res.code !== 200 || !res.content) return null;
+
+    // XML 转 SRT
+    var srt = xmlToSrt(res.content);
+    if (!srt) return null;
+
+    // 上传到 file.io
+    var boundary = '----FormBoundary' + Math.random().toString(36).substring(2);
+    var body = '--' + boundary + '\r\n'
+        + 'Content-Disposition: form-data; name="file"; filename="sub.srt"\r\n'
+        + 'Content-Type: text/plain\r\n\r\n'
+        + srt + '\r\n'
+        + '--' + boundary + '--\r\n';
+
+    var uploadRes = req('https://file.io', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'multipart/form-data; boundary=' + boundary,
+            'User-Agent': 'YouTube-Spider/1.0',
+        },
+        body: body,
+    });
+
+    if (uploadRes && uploadRes.code === 200) {
+        try {
+            var json = JSON.parse(uploadRes.content);
+            if (json && json.success && json.link) {
+                return json.link;
+            }
+        } catch (e) {}
+    }
+    return null;
+}
+
+// XML (srv3) 转 SRT
+function xmlToSrt(xml) {
+    try {
+        var results = [];
+        // 匹配 <p t="开始时间" d="持续时间">文本</p>
+        var pRegex = /<p[^>]*t="(\d+)"[^>]*d="(\d+)"[^>]*>([\s\S]*?)<\/p>/g;
+        var match;
+        while ((match = pRegex.exec(xml)) !== null) {
+            var startMs = parseInt(match[1]);
+            var durMs = parseInt(match[2]);
+            var text = match[3]
+                .replace(/<[^>]+>/g, '')  // 移除 XML 标签
+                .replace(/&amp;/g, '&')
+                .replace(/&lt;/g, '<')
+                .replace(/&gt;/g, '>')
+                .replace(/&quot;/g, '"')
+                .replace(/&#39;/g, "'")
+                .replace(/\r?\n/g, ' ')
+                .trim();
+            if (text) {
+                results.push({ start: startMs, end: startMs + durMs, text: text });
+            }
+        }
+        if (results.length === 0) return null;
+
+        // 构建 SRT
+        var srt = '';
+        for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            srt += (i + 1) + '\n';
+            srt += formatSrtTime(item.start) + ' --> ' + formatSrtTime(item.end) + '\n';
+            srt += item.text + '\n\n';
+        }
+        return srt;
+    } catch (e) {
+        return null;
+    }
+}
+
+function formatSrtTime(ms) {
+    var hours = Math.floor(ms / 3600000);
+    var minutes = Math.floor((ms % 3600000) / 60000);
+    var seconds = Math.floor((ms % 60000) / 1000);
+    var pad = function(n) { return n < 10 ? '0' + n : '' + n; };
+    return pad(hours) + ':' + pad(minutes) + ':' + pad(seconds) + ',000';
 }
 
 // 获取访客信息（用于 API 请求）
