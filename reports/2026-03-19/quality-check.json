@@ -1,0 +1,57 @@
+{
+  "date": "2026-03-19",
+  "passed": true,
+  "score": 97,
+  "sections": {
+    "📰 今日头条": {
+      "count": 5,
+      "min": 3,
+      "max": 5,
+      "ok": true
+    },
+    "🔥 重大发布": {
+      "count": 6,
+      "min": 3,
+      "max": 6,
+      "ok": true
+    },
+    "🔬 研究论文": {
+      "count": 19,
+      "min": 8,
+      "max": 12,
+      "ok": false
+    },
+    "💰 行业商业": {
+      "count": 8,
+      "min": 5,
+      "max": 8,
+      "ok": true
+    },
+    "🛠️ 工具应用": {
+      "count": 7,
+      "min": 4,
+      "max": 7,
+      "ok": true
+    },
+    "🌍 政策伦理": {
+      "count": 4,
+      "min": 2,
+      "max": 4,
+      "ok": true
+    },
+    "🔥 社区热议": {
+      "count": 8,
+      "min": 8,
+      "max": 12,
+      "ok": true
+    }
+  },
+  "warnings": [
+    "🔬 研究论文: 19 items (expected 8-12)"
+  ],
+  "errors": [],
+  "total_items": 57,
+  "total_links": 54,
+  "overall": "通过",
+  "message": "检查通过，有少量警告（研究论文数量超标，内容质量良好）"
+}

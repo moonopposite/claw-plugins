@@ -105,7 +105,7 @@ class QualityChecker:
             section_content = match.group(1)
             
             # 计数列表项（以 "- **" 或 "1. **" 开头）
-            item_count = len(re.findall(r'^\s*[-1-9]\.\s*\*\*', section_content, re.MULTILINE))
+            item_count = len(re.findall(r'^\s*(?:-\s+\*\*|[1-9]\d*\.\s+\*\*)', section_content, re.MULTILINE))
             
             self.stats[section] = item_count
             total_items += item_count

