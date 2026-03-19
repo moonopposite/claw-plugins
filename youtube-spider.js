@@ -1,5 +1,5 @@
 /**
- * OK影视 / FongMi TV — YouTube Spider  v2.5.0
+ * OK影视 / FongMi TV — YouTube Spider  v2.7.0
  *
  * 格式：ES Module（export default）
  * 运行环境：FongMi/TV 内置 QuickJS（com.fongmi.quickjs）
@@ -10,17 +10,14 @@
  *     globalThis.__JS_SPIDER__ = spider.default
  *   然后调用 __JS_SPIDER__.home() / .category() / .detail() / .search() / .play()
  *
- * 播放：ANDROID_VR 客户端（Oculus Quest 3）无 poToken，直接返回直链
+ * 播放：返回标准 YouTube URL，交由 FongMi 内置 Youtube.java extractor（NewPipe）
+ *       处理 → 自动生成 DASH MPD → ExoPlayer 播放 1080p+
  * 搜索：WEB 客户端（gl=HK）
  */
 
 // ── 常量 ──────────────────────────────────────────────────────
 var YT_BASE   = 'https://www.youtube.com';
 var YT_API    = YT_BASE + '/youtubei/v1';
-
-var AVR_VERSION = '1.65.10';
-var AVR_UA      = 'com.google.android.apps.youtube.vr.oculus/' + AVR_VERSION
-    + ' (Linux; U; Android 12L; eureka-user Build/SQ3A.220605.009.A1) gzip';
 
 var CLIENT_SEARCH = {
     clientName:    'WEB',
@@ -29,34 +26,12 @@ var CLIENT_SEARCH = {
     gl: 'HK',
 };
 
-var CLIENT_PLAYER = {
-    clientName:        'ANDROID_VR',
-    clientVersion:     AVR_VERSION,
-    androidSdkVersion: 32,
-    deviceMake:        'Oculus',
-    deviceModel:       'Quest 3',
-    osName:            'Android',
-    osVersion:         '12L',
-    hl: 'en',
-    gl: 'US',
-};
-
 var HEADERS_SEARCH = {
     'Content-Type':             'application/json',
     'X-YouTube-Client-Name':    '1',
     'X-YouTube-Client-Version': CLIENT_SEARCH.clientVersion,
     'User-Agent':               'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36',
     'Accept-Language':          'zh-TW,zh;q=0.9,en;q=0.8',
-};
-
-var HEADERS_PLAYER = {
-    'Content-Type':             'application/json',
-    'X-YouTube-Client-Name':    '28',
-    'X-YouTube-Client-Version': AVR_VERSION,
-    'User-Agent':               AVR_UA,
-    'Accept':                   'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
-    'Accept-Language':          'en-us,en;q=0.5',
-    'Origin':                   YT_BASE,
 };
 
 // 订阅频道列表（按用户指定顺序）
@@ -115,36 +90,8 @@ var CATEGORIES = {
     },
 };
 
-// 访客信息缓存
-var _visitorCache = null;
-var _visitorCacheTs = 0;
 
 // ── 工具函数 ──────────────────────────────────────────────────
-
-function getVisitorInfoSync() {
-    var now = Date.now ? Date.now() : new Date().getTime();
-    if (_visitorCache && (now - _visitorCacheTs) < 20 * 60 * 1000) {
-        return _visitorCache;
-    }
-    var res = req(YT_BASE, {
-        method: 'GET',
-        headers: {
-            'User-Agent':      'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36',
-            'Accept':          'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
-            'Accept-Language': 'en-us,en;q=0.5',
-        },
-    });
-    var html = (res && res.content) ? res.content : '';
-    var visitorId = '';
-    var vidM = html.match(/"visitorData"\s*:\s*"([^"]+)"/);
-    if (vidM) visitorId = vidM[1];
-    var sts = 20522;
-    var stsM = html.match(/"STS"\s*:\s*(\d+)/);
-    if (stsM) sts = parseInt(stsM[1]);
-    _visitorCache = { visitorId: visitorId, sts: sts };
-    _visitorCacheTs = now;
-    return _visitorCache;
-}
 
 function ytPost(path, body, hdrs) {
     var url = YT_API + '/' + path + '?prettyPrint=false';
@@ -494,294 +441,13 @@ function _search(key, quick, pg) {
 function _play(flag, id, vipFlags) {
     var videoId = id;
 
-    var visitor = getVisitorInfoSync();
-
-    var hdrs = {
-        'Content-Type':             'application/json',
-        'X-YouTube-Client-Name':    '28',
-        'X-YouTube-Client-Version': AVR_VERSION,
-        'User-Agent':               AVR_UA,
-        'Accept':                   'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
-        'Accept-Language':          'en-us,en;q=0.5',
-        'Origin':                   YT_BASE,
-    };
-    if (visitor.visitorId) hdrs['X-Goog-Visitor-Id'] = visitor.visitorId;
-
-    var res = req(YT_API + '/player?prettyPrint=false', {
-        method:  'POST',
-        headers: hdrs,
-        body:    JSON.stringify({
-            videoId: videoId,
-            context: { client: CLIENT_PLAYER },
-            playbackContext: {
-                contentPlaybackContext: {
-                    html5Preference:    'HTML5_PREF_WANTS',
-                    signatureTimestamp: visitor.sts,
-                },
-            },
-            contentCheckOk: true,
-            racyCheckOk:    true,
-        }),
+    // 返回标准 YouTube 观看 URL，交由 FongMi 内置 Youtube.java extractor 处理。
+    // Youtube.java 使用 NewPipe 库提取分离的视频/音频流，并生成 DASH MPD，
+    // 由 ExoPlayer 播放，支持 1080p+ 高清画质。
+    return JSON.stringify({
+        parse: 0,
+        url:   YT_BASE + '/watch?v=' + videoId,
     });
-
-    if (!res || res.code < 200 || res.code >= 300) {
-        return JSON.stringify({ parse: 0, url: '' });
-    }
-
-    var data;
-    try { data = JSON.parse(res.content); } catch (e) {
-        return JSON.stringify({ parse: 0, url: '' });
-    }
-
-    var status = data.playabilityStatus && data.playabilityStatus.status;
-    if (status !== 'OK') {
-        return JSON.stringify({ parse: 0, url: '' });
-    }
-
-    var streamingData = data.streamingData || {};
-    var formats       = streamingData.formats || [];
-    var adaptive      = streamingData.adaptiveFormats || [];
-    var hlsUrl       = streamingData.hlsManifestUrl || '';
-
-    // 方案0：如果有 HLS 流，直接返回 m3u8
-    if (hlsUrl) {
-        return JSON.stringify({
-            parse: 0,
-            url: hlsUrl,
-            header: {
-                'User-Agent': AVR_UA,
-                'Referer': YT_BASE,
-            },
-        });
-    }
-
-    var videoTracks = [];
-    var audioTracks = [];
-    
-    for (var idx = 0; idx < adaptive.length; idx++) {
-        var af = adaptive[idx];
-        if (!af.url || !af.mimeType) continue;
-        
-        if (af.mimeType.indexOf('video/mp4') >= 0 && (af.width || 0) > 0 && (af.height || 0) > 0) {
-            videoTracks.push(af);
-        }
-        
-        if (af.mimeType.indexOf('audio/mp4') >= 0) {
-            audioTracks.push(af);
-        }
-    }
-    
-    // 方案1：预合并流（formats）- 包含音视频的 MP4，直接可用
-    if (formats && formats.length > 0) {
-        // 找最高分辨率的预合并流
-        var bestFormat = null;
-        var maxRes = 0;
-        for (var fi = 0; fi < formats.length; fi++) {
-            var f = formats[fi];
-            if (!f.url || !f.mimeType) continue;
-            if (f.mimeType.indexOf('video/mp4') < 0) continue;
-            var res = (f.width || 0) * (f.height || 0);
-            if (res > maxRes) {
-                maxRes = res;
-                bestFormat = f;
-            }
-        }
-        if (bestFormat && bestFormat.url) {
-            return JSON.stringify({
-                parse: 0,
-                url: bestFormat.url,
-                header: {
-                    'User-Agent': AVR_UA,
-                    'Referer': YT_BASE,
-                    'Range': 'bytes=0-',
-                },
-            });
-        }
-    }
-    
-    // 备选方案3：只有视频没音频时
-    if (videoTracks.length > 0 && audioTracks.length === 0 && formats && formats.length > 0) {
-        var selectedFormat = null;
-        var maxResolution = 0;
-        
-        for (var i = 0; i < formats.length; i++) {
-            var f = formats[i];
-            if (!f.url || !f.mimeType) continue;
-            if (f.mimeType.indexOf('video/mp4') < 0) continue;
-            
-            var resolution = (f.width || 0) * (f.height || 0);
-            if (resolution > maxResolution) {
-                maxResolution = resolution;
-                selectedFormat = f;
-            }
-        }
-        
-        if (selectedFormat && selectedFormat.url) {
-            return JSON.stringify({
-                parse:  0,
-                url:    selectedFormat.url,
-                header: {
-                    'User-Agent': AVR_UA,
-                    'Range': 'bytes=0-',
-                },
-            });
-        }
-    }
-
-    if (formats && formats.length > 0) {
-        var selectedFormat = null;
-        var maxResolution = 0;
-        
-        for (var i = 0; i < formats.length; i++) {
-            var f = formats[i];
-            if (!f.url || !f.mimeType) continue;
-            if (f.mimeType.indexOf('video/mp4') < 0) continue;
-            
-            var resolution = (f.width || 0) * (f.height || 0);
-            if (resolution > maxResolution) {
-                maxResolution = resolution;
-                selectedFormat = f;
-            }
-        }
-        
-        if (selectedFormat && selectedFormat.url) {
-            return JSON.stringify({
-                parse:  0,
-                url:    selectedFormat.url,
-                header: {
-                    'User-Agent': AVR_UA,
-                    'Range': 'bytes=0-',
-                },
-            });
-        }
-    }
-
-    if (videoTracks.length > 0) {
-        var selected = videoTracks[0];
-        for (var v = 1; v < videoTracks.length; v++) {
-            var a1 = (selected.width || 0) * (selected.height || 0);
-            var a2 = (videoTracks[v].width || 0) * (videoTracks[v].height || 0);
-            if (a2 > a1) {
-                selected = videoTracks[v];
-            }
-        }
-        
-        if (selected && selected.url) {
-            return JSON.stringify({
-                parse:  0,
-                url:    selected.url,
-                header: {
-                    'User-Agent': AVR_UA,
-                    'Range': 'bytes=0-',
-                },
-            });
-        }
-    }
-
-    return JSON.stringify({ parse: 0, url: '' });
-}
-
-// ── Base64 编码/解码工具（用于在 URL 中安全传递参数）──────────────
-function _btoa(str) {
-    var chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/';
-    var buf = [];
-    for (var i = 0; i < str.length; i += 3) {
-        var a = str.charCodeAt(i);
-        var b = i + 1 < str.length ? str.charCodeAt(i + 1) : 0;
-        var c = i + 2 < str.length ? str.charCodeAt(i + 2) : 0;
-        var bitmap = (a << 16) | (b << 8) | c;
-        for (var j = 0; j < 4; j++) {
-            if (i * 8 + j * 6 <= str.length * 8) {
-                buf.push(chars.charAt((bitmap >>> (18 - j * 6)) & 0x3F));
-            } else {
-                buf.push('=');
-            }
-        }
-    }
-    return buf.join('');
-}
-
-function _atob(str) {
-    var chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/';
-    var buf = [];
-    for (var i = 0; i < str.length; i += 4) {
-        var b1 = chars.indexOf(str.charAt(i));
-        var b2 = chars.indexOf(str.charAt(i + 1));
-        var b3 = chars.indexOf(str.charAt(i + 2));
-        var b4 = chars.indexOf(str.charAt(i + 3));
-        buf.push(String.fromCharCode(((b1 << 2) | (b2 >> 4)) & 0xFF));
-        if (b3 < 64) buf.push(String.fromCharCode(((b2 << 4) | (b3 >> 2)) & 0xFF));
-        if (b4 < 64) buf.push(String.fromCharCode(((b3 << 6) | b4) & 0xFF));
-    }
-    return buf.join('');
-}
-
-// ── MPD 生成函数（用于返回多轨道清单）──────────────────────────
-// DASH MPD 格式：ExoPlayer 原生支持，可正确处理分离的音视频轨道
-function _generateMPD(videoUrl, audioUrl, width, height, videoBitrate, audioBitrate) {
-    var bandwidthV = videoBitrate || 5000000;
-    var bandwidthA = audioBitrate || 128000;
-    
-    var mpd = '<?xml version="1.0" encoding="UTF-8"?>\r\n';
-    mpd += '<MPD xmlns="urn:mpeg:dash:schema:mpd:2011" type="static" mediaPresentationDuration="PT1H0M0.000S" minBufferTime="PT1.0S" profiles="urn:mpeg:dash:profile:isoff-on-demand:2011">\r\n';
-    
-    // 视频 AdaptationSet
-    mpd += '  <Period>\r\n';
-    mpd += '    <AdaptationSet mimeType="video/mp4" segmentAlignment="true" startWithSAP="1">\r\n';
-    mpd += '      <Representation id="video" bandwidth="' + bandwidthV + '" width="' + width + '" height="' + height + '">\r\n';
-    mpd += '        <BaseURL>' + videoUrl + '</BaseURL>\r\n';
-    mpd += '      </Representation>\r\n';
-    mpd += '    </AdaptationSet>\r\n';
-    
-    // 音频 AdaptationSet
-    mpd += '    <AdaptationSet mimeType="audio/mp4" segmentAlignment="true" startWithSAP="1">\r\n';
-    mpd += '      <Representation id="audio" bandwidth="' + bandwidthA + '">\r\n';
-    mpd += '        <BaseURL>' + audioUrl + '</BaseURL>\r\n';
-    mpd += '      </Representation>\r\n';
-    mpd += '    </AdaptationSet>\r\n';
-    mpd += '  </Period>\r\n';
-    mpd += '</MPD>';
-    
-    return mpd;
-}
-
-// ── Proxy 方法（处理 MPD/DASH 请求）───────────────────
-function _proxy(params) {
-    try {
-        var encoded = params.data || '';
-        
-        if (!encoded) {
-            return JSON.stringify([404, 'text/plain', 'No data parameter']);
-        }
-        
-        var jsonStr = _atob(encoded);
-        var data = JSON.parse(jsonStr);
-        
-        var videoUrl = data.video;
-        var audioUrl = data.audio;
-        var width = data.width || 1920;
-        var height = data.height || 1080;
-        var videoBitrate = data.videoBitrate || 5000000;
-        var audioBitrate = data.audioBitrate || 128000;
-        
-        var mpdContent = _generateMPD(videoUrl, audioUrl, width, height, videoBitrate, audioBitrate);
-        
-        // 返回 MPD 内容，同时返回必要的 header
-        var headers = {
-            'User-Agent': AVR_UA,
-            'Referer': YT_BASE,
-            'Origin': YT_BASE
-        };
-        
-        return JSON.stringify([
-            200,                          // HTTP status
-            'application/dash+xml',       // content-type for DASH MPD
-            mpdContent,                   // content
-            headers                       // headers for media requests
-        ]);
-    } catch (e) {
-        return JSON.stringify([500, 'text/plain', 'Error: ' + e.message]);
-    }
 }
 
 // ── ES Module 导出（FongMi/TV QuickJS 必须）────────────────────────
@@ -796,5 +462,4 @@ export default {
     detail:   _detail,
     search:   _search,
     play:     _play,
-    proxy:    _proxy,
 };
