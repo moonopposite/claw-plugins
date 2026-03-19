@@ -1,5 +1,5 @@
 /**
- * OK影视 / FongMi TV — YouTube Spider  v2.7.0
+ * OK影视 / FongMi TV — YouTube Spider  v2.8.0
  *
  * 格式：ES Module（export default）
  * 运行环境：FongMi/TV 内置 QuickJS（com.fongmi.quickjs）
@@ -10,8 +10,10 @@
  *     globalThis.__JS_SPIDER__ = spider.default
  *   然后调用 __JS_SPIDER__.home() / .category() / .detail() / .search() / .play()
  *
- * 播放：返回标准 YouTube URL，交由 FongMi 内置 Youtube.java extractor（NewPipe）
- *       处理 → 自动生成 DASH MPD → ExoPlayer 播放 1080p+
+ * 播放：
+ *   1. 返回标准 YouTube URL，交由 FongMi 内置 Youtube.java extractor（NewPipe）
+ *      处理 → 自动生成 DASH MPD → ExoPlayer 播放 1080p+
+ *   2. 自动提取字幕（优先中文/英文），转 SRT 后上传到 file.io，返回 subs 列表
  * 搜索：WEB 客户端（gl=HK）
  */
 
@@ -441,13 +443,184 @@ function _search(key, quick, pg) {
 function _play(flag, id, vipFlags) {
     var videoId = id;
 
+    // ── 1. 提取字幕 ────────────────────────────────────────────────
+    var subs = getSubtitles(videoId);
+
     // 返回标准 YouTube 观看 URL，交由 FongMi 内置 Youtube.java extractor 处理。
     // Youtube.java 使用 NewPipe 库提取分离的视频/音频流，并生成 DASH MPD，
     // 由 ExoPlayer 播放，支持 1080p+ 高清画质。
-    return JSON.stringify({
+    var result = {
         parse: 0,
         url:   YT_BASE + '/watch?v=' + videoId,
+    };
+    if (subs && subs.length > 0) {
+        result.subs = subs;
+    }
+    return JSON.stringify(result);
+}
+
+// 获取 YouTube 字幕列表并上传到临时存储
+function getSubtitles(videoId) {
+    // 用 WEB 客户端获取字幕轨道信息
+    var visitor = getVisitorInfo();
+    var hdrs = {
+        'Content-Type':             'application/json',
+        'X-YouTube-Client-Name':    '1',
+        'X-YouTube-Client-Version': CLIENT_SEARCH.clientVersion,
+        'User-Agent':               'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
+    };
+    if (visitor.visitorId) hdrs['X-Goog-Visitor-Id'] = visitor.visitorId;
+
+    var res = req(YT_API + '/player?prettyPrint=false', {
+        method:  'POST',
+        headers: hdrs,
+        body:    JSON.stringify({
+            videoId: videoId,
+            context: { client: CLIENT_SEARCH },
+            playbackContext: { contentPlaybackContext: { signatureTimestamp: visitor.sts } },
+        }),
     });
+    if (!res || res.code !== 200) return [];
+
+    var data;
+    try { data = JSON.parse(res.content); } catch (e) { return []; }
+
+    var captions = data.captions && data.captions.playerCaptionsTracklistRenderer;
+    if (!captions) return [];
+
+    var captionTracks = captions.captionTracks || [];
+    if (captionTracks.length === 0) return [];
+
+    // 只处理前 2 个字幕（优先中文、英文）
+    var selected = [];
+    var langPriority = ['zh-CN', 'zh-TW', 'zh', 'en', 'en-US', 'en-GB'];
+    for (var i = 0; i < captionTracks.length && selected.length < 2; i++) {
+        var track = captionTracks[i];
+        var langCode = track.languageCode || '';
+        // 跳过 ASR（自动生成）
+        if (track.kind === 'asr') continue;
+        selected.push(track);
+    }
+
+    var results = [];
+    for (var j = 0; j < selected.length; j++) {
+        var track = selected[j];
+        var lang = track.languageCode || 'unknown';
+        var name = (track.name && track.name.simpleText) || lang;
+
+        // 下载字幕并转 SRT
+        var srtUrl = fetchAndUploadSubtitle(videoId, track.baseUrl, lang, name);
+        if (srtUrl) {
+            results.push({ url: srtUrl, lang: lang, name: name });
+        }
+    }
+    return results;
+}
+
+// 获取访客信息（用于 API 请求）
+function getVisitorInfo() {
+    var res = req(YT_BASE, {
+        method: 'GET',
+        headers: {
+            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
+        },
+    });
+    var html = (res && res.content) || '';
+    var visitorId = '';
+    var vidM = html.match(/"visitorData"\s*:\s*"([^"]+)"/);
+    if (vidM) visitorId = vidM[1];
+    var sts = 20522;
+    var stsM = html.match(/"STS"\s*:\s*(\d+)/);
+    if (stsM) sts = parseInt(stsM[1]);
+    return { visitorId: visitorId, sts: sts };
+}
+
+// 下载字幕并转 SRT，然后上传到 file.io
+function fetchAndUploadSubtitle(videoId, baseUrl, lang, name) {
+    // 添加 fmt=srv3 参数获取 XML 格式字幕
+    var url = baseUrl + (baseUrl.indexOf('?') >= 0 ? '&' : '?') + 'fmt=srv3';
+    var res = req(url, {
+        method: 'GET',
+        headers: {
+            'User-Agent': 'Mozilla/5.0',
+            'Referer': YT_BASE,
+        },
+    });
+    if (!res || res.code !== 200 || !res.content) return null;
+
+    // 把 TTML/XML 转成 SRT
+    var srtContent = ttmlToSrt(res.content, lang);
+    if (!srtContent) return null;
+
+    // 上传到 file.io（免费临时文件托管，接受 multipart/form-data POST）
+    var boundary = '----FormBoundary' + Math.random().toString(36).substring(2);
+    var body = '--' + boundary + '\r\n' 
+        + 'Content-Disposition: form-data; name="file"; filename="sub.srt"\r\n'
+        + 'Content-Type: text/plain\r\n\r\n'
+        + srtContent + '\r\n'
+        + '--' + boundary + '--\r\n';
+    
+    var uploadRes = req('https://file.io', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'multipart/form-data; boundary=' + boundary,
+            'User-Agent': 'YouTube-Spider/1.0',
+        },
+        body: body,
+    });
+
+    if (uploadRes && uploadRes.code === 200) {
+        try {
+            var json = JSON.parse(uploadRes.content);
+            if (json && json.success && json.link) {
+                return json.link;
+            }
+        } catch (e) {}
+    }
+    return null;
+}
+
+// TTML 转 SRT
+function ttmlToSrt(xml, lang) {
+    try {
+        // 简单解析 TTML，提取所有 <p> 标签
+        var results = [];
+        var pRegex = /<p[^>]*t="(\d+)"[^>]*>([\s\S]*?)<\/p>/g;
+        var match;
+        while ((match = pRegex.exec(xml)) !== null) {
+            var startMs = parseInt(match[1]);
+            var text = match[2].replace(/<[^>]+>/g, '').replace(/&amp;/g, '&')
+                .replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&quot;/g, '"')
+                .replace(/&#39;/g, "'").replace(/\n/g, ' ').trim();
+            if (text) {
+                results.push({ start: startMs, text: text });
+            }
+        }
+        if (results.length === 0) return null;
+
+        // 构建 SRT
+        var srt = '';
+        for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var startTime = formatSrtTime(item.start);
+            var endTime = formatSrtTime(item.start + 2000); // 默认 2 秒 duration
+            srt += (i + 1) + '\n' + startTime + ' --> ' + endTime + '\n' + item.text + '\n\n';
+        }
+        return srt;
+    } catch (e) {
+        return null;
+    }
+}
+
+function formatSrtTime(ms) {
+    var hours = Math.floor(ms / 3600000);
+    var minutes = Math.floor((ms % 3600000) / 60000);
+    var seconds = Math.floor((ms % 60000) / 1000);
+    return pad(hours) + ':' + pad(minutes) + ':' + pad(seconds) + ',000';
+}
+
+function pad(n) {
+    return n < 10 ? '0' + n : '' + n;
 }
 
 // ── ES Module 导出（FongMi/TV QuickJS 必须）────────────────────────

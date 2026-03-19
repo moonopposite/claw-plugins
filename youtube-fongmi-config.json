@@ -4,7 +4,7 @@
       "key": "youtube",
       "name": "YouTube",
       "type": 3,
-      "api": "https://raw.githubusercontent.com/moonopposite/claw-plugins/master/youtube-spider.js?v=2.7.0",
+      "api": "https://raw.githubusercontent.com/moonopposite/claw-plugins/master/youtube-spider.js?v=2.8.0",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 0
