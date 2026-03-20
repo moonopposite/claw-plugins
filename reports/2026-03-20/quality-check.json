@@ -1,0 +1,24 @@
+{
+  "date": "2026-03-20",
+  "file": "reports/2026-03-20/ai-daily.md",
+  "status": "PASSED",
+  "score": 97,
+  "errors": [],
+  "warnings": [
+    "研究论文板块 16 条（建议 8-12）"
+  ],
+  "stats": {
+    "今日头条": 5,
+    "重大发布": 4,
+    "研究论文": 16,
+    "行业商业": 5,
+    "工具应用": 6,
+    "政策伦理": 3,
+    "社区热议": 11,
+    "total_items": 50,
+    "total_links": 56,
+    "date": "2026-03-20"
+  },
+  "threshold": 95,
+  "passed": true
+}

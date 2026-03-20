@@ -1,0 +1,530 @@
+[
+  {
+    "source": "GitHub Trending",
+    "category": "tools",
+    "title": "shareAI-lab/learn-claude-code",
+    "url": "https://github.com/shareAI-lab/learn-claude-code",
+    "time": "2026-03-20T00:01:45.454846+00:00",
+    "summary": "Bash is all you need - A nano claude code–like 「agent harness」, built from 0 to 1",
+    "readme": "[English](./README.md) | [中文](./README-zh.md) | [日本語](./README-ja.md)\n# Learn Claude Code -- Harness Engineering for Real Agents\n\n## The Model IS the Agent\n\nBefore we talk about code, let's get one thing absolutely straight.\n\n**An agent is a model. Not a framework. Not a prompt chain. Not a drag-and-drop workflow.**\n\n### What an Agent IS\n\nAn agent is a neural network -- a Transformer, an RNN, a learned function -- that has been trained, through billions of gradient updates on action-sequence dat",
+    "github_url": "https://github.com/shareAI-lab/learn-claude-code",
+    "lang": "TypeScript",
+    "stars": "33581"
+  },
+  {
+    "source": "GitHub Trending",
+    "category": "tools",
+    "title": "jarrodwatts/claude-hud",
+    "url": "https://github.com/jarrodwatts/claude-hud",
+    "time": "2026-03-20T00:01:45.042459+00:00",
+    "summary": "A Claude Code plugin that shows what's happening - context usage, active tools, running agents, and todo progress",
+    "readme": "# Claude HUD\n\nA Claude Code plugin that shows what's happening — context usage, active tools, running agents, and todo progress. Always visible below your input.\n\n[![License](https://img.shields.io/github/license/jarrodwatts/claude-hud?v=2)](LICENSE)\n[![Stars](https://img.shields.io/github/stars/jarrodwatts/claude-hud)](https://github.com/jarrodwatts/claude-hud/stargazers)\n\n![Claude HUD in action](claude-hud-preview-5-2.png)\n\n## Install\n\nInside a Claude Code instance, run the following commands:",
+    "github_url": "https://github.com/jarrodwatts/claude-hud",
+    "lang": "JavaScript",
+    "stars": "8475"
+  },
+  {
+    "source": "GitHub Trending",
+    "category": "tools",
+    "title": "gsd-build/get-shit-done",
+    "url": "https://github.com/gsd-build/get-shit-done",
+    "time": "2026-03-20T00:01:44.969236+00:00",
+    "summary": "A light-weight and powerful meta-prompting, context engineering and spec-driven development system for Claude Code by TÂCHES.",
+    "readme": "<div align=\"center\">\n\n# GET SHIT DONE\n\n**English** · [简体中文](README.zh-CN.md)\n\n**A light-weight and powerful meta-prompting, context engineering and spec-driven development system for Claude Code, OpenCode, Gemini CLI, Codex, Copilot, and Antigravity.**\n\n**Solves context rot — the quality degradation that happens as Claude fills its context window.**\n\n[**English**](README.md) | [**简体中文**](docs/zh-CN/README.md)\n\n[![npm version](https://img.shields.io/npm/v/get-shit-done-cc?style=for-the-badge&logo",
+    "github_url": "https://github.com/gsd-build/get-shit-done",
+    "lang": "JavaScript",
+    "stars": "36061"
+  },
+  {
+    "source": "GitHub Trending",
+    "category": "tools",
+    "title": "opendataloader-project/opendataloader-pdf",
+    "url": "https://github.com/opendataloader-project/opendataloader-pdf",
+    "time": "2026-03-20T00:01:44.961157+00:00",
+    "summary": "PDF Parser for AI-ready data. Automate PDF accessibility. Open-source.",
+    "readme": "<!-- AI-AGENT-SUMMARY\nname: opendataloader-pdf\ncategory: PDF data extraction, PDF accessibility automation\nlicense: Apache-2.0\nsolves: [PDF to structured data for RAG/LLM pipelines, automate PDF accessibility compliance — layout analysis + auto-tagging to Tagged PDF (first open-source end-to-end)]\ninput: PDF files (digital, scanned, tagged)\noutput: Markdown, JSON (with bounding boxes), HTML, Tagged PDF, PDF/UA (enterprise)\nsdk: Python, Node.js, Java\nrequirements: Java 11+\npricing: open-source co",
+    "github_url": "https://github.com/opendataloader-project/opendataloader-pdf",
+    "lang": "Java",
+    "stars": "5546"
+  },
+  {
+    "source": "GitHub Trending",
+    "category": "tools",
+    "title": "langchain-ai/open-swe",
+    "url": "https://github.com/langchain-ai/open-swe",
+    "time": "2026-03-20T00:01:44.825713+00:00",
+    "summary": "An Open-Source Asynchronous Coding Agent",
+    "readme": "<div align=\"center\">\n  <a href=\"https://github.com/langchain-ai/open-swe\">\n    <picture>\n      <source media=\"(prefers-color-scheme: dark)\" srcset=\"static/dark.svg\">\n      <source media=\"(prefers-color-scheme: light)\" srcset=\"static/light.svg\">\n      <img alt=\"Open SWE Logo\" src=\"static/dark.svg\" width=\"35%\">\n    </picture>\n  </a>\n</div>\n\n<div align=\"center\">\n  <h3>Open-source framework for building your org's internal coding agent.</h3>\n</div>\n\n<div align=\"center\">\n  <a href=\"https://opensource",
+    "github_url": "https://github.com/langchain-ai/open-swe",
+    "lang": "Python",
+    "stars": "7011"
+  },
+  {
+    "source": "GitHub Trending",
+    "category": "tools",
+    "title": "unslothai/unsloth",
+    "url": "https://github.com/unslothai/unsloth",
+    "time": "2026-03-20T00:01:44.820486+00:00",
+    "summary": "Unified web UI for training and running open models like Qwen, DeepSeek, gpt-oss and Gemma locally.",
+    "readme": "<h1 align=\"center\" style=\"margin:0;\">\n  <a href=\"https://unsloth.ai/docs\"><picture>\n    <source media=\"(prefers-color-scheme: dark)\" srcset=\"https://raw.githubusercontent.com/unslothai/unsloth/main/images/STUDIO%20WHITE%20LOGO.png\">\n    <source media=\"(prefers-color-scheme: light)\" srcset=\"https://raw.githubusercontent.com/unslothai/unsloth/main/images/STUDIO%20BLACK%20LOGO.png\">\n    <img alt=\"Unsloth logo\" src=\"https://raw.githubusercontent.com/unslothai/unsloth/main/images/STUDIO%20BLACK%20LOG",
+    "github_url": "https://github.com/unslothai/unsloth",
+    "lang": "Python",
+    "stars": "56682"
+  },
+  {
+    "source": "Hacker News",
+    "category": "community",
+    "title": "Be intentional about how AI changes your codebase",
+    "url": "https://news.ycombinator.com/item?id=47446373",
+    "time": "2026-03-19T21:23:24Z",
+    "heat": "55",
+    "summary": "",
+    "hn_url": "https://news.ycombinator.com/item?id=47446373"
+  },
+  {
+    "source": "Hacker News",
+    "category": "community",
+    "title": "Xiaomi launches next-gen SU7 with 902 km range and Lidar, still undercuts Tesla",
+    "url": "https://news.ycombinator.com/item?id=47446192",
+    "time": "2026-03-19T21:12:44Z",
+    "heat": "62",
+    "summary": "",
+    "hn_url": "https://news.ycombinator.com/item?id=47446192"
+  },
+  {
+    "source": "Hacker News",
+    "category": "community",
+    "title": "EsoLang-Bench: Evaluating Genuine Reasoning in LLMs via Esoteric Languages",
+    "url": "https://news.ycombinator.com/item?id=47446021",
+    "time": "2026-03-19T21:01:03Z",
+    "heat": "52",
+    "summary": "",
+    "hn_url": "https://news.ycombinator.com/item?id=47446021"
+  },
+  {
+    "source": "Hacker News",
+    "category": "community",
+    "title": "Anthropic takes legal action against OpenCode",
+    "url": "https://news.ycombinator.com/item?id=47444748",
+    "time": "2026-03-19T19:37:26Z",
+    "heat": "354",
+    "summary": "",
+    "hn_url": "https://news.ycombinator.com/item?id=47444748"
+  },
+  {
+    "source": "Hacker News",
+    "category": "community",
+    "title": "No AI in Node.js Core",
+    "url": "https://news.ycombinator.com/item?id=47444714",
+    "time": "2026-03-19T19:35:37Z",
+    "heat": "37",
+    "summary": "",
+    "hn_url": "https://news.ycombinator.com/item?id=47444714"
+  },
+  {
+    "source": "Hacker News",
+    "category": "community",
+    "title": "Show HN: I built a P2P network where AI agents publish formally verified science",
+    "url": "https://news.ycombinator.com/item?id=47444212",
+    "time": "2026-03-19T19:00:43Z",
+    "heat": "32",
+    "summary": "",
+    "hn_url": "https://news.ycombinator.com/item?id=47444212"
+  },
+  {
+    "source": "Hacker News",
+    "category": "community",
+    "title": "A rogue AI led to a serious security incident at Meta",
+    "url": "https://news.ycombinator.com/item?id=47444195",
+    "time": "2026-03-19T18:59:02Z",
+    "heat": "122",
+    "summary": "",
+    "hn_url": "https://news.ycombinator.com/item?id=47444195"
+  },
+  {
+    "source": "Hacker News",
+    "category": "community",
+    "title": "Launch HN: Voltair (YC W26) – Drone and charging network for power utilities",
+    "url": "https://news.ycombinator.com/item?id=47442452",
+    "time": "2026-03-19T16:57:02Z",
+    "heat": "45",
+    "summary": "",
+    "hn_url": "https://news.ycombinator.com/item?id=47442452"
+  },
+  {
+    "source": "Hacker News",
+    "category": "community",
+    "title": "Scaling Karpathy's Autoresearch: What Happens When the Agent Gets a GPU Cluster",
+    "url": "https://news.ycombinator.com/item?id=47442435",
+    "time": "2026-03-19T16:55:45Z",
+    "heat": "112",
+    "summary": "",
+    "hn_url": "https://news.ycombinator.com/item?id=47442435"
+  },
+  {
+    "source": "Hacker News",
+    "category": "community",
+    "title": "Prompt Injecting Contributing.md",
+    "url": "https://news.ycombinator.com/item?id=47441499",
+    "time": "2026-03-19T15:52:12Z",
+    "heat": "99",
+    "summary": "",
+    "hn_url": "https://news.ycombinator.com/item?id=47441499"
+  },
+  {
+    "source": "TechCrunch AI",
+    "category": "industry",
+    "title": "Jeff Bezos reportedly wants $100 billion to buy and transform old manufacturing firms with AI",
+    "url": "https://techcrunch.com/2026/03/19/jeff-bezos-reportedly-wants-100-billion-to-buy-and-transform-old-manufacturing-firms-with-ai/",
+    "time": "2026-03-19T14:09:24+00:00",
+    "summary": "The Amazon magnate has a new project centered around acquiring industrial firms and revamping them with AI technology."
+  },
+  {
+    "source": "Hacker News",
+    "category": "community",
+    "title": "The RAM stick is dying, and the replacement is something most have never seen",
+    "url": "https://news.ycombinator.com/item?id=47438940",
+    "time": "2026-03-19T13:19:42Z",
+    "heat": "32",
+    "summary": "",
+    "hn_url": "https://news.ycombinator.com/item?id=47438940"
+  },
+  {
+    "source": "Hacker News",
+    "category": "community",
+    "title": "Astral to Join OpenAI",
+    "url": "https://news.ycombinator.com/item?id=47438723",
+    "time": "2026-03-19T13:05:50Z",
+    "heat": "1180",
+    "summary": "",
+    "hn_url": "https://news.ycombinator.com/item?id=47438723"
+  },
+  {
+    "source": "Hacker News",
+    "category": "community",
+    "title": "OpenAI to Acquire Astral",
+    "url": "https://news.ycombinator.com/item?id=47438716",
+    "time": "2026-03-19T13:05:17Z",
+    "heat": "159",
+    "summary": "",
+    "hn_url": "https://news.ycombinator.com/item?id=47438716"
+  },
+  {
+    "source": "Hacker News",
+    "category": "community",
+    "title": "Ramtrack.eu – RAM Price Intelligence",
+    "url": "https://news.ycombinator.com/item?id=47438342",
+    "time": "2026-03-19T12:39:46Z",
+    "heat": "80",
+    "summary": "",
+    "hn_url": "https://news.ycombinator.com/item?id=47438342"
+  },
+  {
+    "source": "Hacker News",
+    "category": "community",
+    "title": "Afroman Wins Civil Trial over Use of Police Raid Footage in His Music Videos",
+    "url": "https://news.ycombinator.com/item?id=47438001",
+    "time": "2026-03-19T12:13:00Z",
+    "heat": "382",
+    "summary": "",
+    "hn_url": "https://news.ycombinator.com/item?id=47438001"
+  },
+  {
+    "source": "TechCrunch AI",
+    "category": "industry",
+    "title": "Online bot traffic will exceed human traffic by 2027, Cloudflare CEO says",
+    "url": "https://techcrunch.com/2026/03/19/online-bot-traffic-will-exceed-human-traffic-by-2027-cloudflare-ceo-says/",
+    "time": "2026-03-19T11:09:02+00:00",
+    "summary": "AI bots may outnumber humans online by 2027, says Cloudflare CEO Matthew Prince, as generative AI agents dramatically increase web traffic and infrastructure demands."
+  },
+  {
+    "source": "Hacker News",
+    "category": "community",
+    "title": "2% of ICML papers desk rejected because the authors used LLM in their reviews",
+    "url": "https://news.ycombinator.com/item?id=47437101",
+    "time": "2026-03-19T10:17:46Z",
+    "heat": "185",
+    "summary": "",
+    "hn_url": "https://news.ycombinator.com/item?id=47437101"
+  },
+  {
+    "source": "TechCrunch AI",
+    "category": "industry",
+    "title": "Meta rolls out new AI content enforcement systems while reducing reliance on third-party vendors",
+    "url": "https://techcrunch.com/2026/03/19/meta-rolls-out-new-ai-content-enforcement-systems-while-reducing-reliance-on-third-party-vendors/",
+    "time": "2026-03-19T09:24:13+00:00",
+    "summary": "Meta believes these AI systems can detect more violations with greater accuracy, better prevent scams, respond more quickly to real-world events, and reduce over-enforcement."
+  },
+  {
+    "source": "Simon Willison",
+    "category": "tools",
+    "title": "Thoughts on OpenAI acquiring Astral and uv/ruff/ty",
+    "url": "https://simonwillison.net/2026/Mar/19/openai-acquiring-astral/#atom-everything",
+    "time": "2026-03-19T08:45:15+00:00",
+    "summary": "The big news this morning: Astral to join OpenAI (on the Astral blog) and OpenAI to acquire Astral (the OpenAI announcement). Astral are the company behind uv, ruff, and ty - three increasingly load-bearing open source projects in the Python ecosystem. I have thoughts!\nThe official line from OpenAI and Astral\nThe Astral team will become part of the Codex team at OpenAI.\nCharlie Marsh has this to say:\n\nOpen source is at the heart of that impact and the heart of that story; it sits at the center o"
+  },
+  {
+    "source": "TechCrunch AI",
+    "category": "industry",
+    "title": "DoorDash launches a new ‘Tasks’ app that pays couriers to submit videos to train AI",
+    "url": "https://techcrunch.com/2026/03/19/doordash-launches-a-new-tasks-app-that-pays-couriers-to-submit-videos-to-train-ai/",
+    "time": "2026-03-19T08:14:00+00:00",
+    "summary": "Delivery couriers will be able to earn money by completing activities like filming everyday tasks or recording themselves speaking in another language."
+  },
+  {
+    "source": "Hacker News",
+    "category": "community",
+    "title": "What 81,000 people want from AI",
+    "url": "https://news.ycombinator.com/item?id=47435156",
+    "time": "2026-03-19T05:00:56Z",
+    "heat": "189",
+    "summary": "",
+    "hn_url": "https://news.ycombinator.com/item?id=47435156"
+  },
+  {
+    "source": "Hacker News",
+    "category": "community",
+    "title": "Cook: A simple CLI for orchestrating Claude Code",
+    "url": "https://news.ycombinator.com/item?id=47434024",
+    "time": "2026-03-19T02:20:34Z",
+    "heat": "283",
+    "summary": "",
+    "hn_url": "https://news.ycombinator.com/item?id=47434024"
+  },
+  {
+    "source": "Hacker News",
+    "category": "community",
+    "title": "Afroman prevails in defamation trial over songs about police raid on his home",
+    "url": "https://news.ycombinator.com/item?id=47433989",
+    "time": "2026-03-19T02:14:51Z",
+    "heat": "43",
+    "summary": "",
+    "hn_url": "https://news.ycombinator.com/item?id=47433989"
+  },
+  {
+    "source": "OpenAI Blog",
+    "category": "announcements",
+    "title": "How we monitor internal coding agents for misalignment",
+    "url": "https://openai.com/index/how-we-monitor-internal-coding-agents-misalignment",
+    "time": "2026-03-19T02:00:00+00:00",
+    "summary": "How OpenAI uses chain-of-thought monitoring to study misalignment in internal coding agents—analyzing real-world deployments to detect risks and strengthen AI safety safeguards."
+  },
+  {
+    "source": "AI News",
+    "category": "announcements",
+    "title": "Visa prepares payment systems for AI agent-initiated transactions",
+    "url": "https://www.artificialintelligence-news.com/news/visa-prepares-payment-systems-for-ai-agent-initiated-transactions/",
+    "time": "2026-03-19T02:00:00+00:00",
+    "summary": "Payments rely on a simple model: a person decides to buy something, and a bank or card network processes the transaction. That model is starting to change as Visa tests how AI agents can initiate payments. New work in the banking sector suggests that, in some cases, software agents may soon take on that role. […]\nThe post Visa prepares payment systems for AI agent-initiated transactions appeared first on AI News."
+  },
+  {
+    "source": "Hacker News",
+    "category": "community",
+    "title": "Ask HN: How do you deal with people who trust LLMs?",
+    "url": "https://news.ycombinator.com/item?id=47433702",
+    "time": "2026-03-19T01:37:35Z",
+    "heat": "144",
+    "summary": "",
+    "hn_url": "https://news.ycombinator.com/item?id=47433702"
+  },
+  {
+    "source": "HuggingFace Papers",
+    "category": "research",
+    "title": "VideoAtlas: Navigating Long-Form Video in Logarithmic Compute",
+    "url": "https://huggingface.co/papers/2603.17948",
+    "time": "2026-03-18T17:20:19.000Z",
+    "summary": "Extending language models to video introduces two challenges: representation, where existing methods rely on lossy approximations, and long-context, where caption- or agent-based pipelines collapse video into text and lose visual fidelity. To overcome this, we introduce VideoAtlas, a task-agnostic environment to represent video as a hierarchical grid that is simultaneously lossless, navigable, scalable, caption- and preprocessing-free. An overview of the video is available at a glance, and any r",
+    "heat": "2",
+    "github_url": "https://arxiv.org/abs/2603.17948"
+  },
+  {
+    "source": "HuggingFace Papers",
+    "category": "research",
+    "title": "Efficient Training-Free Multi-Token Prediction via Embedding-Space Probing",
+    "url": "https://huggingface.co/papers/2603.17942",
+    "time": "2026-03-18T17:14:01.000Z",
+    "summary": "Large language models (LLMs) exhibit latent multi-token prediction (MTP) capabilities despite being trained solely for next-token generation. We propose a simple, training-free MTP approach that probes an LLM using on-the-fly mask tokens drawn from its embedding space, enabling parallel prediction of future tokens without modifying model weights or relying on auxiliary draft models. Our method constructs a speculative token tree by sampling top-K candidates from mask-token logits and applies a l",
+    "heat": "2",
+    "github_url": "https://arxiv.org/abs/2603.17942"
+  },
+  {
+    "source": "HuggingFace Papers",
+    "category": "research",
+    "title": "RAMP: Reinforcement Adaptive Mixed Precision Quantization for Efficient On Device LLM Inference",
+    "url": "https://huggingface.co/papers/2603.17891",
+    "time": "2026-03-18T16:16:28.000Z",
+    "summary": "Post training quantization is essential for deploying large language models (LLMs) on resource constrained hardware, yet state of the art methods enforce uniform bit widths across layers, yielding suboptimal accuracy efficiency trade offs. We present RAMP (Reinforcement Adaptive Mixed Precision), an off policy Soft Actor Critic framework that learns per layer bit width assignments to minimize perplexity under a global bit budget. The policy conditions on an 11 dimensional embedding of activation",
+    "heat": "2",
+    "github_url": "https://arxiv.org/abs/2603.17891"
+  },
+  {
+    "source": "HuggingFace Papers",
+    "category": "research",
+    "title": "FINER: MLLMs Hallucinate under Fine-grained Negative Queries",
+    "url": "https://huggingface.co/papers/2603.17662",
+    "time": "2026-03-18T12:28:05.000Z",
+    "summary": "Multimodal large language models (MLLMs) struggle with hallucinations, particularly with fine-grained queries, a challenge underrepresented by existing benchmarks that focus on coarse image-related questions. We introduce FIne-grained NEgative queRies (FINER), alongside two benchmarks: FINER-CompreCap and FINER-DOCCI. Using FINER, we analyze hallucinations across four settings: multi-object, multi-attribute, multi-relation, and ``what'' questions. Our benchmarks reveal that MLLMs hallucinate whe",
+    "heat": "2",
+    "github_url": "https://arxiv.org/abs/2603.17662"
+  },
+  {
+    "source": "HuggingFace Papers",
+    "category": "research",
+    "title": "Temporal Gains, Spatial Costs: Revisiting Video Fine-Tuning in Multimodal Large Language Models",
+    "url": "https://huggingface.co/papers/2603.17541",
+    "time": "2026-03-18T09:46:44.000Z",
+    "summary": "Multimodal large language models (MLLMs) are typically trained in multiple stages, with video-based supervised fine-tuning (Video-SFT) serving as a key step for improving visual understanding. Yet its effect on the fine-grained evolution of visual capabilities, particularly the balance between spatial and temporal understanding, remains poorly understood. In this paper, we systematically study how Video-SFT reshapes visual capabilities in MLLMs. Across architectures, parameter scales, and frame ",
+    "heat": "16",
+    "github_url": "https://arxiv.org/abs/2603.17541"
+  },
+  {
+    "source": "HuggingFace Papers",
+    "category": "research",
+    "title": "GigaWorld-Policy: An Efficient Action-Centered World--Action Model",
+    "url": "https://huggingface.co/papers/2603.17240",
+    "time": "2026-03-18T00:52:02.000Z",
+    "summary": "World-Action Models (WAM) initialized from pre-trained video generation backbones have demonstrated remarkable potential for robot policy learning. However, existing approaches face two critical bottlenecks that hinder performance and deployment. First, jointly reasoning over future visual dynamics and corresponding actions incurs substantial inference overhead. Second, joint modeling often entangles visual and motion representations, making motion prediction accuracy heavily dependent on the qu",
+    "heat": "18",
+    "github_url": "https://arxiv.org/abs/2603.17240"
+  },
+  {
+    "source": "HuggingFace Papers",
+    "category": "research",
+    "title": "Alignment Makes Language Models Normative, Not Descriptive",
+    "url": "https://huggingface.co/papers/2603.17218",
+    "time": "2026-03-17T23:47:08.000Z",
+    "summary": "Post-training alignment optimizes language models to match human preference signals, but this objective is not equivalent to modeling observed human behavior. We compare 120 base-aligned model pairs on more than 10,000 real human decisions in multi-round strategic games - bargaining, persuasion, negotiation, and repeated matrix games. In these settings, base models outperform their aligned counterparts in predicting human choices by nearly 10:1, robustly across model families, prompt formulation",
+    "heat": "34",
+    "github_url": "https://arxiv.org/abs/2603.17218"
+  },
+  {
+    "source": "HuggingFace Papers",
+    "category": "research",
+    "title": "AI Scientist via Synthetic Task Scaling",
+    "url": "https://huggingface.co/papers/2603.17216",
+    "time": "2026-03-17T23:43:16.000Z",
+    "summary": "With the advent of AI agents, automatic scientific discovery has become a tenable goal. Many recent works scaffold agentic systems that can perform machine learning research, but don't offer a principled way to train such agents -- and current LLMs often generate plausible-looking but ineffective ideas. To make progress on training agents that can learn from doing, we provide a novel synthetic environment generation pipeline targeting machine learning agents. Our pipeline automatically synthesiz",
+    "heat": "1",
+    "github_url": "https://arxiv.org/abs/2603.17216"
+  },
+  {
+    "source": "HuggingFace Papers",
+    "category": "research",
+    "title": "ACE-LoRA: Graph-Attentive Context Enhancement for Parameter-Efficient Adaptation of Medical Vision-Language Models",
+    "url": "https://huggingface.co/papers/2603.17079",
+    "time": "2026-03-17T19:06:33.000Z",
+    "summary": "The success of CLIP-like vision-language models (VLMs) on natural images has inspired medical counterparts, yet existing approaches largely fall into two extremes: specialist models trained on single-domain data, which capture domain-specific details but generalize poorly, and generalist medical VLMs trained on multi-domain data, which retain broad semantics but dilute fine-grained diagnostic cues. Bridging this specialization-generalization trade-off remains challenging. To address this problem",
+    "heat": "2",
+    "github_url": "https://arxiv.org/abs/2603.17079"
+  },
+  {
+    "source": "HuggingFace Papers",
+    "category": "research",
+    "title": "HeBA: Heterogeneous Bottleneck Adapters for Robust Vision-Language Models",
+    "url": "https://huggingface.co/papers/2603.16653",
+    "time": "2026-03-17T15:23:04.000Z",
+    "summary": "Adapting large-scale Vision-Language Models (VLMs) like CLIP to downstream tasks often suffers from a \"one-size-fits-all\" architectural approach, where visual and textual tokens are processed uniformly by wide, generic adapters. We argue that this homogeneity ignores the distinct structural nature of the modalities -- spatial locality in images versus semantic density in text. To address this, we propose HeBA (Heterogeneous Bottleneck Adapter), a unified architectural framework that introduces m",
+    "heat": "1",
+    "github_url": "https://arxiv.org/abs/2603.16653"
+  },
+  {
+    "source": "HuggingFace Papers",
+    "category": "research",
+    "title": "BenchPreS: A Benchmark for Context-Aware Personalized Preference Selectivity of Persistent-Memory LLMs",
+    "url": "https://huggingface.co/papers/2603.16557",
+    "time": "2026-03-17T14:19:05.000Z",
+    "summary": "Large language models (LLMs) increasingly store user preferences in persistent memory to support personalization across interactions. However, in third-party communication settings governed by social and institutional norms, some user preferences may be inappropriate to apply. We introduce BenchPreS, which evaluates whether memory-based user preferences are appropriately applied or suppressed across communication contexts. Using two complementary metrics, Misapplication Rate (MR) and Appropriate",
+    "heat": "15",
+    "github_url": "https://arxiv.org/abs/2603.16557"
+  },
+  {
+    "source": "HuggingFace Papers",
+    "category": "research",
+    "title": "Conservative Offline Robot Policy Learning via Posterior-Transition Reweighting",
+    "url": "https://huggingface.co/papers/2603.16542",
+    "time": "2026-03-17T14:05:35.000Z",
+    "summary": "Offline post-training adapts a pretrained robot policy to a target dataset by supervised regression on recorded actions. In practice, robot datasets are heterogeneous: they mix embodiments, camera setups, and demonstrations of varying quality, so many trajectories reflect recovery behavior, inconsistent operator skill, or weakly informative supervision. Uniform post-training gives equal credit to all samples and can therefore average over conflicting or low-attribution data. We propose Posterior",
+    "heat": "9",
+    "github_url": "https://arxiv.org/abs/2603.16542"
+  },
+  {
+    "source": "HuggingFace Papers",
+    "category": "research",
+    "title": "Look Before Acting: Enhancing Vision Foundation Representations for Vision-Language-Action Models",
+    "url": "https://huggingface.co/papers/2603.15618",
+    "time": "2026-03-16T17:59:54.000Z",
+    "summary": "Vision-Language-Action (VLA) models have recently emerged as a promising paradigm for robotic manipulation, in which reliable action prediction critically depends on accurately interpreting and integrating visual observations conditioned on language instructions. Although recent works have sought to enhance the visual capabilities of VLA models, most approaches treat the LLM backbone as a black box, providing limited insight into how visual information is grounded into action generation. Therefo",
+    "heat": "19",
+    "github_url": "https://arxiv.org/abs/2603.15618"
+  },
+  {
+    "source": "HuggingFace Papers",
+    "category": "research",
+    "title": "Video-CoE: Reinforcing Video Event Prediction via Chain of Events",
+    "url": "https://huggingface.co/papers/2603.14935",
+    "time": "2026-03-16T07:38:15.000Z",
+    "summary": "Despite advances in the application of MLLMs for various video tasks, video event prediction (VEP) remains relatively underexplored. VEP requires the model to perform fine-grained temporal modeling of videos and establish logical relationships between videos and future events, which current MLLMs still struggle with. In this work, we first present a comprehensive evaluation of current leading MLLMs on the VEP task, revealing the reasons behind their inaccurate predictions, including lack of logi",
+    "heat": "82",
+    "github_url": "https://arxiv.org/abs/2603.14935"
+  },
+  {
+    "source": "HuggingFace Papers",
+    "category": "research",
+    "title": "V-JEPA 2.1: Unlocking Dense Features in Video Self-Supervised Learning",
+    "url": "https://huggingface.co/papers/2603.14482",
+    "time": "2026-03-15T17:02:40.000Z",
+    "summary": "We present V-JEPA 2.1, a family of self-supervised models that learn dense, high-quality visual representations for both images and videos while retaining strong global scene understanding. The approach combines four key components. First, a dense predictive loss uses a masking-based objective in which both visible and masked tokens contribute to the training signal, encouraging explicit spatial and temporal grounding. Second, deep self-supervision applies the self-supervised objective hierarchi",
+    "heat": "3",
+    "github_url": "https://arxiv.org/abs/2603.14482"
+  },
+  {
+    "source": "HuggingFace Papers",
+    "category": "research",
+    "title": "ESPIRE: A Diagnostic Benchmark for Embodied Spatial Reasoning of Vision-Language Models",
+    "url": "https://huggingface.co/papers/2603.13033",
+    "time": "2026-03-13T14:43:00.000Z",
+    "summary": "A recent trend in vision-language models (VLMs) has been to enhance their spatial cognition for embodied domains. Despite progress, existing evaluations have been limited both in paradigm and in coverage, hindering rapid, iterative model development. To address these limitations, we propose ESPIRE, a diagnostic benchmark for embodied spatial reasoning. ESPIRE offers a simulated world that physically grounds VLMs and evaluates them on spatial-reasoning-centric robotic tasks, thus narrowing the ga",
+    "heat": "12",
+    "github_url": "https://arxiv.org/abs/2603.13033"
+  },
+  {
+    "source": "HuggingFace Papers",
+    "category": "research",
+    "title": "Coherent Human-Scene Reconstruction from Multi-Person Multi-View Video in a Single Pass",
+    "url": "https://huggingface.co/papers/2603.12789",
+    "time": "2026-03-13T08:48:19.000Z",
+    "summary": "Recent advances in 3D foundation models have led to growing interest in reconstructing humans and their surrounding environments. However, most existing approaches focus on monocular inputs, and extending them to multi-view settings requires additional overhead modules or preprocessed data. To this end, we present CHROMM, a unified framework that jointly estimates cameras, scene point clouds, and human meshes from multi-person multi-view videos without relying on external modules or preprocessin",
+    "heat": "1",
+    "github_url": "https://arxiv.org/abs/2603.12789"
+  },
+  {
+    "source": "HuggingFace Papers",
+    "category": "research",
+    "title": "Expert Threshold Routing for Autoregressive Language Modeling with Dynamic Computation Allocation and Load Balancing",
+    "url": "https://huggingface.co/papers/2603.11535",
+    "time": "2026-03-12T04:45:48.000Z",
+    "summary": "Token-choice Mixture-of-Experts (TC-MoE) routes each token to a fixed number of experts, limiting dynamic computation allocation and requiring auxiliary losses to maintain load balance. We propose Expert Threshold (ET) routing, where each expert maintains an exponential moving average (EMA) threshold estimated from the global token distribution. At both training and inference, each token is independently routed to an expert if its score exceeds the expert's threshold, enabling dynamic computatio",
+    "heat": "7",
+    "github_url": "https://arxiv.org/abs/2603.11535"
+  },
+  {
+    "source": "HuggingFace Papers",
+    "category": "research",
+    "title": "From Prior to Pro: Efficient Skill Mastery via Distribution Contractive RL Finetuning",
+    "url": "https://huggingface.co/papers/2603.10263",
+    "time": "2026-03-10T22:49:46.000Z",
+    "summary": "We introduce Distribution Contractive Reinforcement Learning (DICE-RL), a framework that uses reinforcement learning (RL) as a \"distribution contraction\" operator to refine pretrained generative robot policies. DICE-RL turns a pretrained behavior prior into a high-performing \"pro\" policy by amplifying high-success behaviors from online feedback. We pretrain a diffusion- or flow-based policy for broad behavioral coverage, then finetune it with a stable, sample-efficient residual off-policy RL fra",
+    "heat": "1",
+    "github_url": "https://arxiv.org/abs/2603.10263"
+  },
+  {
+    "source": "HuggingFace Papers",
+    "category": "research",
+    "title": "Fanar-Sadiq: A Multi-Agent Architecture for Grounded Islamic QA",
+    "url": "https://huggingface.co/papers/2603.08501",
+    "time": "2026-03-09T15:35:12.000Z",
+    "summary": "Large language models (LLMs) can answer religious knowledge queries fluently, yet they often hallucinate and misattribute sources, which is especially consequential in Islamic settings where users expect grounding in canonical texts (Qur'an and Hadith) and jurisprudential (fiqh) nuance. Retrieval-augmented generation (RAG) reduces some of these limitations by grounding generation in external evidence. However, a single ``retrieve-then-generate'' pipeline is limited to deal with the diversity of ",
+    "heat": "",
+    "github_url": "https://arxiv.org/abs/2603.08501"
+  }
+]
