@@ -1,0 +1,534 @@
+[
+  {
+    "source": "GitHub Trending",
+    "category": "tools",
+    "title": "jarrodwatts/claude-hud",
+    "url": "https://github.com/jarrodwatts/claude-hud",
+    "time": "2026-03-21T00:02:16.131646+00:00",
+    "summary": "A Claude Code plugin that shows what's happening - context usage, active tools, running agents, and todo progress",
+    "readme": "# Claude HUD\n\nA Claude Code plugin that shows what's happening — context usage, active tools, running agents, and todo progress. Always visible below your input.\n\n[![License](https://img.shields.io/github/license/jarrodwatts/claude-hud?v=2)](LICENSE)\n[![Stars](https://img.shields.io/github/stars/jarrodwatts/claude-hud)](https://github.com/jarrodwatts/claude-hud/stargazers)\n\n![Claude HUD in action](claude-hud-preview-5-2.png)\n\n## Install\n\nInside a Claude Code instance, run the following commands:",
+    "github_url": "https://github.com/jarrodwatts/claude-hud",
+    "lang": "JavaScript",
+    "stars": "9513"
+  },
+  {
+    "source": "GitHub Trending",
+    "category": "tools",
+    "title": "opendataloader-project/opendataloader-pdf",
+    "url": "https://github.com/opendataloader-project/opendataloader-pdf",
+    "time": "2026-03-21T00:02:15.914535+00:00",
+    "summary": "PDF Parser for AI-ready data. Automate PDF accessibility. Open-source.",
+    "readme": "<!-- AI-AGENT-SUMMARY\nname: opendataloader-pdf\ncategory: PDF data extraction, PDF accessibility automation\nlicense: Apache-2.0\nsolves: [PDF to structured data for RAG/LLM pipelines, automate PDF accessibility compliance — layout analysis + auto-tagging to Tagged PDF (first open-source end-to-end)]\ninput: PDF files (digital, scanned, tagged)\noutput: Markdown, JSON (with bounding boxes), HTML, Tagged PDF, PDF/UA (enterprise)\nsdk: Python, Node.js, Java\nrequirements: Java 11+\npricing: open-source co",
+    "github_url": "https://github.com/opendataloader-project/opendataloader-pdf",
+    "lang": "Java",
+    "stars": "7020"
+  },
+  {
+    "source": "GitHub Trending",
+    "category": "tools",
+    "title": "TauricResearch/TradingAgents",
+    "url": "https://github.com/TauricResearch/TradingAgents",
+    "time": "2026-03-21T00:02:15.836863+00:00",
+    "summary": "TradingAgents: Multi-Agents LLM Financial Trading Framework",
+    "readme": "<p align=\"center\">\n  <img src=\"assets/TauricResearch.png\" style=\"width: 60%; height: auto;\">\n</p>\n\n<div align=\"center\" style=\"line-height: 1;\">\n  <a href=\"https://arxiv.org/abs/2412.20138\" target=\"_blank\"><img alt=\"arXiv\" src=\"https://img.shields.io/badge/arXiv-2412.20138-B31B1B?logo=arxiv\"/></a>\n  <a href=\"https://discord.com/invite/hk9PGKShPK\" target=\"_blank\"><img alt=\"Discord\" src=\"https://img.shields.io/badge/Discord-TradingResearch-7289da?logo=discord&logoColor=white&color=7289da\"/></a>\n  <",
+    "github_url": "https://github.com/TauricResearch/TradingAgents",
+    "lang": "Python",
+    "stars": "34061"
+  },
+  {
+    "source": "GitHub Trending",
+    "category": "tools",
+    "title": "vas3k/TaxHacker",
+    "url": "https://github.com/vas3k/TaxHacker",
+    "time": "2026-03-21T00:02:15.824719+00:00",
+    "summary": "Self-hosted AI accounting app. LLM analyzer for receipts, invoices, transactions with custom prompts and categories",
+    "readme": "<div align=\"center\"><a name=\"readme-top\"></a>\n\n<img src=\"public/logo/512.png\" alt=\"\" width=\"320\">\n\n<br>\n\n# TaxHacker — self-hosted AI accountant\n\n[![GitHub Stars](https://img.shields.io/github/stars/vas3k/TaxHacker?color=ffcb47&labelColor=black&style=flat-square)](https://github.com/vas3k/TaxHacker/stargazers)\n[![License](https://img.shields.io/badge/license-MIT-ffcb47?labelColor=black&style=flat-square)](https://github.com/vas3k/TaxHacker/blob/main/LICENSE)\n[![GitHub Issues](https://img.shields",
+    "github_url": "https://github.com/vas3k/TaxHacker",
+    "lang": "TypeScript",
+    "stars": "1910"
+  },
+  {
+    "source": "GitHub Trending",
+    "category": "tools",
+    "title": "langchain-ai/open-swe",
+    "url": "https://github.com/langchain-ai/open-swe",
+    "time": "2026-03-21T00:02:15.821388+00:00",
+    "summary": "An Open-Source Asynchronous Coding Agent",
+    "readme": "<div align=\"center\">\n  <a href=\"https://github.com/langchain-ai/open-swe\">\n    <picture>\n      <source media=\"(prefers-color-scheme: dark)\" srcset=\"static/dark.svg\">\n      <source media=\"(prefers-color-scheme: light)\" srcset=\"static/light.svg\">\n      <img alt=\"Open SWE Logo\" src=\"static/dark.svg\" width=\"35%\">\n    </picture>\n  </a>\n</div>\n\n<div align=\"center\">\n  <h3>Open-source framework for building your org's internal coding agent.</h3>\n</div>\n\n<div align=\"center\">\n  <a href=\"https://opensource",
+    "github_url": "https://github.com/langchain-ai/open-swe",
+    "lang": "Python",
+    "stars": "7623"
+  },
+  {
+    "source": "Hacker News",
+    "category": "community",
+    "title": "We rewrote our Rust WASM Parser in TypeScript – and it got 3x Faster",
+    "url": "https://news.ycombinator.com/item?id=47461094",
+    "time": "2026-03-20T21:48:06Z",
+    "heat": "61",
+    "summary": "",
+    "hn_url": "https://news.ycombinator.com/item?id=47461094"
+  },
+  {
+    "source": "Hacker News",
+    "category": "community",
+    "title": "Show HN: Baltic shadow fleet tracker – live AIS, cable proximity alerts",
+    "url": "https://news.ycombinator.com/item?id=47460528",
+    "time": "2026-03-20T21:04:11Z",
+    "heat": "22",
+    "summary": "",
+    "hn_url": "https://news.ycombinator.com/item?id=47460528"
+  },
+  {
+    "source": "Hacker News",
+    "category": "community",
+    "title": "OpenCode – The open source AI coding agent",
+    "url": "https://news.ycombinator.com/item?id=47460525",
+    "time": "2026-03-20T21:03:52Z",
+    "heat": "300",
+    "summary": "",
+    "hn_url": "https://news.ycombinator.com/item?id=47460525"
+  },
+  {
+    "source": "Hacker News",
+    "category": "community",
+    "title": "Thousands have swooned over this MAGA dream girl. She's made with AI",
+    "url": "https://news.ycombinator.com/item?id=47458760",
+    "time": "2026-03-20T18:37:32Z",
+    "heat": "20",
+    "summary": "",
+    "hn_url": "https://news.ycombinator.com/item?id=47458760"
+  },
+  {
+    "source": "Hacker News",
+    "category": "community",
+    "title": "Wikipedia RFC on banning LLM contributions",
+    "url": "https://news.ycombinator.com/item?id=47458671",
+    "time": "2026-03-20T18:30:38Z",
+    "heat": "31",
+    "summary": "",
+    "hn_url": "https://news.ycombinator.com/item?id=47458671"
+  },
+  {
+    "source": "Hacker News",
+    "category": "community",
+    "title": "Launch HN: Sitefire (YC W26) – Automating actions to improve AI visibility",
+    "url": "https://news.ycombinator.com/item?id=47457472",
+    "time": "2026-03-20T17:05:38Z",
+    "heat": "32",
+    "summary": "",
+    "hn_url": "https://news.ycombinator.com/item?id=47457472"
+  },
+  {
+    "source": "Hacker News",
+    "category": "community",
+    "title": "MacBook M5 Pro and Qwen3.5 = Local AI Security System",
+    "url": "https://news.ycombinator.com/item?id=47457107",
+    "time": "2026-03-20T16:41:42Z",
+    "heat": "152",
+    "summary": "",
+    "hn_url": "https://news.ycombinator.com/item?id=47457107"
+  },
+  {
+    "source": "Hacker News",
+    "category": "community",
+    "title": "A 6502 disassembler with a TUI: A modern take on Regenerator",
+    "url": "https://news.ycombinator.com/item?id=47456997",
+    "time": "2026-03-20T16:34:24Z",
+    "heat": "12",
+    "summary": "",
+    "hn_url": "https://news.ycombinator.com/item?id=47456997"
+  },
+  {
+    "source": "Hacker News",
+    "category": "community",
+    "title": "We Have 700 AI Agents Playing a Game We Don't Understand",
+    "url": "https://news.ycombinator.com/item?id=47456013",
+    "time": "2026-03-20T15:30:18Z",
+    "heat": "13",
+    "summary": "",
+    "hn_url": "https://news.ycombinator.com/item?id=47456013"
+  },
+  {
+    "source": "Hacker News",
+    "category": "community",
+    "title": "Google Search is now using AI to replace headlines",
+    "url": "https://news.ycombinator.com/item?id=47455224",
+    "time": "2026-03-20T14:39:05Z",
+    "heat": "49",
+    "summary": "",
+    "hn_url": "https://news.ycombinator.com/item?id=47455224"
+  },
+  {
+    "source": "Hacker News",
+    "category": "community",
+    "title": "Trump Unveils National AI Legislative Framework",
+    "url": "https://news.ycombinator.com/item?id=47455014",
+    "time": "2026-03-20T14:26:38Z",
+    "heat": "17",
+    "summary": "",
+    "hn_url": "https://news.ycombinator.com/item?id=47455014"
+  },
+  {
+    "source": "Hacker News",
+    "category": "community",
+    "title": "Nvidia's Huang pitches AI tokens on top of salary",
+    "url": "https://news.ycombinator.com/item?id=47454241",
+    "time": "2026-03-20T13:31:46Z",
+    "heat": "19",
+    "summary": "",
+    "hn_url": "https://news.ycombinator.com/item?id=47454241"
+  },
+  {
+    "source": "Hacker News",
+    "category": "community",
+    "title": "France's aircraft carrier located in real time by Le Monde through fitness app",
+    "url": "https://news.ycombinator.com/item?id=47453942",
+    "time": "2026-03-20T13:01:56Z",
+    "heat": "445",
+    "summary": "",
+    "hn_url": "https://news.ycombinator.com/item?id=47453942"
+  },
+  {
+    "source": "TechCrunch AI",
+    "category": "industry",
+    "title": "Microsoft rolls back some of its Copilot AI bloat on Windows",
+    "url": "https://techcrunch.com/2026/03/20/microsoft-rolls-back-some-of-its-copilot-ai-bloat-on-windows/",
+    "time": "2026-03-20T12:53:09+00:00",
+    "summary": "The company is reducing Copilot entry points on Windows, starting with Photos, Widgets, Notepad, and other apps."
+  },
+  {
+    "source": "Hacker News",
+    "category": "community",
+    "title": "Supermicro's co-founder arrested for smuggling $2.5B in GPUs to China",
+    "url": "https://news.ycombinator.com/item?id=47453762",
+    "time": "2026-03-20T12:45:12Z",
+    "heat": "10",
+    "summary": "",
+    "hn_url": "https://news.ycombinator.com/item?id=47453762"
+  },
+  {
+    "source": "Simon Willison",
+    "category": "tools",
+    "title": "Quoting Kimi.ai @Kimi_Moonshot",
+    "url": "https://simonwillison.net/2026/Mar/20/cursor-on-kimi/#atom-everything",
+    "time": "2026-03-20T12:29:23+00:00",
+    "summary": "Congrats to the @cursor_ai team on the launch of Composer 2!\nWe are proud to see Kimi-k2.5 provide the foundation. Seeing our model integrated effectively through Cursor's continued pretraining & high-compute RL training is the open model ecosystem we love to support.\nNote: Cursor accesses Kimi-k2.5 via @FireworksAI_HQ hosted RL and inference platform as part of an authorized commercial partnership.\n— Kimi.ai @Kimi_Moonshot, responding to reports that Composer 2 was built on top of Kimi K2.5\nTag"
+  },
+  {
+    "source": "Hacker News",
+    "category": "community",
+    "title": "Show HN: Tiny pixel characters for Cursor AI agents",
+    "url": "https://news.ycombinator.com/item?id=47453626",
+    "time": "2026-03-20T12:29:01Z",
+    "heat": "11",
+    "summary": "",
+    "hn_url": "https://news.ycombinator.com/item?id=47453626"
+  },
+  {
+    "source": "TechCrunch AI",
+    "category": "industry",
+    "title": "What happened at Nvidia GTC: NemoClaw, Robot Olaf, and a $1 trillion bet",
+    "url": "https://techcrunch.com/video/what-happened-at-nvidia-gtc-nemoclaw-robot-olaf-and-a-1-trillion-bet/",
+    "time": "2026-03-20T12:02:35+00:00",
+    "summary": "CEO Jensen Huang took the stage at Nvidia’s GTC conference this week in his signature leather jacket to deliver a two-and-a-half-hour keynote, projecting $1 trillion in AI chip sales through 2027, declaring that every company needs an “OpenClaw strategy,” and closing with a rambling Olaf robot that had to get its mic cut. The message was hard to miss: Nvidia […]"
+  },
+  {
+    "source": "TechCrunch AI",
+    "category": "industry",
+    "title": "Nvidia has an OpenClaw strategy. Do you?",
+    "url": "https://techcrunch.com/podcast/nvidia-has-an-openclaw-strategy-do-you/",
+    "time": "2026-03-20T11:48:38+00:00",
+    "summary": "CEO Jensen Huang took the stage at Nvidia’s GTC conference this week in his signature leather jacket to deliver a two-and-a-half-hour keynote, projecting $1 trillion in AI chip sales through 2027, declaring that every company needs an “OpenClaw strategy,” and closing with a rambling Olaf robot that had to get its mic cut. The message was hard to miss: Nvidia […]"
+  },
+  {
+    "source": "Hacker News",
+    "category": "community",
+    "title": "AI (2014)",
+    "url": "https://news.ycombinator.com/item?id=47453010",
+    "time": "2026-03-20T11:10:17Z",
+    "heat": "65",
+    "summary": "",
+    "hn_url": "https://news.ycombinator.com/item?id=47453010"
+  },
+  {
+    "source": "Hacker News",
+    "category": "community",
+    "title": "Getting Ziggy with It – Re: Factor",
+    "url": "https://news.ycombinator.com/item?id=47452566",
+    "time": "2026-03-20T10:07:36Z",
+    "heat": "12",
+    "summary": "",
+    "hn_url": "https://news.ycombinator.com/item?id=47452566"
+  },
+  {
+    "source": "Hacker News",
+    "category": "community",
+    "title": "Essex police pause facial recognition camera use after study finds racial bias",
+    "url": "https://news.ycombinator.com/item?id=47452248",
+    "time": "2026-03-20T09:17:44Z",
+    "heat": "46",
+    "summary": "",
+    "hn_url": "https://news.ycombinator.com/item?id=47452248"
+  },
+  {
+    "source": "TechCrunch AI",
+    "category": "industry",
+    "title": "WordPress.com now lets AI agents write and publish posts, and more",
+    "url": "https://techcrunch.com/2026/03/20/wordpress-com-now-lets-ai-agents-write-and-publish-posts-and-more/",
+    "time": "2026-03-20T08:43:09+00:00",
+    "summary": "New AI agents on WordPress.com could lower barriers to publishing while increasing machine-generated content across the web."
+  },
+  {
+    "source": "TechCrunch AI",
+    "category": "industry",
+    "title": "Trump’s AI framework targets state laws, shifts child safety burden to parents",
+    "url": "https://techcrunch.com/2026/03/20/trumps-ai-framework-targets-state-laws-shifts-child-safety-burden-to-parents/",
+    "time": "2026-03-20T08:14:04+00:00",
+    "summary": "Trump’s AI framework pushes federal preemption of state laws, emphasizes innovation, and shifts responsibility for child safety toward parents while laying out lighter-touch rules for tech companies."
+  },
+  {
+    "source": "TechCrunch AI",
+    "category": "industry",
+    "title": "The best AI investment might be in energy tech",
+    "url": "https://techcrunch.com/2026/03/20/the-best-ai-investment-might-be-in-energy-tech/",
+    "time": "2026-03-20T04:00:00+00:00",
+    "summary": "Power has become one of the biggest bottlenecks in rolling out new AI data centers. That's creating an opening for investors."
+  },
+  {
+    "source": "MIT Technology Review AI",
+    "category": "research",
+    "title": "OpenAI is throwing everything into building a fully automated researcher",
+    "url": "https://www.technologyreview.com/2026/03/20/1134438/openai-is-throwing-everything-into-building-a-fully-automated-researcher/",
+    "time": "2026-03-20T03:57:16+00:00",
+    "summary": "OpenAI is refocusing its research efforts and throwing its resources into a new grand challenge. The San Francisco firm has set its sights on building what it calls an AI researcher, a fully automated agent-based system that will be able to go off and tackle large, complex problems by itself. ​​OpenAI says that this new…"
+  },
+  {
+    "source": "TechCrunch AI",
+    "category": "industry",
+    "title": "These AI notetaking devices can help you record and transcribe your meetings",
+    "url": "https://techcrunch.com/2026/03/20/ai-notetaker-hardware-devices-pins-pendants-record-transcribe/",
+    "time": "2026-03-20T03:31:38+00:00",
+    "summary": "These physical notetakers transcribe audio and give users summaries and action items of meetings using AI. Some even offer live translation."
+  },
+  {
+    "source": "Hacker News",
+    "category": "community",
+    "title": "TI-89 Height-Mapped Raycaster",
+    "url": "https://news.ycombinator.com/item?id=47449741",
+    "time": "2026-03-20T02:33:34Z",
+    "heat": "24",
+    "summary": "",
+    "hn_url": "https://news.ycombinator.com/item?id=47449741"
+  },
+  {
+    "source": "Hacker News",
+    "category": "community",
+    "title": "Aquasecurity/Trivy GitHub Repository and Homebrew Cask Compromised (again)",
+    "url": "https://news.ycombinator.com/item?id=47449498",
+    "time": "2026-03-20T02:04:51Z",
+    "heat": "12",
+    "summary": "",
+    "hn_url": "https://news.ycombinator.com/item?id=47449498"
+  },
+  {
+    "source": "HuggingFace Papers",
+    "category": "research",
+    "title": "MonoArt: Progressive Structural Reasoning for Monocular Articulated 3D Reconstruction",
+    "url": "https://huggingface.co/papers/2603.19231",
+    "time": "2026-03-19T17:59:52.000Z",
+    "summary": "Reconstructing articulated 3D objects from a single image requires jointly inferring object geometry, part structure, and motion parameters from limited visual evidence. A key difficulty lies in the entanglement between motion cues and object structure, which makes direct articulation regression unstable. Existing methods address this challenge through multi-view supervision, retrieval-based assembly, or auxiliary video generation, often sacrificing scalability or efficiency. We present MonoArt,",
+    "heat": "28",
+    "github_url": "https://arxiv.org/abs/2603.19231"
+  },
+  {
+    "source": "HuggingFace Papers",
+    "category": "research",
+    "title": "Bridging Semantic and Kinematic Conditions with Diffusion-based Discrete Motion Tokenizer",
+    "url": "https://huggingface.co/papers/2603.19227",
+    "time": "2026-03-19T17:59:51.000Z",
+    "summary": "Prior motion generation largely follows two paradigms: continuous diffusion models that excel at kinematic control, and discrete token-based generators that are effective for semantic conditioning. To combine their strengths, we propose a three-stage framework comprising condition feature extraction (Perception), discrete token generation (Planning), and diffusion-based motion synthesis (Control). Central to this framework is MoTok, a diffusion-based discrete motion tokenizer that decouples sema",
+    "heat": "34",
+    "github_url": "https://arxiv.org/abs/2603.19227"
+  },
+  {
+    "source": "HuggingFace Papers",
+    "category": "research",
+    "title": "EffectErase: Joint Video Object Removal and Insertion for High-Quality Effect Erasing",
+    "url": "https://huggingface.co/papers/2603.19224",
+    "time": "2026-03-19T17:59:22.000Z",
+    "summary": "Video object removal aims to eliminate dynamic target objects and their visual effects, such as deformation, shadows, and reflections, while restoring seamless backgrounds. Recent diffusion-based video inpainting and object removal methods can remove the objects but often struggle to erase these effects and to synthesize coherent backgrounds. Beyond method limitations, progress is further hampered by the lack of a comprehensive dataset that systematically captures common object effects across va",
+    "heat": "15",
+    "github_url": "https://arxiv.org/abs/2603.19224"
+  },
+  {
+    "source": "HuggingFace Papers",
+    "category": "research",
+    "title": "DreamPartGen: Semantically Grounded Part-Level 3D Generation via Collaborative Latent Denoising",
+    "url": "https://huggingface.co/papers/2603.19216",
+    "time": "2026-03-19T17:58:11.000Z",
+    "summary": "Understanding and generating 3D objects as compositions of meaningful parts is fundamental to human perception and reasoning. However, most text-to-3D methods overlook the semantic and functional structure of parts. While recent part-aware approaches introduce decomposition, they remain largely geometry-focused, lacking semantic grounding and failing to model how parts align with textual descriptions or their inter-part relations. We propose DreamPartGen, a framework for semantically grounded, p",
+    "heat": "",
+    "github_url": "https://arxiv.org/abs/2603.19216"
+  },
+  {
+    "source": "HuggingFace Papers",
+    "category": "research",
+    "title": "Tinted Frames: Question Framing Blinds Vision-Language Models",
+    "url": "https://huggingface.co/papers/2603.19203",
+    "time": "2026-03-19T17:53:09.000Z",
+    "summary": "Vision-Language Models (VLMs) have been shown to be blind, often underutilizing their visual inputs even on tasks that require visual reasoning. In this work, we demonstrate that VLMs are selectively blind. They modulate the amount of attention applied to visual inputs based on linguistic framing even when alternative framings demand identical visual reasoning. Using visual attention as a probe, we quantify how framing alters both the amount and distribution of attention over the image. Constrai",
+    "heat": "13",
+    "github_url": "https://arxiv.org/abs/2603.19203"
+  },
+  {
+    "source": "HuggingFace Papers",
+    "category": "research",
+    "title": "What Really Controls Temporal Reasoning in Large Language Models: Tokenisation or Representation of Time?",
+    "url": "https://huggingface.co/papers/2603.19017",
+    "time": "2026-03-19T15:22:03.000Z",
+    "summary": "We present MultiTempBench, a multilingual temporal reasoning benchmark spanning three tasks, date arithmetic, time zone conversion, and temporal relation extraction across five languages (English, German, Chinese, Arabic, and Hausa) and multiple calendar conventions (Gregorian, Hijri, and Chinese Lunar). MultiTempBench contains 15,000 examples built by translating 750 curated English questions and expanding each into controlled date-format variants. We evaluate 20 LLMs and introduce the multilin",
+    "heat": "1",
+    "github_url": "https://arxiv.org/abs/2603.19017"
+  },
+  {
+    "source": "HuggingFace Papers",
+    "category": "research",
+    "title": "Memento-Skills: Let Agents Design Agents",
+    "url": "https://huggingface.co/papers/2603.18743",
+    "time": "2026-03-19T10:45:22.000Z",
+    "summary": "We introduce Memento-Skills, a generalist, continually-learnable LLM agent system that functions as an agent-designing agent: it autonomously constructs, adapts, and improves task-specific agents through experience. The system is built on a memory-based reinforcement learning framework with stateful prompts, where reusable skills (stored as structured markdown files) serve as persistent, evolving memory. These skills encode both behaviour and context, enabling the agent to carry forward knowledg",
+    "heat": "23",
+    "github_url": "https://arxiv.org/abs/2603.18743"
+  },
+  {
+    "source": "HuggingFace Papers",
+    "category": "research",
+    "title": "3DreamBooth: High-Fidelity 3D Subject-Driven Video Generation Model",
+    "url": "https://huggingface.co/papers/2603.18524",
+    "time": "2026-03-19T06:14:05.000Z",
+    "summary": "Creating dynamic, view-consistent videos of customized subjects is highly sought after for a wide range of emerging applications, including immersive VR/AR, virtual production, and next-generation e-commerce. However, despite rapid progress in subject-driven video generation, existing methods predominantly treat subjects as 2D entities, focusing on transferring identity through single-view visual features or textual prompts. Because real-world subjects are inherently 3D, applying these 2D-centri",
+    "heat": "39",
+    "github_url": "https://arxiv.org/abs/2603.18524"
+  },
+  {
+    "source": "HuggingFace Papers",
+    "category": "research",
+    "title": "Cognitive Mismatch in Multimodal Large Language Models for Discrete Symbol Understanding",
+    "url": "https://huggingface.co/papers/2603.18472",
+    "time": "2026-03-19T04:08:20.000Z",
+    "summary": "While Multimodal Large Language Models (MLLMs) have achieved remarkable success in interpreting natural scenes, their ability to process discrete symbols -- the fundamental building blocks of human cognition -- remains a critical open question. Unlike continuous visual data, symbols such as mathematical formulas, chemical structures, and linguistic characters require precise, deeper interpretation. This paper introduces a comprehensive benchmark to evaluate how top-tier MLLMs navigate these \"dis",
+    "heat": "16",
+    "github_url": "https://arxiv.org/abs/2603.18472"
+  },
+  {
+    "source": "HuggingFace Papers",
+    "category": "research",
+    "title": "AndroTMem: From Interaction Trajectories to Anchored Memory in Long-Horizon GUI Agents",
+    "url": "https://huggingface.co/papers/2603.18429",
+    "time": "2026-03-19T02:45:21.000Z",
+    "summary": "Long-horizon GUI agents are a key step toward real-world deployment, yet effective interaction memory under prevailing paradigms remains under-explored. Replaying full interaction sequences is redundant and amplifies noise, while summaries often erase dependency-critical information and traceability. We present AndroTMem, a diagnostic framework for anchored memory in long-horizon Android GUI agents. Its core benchmark, AndroTMem-Bench, comprises 1,069 tasks with 34,473 interaction steps (avg. 32",
+    "heat": "16",
+    "github_url": "https://arxiv.org/abs/2603.18429"
+  },
+  {
+    "source": "HuggingFace Papers",
+    "category": "research",
+    "title": "Loc3R-VLM: Language-based Localization and 3D Reasoning with Vision-Language Models",
+    "url": "https://huggingface.co/papers/2603.18002",
+    "time": "2026-03-18T17:59:10.000Z",
+    "summary": "Multimodal Large Language Models (MLLMs) have made impressive progress in connecting vision and language, but they still struggle with spatial understanding and viewpoint-aware reasoning. Recent efforts aim to augment the input representations with geometric cues rather than explicitly teaching models to reason in 3D space. We introduce Loc3R-VLM, a framework that equips 2D Vision-Language Models with advanced 3D understanding capabilities from monocular video input. Inspired by human spatial co",
+    "heat": "3",
+    "github_url": "https://arxiv.org/abs/2603.18002"
+  },
+  {
+    "source": "HuggingFace Papers",
+    "category": "research",
+    "title": "Prompt-Free Universal Region Proposal Network",
+    "url": "https://huggingface.co/papers/2603.17554",
+    "time": "2026-03-18T10:02:13.000Z",
+    "summary": "Identifying potential objects is critical for object recognition and analysis across various computer vision applications. Existing methods typically localize potential objects by relying on exemplar images, predefined categories, or textual descriptions. However, their reliance on image and text prompts often limits flexibility, restricting adaptability in real-world scenarios. In this paper, we introduce a novel Prompt-Free Universal Region Proposal Network (PF-RPN), which identifies potential",
+    "heat": "1",
+    "github_url": "https://arxiv.org/abs/2603.17554"
+  },
+  {
+    "source": "HuggingFace Papers",
+    "category": "research",
+    "title": "MOSS-TTS Technical Report",
+    "url": "https://huggingface.co/papers/2603.18090",
+    "time": "2026-03-18T09:08:06.000Z",
+    "summary": "This technical report presents MOSS-TTS, a speech generation foundation model built on a scalable recipe: discrete audio tokens, autoregressive modeling, and large-scale pretraining. Built on MOSS-Audio-Tokenizer, a causal Transformer tokenizer that compresses 24 kHz audio to 12.5 fps with variable-bitrate RVQ and unified semantic-acoustic representations, we release two complementary generators: MOSS-TTS, which emphasizes structural simplicity, scalability, and long-context/control-oriented dep",
+    "heat": "6",
+    "github_url": "https://arxiv.org/abs/2603.18090"
+  },
+  {
+    "source": "HuggingFace Papers",
+    "category": "research",
+    "title": "ReactMotion: Generating Reactive Listener Motions from Speaker Utterance",
+    "url": "https://huggingface.co/papers/2603.15083",
+    "time": "2026-03-16T10:37:42.000Z",
+    "summary": "In this paper, we introduce a new task, Reactive Listener Motion Generation from Speaker Utterance, which aims to generate naturalistic listener body motions that appropriately respond to a speaker's utterance. However, modeling such nonverbal listener behaviors remains underexplored and challenging due to the inherently non-deterministic nature of human reactions. To facilitate this task, we present ReactMotionNet, a large-scale dataset that pairs speaker utterances with multiple candidate list",
+    "heat": "20",
+    "github_url": "https://arxiv.org/abs/2603.15083"
+  },
+  {
+    "source": "HuggingFace Papers",
+    "category": "research",
+    "title": "VTC-Bench: Evaluating Agentic Multimodal Models via Compositional Visual Tool Chaining",
+    "url": "https://huggingface.co/papers/2603.15030",
+    "time": "2026-03-16T09:31:44.000Z",
+    "summary": "Recent advancements extend Multimodal Large Language Models (MLLMs) beyond standard visual question answering to utilizing external tools for advanced visual tasks. Despite this progress, precisely executing and effectively composing diverse tools for complex tasks remain persistent bottleneck. Constrained by sparse tool-sets and simple tool-use trajectories, existing benchmarks fail to capture complex and diverse tool interactions, falling short in evaluating model performance under practical, ",
+    "heat": "13",
+    "github_url": "https://arxiv.org/abs/2603.15030"
+  },
+  {
+    "source": "HuggingFace Papers",
+    "category": "research",
+    "title": "PARSA-Bench: A Comprehensive Persian Audio-Language Model Benchmark",
+    "url": "https://huggingface.co/papers/2603.14456",
+    "time": "2026-03-15T16:06:24.000Z",
+    "summary": "Persian poses unique audio understanding challenges through its classical poetry, traditional music, and pervasive code-switching - none captured by existing benchmarks. We introduce PARSA-Bench (Persian Audio Reasoning and Speech Assessment Benchmark), the first benchmark for evaluating large audio-language models on Persian language and culture, comprising 16 tasks and over 8,000 samples across speech understanding, paralinguistic analysis, and cultural audio understanding. Ten tasks are newly",
+    "heat": "1",
+    "github_url": "https://arxiv.org/abs/2603.14456"
+  },
+  {
+    "source": "HuggingFace Papers",
+    "category": "research",
+    "title": "VID-AD: A Dataset for Image-Level Logical Anomaly Detection under Vision-Induced Distraction",
+    "url": "https://huggingface.co/papers/2603.13964",
+    "time": "2026-03-14T14:21:37.000Z",
+    "summary": "Logical anomaly detection in industrial inspection remains challenging due to variations in visual appearance (e.g., background clutter, illumination shift, and blur), which often distract vision-centric detectors from identifying rule-level violations. However, existing benchmarks rarely provide controlled settings where logical states are fixed while such nuisance factors vary. To address this gap, we introduce VID-AD, a dataset for logical anomaly detection under vision-induced distraction. I",
+    "heat": "",
+    "github_url": "https://arxiv.org/abs/2603.13964"
+  },
+  {
+    "source": "HuggingFace Papers",
+    "category": "research",
+    "title": "Mending the Holes: Mitigating Reward Hacking in Reinforcement Learning for Multilingual Translation",
+    "url": "https://huggingface.co/papers/2603.13045",
+    "time": "2026-03-13T14:52:51.000Z",
+    "summary": "Large Language Models (LLMs) have demonstrated remarkable capability in machine translation on high-resource language pairs, yet their performance on low-resource translation still lags behind. Existing post-training methods rely heavily on high-quality parallel data, which are often scarce or unavailable for low-resource languages. In this paper, we introduce WALAR, a reinforcement training method using only monolingual text to elevate LLMs' translation capabilities on massive low-resource lang",
+    "heat": "1",
+    "github_url": "https://arxiv.org/abs/2603.13045"
+  },
+  {
+    "source": "HuggingFace Papers",
+    "category": "research",
+    "title": "SimulU: Training-free Policy for Long-form Simultaneous Speech-to-Speech Translation",
+    "url": "https://huggingface.co/papers/2603.16924",
+    "time": "2026-03-11T22:07:53.000Z",
+    "summary": "Simultaneous speech-to-speech translation (SimulS2S) is essential for real-time multilingual communication, with increasing integration into meeting and streaming platforms. Despite this, SimulS2S remains underexplored in research, where current solutions often rely on resource-intensive training procedures and operate on short-form, pre-segmented utterances, failing to generalize to continuous speech. To bridge this gap, we propose SimulU, the first training-free policy for long-form SimulS2S. ",
+    "heat": "13",
+    "github_url": "https://arxiv.org/abs/2603.16924"
+  },
+  {
+    "source": "HuggingFace Papers",
+    "category": "research",
+    "title": "COT-FM: Cluster-wise Optimal Transport Flow Matching",
+    "url": "https://huggingface.co/papers/2603.13395",
+    "time": "2026-03-11T13:52:17.000Z",
+    "summary": "We introduce COT-FM, a general framework that reshapes the probability path in Flow Matching (FM) to achieve faster and more reliable generation. FM models often produce curved trajectories due to random or batchwise couplings, which increase discretization error and reduce sample quality. COT-FM fixes this by clustering target samples and assigning each cluster a dedicated source distribution obtained by reversing pretrained FM models. This divide-and-conquer strategy yields more accurate local",
+    "heat": "",
+    "github_url": "https://arxiv.org/abs/2603.13395"
+  }
+]
