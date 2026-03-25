@@ -2,9 +2,16 @@
 """将 AI 日报 Markdown 渲染为 Newsletter 风格 HTML，可选截图。"""
 
 import argparse
+import io
 import re
 import sys
 from pathlib import Path
+
+# Fix Windows GBK encoding issue
+if sys.stdout.encoding and sys.stdout.encoding.lower() != 'utf-8':
+    sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8', errors='replace')
+if sys.stderr.encoding and sys.stderr.encoding.lower() != 'utf-8':
+    sys.stderr = io.TextIOWrapper(sys.stderr.buffer, encoding='utf-8', errors='replace')
 
 import markdown
 
@@ -317,6 +324,22 @@ def render(md_path: Path) -> Path:
     out_path = md_path.with_suffix(".html")
     out_path.write_text(full_html, encoding="utf-8")
     print(f"HTML 已生成: {out_path}")
+
+    # 自动同步到 public/index.html（CF Pages 入口）
+    # 向上查找项目根目录（包含 public/ 目录的最近祖先）
+    project_root = md_path.parent
+    for _ in range(6):
+        if (project_root / "public").is_dir():
+            break
+        project_root = project_root.parent
+    else:
+        project_root = None
+
+    if project_root:
+        public_index = project_root / "public" / "index.html"
+        public_index.write_text(full_html, encoding="utf-8")
+        print(f"已同步 → {public_index}")
+
     return out_path
 
 
