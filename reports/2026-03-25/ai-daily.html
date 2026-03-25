@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🤖 AI 日报 · 2026-03-25</title>
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Serif+SC:wght@400;600;700;900&display=swap');
+
+:root {
+    --bg-page: #F7F7F5;
+    --bg-paper: #FFFFFF;
+    --text-main: #111111;
+    --text-muted: #555555;
+    --text-light: #999999;
+    --accent: #D93025;
+    --border-divider: #E5E5E5;
+    --border-strong: #111111;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: 'Noto Serif SC', "PingFang SC", serif;
+    background: var(--bg-page);
+    color: var(--text-main);
+    line-height: 1.8;
+    -webkit-font-smoothing: antialiased;
+    padding: 40px 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: var(--bg-paper);
+    padding: 80px 60px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.05);
+    position: relative;
+}
+
+.container::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 6px;
+    background: var(--text-main);
+}
+
+.newsletter-header {
+    text-align: center;
+    padding-bottom: 50px;
+    margin-bottom: 50px;
+    border-bottom: 2px solid var(--border-strong);
+}
+
+.newsletter-header h1 {
+    font-family: 'Noto Serif SC', serif;
+    font-weight: 900;
+    font-size: 42px;
+    line-height: 1.2;
+    color: var(--text-main);
+    margin-bottom: 20px;
+    letter-spacing: -0.02em;
+}
+
+.newsletter-header blockquote {
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text-muted);
+    font-style: normal;
+    font-weight: 500;
+}
+
+.newsletter-body { font-size: 16px; }
+
+.newsletter-body h2 {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--accent);
+    margin: 60px 0 30px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--border-divider);
+}
+
+.newsletter-body h2:first-child { margin-top: 0; }
+
+.newsletter-body h3 {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 20px;
+    font-weight: 700;
+    margin: 40px 0 16px;
+    line-height: 1.5;
+    color: var(--text-main);
+}
+
+.newsletter-body p { margin-bottom: 20px; color: #222222; text-align: justify; }
+
+.newsletter-body a {
+    color: var(--text-main);
+    text-decoration: none;
+    border-bottom: 1px solid #CCCCCC;
+    transition: all 0.2s ease;
+}
+
+.newsletter-body a:hover { color: var(--accent); border-bottom-color: var(--accent); }
+
+.newsletter-body ul, .newsletter-body ol { margin-bottom: 30px; padding-left: 0; list-style: none; }
+
+.newsletter-body > ul > li { position: relative; padding-left: 24px; margin-bottom: 24px; }
+
+.newsletter-body > ul > li::before {
+    content: "■";
+    position: absolute;
+    left: 0; top: 6px;
+    font-size: 10px;
+    color: var(--accent);
+}
+
+.newsletter-body li ul { margin-top: 12px; margin-bottom: 0; padding-left: 0; }
+
+.newsletter-body li li {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    color: var(--text-muted);
+    margin-bottom: 8px;
+    padding-left: 20px;
+    position: relative;
+    line-height: 1.6;
+}
+
+.newsletter-body li li::before { content: "→"; position: absolute; left: 0; color: #AAAAAA; font-family: monospace; }
+
+.newsletter-body strong { font-weight: 700; color: var(--text-main); }
+
+.newsletter-body blockquote {
+    margin: 30px 0;
+    padding: 20px 30px;
+    background: #FAFAFA;
+    border-left: 3px solid var(--accent);
+    font-size: 16px;
+    font-family: 'Noto Serif SC', serif;
+    color: var(--text-main);
+    font-style: italic;
+    line-height: 1.8;
+}
+
+.newsletter-body code {
+    font-family: 'SF Mono', 'Consolas', monospace;
+    font-size: 13px;
+    background: #F5F5F5;
+    padding: 3px 6px;
+    border-radius: 2px;
+    color: var(--accent);
+    border: 1px solid #EAEAEA;
+}
+
+.newsletter-body pre { background: #111111; color: #E5E5E5; padding: 20px 24px; border-radius: 4px; overflow-x: auto; margin: 24px 0; }
+.newsletter-body pre code { background: none; padding: 0; border: none; color: inherit; }
+.newsletter-body hr { border: none; height: 1px; background: var(--border-divider); margin: 40px 0; }
+
+.newsletter-footer {
+    margin-top: 80px;
+    padding-top: 30px;
+    border-top: 1px solid var(--border-divider);
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text-light);
+}
+
+@media (max-width: 700px) {
+    body { padding: 0; background: var(--bg-paper); }
+    .container { padding: 40px 24px; box-shadow: none; }
+    .newsletter-header h1 { font-size: 32px; }
+}
+
+</style>
+</head>
+<body>
+<div class="container">
+<div class="newsletter-header">
+<h1>🤖 AI 日报 · 2026-03-25</h1>
+<blockquote>
+</div>
+<div class="newsletter-body">
+<p>每日精选全球 AI 最新动态，覆盖研究论文、产品发布、行业资讯与社区热议。</p>
+</blockquote>
+<hr />
+<h2>📰 今日头条</h2>
+<ol>
+<li>
+<p><strong>OpenAI 关闭 Sora 视频社交应用</strong> — OpenAI 正式下线 Sora 独立 App，迪士尼随即终止与 OpenAI 的合作协议。Sora 底层视频生成模型（Sora 2）技术实力仍被认可，但"纯 AI 社交信息流"的产品形态缺乏可持续用户需求。(<a href="https://techcrunch.com/2026/03/24/openais-sora-was-the-creepiest-app-on-your-phone-now-its-shutting-down/">TechCrunch</a>)</p>
+</li>
+<li>
+<p><strong>Anthropic 为 Claude Code 新增 Auto 模式</strong> — 新 Auto 模式允许 Claude Code 以更少的人工确认执行任务，体现 AI 编程工具向高度自主化演进的行业趋势。Anthropic 同步强调内置安全护栏的重要性。(<a href="https://techcrunch.com/2026/03/24/anthropic-hands-claude-code-more-control-but-keeps-it-on-a-leash/">TechCrunch</a>)</p>
+</li>
+<li>
+<p><strong>GPT-5.4 Pro 解决前沿数学开放问题（Epoch 确认）</strong> — Epoch AI 研究机构证实 GPT-5.4 Pro 成功解决了一个此前无解的数学开放难题，热度 399，引发数学界与 AI 界广泛讨论。(<a href="https://news.ycombinator.com/item?id=47497757">HN</a>)</p>
+</li>
+<li>
+<p><strong>LiteLLM v1.82.8 供应链攻击——凭证窃取器</strong> — Simon Willison 披露：LiteLLM v1.82.8（及 1.82.7）发布到 PyPI 的包内含 base64 编码的凭证窃取恶意代码，仅安装即可触发，无需 import。强烈建议锁定版本并立即检查。(<a href="https://simonwillison.net/2026/Mar/24/malicious-litellm/#atom-everything">Simon Willison</a>)</p>
+</li>
+<li>
+<p><strong>包管理器需要"冷静期"</strong> — Simon Willison 呼吁在 LiteLLM 供应链攻击后推广"依赖冷静期"（dependency cooldown）实践：新版本发布后等待数天再安装，给社区时间发现恶意代码。(<a href="https://simonwillison.net/2026/Mar/24/package-managers-need-to-cool-down/#atom-everything">Simon Willison</a>)</p>
+</li>
+</ol>
+<hr />
+<h2>🔥 重大发布</h2>
+<ol>
+<li>
+<p><strong>OpenAI 基金会宣布 $10 亿投资计划</strong> — OpenAI 基金会宣布将向医疗疾病攻克、经济机会拓展、AI 韧性建设和社区项目投入至少 10 亿美元。(<a href="https://openai.com/index/update-on-the-openai-foundation">OpenAI Blog</a>)</p>
+</li>
+<li>
+<p><strong>ChatGPT 上线 Agentic Commerce Protocol 购物功能</strong> — ChatGPT 推出视觉沉浸式购物体验，支持产品发现、商品对比和商家接入，基于新 Agentic Commerce Protocol 协议。OpenAI 同时宣布放弃此前的 Instant Checkout 功能。(<a href="https://openai.com/index/powering-product-discovery-in-chatgpt">OpenAI Blog</a>)</p>
+</li>
+<li>
+<p><strong>OpenAI 开源青少年安全工具 gpt-oss-safeguard</strong> — OpenAI 向开发者开放基于 Prompt 的青少年安全策略工具，帮助第三方 AI 应用快速落实年龄分段内容审核，无需从零搭建。(<a href="https://openai.com/index/teen-safety-policies-gpt-oss-safeguard">OpenAI Blog</a>)</p>
+</li>
+<li>
+<p><strong>Google TV 接入 Gemini：运动资讯、深度探索、视觉问答</strong> — 三项 Gemini 功能正式登陆 Google TV，包括体育实时资讯简报、深度主题探索和视觉问答，进一步将 LLM 整合到客厅场景。(<a href="https://techcrunch.com/2026/03/24/google-tv-new-gemini-features-keep-fans-updated-on-sports-teams-deep-dives-visual-answers/">TechCrunch</a>)</p>
+</li>
+<li>
+<p><strong>Databricks 收购两家安全初创公司</strong> — Databricks 趁 50 亿美元融资"弹药充足"，收购 Antimatter 和 SiftD.ai，为新 AI 安全产品线奠基。(<a href="https://techcrunch.com/2026/03/24/databricks-buys-two-startups-lakewatch-antimatter-siftd-ai-security/">TechCrunch</a>)</p>
+</li>
+<li>
+<p><strong>Mirage（Captions AI）完成 $7500 万融资</strong> — AI 视频编辑应用 Captions 的母公司 Mirage 从 General Catalyst CVF 获得 7500 万美元增长融资，持续押注 AI 视频模型研发。(<a href="https://techcrunch.com/2026/03/24/mirage-raises-75m-to-continue-building-models-for-its-ai-video-editing-app-captions/">TechCrunch</a>)</p>
+</li>
+</ol>
+<hr />
+<h2>🔬 研究论文</h2>
+<ol>
+<li>
+<p><strong>OpenResearcher：全开放深度研究轨迹合成流水线</strong> — 提出可复现的研究 Agent 训练流水线，离线执行搜索-浏览循环，解耦语料自举与多轮轨迹合成。⭐热度 50。(<a href="https://huggingface.co/papers/2603.20278">HF</a>)</p>
+</li>
+<li>
+<p><strong>Look Where It Matters（AwaRes）：VLM 高分辨率裁剪检索</strong> — AwaRes 以低分辨率全局视图识别关键区域，按需检索高分辨率局部裁剪，在效率-精度之间取得新平衡。热度 56。(<a href="https://huggingface.co/papers/2603.16932">HF</a>)</p>
+</li>
+<li>
+<p><strong>GLD：几何潜空间扩散用于多视图生成</strong> — 提出将几何基础模型的特征空间复用为多视图扩散的潜空间，解决视图一致性生成问题。热度 19。(<a href="https://huggingface.co/papers/2603.22275">HF</a>)</p>
+</li>
+<li>
+<p><strong>RoboAlign：视觉-语言-动作模型的测试时推理</strong> — 通过测试时推理改善具身 Agent 的语言-动作对齐，避免 VQA 监督导致的 VLA 性能不稳定问题。热度 21。(<a href="https://huggingface.co/papers/2603.21341">HF</a>)</p>
+</li>
+<li>
+<p><strong>SpatialBoost：语言引导的 3D 空间感知增强</strong> — 为预训练视觉编码器注入 3D 空间关系理解能力，通过可扩展框架解决 2D 视觉模型在空间推理上的局限。热度 38。(<a href="https://huggingface.co/papers/2603.22057">HF</a>)</p>
+</li>
+<li>
+<p><strong>BubbleRAG：黑盒知识图谱的证据驱动 RAG</strong> — 针对模式和结构未知的黑盒知识图谱，解决语义实例化不确定性和结构路径不确定性导致的召回/精度损失。热度 18。(<a href="https://huggingface.co/papers/2603.20309">HF</a>)</p>
+</li>
+<li>
+<p><strong>长时序 Tool-Using Agent 的 RL 完整训练方案</strong> — 以 TravelPlanner 为测试床，系统研究 RL 训练 5 个设计维度：奖励塑形、模型规模、数据组成、算法与课程设置。热度 2。(<a href="https://huggingface.co/papers/2603.21972">HF</a>)</p>
+</li>
+<li>
+<p><strong>REVERE：用于科学工作流的自反进化研究工程师</strong> — 解决现有 Prompt 优化方法局部信号依赖、跨任务泛化差的问题，在异构仓库和弱反馈环境下复现科学代码实验。热度 11。(<a href="https://huggingface.co/papers/2603.20667">HF</a>)</p>
+</li>
+<li>
+<p><strong>F4Splat：前向预测致密化 3D 高斯泼溅</strong> — 提出自适应高斯分配机制，解决前向 3DGS 方法中高斯数量固定导致冗余问题，单次推理实时渲染。热度 30。(<a href="https://huggingface.co/papers/2603.21304">HF</a>)</p>
+</li>
+<li>
+<p><strong>Adaptive LoRA 秩分配用于个性化图像生成</strong> — 提出为 LoRA 各层自适应选择最优秩，取代固定秩策略，在保持内存效率的同时提升个性化图像生成质量。热度 2。(<a href="https://huggingface.co/papers/2603.21884">HF</a>)</p>
+</li>
+</ol>
+<hr />
+<h2>💰 行业商业</h2>
+<ol>
+<li>
+<p><strong>OpenAI 放弃 ChatGPT 内嵌购物结账（Instant Checkout）</strong> — OpenAI 宣布停用曾对标 Amazon 的直接购买功能，转向基于 Agentic Commerce Protocol 的展示型商品发现，承认产品方向需调整。(<a href="https://techcrunch.com/2026/03/24/openais-plans-to-make-chatgpt-more-like-amazon-arent-going-so-well/">TechCrunch</a>)</p>
+</li>
+<li>
+<p><strong>Doss 完成 $5500 万 B 轮：AI 驱动库存管理接入 ERP</strong> — 由 Madrona 和 Premji Invest 共同领投，Doss 的 AI 库存管理系统深度集成企业现有 ERP 系统，面向中大型零售和制造业。(<a href="https://techcrunch.com/2026/03/24/doss-raises-55m-for-ai-inventory-management-that-plugs-into-erp/">TechCrunch</a>)</p>
+</li>
+<li>
+<p><strong>迪士尼退出 OpenAI 合作</strong> — 随着 Sora 应用关闭，迪士尼终止与 OpenAI 的合作协议，媒体娱乐巨头与 AI 内容生成平台的关系趋于审慎。(<a href="https://news.ycombinator.com/item?id=47509234">HN</a>)</p>
+</li>
+<li>
+<p><strong>多模态 AI 自动化复杂金融工作流</strong> — 金融机构正积极采用多模态 AI 框架自动处理复杂文档（多栏布局、图片、嵌套数据集），替代传统 OCR 工具。(<a href="https://www.artificialintelligence-news.com/news/automating-complex-finance-workflows-with-multimodal-ai/">AI News</a>)</p>
+</li>
+<li>
+<p><strong>Spotify 测试反 AI Slop 工具</strong> — 新工具旨在阻止 AI 生成音频被错误归属到真人艺术家名下，赋予艺术家对关联曲目更强的控制权。(<a href="https://techcrunch.com/2026/03/24/spotify-tests-new-tool-to-stop-ai-slop-from-being-attributed-to-real-artists/">TechCrunch</a>)</p>
+</li>
+<li>
+<p><strong>Hark：前苹果设计师打造全新 AI 交互界面</strong> — Hark 采用"模型+硬件+界面三位一体"的设计理念，致力于打造无缝端到端个人智能产品，正吸引业内关注。(<a href="https://techcrunch.com/2026/03/24/meet-the-former-apple-designer-building-a-new-ai-interface-at-hark/">TechCrunch</a>)</p>
+</li>
+<li>
+<p><strong>Talat：AI 会议记录本地化方案</strong> — 无订阅费用，所有处理在设备本地进行，不上传云端，定位 Granola 的隐私友好替代品。(<a href="https://techcrunch.com/2026/03/24/talats-ai-meeting-notes-stay-on-your-machine-not-in-the-cloud/">TechCrunch</a>)</p>
+</li>
+</ol>
+<hr />
+<h2>🛠️ 工具应用</h2>
+<ol>
+<li>
+<p><strong>RuFlo v3.5</strong> ⭐25,065 — 面向 Claude 的领先 Agent 编排平台，支持多 Agent Swarm、自主工作流、RAG 集成与原生 Claude Code/Codex 集成。TypeScript。(<a href="https://github.com/ruvnet/ruflo">GitHub</a>)</p>
+</li>
+<li>
+<p><strong>Hermes Agent（NousResearch）</strong> ⭐12,509 — "与你共同成长的 Agent"，Nous Research 开源自主 Agent 框架，支持个性化任务规划与执行。Python。(<a href="https://github.com/NousResearch/hermes-agent">GitHub</a>)</p>
+</li>
+<li>
+<p><strong>awesome-claude-code</strong> ⭐31,812 — Claude Code 生态精选列表，包含 Skills、Hooks、Slash Commands、Agent 编排器、插件等，生态爆发持续加速。(<a href="https://github.com/hesreallyhim/awesome-claude-code">GitHub</a>)</p>
+</li>
+<li>
+<p><strong>Supermemory</strong> ⭐18,515 — AI 时代的高性能记忆引擎，极速、可扩展的 Memory API，支持个性化上下文持久化。TypeScript。(<a href="https://github.com/supermemoryai/supermemory">GitHub</a>)</p>
+</li>
+<li>
+<p><strong>TradingAgents</strong> ⭐40,815 — 多 Agent LLM 量化金融交易框架，实现多角色分工协作的智能投资决策。Python。(<a href="https://github.com/TauricResearch/TradingAgents">GitHub</a>)</p>
+</li>
+<li>
+<p><strong>Project N.O.M.A.D.</strong> ⭐15,279 — 自包含、完全离线的 AI 生存计算机，集成关键工具、知识库和 AI 推理能力，无网络环境可用。TypeScript。(<a href="https://github.com/Crosstalk-Solutions/project-nomad">GitHub</a>)</p>
+</li>
+<li>
+<p><strong>Gemini 原生视频嵌入 + 毫秒级视频搜索（Show HN）</strong> — 利用 Gemini 新增的视频向量化能力构建亚秒视频搜索应用，首批实用落地案例之一。(<a href="https://news.ycombinator.com/item?id=47503617">HN</a>)</p>
+</li>
+</ol>
+<hr />
+<h2>🌍 政策伦理</h2>
+<ol>
+<li>
+<p><strong>AI 量子安全：迁移与硬件数据隔离</strong> — 研究显示组织将安全风险列为 AI 采用的首要障碍；量子韧性要求企业提前部署加密迁移路径和硬件保护数据飞地。(<a href="https://www.artificialintelligence-news.com/news/quantum-resilient-ai-needs-migration-and-hardware-protected-data-enclaves/">AI News</a>)</p>
+</li>
+<li>
+<p><strong>WSJ 科技专栏作家：将 AI 全面托管电脑将贻笑大方</strong> — Christopher Mims 发文称"给 AI 完全控制我的电脑因此也是我整个生活"的做法，未来会被视为像持有无聊猿 NFT 一样愚蠢，引发 Simon Willison 转发讨论。(<a href="https://simonwillison.net/2026/Mar/24/christopher-mims/#atom-everything">Simon Willison</a>)</p>
+</li>
+<li>
+<p><strong>OpenAI 面向青少年安全的开源工具发布</strong> — 开发者可直接使用 OpenAI 定义的年龄段内容审核策略，推动 AI 产品在未成年人保护方面建立行业基准。(<a href="https://openai.com/index/teen-safety-policies-gpt-oss-safeguard">OpenAI Blog</a>)</p>
+</li>
+</ol>
+<hr />
+<h2>🔥 社区热议</h2>
+<ul>
+<li><strong>"有人厌倦了讨论 AI 吗？"</strong> — HN 热度 430，真实反映了 AI 话题疲劳现象，社区对 AI 过度炒作产生明显逆反情绪</li>
+<li><strong>"AI 应用都在哪里？"</strong> — HN 热度 370，讨论真正成功落地的 AI 应用匮乏，B2C 赛道仍未出现标志性杀手级应用</li>
+<li><strong>Epoch 确认 GPT-5.4 Pro 解决前沿数学开放问题</strong> — HN 热度 399，AI 数学能力突破引发学界与工程师圈热议</li>
+<li><strong>GitHub 再次宕机</strong> — HN 热度 314，GitHub 稳定性问题老生常谈，研发效率受损引发不满</li>
+<li><strong>"AI 财富通道正在被关上"</strong> — HN 热度 255，讨论 AI 浪潮是否正在创造"赢者通吃"局面，普通人的财富机会窗口正在收窄</li>
+<li><strong>LaGuardia 机场跑道相撞安全警报</strong> — HN 热度 323（非 AI 话题），单名 ATC 管制员值班争议持续发酵</li>
+<li><strong>Ripgrep vs grep 性能对比（2016 经典文章重温）</strong> — HN 热度 326，经典技术文章长期有效，ripgrep 在开发者圈影响力持久</li>
+<li><strong>AI Roundtable：让 200 个模型辩论你的问题（Show HN）</strong> — 新奇创意应用，让多模型同时对话，集体智慧 vs. 单一 LLM 的有趣实验</li>
+</ul>
+<hr />
+<h2>📊 趋势洞察</h2>
+<ul>
+<li><strong>Claude Code 生态爆发</strong>：Auto 模式上线 + awesome-claude-code ⭐31K + RuFlo ⭐25K，Claude Code 正在形成完整开发者生态闭环，竞争优势持续扩大</li>
+<li><strong>OpenAI 产品战略收缩</strong>：Sora 关闭 + Instant Checkout 放弃，显示 OpenAI 在"新品探索"上的失败率上升，正集中资源于核心模型能力与商业化路径</li>
+<li><strong>AI 供应链安全红色警报</strong>：LiteLLM 恶意包事件是 2026 年迄今最严重的 AI 工具链安全事件，包管理冷静期等防御性实践亟待推广</li>
+<li><strong>具身智能加速落地</strong>：Agile Robots + DeepMind、RoboAlign 论文、HF Papers 多篇机器人方向论文，具身 AI 正从实验室走向工业现场</li>
+<li><strong>AI 反思时刻</strong>：HN 上"AI 疲劳"与"AI 撒谎"热帖同时上榜，表明技术社区对 AI 夸大宣传的批判性认知正在增强，行业可能进入更理性的增长周期</li>
+<li><strong>本地优先趋势</strong>：Talat 本地 AI 会议记录、Project N.O.M.A.D 离线 AI 设备，隐私保护与离线可用性成为 To C 产品的新卖点</li>
+</ul>
+</div>
+<div class="newsletter-footer">
+统计: 8 个板块 | 46 条内容 | 数据源: TechCrunch AI(12) + OpenAI Blog(3) + Simon Willison(3) + AI News(2) + HN(20) + GitHub Trending(8) + HF Papers(20) | 生成时间: 2026-03-25 08:05
+</div>
+</div>
+</body>
+</html>

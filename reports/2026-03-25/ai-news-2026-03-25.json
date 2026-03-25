@@ -1,0 +1,658 @@
+[
+  {
+    "source": "GitHub Trending",
+    "category": "tools",
+    "title": "ruvnet/ruflo",
+    "url": "https://github.com/ruvnet/ruflo",
+    "time": "2026-03-25T00:01:07.334900+00:00",
+    "summary": "🌊 The leading agent orchestration platform for Claude. Deploy intelligent multi-agent swarms, coordinate autonomous workflows, and build conversational AI systems. Features enterprise-grade architecture, distributed swarm intelligence, RAG integration, and native Claude Code / Codex Integration",
+    "readme": "# 🌊 RuFlo v3.5: Enterprise AI Orchestration Platform\n\n<div align=\"center\">\n\n![Ruflo Banner](ruflo/assets/ruflo-small.jpeg)\n\n\n\n[![GitHub Project of the Day](https://img.shields.io/badge/GitHub-Project%20of%20the%20Day-ff6600?style=for-the-badge&logo=github&logoColor=white)](https://github.com/ruvnet/claude-flow)\n\n[![Star on GitHub](https://img.shields.io/github/stars/ruvnet/claude-flow?style=for-the-badge&logo=github&color=gold)](https://github.com/ruvnet/claude-flow)\n[![Monthly Downloads](https:",
+    "github_url": "https://github.com/ruvnet/ruflo",
+    "lang": "TypeScript",
+    "stars": "25065"
+  },
+  {
+    "source": "GitHub Trending",
+    "category": "tools",
+    "title": "NousResearch/hermes-agent",
+    "url": "https://github.com/NousResearch/hermes-agent",
+    "time": "2026-03-25T00:01:07.191825+00:00",
+    "summary": "The agent that grows with you",
+    "readme": "<p align=\"center\">\n  <img src=\"assets/banner.png\" alt=\"Hermes Agent\" width=\"100%\">\n</p>\n\n# Hermes Agent ☤\n\n<p align=\"center\">\n  <a href=\"https://hermes-agent.nousresearch.com/docs/\"><img src=\"https://img.shields.io/badge/Docs-hermes--agent.nousresearch.com-FFD700?style=for-the-badge\" alt=\"Documentation\"></a>\n  <a href=\"https://discord.gg/NousResearch\"><img src=\"https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white\" alt=\"Discord\"></a>\n  <a href=\"https://gith",
+    "github_url": "https://github.com/NousResearch/hermes-agent",
+    "lang": "Python",
+    "stars": "12509"
+  },
+  {
+    "source": "GitHub Trending",
+    "category": "tools",
+    "title": "hesreallyhim/awesome-claude-code",
+    "url": "https://github.com/hesreallyhim/awesome-claude-code",
+    "time": "2026-03-25T00:01:07.188613+00:00",
+    "summary": "A curated list of awesome skills, hooks, slash-commands, agent orchestrators, applications, and plugins for Claude Code by Anthropic",
+    "readme": "<!-- GENERATED FILE: do not edit directly -->\n<h3 align=\"center\">Pick Your Style:</h3>\n<p align=\"center\">\n<a href=\"./\"><img src=\"assets/badge-style-awesome.svg\" alt=\"Awesome\" height=\"28\" style=\"border: 2px solid #cc3366; border-radius: 4px;\"></a>\n<a href=\"README_ALTERNATIVES/README_EXTRA.md\"><img src=\"assets/badge-style-extra.svg\" alt=\"Extra\" height=\"28\"></a>\n<a href=\"README_ALTERNATIVES/README_CLASSIC.md\"><img src=\"assets/badge-style-classic.svg\" alt=\"Classic\" height=\"28\"></a>\n<a href=\"README_A",
+    "github_url": "https://github.com/hesreallyhim/awesome-claude-code",
+    "lang": "Python",
+    "stars": "31812"
+  },
+  {
+    "source": "GitHub Trending",
+    "category": "tools",
+    "title": "supermemoryai/supermemory",
+    "url": "https://github.com/supermemoryai/supermemory",
+    "time": "2026-03-25T00:01:06.337984+00:00",
+    "summary": "Memory engine and app that is extremely fast, scalable. The Memory API for the AI era.",
+    "readme": "<p align=\"center\">\n  <picture>\n    <source srcset=\"apps/web/public/logo-fullmark.svg\" media=\"(prefers-color-scheme: dark)\">\n    <source srcset=\"apps/web/public/logo-light-fullmark.svg\" media=\"(prefers-color-scheme: light)\">\n    <img src=\"apps/web/public/logo-fullmark.svg\" alt=\"Supermemory\" width=\"400\" />\n  </picture>\n</p>\n\n<p align=\"center\">\n  <strong>State-of-the-art memory and context engine for AI.</strong>\n</p>\n\n<p align=\"center\">\n  <a href=\"https://supermemory.ai/docs\">Docs</a> ·\n  <a href=",
+    "github_url": "https://github.com/supermemoryai/supermemory",
+    "lang": "TypeScript",
+    "stars": "18515"
+  },
+  {
+    "source": "GitHub Trending",
+    "category": "tools",
+    "title": "mvanhorn/last30days-skill",
+    "url": "https://github.com/mvanhorn/last30days-skill",
+    "time": "2026-03-25T00:01:06.273486+00:00",
+    "summary": "AI agent skill that researches any topic across Reddit, X, YouTube, HN, Polymarket, and the web - then synthesizes a grounded summary",
+    "readme": "# /last30days v2.9.5\n\n### Claude Code (recommended)\n```\n/plugin marketplace add mvanhorn/last30days-skill\n/plugin install last30days@last30days-skill\n```\n\n[![ClawHub](https://img.shields.io/badge/ClawHub-last30days--official-blue)](https://clawhub.ai/skills/last30days-official)\n\n```bash\nclawhub install last30days-official\n```\n\n**The AI world reinvents itself every month. This skill keeps you current.** /last30days researches your topic across Reddit, X, Bluesky, YouTube, TikTok, Instagram, Hacke",
+    "github_url": "https://github.com/mvanhorn/last30days-skill",
+    "lang": "Python",
+    "stars": "5514"
+  },
+  {
+    "source": "GitHub Trending",
+    "category": "tools",
+    "title": "harry0703/MoneyPrinterTurbo",
+    "url": "https://github.com/harry0703/MoneyPrinterTurbo",
+    "time": "2026-03-25T00:01:06.257101+00:00",
+    "summary": "利用AI大模型，一键生成高清短视频 Generate short videos with one click using AI LLM.",
+    "readme": "<div align=\"center\">\n<h1 align=\"center\">MoneyPrinterTurbo 💸</h1>\n\n<p align=\"center\">\n  <a href=\"https://github.com/harry0703/MoneyPrinterTurbo/stargazers\"><img src=\"https://img.shields.io/github/stars/harry0703/MoneyPrinterTurbo.svg?style=for-the-badge\" alt=\"Stargazers\"></a>\n  <a href=\"https://github.com/harry0703/MoneyPrinterTurbo/issues\"><img src=\"https://img.shields.io/github/issues/harry0703/MoneyPrinterTurbo.svg?style=for-the-badge\" alt=\"Issues\"></a>\n  <a href=\"https://github.com/harry0703/",
+    "github_url": "https://github.com/harry0703/MoneyPrinterTurbo",
+    "lang": "Python",
+    "stars": "52583"
+  },
+  {
+    "source": "GitHub Trending",
+    "category": "tools",
+    "title": "Crosstalk-Solutions/project-nomad",
+    "url": "https://github.com/Crosstalk-Solutions/project-nomad",
+    "time": "2026-03-25T00:01:06.244654+00:00",
+    "summary": "Project N.O.M.A.D, is a self-contained, offline survival computer packed with critical tools, knowledge, and AI to keep you informed and empowered—anytime, anywhere.",
+    "readme": "<div align=\"center\">\n<img src=\"https://raw.githubusercontent.com/Crosstalk-Solutions/project-nomad/refs/heads/main/admin/public/project_nomad_logo.png\" width=\"200\" height=\"200\"/>\n\n# Project N.O.M.A.D.\n### Node for Offline Media, Archives, and Data\n\n**Knowledge That Never Goes Offline**\n\n[![Website](https://img.shields.io/badge/Website-projectnomad.us-blue)](https://www.projectnomad.us)\n[![Discord](https://img.shields.io/badge/Discord-Join%20Community-5865F2)](https://discord.com/invite/crosstalk",
+    "github_url": "https://github.com/Crosstalk-Solutions/project-nomad",
+    "lang": "TypeScript",
+    "stars": "15279"
+  },
+  {
+    "source": "GitHub Trending",
+    "category": "tools",
+    "title": "TauricResearch/TradingAgents",
+    "url": "https://github.com/TauricResearch/TradingAgents",
+    "time": "2026-03-25T00:01:06.240530+00:00",
+    "summary": "TradingAgents: Multi-Agents LLM Financial Trading Framework",
+    "readme": "<p align=\"center\">\n  <img src=\"assets/TauricResearch.png\" style=\"width: 60%; height: auto;\">\n</p>\n\n<div align=\"center\" style=\"line-height: 1;\">\n  <a href=\"https://arxiv.org/abs/2412.20138\" target=\"_blank\"><img alt=\"arXiv\" src=\"https://img.shields.io/badge/arXiv-2412.20138-B31B1B?logo=arxiv\"/></a>\n  <a href=\"https://discord.com/invite/hk9PGKShPK\" target=\"_blank\"><img alt=\"Discord\" src=\"https://img.shields.io/badge/Discord-TradingResearch-7289da?logo=discord&logoColor=white&color=7289da\"/></a>\n  <",
+    "github_url": "https://github.com/TauricResearch/TradingAgents",
+    "lang": "Python",
+    "stars": "40815"
+  },
+  {
+    "source": "Hacker News",
+    "category": "community",
+    "title": "Disney Exits OpenAI Deal After AI Giant Shutters Sora",
+    "url": "https://news.ycombinator.com/item?id=47509234",
+    "time": "2026-03-24T21:01:21Z",
+    "heat": "200",
+    "summary": "",
+    "hn_url": "https://news.ycombinator.com/item?id=47509234"
+  },
+  {
+    "source": "Hacker News",
+    "category": "community",
+    "title": "OpenAI shutting down Sora app",
+    "url": "https://news.ycombinator.com/item?id=47509036",
+    "time": "2026-03-24T20:49:31Z",
+    "heat": "46",
+    "summary": "",
+    "hn_url": "https://news.ycombinator.com/item?id=47509036"
+  },
+  {
+    "source": "Hacker News",
+    "category": "community",
+    "title": "Is anybody else bored of talking about AI?",
+    "url": "https://news.ycombinator.com/item?id=47508745",
+    "time": "2026-03-24T20:31:08Z",
+    "heat": "430",
+    "summary": "",
+    "hn_url": "https://news.ycombinator.com/item?id=47508745"
+  },
+  {
+    "source": "Hacker News",
+    "category": "community",
+    "title": "GitHub is once again down",
+    "url": "https://news.ycombinator.com/item?id=47508608",
+    "time": "2026-03-24T20:23:34Z",
+    "heat": "314",
+    "summary": "",
+    "hn_url": "https://news.ycombinator.com/item?id=47508608"
+  },
+  {
+    "source": "Hacker News",
+    "category": "community",
+    "title": "Show HN: AI Roundtable – Let 200 models debate your question",
+    "url": "https://news.ycombinator.com/item?id=47507666",
+    "time": "2026-03-24T19:15:27Z",
+    "heat": "22",
+    "summary": "",
+    "hn_url": "https://news.ycombinator.com/item?id=47507666"
+  },
+  {
+    "source": "Hacker News",
+    "category": "community",
+    "title": "The AI Industry Is Lying to You",
+    "url": "https://news.ycombinator.com/item?id=47506259",
+    "time": "2026-03-24T17:30:55Z",
+    "heat": "146",
+    "summary": "",
+    "hn_url": "https://news.ycombinator.com/item?id=47506259"
+  },
+  {
+    "source": "Hacker News",
+    "category": "community",
+    "title": "Hypura – A storage-tier-aware LLM inference scheduler for Apple Silicon",
+    "url": "https://news.ycombinator.com/item?id=47504695",
+    "time": "2026-03-24T16:02:22Z",
+    "heat": "186",
+    "summary": "",
+    "hn_url": "https://news.ycombinator.com/item?id=47504695"
+  },
+  {
+    "source": "TechCrunch AI",
+    "category": "industry",
+    "title": "OpenAI’s Sora was the creepiest app on your phone — now it’s shutting down",
+    "url": "https://techcrunch.com/2026/03/24/openais-sora-was-the-creepiest-app-on-your-phone-now-its-shutting-down/",
+    "time": "2026-03-24T15:57:55+00:00",
+    "summary": "Though the underlying Sora 2 video- and audio-generation model is scarily impressive, there was not sustained interest in an AI-only social feed."
+  },
+  {
+    "source": "Hacker News",
+    "category": "community",
+    "title": "LaGuardia pilots raised safety alarms months before deadly runway crash",
+    "url": "https://news.ycombinator.com/item?id=47503965",
+    "time": "2026-03-24T15:19:19Z",
+    "heat": "323",
+    "summary": "",
+    "hn_url": "https://news.ycombinator.com/item?id=47503965"
+  },
+  {
+    "source": "Hacker News",
+    "category": "community",
+    "title": "Show HN: Gemini can now natively embed video, so I built sub-second video search",
+    "url": "https://news.ycombinator.com/item?id=47503617",
+    "time": "2026-03-24T14:58:27Z",
+    "heat": "227",
+    "summary": "",
+    "hn_url": "https://news.ycombinator.com/item?id=47503617"
+  },
+  {
+    "source": "Hacker News",
+    "category": "community",
+    "title": "The bridge to wealth is being pulled up with AI",
+    "url": "https://news.ycombinator.com/item?id=47503296",
+    "time": "2026-03-24T14:39:20Z",
+    "heat": "255",
+    "summary": "",
+    "hn_url": "https://news.ycombinator.com/item?id=47503296"
+  },
+  {
+    "source": "Hacker News",
+    "category": "community",
+    "title": "So where are all the AI apps?",
+    "url": "https://news.ycombinator.com/item?id=47503006",
+    "time": "2026-03-24T14:19:59Z",
+    "heat": "370",
+    "summary": "",
+    "hn_url": "https://news.ycombinator.com/item?id=47503006"
+  },
+  {
+    "source": "Hacker News",
+    "category": "community",
+    "title": "Sandboxing AI agents, 100x faster",
+    "url": "https://news.ycombinator.com/item?id=47502448",
+    "time": "2026-03-24T13:40:04Z",
+    "heat": "27",
+    "summary": "",
+    "hn_url": "https://news.ycombinator.com/item?id=47502448"
+  },
+  {
+    "source": "Simon Willison",
+    "category": "tools",
+    "title": "Package Managers Need to Cool Down",
+    "url": "https://simonwillison.net/2026/Mar/24/package-managers-need-to-cool-down/#atom-everything",
+    "time": "2026-03-24T13:11:38+00:00",
+    "summary": "Package Managers Need to Cool Down\nToday's LiteLLM supply chain attack inspired me to revisit the idea of dependency cooldowns, the practice of only installing updated dependencies once they've been out in the wild for a few days to give the community a chance to spot if they've been subverted in some way.\nThis recent piece (March 4th) piece by Andrew Nesbitt reviews the current state of dependency cooldown mechanisms across different packaging tools. It's surprisingly well supported! There's be"
+  },
+  {
+    "source": "TechCrunch AI",
+    "category": "industry",
+    "title": "Anthropic hands Claude Code more control, but keeps it on a leash",
+    "url": "https://techcrunch.com/2026/03/24/anthropic-hands-claude-code-more-control-but-keeps-it-on-a-leash/",
+    "time": "2026-03-24T13:00:30+00:00",
+    "summary": "Anthropic’s new auto mode for Claude Code lets AI execute tasks with fewer approvals, reflecting a broader shift toward more autonomous tools that balance speed with safety through built-in safeguards."
+  },
+  {
+    "source": "TechCrunch AI",
+    "category": "industry",
+    "title": "Spotify tests new tool to stop AI slop from being attributed to real artists",
+    "url": "https://techcrunch.com/2026/03/24/spotify-tests-new-tool-to-stop-ai-slop-from-being-attributed-to-real-artists/",
+    "time": "2026-03-24T12:56:25+00:00",
+    "summary": "The idea behind the new tool is to give artists more control over which tracks are associated with their name on Spotify."
+  },
+  {
+    "source": "Hacker News",
+    "category": "community",
+    "title": "NanoClaw Adopts OneCLI Agent Vault",
+    "url": "https://news.ycombinator.com/item?id=47501840",
+    "time": "2026-03-24T12:48:04Z",
+    "heat": "103",
+    "summary": "",
+    "hn_url": "https://news.ycombinator.com/item?id=47501840"
+  },
+  {
+    "source": "TechCrunch AI",
+    "category": "industry",
+    "title": "Databricks bought two startups to underpin its new AI security product",
+    "url": "https://techcrunch.com/2026/03/24/databricks-buys-two-startups-lakewatch-antimatter-siftd-ai-security/",
+    "time": "2026-03-24T12:40:56+00:00",
+    "summary": "With an overflowing war chest from its recent $5 billion raise, Databricks is buying startups and looking for more. It acquired Antimatter and SiftD.ai."
+  },
+  {
+    "source": "Simon Willison",
+    "category": "tools",
+    "title": "Quoting Christopher Mims",
+    "url": "https://simonwillison.net/2026/Mar/24/christopher-mims/#atom-everything",
+    "time": "2026-03-24T12:35:52+00:00",
+    "summary": "I really think \"give AI total control of my computer and therefore my entire life\" is going to look so foolish in retrospect that everyone who went for this is going to look as dumb as Jimmy Fallon holding up a picture of his Bored Ape\n— Christopher Mims, Technology columnist at The Wall Street Journal\nTags: ai, security"
+  },
+  {
+    "source": "TechCrunch AI",
+    "category": "industry",
+    "title": "OpenAI’s plans to make ChatGPT more like Amazon aren’t going so well",
+    "url": "https://techcrunch.com/2026/03/24/openais-plans-to-make-chatgpt-more-like-amazon-arent-going-so-well/",
+    "time": "2026-03-24T11:27:56+00:00",
+    "summary": "OpenAI says it's moving away from Instant Checkout, which allowed users to buy items directly through the ChatGPT interface."
+  },
+  {
+    "source": "TechCrunch AI",
+    "category": "industry",
+    "title": "Google TV’s new Gemini features keep fans updated on sports teams and more",
+    "url": "https://techcrunch.com/2026/03/24/google-tv-new-gemini-features-keep-fans-updated-on-sports-teams-deep-dives-visual-answers/",
+    "time": "2026-03-24T11:12:11+00:00",
+    "summary": "Three Gemini-powered features are coming to your Google TV. This includes visual responses, deep dives, and sports briefs."
+  },
+  {
+    "source": "TechCrunch AI",
+    "category": "industry",
+    "title": "OpenAI adds open source tools to help developers build for teen safety",
+    "url": "https://techcrunch.com/2026/03/24/openai-adds-open-source-tools-to-help-developers-build-for-teen-safety/",
+    "time": "2026-03-24T10:41:34+00:00",
+    "summary": "Rather than working from scratch to figure out how to make AI safer for teens, developers can use these policies to fortify what they build."
+  },
+  {
+    "source": "TechCrunch AI",
+    "category": "industry",
+    "title": "Talat’s AI meeting notes stay on your machine, not in the cloud",
+    "url": "https://techcrunch.com/2026/03/24/talats-ai-meeting-notes-stay-on-your-machine-not-in-the-cloud/",
+    "time": "2026-03-24T10:41:33+00:00",
+    "summary": "The subscription-free AI meeting notes app is a local-first twist on notetaking tools like Granola."
+  },
+  {
+    "source": "Hacker News",
+    "category": "community",
+    "title": "LLM Neuroanatomy II: Modern LLM Hacking and Hints of a Universal Language?",
+    "url": "https://news.ycombinator.com/item?id=47500709",
+    "time": "2026-03-24T10:33:54Z",
+    "heat": "112",
+    "summary": "",
+    "hn_url": "https://news.ycombinator.com/item?id=47500709"
+  },
+  {
+    "source": "TechCrunch AI",
+    "category": "industry",
+    "title": "Doss raises $55M for AI inventory management that plugs into ERP",
+    "url": "https://techcrunch.com/2026/03/24/doss-raises-55m-for-ai-inventory-management-that-plugs-into-erp/",
+    "time": "2026-03-24T09:18:29+00:00",
+    "summary": "Doss's AI-powered inventory management system integrates with existing ERP systems. The Series B round was co-led by Madrona and Premji Invest."
+  },
+  {
+    "source": "AI News",
+    "category": "announcements",
+    "title": "Automating complex finance workflows with multimodal AI",
+    "url": "https://www.artificialintelligence-news.com/news/automating-complex-finance-workflows-with-multimodal-ai/",
+    "time": "2026-03-24T09:03:48+00:00",
+    "summary": "Finance leaders are automating their complex workflows by actively adopting powerful new multimodal AI frameworks. Extracting text from unstructured documents presents a frequent headache for developers. Historically, standard optical character recognition systems failed to accurately digitise complex layouts, frequently converting multi-column files, pictures, and layered datasets into an unreadable mess of plain text. The varied […]\nThe post Automating complex finance workflows with multimodal"
+  },
+  {
+    "source": "TechCrunch AI",
+    "category": "industry",
+    "title": "Meet the former Apple designer building a new AI interface at Hark",
+    "url": "https://techcrunch.com/2026/03/24/meet-the-former-apple-designer-building-a-new-ai-interface-at-hark/",
+    "time": "2026-03-24T08:00:00+00:00",
+    "summary": "The company said it would design models, hardware, and interfaces in tandem to deliver a \"seamless end-to-end personal intelligence product.\""
+  },
+  {
+    "source": "Hacker News",
+    "category": "community",
+    "title": "Show HN: ProofShot – Give AI coding agents eyes to verify the UI they build",
+    "url": "https://news.ycombinator.com/item?id=47499672",
+    "time": "2026-03-24T07:46:46Z",
+    "heat": "114",
+    "summary": "",
+    "hn_url": "https://news.ycombinator.com/item?id=47499672"
+  },
+  {
+    "source": "AI News",
+    "category": "announcements",
+    "title": "Securing AI systems under today’s and tomorrow’s conditions",
+    "url": "https://www.artificialintelligence-news.com/news/quantum-resilient-ai-needs-migration-and-hardware-protected-data-enclaves/",
+    "time": "2026-03-24T07:22:00+00:00",
+    "summary": "Evidence cited in an eBook titled “AI Quantum Resilience”, published by Utimaco [email wall], shows organisations consider security risks as the leading barrier to effective adoption of AI on data they hold. AI’s value depends on data amassed by an organisation. However, there are security risks to building models and training them on that data. […]\nThe post Securing AI systems under today’s and tomorrow’s conditions appeared first on AI News."
+  },
+  {
+    "source": "Simon Willison",
+    "category": "tools",
+    "title": "Malicious litellm_init.pth in litellm 1.82.8 — credential stealer",
+    "url": "https://simonwillison.net/2026/Mar/24/malicious-litellm/#atom-everything",
+    "time": "2026-03-24T07:07:31+00:00",
+    "summary": "Malicious litellm_init.pth in litellm 1.82.8 — credential stealer\nThe LiteLLM v1.82.8 package published to PyPI was compromised with a particularly nasty credential stealer hidden in base64 in a litellm_init.pth file, which means installing the package is enough to trigger it even without running import litellm.\n(1.82.7 had the exploit as well but it was in the proxy/proxy_server.py file so the package had to be imported for it to take effect.)\nThis issue has a very detailed description of what "
+  },
+  {
+    "source": "Hacker News",
+    "category": "community",
+    "title": "Ripgrep is faster than grep, ag, git grep, ucg, pt, sift (2016)",
+    "url": "https://news.ycombinator.com/item?id=47499245",
+    "time": "2026-03-24T06:31:39Z",
+    "heat": "326",
+    "summary": "",
+    "hn_url": "https://news.ycombinator.com/item?id=47499245"
+  },
+  {
+    "source": "Hacker News",
+    "category": "community",
+    "title": "Amazon says AWS' Bahrain region 'disrupted' following drone activity",
+    "url": "https://news.ycombinator.com/item?id=47499027",
+    "time": "2026-03-24T05:55:49Z",
+    "heat": "26",
+    "summary": "",
+    "hn_url": "https://news.ycombinator.com/item?id=47499027"
+  },
+  {
+    "source": "TechCrunch AI",
+    "category": "industry",
+    "title": "Mirage raises $75M to continue building models for its AI video-editing app Captions",
+    "url": "https://techcrunch.com/2026/03/24/mirage-raises-75m-to-continue-building-models-for-its-ai-video-editing-app-captions/",
+    "time": "2026-03-24T05:00:00+00:00",
+    "summary": "Mirage, the maker of video-editing app Captions, has raised $75 million in growth financing from General Catalyst's Customer Value Fund (CVF)."
+  },
+  {
+    "source": "TechCrunch AI",
+    "category": "industry",
+    "title": "Agile Robots becomes the latest robotics company to partner with Google DeepMind",
+    "url": "https://techcrunch.com/2026/03/24/agile-robots-becomes-the-latest-robotics-company-to-partner-with-google-deepmind/",
+    "time": "2026-03-24T04:05:00+00:00",
+    "summary": "Agile Robots will incorporate Google DeepMind's robotics foundation models into its bots while collecting data for the AI research lab."
+  },
+  {
+    "source": "Hacker News",
+    "category": "community",
+    "title": "Single ATC controller was managing LaGuardia Airport at time of Air Canada crash [video]",
+    "url": "https://news.ycombinator.com/item?id=47498217",
+    "time": "2026-03-24T03:07:03Z",
+    "heat": "25",
+    "summary": "",
+    "hn_url": "https://news.ycombinator.com/item?id=47498217"
+  },
+  {
+    "source": "OpenAI Blog",
+    "category": "announcements",
+    "title": "Helping developers build safer AI experiences for teens",
+    "url": "https://openai.com/index/teen-safety-policies-gpt-oss-safeguard",
+    "time": "2026-03-24T03:00:00+00:00",
+    "summary": "OpenAI releases prompt-based teen safety policies for developers using gpt-oss-safeguard, helping moderate age-specific risks in AI systems."
+  },
+  {
+    "source": "Hacker News",
+    "category": "community",
+    "title": "Epoch confirms GPT5.4 Pro solved a frontier math open problem",
+    "url": "https://news.ycombinator.com/item?id=47497757",
+    "time": "2026-03-24T01:53:09Z",
+    "heat": "399",
+    "summary": "",
+    "hn_url": "https://news.ycombinator.com/item?id=47497757"
+  },
+  {
+    "source": "Hacker News",
+    "category": "community",
+    "title": "I created my first AI-assisted pull request",
+    "url": "https://news.ycombinator.com/item?id=47497679",
+    "time": "2026-03-24T01:42:38Z",
+    "heat": "81",
+    "summary": "",
+    "hn_url": "https://news.ycombinator.com/item?id=47497679"
+  },
+  {
+    "source": "OpenAI Blog",
+    "category": "announcements",
+    "title": "Update on the OpenAI Foundation",
+    "url": "https://openai.com/index/update-on-the-openai-foundation",
+    "time": "2026-03-24T01:00:00+00:00",
+    "summary": "The OpenAI Foundation announces plans to invest at least $1 billion in curing diseases, economic opportunity, AI resilience, and community programs."
+  },
+  {
+    "source": "OpenAI Blog",
+    "category": "announcements",
+    "title": "Powering product discovery in ChatGPT",
+    "url": "https://openai.com/index/powering-product-discovery-in-chatgpt",
+    "time": "2026-03-24T01:00:00+00:00",
+    "summary": "ChatGPT introduces richer, visually immersive shopping powered by the Agentic Commerce Protocol, enabling product discovery, side-by-side comparisons, and merchant integration."
+  },
+  {
+    "source": "HuggingFace Papers",
+    "category": "research",
+    "title": "Repurposing Geometric Foundation Models for Multi-view Diffusion",
+    "url": "https://huggingface.co/papers/2603.22275",
+    "time": "2026-03-23T17:57:05.000Z",
+    "summary": "While recent advances in generative latent spaces have driven substantial progress in single-image generation, the optimal latent space for novel view synthesis (NVS) remains largely unexplored. In particular, NVS requires geometrically consistent generation across viewpoints, but existing approaches typically operate in a view-independent VAE latent space. In this paper, we propose Geometric Latent Diffusion (GLD), a framework that repurposes the geometrically consistent feature space of geomet",
+    "heat": "19",
+    "github_url": "https://arxiv.org/abs/2603.22275"
+  },
+  {
+    "source": "HuggingFace Papers",
+    "category": "research",
+    "title": "SpatialBoost: Enhancing Visual Representation through Language-Guided Reasoning",
+    "url": "https://huggingface.co/papers/2603.22057",
+    "time": "2026-03-23T14:54:34.000Z",
+    "summary": "Despite the remarkable success of large-scale pre-trained image representation models (i.e., vision encoders) across various vision tasks, they are predominantly trained on 2D image data and therefore often fail to capture 3D spatial relationships between objects and backgrounds in the real world, constraining their effectiveness in many downstream applications. To address this, we propose SpatialBoost, a scalable framework that enhances the spatial awareness of existing pre-trained vision encod",
+    "heat": "38",
+    "github_url": "https://arxiv.org/abs/2603.22057"
+  },
+  {
+    "source": "HuggingFace Papers",
+    "category": "research",
+    "title": "AdditiveLLM2: A Multi-modal Large Language Model for Additive Manufacturing",
+    "url": "https://huggingface.co/papers/2603.22017",
+    "time": "2026-03-23T14:28:10.000Z",
+    "summary": "This work presents AdditiveLLM2 a multi-modal, domain adapted large language model built upon the instruction tuned variant of the Gemma 3 model using a relatively small dataset of around 50 million tokens. The dataset (AdditiveLLM2-OA) consists of open-access additive manufacturing journal articles with data extracted for the domain adaptive pretraining and visual instruction tuning processes. Various stages of the developed model are evaluated with the Additive-Manufacturing-Benchmark which co",
+    "heat": "1",
+    "github_url": "https://arxiv.org/abs/2603.22017"
+  },
+  {
+    "source": "HuggingFace Papers",
+    "category": "research",
+    "title": "Demystifying Reinforcement Learning for Long-Horizon Tool-Using Agents: A Comprehensive Recipe",
+    "url": "https://huggingface.co/papers/2603.21972",
+    "time": "2026-03-23T13:40:08.000Z",
+    "summary": "Reinforcement Learning (RL) is essential for evolving Large Language Models (LLMs) into autonomous agents capable of long-horizon planning, yet a practical recipe for scaling RL in complex, multi-turn environments remains elusive. This paper presents a systematic empirical study using TravelPlanner, a challenging testbed requiring tool orchestration to satisfy multifaceted constraints. We decompose the agentic RL design space along 5 axes: reward shaping, model scaling, data composition, algorit",
+    "heat": "2",
+    "github_url": "https://arxiv.org/abs/2603.21972"
+  },
+  {
+    "source": "HuggingFace Papers",
+    "category": "research",
+    "title": "Not All Layers Are Created Equal: Adaptive LoRA Ranks for Personalized Image Generation",
+    "url": "https://huggingface.co/papers/2603.21884",
+    "time": "2026-03-23T12:13:47.000Z",
+    "summary": "Low Rank Adaptation (LoRA) is the de facto fine-tuning strategy to generate personalized images from pre-trained diffusion models. Choosing a good rank is extremely critical, since it trades off performance and memory consumption, but today the decision is often left to the community's consensus, regardless of the personalized subject's complexity. The reason is evident: the cost of selecting a good rank for each LoRA component is combinatorial, so we opt for practical shortcuts such as fixing t",
+    "heat": "2",
+    "github_url": "https://arxiv.org/abs/2603.21884"
+  },
+  {
+    "source": "HuggingFace Papers",
+    "category": "research",
+    "title": "The Universal Normal Embedding",
+    "url": "https://huggingface.co/papers/2603.21786",
+    "time": "2026-03-23T10:28:14.000Z",
+    "summary": "Generative models and vision encoders have largely advanced on separate tracks, optimized for different goals and grounded in different mathematical principles. Yet, they share a fundamental property: latent space Gaussianity. Generative models map Gaussian noise to images, while encoders map images to semantic embeddings whose coordinates empirically behave as Gaussian. We hypothesize that both are views of a shared latent source, the Universal Normal Embedding (UNE): an approximately Gaussian ",
+    "heat": "6",
+    "github_url": "https://arxiv.org/abs/2603.21786"
+  },
+  {
+    "source": "HuggingFace Papers",
+    "category": "research",
+    "title": "Generalized Discrete Diffusion from Snapshots",
+    "url": "https://huggingface.co/papers/2603.21342",
+    "time": "2026-03-22T17:58:01.000Z",
+    "summary": "We introduce Generalized Discrete Diffusion from Snapshots (GDDS), a unified framework for discrete diffusion modeling that supports arbitrary noising processes over large discrete state spaces. Our formulation encompasses all existing discrete diffusion approaches, while allowing significantly greater flexibility in the choice of corruption dynamics. The forward noising process relies on uniformization and enables fast arbitrary corruption. For the reverse process, we derive a simple evidence l",
+    "heat": "6",
+    "github_url": "https://arxiv.org/abs/2603.21342"
+  },
+  {
+    "source": "HuggingFace Papers",
+    "category": "research",
+    "title": "RoboAlign: Learning Test-Time Reasoning for Language-Action Alignment in Vision-Language-Action Models",
+    "url": "https://huggingface.co/papers/2603.21341",
+    "time": "2026-03-22T17:57:55.000Z",
+    "summary": "Improving embodied reasoning in multimodal-large-language models (MLLMs) is essential for building vision-language-action models (VLAs) on top of them to readily translate multimodal understanding into low-level actions. Accordingly, recent work has explored enhancing embodied reasoning in MLLMs through supervision of vision-question-answering type. However, these approaches have been reported to result in unstable VLA performance, often yielding only marginal or even negative gains. In this pap",
+    "heat": "21",
+    "github_url": "https://arxiv.org/abs/2603.21341"
+  },
+  {
+    "source": "HuggingFace Papers",
+    "category": "research",
+    "title": "FluidWorld: Reaction-Diffusion Dynamics as a Predictive Substrate for World Models",
+    "url": "https://huggingface.co/papers/2603.21315",
+    "time": "2026-03-22T16:49:43.000Z",
+    "summary": "World models learn to predict future states of an environment, enabling planning and mental simulation. Current approaches default to Transformer-based predictors operating in learned latent spaces. This comes at a cost: O(N^2) computation and no explicit spatial inductive bias. This paper asks a foundational question: is self-attention necessary for predictive world modeling, or can alternative computational substrates achieve comparable or superior results? I introduce FluidWorld, a proof-of-c",
+    "heat": "1",
+    "github_url": "https://arxiv.org/abs/2603.21315"
+  },
+  {
+    "source": "HuggingFace Papers",
+    "category": "research",
+    "title": "F4Splat: Feed-Forward Predictive Densification for Feed-Forward 3D Gaussian Splatting",
+    "url": "https://huggingface.co/papers/2603.21304",
+    "time": "2026-03-22T16:03:56.000Z",
+    "summary": "Feed-forward 3D Gaussian Splatting methods enable single-pass reconstruction and real-time rendering. However, they typically adopt rigid pixel-to-Gaussian or voxel-to-Gaussian pipelines that uniformly allocate Gaussians, leading to redundant Gaussians across views. Moreover, they lack an effective mechanism to control the total number of Gaussians while maintaining reconstruction fidelity. To address these limitations, we present F4Splat, which performs Feed-Forward predictive densification for",
+    "heat": "30",
+    "github_url": "https://arxiv.org/abs/2603.21304"
+  },
+  {
+    "source": "HuggingFace Papers",
+    "category": "research",
+    "title": "SNAP: Speaker Nulling for Artifact Projection in Speech Deepfake Detection",
+    "url": "https://huggingface.co/papers/2603.20686",
+    "time": "2026-03-21T07:05:30.000Z",
+    "summary": "Recent advancements in text-to-speech technologies enable generating high-fidelity synthetic speech nearly indistinguishable from real human voices. While recent studies show the efficacy of self-supervised learning-based speech encoders for deepfake detection, these models struggle to generalize across unseen speakers. Our quantitative analysis suggests these encoder representations are substantially influenced by speaker information, causing detectors to exploit speaker-specific correlations r",
+    "heat": "2",
+    "github_url": "https://arxiv.org/abs/2603.20686"
+  },
+  {
+    "source": "HuggingFace Papers",
+    "category": "research",
+    "title": "REVERE: Reflective Evolving Research Engineer for Scientific Workflows",
+    "url": "https://huggingface.co/papers/2603.20667",
+    "time": "2026-03-21T05:58:30.000Z",
+    "summary": "Existing prompt-optimization techniques rely on local signals to update behavior, often neglecting broader and recurring patterns across tasks, leading to poor generalization; they further rely on full-prompt rewrites or unstructured merges, resulting in knowledge loss. These limitations are magnified in research-coding workflows, which involve heterogeneous repositories, underspecified environments, and weak feedback, where reproducing results from public codebases is an established evaluation ",
+    "heat": "11",
+    "github_url": "https://arxiv.org/abs/2603.20667"
+  },
+  {
+    "source": "HuggingFace Papers",
+    "category": "research",
+    "title": "Scalable Prompt Routing via Fine-Grained Latent Task Discovery",
+    "url": "https://huggingface.co/papers/2603.19415",
+    "time": "2026-03-19T19:15:51.000Z",
+    "summary": "Prompt routing dynamically selects the most appropriate large language model from a pool of candidates for each query, optimizing performance while managing costs. As model pools scale to include dozens of frontier models with narrow performance gaps, existing approaches face significant challenges: manually defined task taxonomies cannot capture fine-grained capability distinctions, while monolithic routers struggle to differentiate subtle differences across diverse tasks. We propose a two-stag",
+    "heat": "4",
+    "github_url": "https://arxiv.org/abs/2603.19415"
+  },
+  {
+    "source": "HuggingFace Papers",
+    "category": "research",
+    "title": "BubbleRAG: Evidence-Driven Retrieval-Augmented Generation for Black-Box Knowledge Graphs",
+    "url": "https://huggingface.co/papers/2603.20309",
+    "time": "2026-03-19T16:00:36.000Z",
+    "summary": "Large Language Models (LLMs) exhibit hallucinations in knowledge-intensive tasks. Graph-based retrieval augmented generation (RAG) has emerged as a promising solution, yet existing approaches suffer from fundamental recall and precision limitations when operating over black-box knowledge graphs -- graphs whose schema and structure are unknown in advance. We identify three core challenges that cause recall loss (semantic instantiation uncertainty and structural path uncertainty) and precision los",
+    "heat": "18",
+    "github_url": "https://arxiv.org/abs/2603.20309"
+  },
+  {
+    "source": "HuggingFace Papers",
+    "category": "research",
+    "title": "SEM: Sparse Embedding Modulation for Post-Hoc Debiasing of Vision-Language Models",
+    "url": "https://huggingface.co/papers/2603.19028",
+    "time": "2026-03-19T15:28:08.000Z",
+    "summary": "Models that bridge vision and language, such as CLIP, are key components of multimodal AI, yet their large-scale, uncurated training data introduce severe social and spurious biases. Existing post-hoc debiasing methods often operate directly in the dense CLIP embedding space, where bias and task-relevant information are highly entangled. This entanglement limits their ability to remove bias without degrading semantic fidelity. In this work, we propose Sparse Embedding Modulation (SEM), a post-ho",
+    "heat": "15",
+    "github_url": "https://arxiv.org/abs/2603.19028"
+  },
+  {
+    "source": "HuggingFace Papers",
+    "category": "research",
+    "title": "Progressive Training for Explainable Citation-Grounded Dialogue: Reducing Hallucination to Zero in English-Hindi LLMs",
+    "url": "https://huggingface.co/papers/2603.18911",
+    "time": "2026-03-19T13:48:19.000Z",
+    "summary": "Knowledge-grounded dialogue systems aim to generate informative, contextually relevant responses by conditioning on external knowledge sources. However, most existing approaches focus exclusively on English, lack explicit citation mechanisms for verifying factual claims, and offer limited transparency into model decision-making. We present XKD-Dial, a progressive four-stage training pipeline for explainable, knowledge-grounded dialogue generation in a bilingual (English-Hindi) setting, comprisin",
+    "heat": "1",
+    "github_url": "https://arxiv.org/abs/2603.18911"
+  },
+  {
+    "source": "HuggingFace Papers",
+    "category": "research",
+    "title": "OpenResearcher: A Fully Open Pipeline for Long-Horizon Deep Research Trajectory Synthesis",
+    "url": "https://huggingface.co/papers/2603.20278",
+    "time": "2026-03-17T20:10:12.000Z",
+    "summary": "Training deep research agents requires long-horizon trajectories that interleave search, evidence aggregation, and multi-step reasoning. However, existing data collection pipelines typically rely on proprietary web APIs, making large-scale trajectory synthesis costly, unstable, and difficult to reproduce. We present OpenResearcher, a reproducible pipeline that decouples one-time corpus bootstrapping from multi-turn trajectory synthesis and executes the search-and-browse loop entirely offline usi",
+    "heat": "50",
+    "github_url": "https://arxiv.org/abs/2603.20278"
+  },
+  {
+    "source": "HuggingFace Papers",
+    "category": "research",
+    "title": "Safe Flow Q-Learning: Offline Safe Reinforcement Learning with Reachability-Based Flow Policies",
+    "url": "https://huggingface.co/papers/2603.15136",
+    "time": "2026-03-16T11:28:47.000Z",
+    "summary": "Offline safe reinforcement learning (RL) seeks reward-maximizing policies from static datasets under strict safety constraints. Existing methods often rely on soft expected-cost objectives or iterative generative inference, which can be insufficient for safety-critical real-time control. We propose Safe Flow Q-Learning (SafeFQL), which extends FQL to safe offline RL by combining a Hamilton--Jacobi reachability-inspired safety value function with an efficient one-step flow policy. SafeFQL learns ",
+    "heat": "2",
+    "github_url": "https://arxiv.org/abs/2603.15136"
+  },
+  {
+    "source": "HuggingFace Papers",
+    "category": "research",
+    "title": "Aperiodic Structures Never Collapse: Fibonacci Hierarchies for Lossless Compression",
+    "url": "https://huggingface.co/papers/2603.14999",
+    "time": "2026-03-16T09:02:59.000Z",
+    "summary": "We study whether an aperiodic hierarchy can provide a structural advantage for lossless compression over periodic alternatives. We show that Fibonacci quasicrystal tilings avoid the finite-depth collapse that affects periodic hierarchies: usable n-gram lookup positions remain non-zero at every level, while periodic tilings collapse after O(log p) levels for period p. This yields an aperiodic hierarchy advantage: dictionary reuse remains available across all scales instead of vanishing beyond a f",
+    "heat": "1",
+    "github_url": "https://arxiv.org/abs/2603.14999"
+  },
+  {
+    "source": "HuggingFace Papers",
+    "category": "research",
+    "title": "Look Where It Matters: High-Resolution Crops Retrieval for Efficient VLMs",
+    "url": "https://huggingface.co/papers/2603.16932",
+    "time": "2026-03-14T10:11:32.000Z",
+    "summary": "Vision-language models (VLMs) typically process images at a native high-resolution, forcing a trade-off between accuracy and computational efficiency: high-resolution inputs capture fine details but incur significant computational costs, while low-resolution inputs advocate for efficiency, they potentially miss critical visual information, like small text. We present AwaRes, a spatial-on-demand framework that resolves this accuracy-efficiency trade-off by operating on a low-resolution global vie",
+    "heat": "56",
+    "github_url": "https://arxiv.org/abs/2603.16932"
+  }
+]
