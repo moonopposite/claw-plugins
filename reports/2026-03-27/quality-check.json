@@ -1,0 +1,19 @@
+{
+  "status": "passed",
+  "errors": 0,
+  "warnings": 0,
+  "date": "2026-03-27",
+  "sections": {
+    "today_headlines": 5,
+    "major_releases": 6,
+    "research_papers": 10,
+    "industry_business": 6,
+    "tools_applications": 7,
+    "policy_ethics": 4,
+    "community_discussions": 8
+  },
+  "total_items": 46,
+  "total_links": 46,
+  "score": 100,
+  "message": "检查全部通过！可以发布"
+}

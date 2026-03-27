@@ -1,0 +1,550 @@
+[
+  {
+    "source": "GitHub Trending",
+    "category": "tools",
+    "title": "mvanhorn/last30days-skill",
+    "url": "https://github.com/mvanhorn/last30days-skill",
+    "time": "2026-03-27T00:00:59.200965+00:00",
+    "summary": "AI agent skill that researches any topic across Reddit, X, YouTube, HN, Polymarket, and the web - then synthesizes a grounded summary",
+    "readme": "# /last30days v2.9.5\n\n### Claude Code (recommended)\n```\n/plugin marketplace add mvanhorn/last30days-skill\n/plugin install last30days@last30days-skill\n```\n\n[![ClawHub](https://img.shields.io/badge/ClawHub-last30days--official-blue)](https://clawhub.ai/skills/last30days-official)\n\n```bash\nclawhub install last30days-official\n```\n\n**The AI world reinvents itself every month. This skill keeps you current.** /last30days researches your topic across Reddit, X, Bluesky, YouTube, TikTok, Instagram, Hacke",
+    "github_url": "https://github.com/mvanhorn/last30days-skill",
+    "lang": "Python",
+    "stars": "10183"
+  },
+  {
+    "source": "GitHub Trending",
+    "category": "tools",
+    "title": "virattt/dexter",
+    "url": "https://github.com/virattt/dexter",
+    "time": "2026-03-27T00:00:59.092956+00:00",
+    "summary": "An autonomous agent for deep financial research",
+    "readme": "# Dexter 🤖\n\nDexter is an autonomous financial research agent that thinks, plans, and learns as it works. It performs analysis using task planning, self-reflection, and real-time market data. Think Claude Code, but built specifically for financial research.\n\n<img width=\"1098\" height=\"659\" alt=\"Screenshot 2026-01-21 at 5 25 10 PM\" src=\"https://github.com/user-attachments/assets/3bcc3a7f-b68a-4f5e-8735-9d22196ff76e\" />\n\n## Table of Contents\n\n- [👋 Overview](#-overview)\n- [✅ Prerequisites](#-prerequi",
+    "github_url": "https://github.com/virattt/dexter",
+    "lang": "TypeScript",
+    "stars": "18965"
+  },
+  {
+    "source": "GitHub Trending",
+    "category": "tools",
+    "title": "Yeachan-Heo/oh-my-claudecode",
+    "url": "https://github.com/Yeachan-Heo/oh-my-claudecode",
+    "time": "2026-03-27T00:00:59.057664+00:00",
+    "summary": "Teams-first Multi-agent orchestration for Claude Code",
+    "readme": "English | [한국어](README.ko.md) | [中文](README.zh.md) | [日本語](README.ja.md) | [Español](README.es.md) | [Tiếng Việt](README.vi.md) | [Português](README.pt.md)\n\n# oh-my-claudecode\n\n[![npm version](https://img.shields.io/npm/v/oh-my-claude-sisyphus?color=cb3837)](https://www.npmjs.com/package/oh-my-claude-sisyphus)\n[![npm downloads](https://img.shields.io/npm/dm/oh-my-claude-sisyphus?color=blue)](https://www.npmjs.com/package/oh-my-claude-sisyphus)\n[![GitHub stars](https://img.shields.io/github/stars",
+    "github_url": "https://github.com/Yeachan-Heo/oh-my-claudecode",
+    "lang": "TypeScript",
+    "stars": "12575"
+  },
+  {
+    "source": "Hacker News",
+    "category": "community",
+    "title": "Order Granting Preliminary Injunction – Anthropic vs. U.S. Department of War [pdf]",
+    "url": "https://news.ycombinator.com/item?id=47537051",
+    "time": "2026-03-26T23:11:45Z",
+    "heat": "26",
+    "summary": "",
+    "hn_url": "https://news.ycombinator.com/item?id=47537051"
+  },
+  {
+    "source": "Hacker News",
+    "category": "community",
+    "title": "Show HN: I put an AI agent on a $7/month VPS with IRC as its transport layer",
+    "url": "https://news.ycombinator.com/item?id=47536761",
+    "time": "2026-03-26T22:41:25Z",
+    "heat": "24",
+    "summary": "",
+    "hn_url": "https://news.ycombinator.com/item?id=47536761"
+  },
+  {
+    "source": "Hacker News",
+    "category": "community",
+    "title": "We Rewrote JSONata with AI in a Day, Saved $500K/Year",
+    "url": "https://news.ycombinator.com/item?id=47536712",
+    "time": "2026-03-26T22:36:41Z",
+    "heat": "54",
+    "summary": "",
+    "hn_url": "https://news.ycombinator.com/item?id=47536712"
+  },
+  {
+    "source": "Hacker News",
+    "category": "community",
+    "title": "Netflix Raising U.S. Prices for Second Time in Less Than Two Years",
+    "url": "https://news.ycombinator.com/item?id=47536393",
+    "time": "2026-03-26T22:02:48Z",
+    "heat": "21",
+    "summary": "",
+    "hn_url": "https://news.ycombinator.com/item?id=47536393"
+  },
+  {
+    "source": "Hacker News",
+    "category": "community",
+    "title": "Anthropic Update on Session Limits",
+    "url": "https://news.ycombinator.com/item?id=47535897",
+    "time": "2026-03-26T21:19:11Z",
+    "heat": "19",
+    "summary": "",
+    "hn_url": "https://news.ycombinator.com/item?id=47535897"
+  },
+  {
+    "source": "Hacker News",
+    "category": "community",
+    "title": "Show HN: Fio: 3D World editor/game engine – inspired by Radiant and Hammer",
+    "url": "https://news.ycombinator.com/item?id=47535626",
+    "time": "2026-03-26T20:58:04Z",
+    "heat": "22",
+    "summary": "",
+    "hn_url": "https://news.ycombinator.com/item?id=47535626"
+  },
+  {
+    "source": "Hacker News",
+    "category": "community",
+    "title": "New York City hospitals drop Palantir as controversial AI firm expands in UK",
+    "url": "https://news.ycombinator.com/item?id=47535371",
+    "time": "2026-03-26T20:35:04Z",
+    "heat": "243",
+    "summary": "",
+    "hn_url": "https://news.ycombinator.com/item?id=47535371"
+  },
+  {
+    "source": "Hacker News",
+    "category": "community",
+    "title": "Using FireWire on a Raspberry Pi",
+    "url": "https://news.ycombinator.com/item?id=47535249",
+    "time": "2026-03-26T20:23:10Z",
+    "heat": "42",
+    "summary": "",
+    "hn_url": "https://news.ycombinator.com/item?id=47535249"
+  },
+  {
+    "source": "Hacker News",
+    "category": "community",
+    "title": "School uses AI to remove 200 books, including Orwell's 1984 and Twilight",
+    "url": "https://news.ycombinator.com/item?id=47535246",
+    "time": "2026-03-26T20:23:01Z",
+    "heat": "27",
+    "summary": "",
+    "hn_url": "https://news.ycombinator.com/item?id=47535246"
+  },
+  {
+    "source": "Hacker News",
+    "category": "community",
+    "title": "Agent Skills: One-Shot PySpark from the CLI",
+    "url": "https://news.ycombinator.com/item?id=47534936",
+    "time": "2026-03-26T19:56:38Z",
+    "heat": "20",
+    "summary": "",
+    "hn_url": "https://news.ycombinator.com/item?id=47534936"
+  },
+  {
+    "source": "Hacker News",
+    "category": "community",
+    "title": "Judge's Remarks on Anthropic vs. Pentagon",
+    "url": "https://news.ycombinator.com/item?id=47533835",
+    "time": "2026-03-26T18:12:47Z",
+    "heat": "26",
+    "summary": "",
+    "hn_url": "https://news.ycombinator.com/item?id=47533835"
+  },
+  {
+    "source": "Hacker News",
+    "category": "community",
+    "title": "Taming LLMs: Using Executable Oracles to Prevent Bad Code",
+    "url": "https://news.ycombinator.com/item?id=47533555",
+    "time": "2026-03-26T17:51:42Z",
+    "heat": "31",
+    "summary": "",
+    "hn_url": "https://news.ycombinator.com/item?id=47533555"
+  },
+  {
+    "source": "Hacker News",
+    "category": "community",
+    "title": "$500 GPU outperforms Claude Sonnet on coding benchmarks",
+    "url": "https://news.ycombinator.com/item?id=47533297",
+    "time": "2026-03-26T17:31:24Z",
+    "heat": "30",
+    "summary": "",
+    "hn_url": "https://news.ycombinator.com/item?id=47533297"
+  },
+  {
+    "source": "TechCrunch AI",
+    "category": "industry",
+    "title": "You can now transfer your chats and personal information from other chatbots directly into Gemini",
+    "url": "https://techcrunch.com/2026/03/26/you-can-now-transfer-your-chats-and-personal-information-from-other-chatbots-directly-into-gemini/",
+    "time": "2026-03-26T15:47:56+00:00",
+    "summary": "Google is launching \"switching tools\" that, just as it sounds, will make it easier for users of other chatbots to switch to Gemini."
+  },
+  {
+    "source": "Hacker News",
+    "category": "community",
+    "title": "Intel Announces Arc Pro B70 and Arc Pro B65 GPUs",
+    "url": "https://news.ycombinator.com/item?id=47530986",
+    "time": "2026-03-26T14:36:04Z",
+    "heat": "138",
+    "summary": "",
+    "hn_url": "https://news.ycombinator.com/item?id=47530986"
+  },
+  {
+    "source": "TechCrunch AI",
+    "category": "industry",
+    "title": "Wikipedia cracks down on the use of AI in article writing",
+    "url": "https://techcrunch.com/2026/03/26/wikipedia-cracks-down-on-the-use-of-ai-in-article-writing/",
+    "time": "2026-03-26T13:50:10+00:00",
+    "summary": "The site, whose policies are subject to change, has struggled with the issue of AI-generated writing."
+  },
+  {
+    "source": "Hacker News",
+    "category": "community",
+    "title": "Moving from GitHub to Codeberg, for lazy people",
+    "url": "https://news.ycombinator.com/item?id=47530330",
+    "time": "2026-03-26T13:38:25Z",
+    "heat": "499",
+    "summary": "",
+    "hn_url": "https://news.ycombinator.com/item?id=47530330"
+  },
+  {
+    "source": "Hacker News",
+    "category": "community",
+    "title": "AI users whose lives were wrecked by delusion",
+    "url": "https://news.ycombinator.com/item?id=47530264",
+    "time": "2026-03-26T13:32:23Z",
+    "heat": "179",
+    "summary": "",
+    "hn_url": "https://news.ycombinator.com/item?id=47530264"
+  },
+  {
+    "source": "TechCrunch AI",
+    "category": "industry",
+    "title": "OpenAI abandons yet another side quest: ChatGPT’s erotic mode",
+    "url": "https://techcrunch.com/2026/03/26/openai-abandons-yet-another-side-quest-chatgpts-erotic-mode/",
+    "time": "2026-03-26T10:34:02+00:00",
+    "summary": "It's only the latest of several side projects that the AI startup has ditched over the past week."
+  },
+  {
+    "source": "Hacker News",
+    "category": "community",
+    "title": "Why Sora Failed: $15M/day inference cost vs. $2.1M lifetime revenue",
+    "url": "https://news.ycombinator.com/item?id=47528380",
+    "time": "2026-03-26T09:37:56Z",
+    "heat": "39",
+    "summary": "",
+    "hn_url": "https://news.ycombinator.com/item?id=47528380"
+  },
+  {
+    "source": "Google AI Blog",
+    "category": "announcements",
+    "title": "Watch James Manyika talk AI and creativity with LL COOL J.",
+    "url": "https://blog.google/innovation-and-ai/technology/ai/ll-cool-j-dialogues/",
+    "time": "2026-03-26T09:00:00+00:00",
+    "summary": "In the latest episode of our Dialogues on Technology and Society series, LL COOL J sits down with James Manyika."
+  },
+  {
+    "source": "Simon Willison",
+    "category": "tools",
+    "title": "Quantization from the ground up",
+    "url": "https://simonwillison.net/2026/Mar/26/quantization-from-the-ground-up/#atom-everything",
+    "time": "2026-03-26T08:21:09+00:00",
+    "summary": "Quantization from the ground up\nSam Rose continues his streak of publishing spectacularly informative interactive essays, this time explaining how quantization of Large Language Models works (which he says might be \"the best post I've ever made\".)\nAlso included is the best visual explanation I've ever seen of how floating point numbers are represented using binary digits.\n\nI hadn't heard about outlier values in quantization - rare float values that exist outside of the normal tiny-value distribu"
+  },
+  {
+    "source": "Google AI Blog",
+    "category": "announcements",
+    "title": "Transform your headphones into a live personal translator on iOS.",
+    "url": "https://blog.google/products-and-platforms/products/translate/live-translate-with-headphones/",
+    "time": "2026-03-26T08:00:00+00:00",
+    "summary": "Google Translate’s Live translate with headphones is officially arriving on iOS! And we're expanding the capability for both iOS and Android users to even more countries…"
+  },
+  {
+    "source": "TechCrunch AI",
+    "category": "industry",
+    "title": "ByteDance’s new AI video generation model, Dreamina Seedance 2.0, comes to CapCut",
+    "url": "https://techcrunch.com/2026/03/26/bytedances-new-ai-video-generation-model-dreamina-seedance-2-0-comes-to-capcut/",
+    "time": "2026-03-26T07:25:13+00:00",
+    "summary": "The new model in CapCut will have built-in protections for making video from real faces or unauthorized intellectual property."
+  },
+  {
+    "source": "DeepMind Blog",
+    "category": "research",
+    "title": "Gemini 3.1 Flash Live: Making audio AI more natural and reliable",
+    "url": "https://deepmind.google/blog/gemini-3-1-flash-live-making-audio-ai-more-natural-and-reliable/",
+    "time": "2026-03-26T07:23:35+00:00",
+    "summary": "Our latest voice model has improved precision and lower latency to make voice interactions more fluid, natural and precise."
+  },
+  {
+    "source": "Google AI Blog",
+    "category": "announcements",
+    "title": "Gemini 3.1 Flash Live: Making audio AI more natural and reliable",
+    "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-1-flash-live/",
+    "time": "2026-03-26T07:21:00+00:00",
+    "summary": "The Gemini emblem sits next to text reading 'Gemini 3.1 Flash Live'. The background has blue, multicolored dots making up a microphone icon"
+  },
+  {
+    "source": "Google AI Blog",
+    "category": "announcements",
+    "title": "Search Live is expanding globally",
+    "url": "https://blog.google/products-and-platforms/products/search/search-live-global-expansion/",
+    "time": "2026-03-26T07:00:00+00:00",
+    "summary": "A graphic with the words Search Live shown underneath a waveform icon. To the right, a phone shows the Google app with Search Live open. The camera is pointing at trees in a forest."
+  },
+  {
+    "source": "TechCrunch AI",
+    "category": "industry",
+    "title": "Conntour raises $7M from General Catalyst, YC to build an AI search engine for security video systems",
+    "url": "https://techcrunch.com/2026/03/26/conntour-raises-7m-from-general-catalyst-yc-to-build-an-ai-search-engine-for-security-video-systems/",
+    "time": "2026-03-26T05:41:00+00:00",
+    "summary": "Conntour uses AI models to let security teams query camera feeds using natural language to find any object, person, or situation."
+  },
+  {
+    "source": "Hacker News",
+    "category": "community",
+    "title": "Show HN: Orloj – agent infrastructure as code (YAML and GitOps)",
+    "url": "https://news.ycombinator.com/item?id=47526813",
+    "time": "2026-03-26T05:07:51Z",
+    "heat": "19",
+    "summary": "",
+    "hn_url": "https://news.ycombinator.com/item?id=47526813"
+  },
+  {
+    "source": "TechCrunch AI",
+    "category": "industry",
+    "title": "A ‘pound of flesh’ from data centers: one senator’s answer to AI job losses",
+    "url": "https://techcrunch.com/2026/03/26/a-pound-of-flesh-from-data-centers-one-senators-answer-to-ai-job-losses/",
+    "time": "2026-03-26T04:00:00+00:00",
+    "summary": "Fears of AI-driven job loss are growing fast, and they’re fueling backlash against data centers. Sen. Mark Warner suggests taxing them to help workers survive the transition."
+  },
+  {
+    "source": "Hacker News",
+    "category": "community",
+    "title": "Show HN: Robust LLM extractor for websites in TypeScript",
+    "url": "https://news.ycombinator.com/item?id=47526486",
+    "time": "2026-03-26T03:55:52Z",
+    "heat": "64",
+    "summary": "",
+    "hn_url": "https://news.ycombinator.com/item?id=47526486"
+  },
+  {
+    "source": "TechCrunch AI",
+    "category": "industry",
+    "title": "Mistral releases a new open source model for speech generation",
+    "url": "https://techcrunch.com/2026/03/26/mistral-releases-a-new-open-source-model-for-speech-generation/",
+    "time": "2026-03-26T03:30:00+00:00",
+    "summary": "The model, which lets enterprises build voice agents for sales and customer engagement, puts Mistral in direct competition with the likes of ElevenLabs, Deepgram, and OpenAI."
+  },
+  {
+    "source": "Hacker News",
+    "category": "community",
+    "title": "Show HN: Nit – I rebuilt Git in Zig to save AI agents 71% on tokens",
+    "url": "https://news.ycombinator.com/item?id=47526276",
+    "time": "2026-03-26T03:14:54Z",
+    "heat": "23",
+    "summary": "",
+    "hn_url": "https://news.ycombinator.com/item?id=47526276"
+  },
+  {
+    "source": "AI News",
+    "category": "announcements",
+    "title": "RPA matters, but AI changes how automation works",
+    "url": "https://www.artificialintelligence-news.com/news/rpa-still-matters-but-ai-is-changing-how-automation-works/",
+    "time": "2026-03-26T01:11:08+00:00",
+    "summary": "RPA (robotic process automation) is a practical and proven way to reduce manual work in business processes without AI systems. By using software bots to follow fixed rules, companies can automate repetitive tasks like data entry and invoice processing, and to a certain extent, report generation. Adoption grew quickly in many sectors, especially in finance, […]\nThe post RPA matters, but AI changes how automation works appeared first on AI News."
+  },
+  {
+    "source": "HuggingFace Papers",
+    "category": "research",
+    "title": "UI-Voyager: A Self-Evolving GUI Agent Learning via Failed Experience",
+    "url": "https://huggingface.co/papers/2603.24533",
+    "time": "2026-03-25T17:10:29.000Z",
+    "summary": "Autonomous mobile GUI agents have attracted increasing attention along with the advancement of Multimodal Large Language Models (MLLMs). However, existing methods still suffer from inefficient learning from failed trajectories and ambiguous credit assignment under sparse rewards for long-horizon GUI tasks. To that end, we propose UI-Voyager, a novel two-stage self-evolving mobile GUI agent. In the first stage, we employ Rejection Fine-Tuning (RFT), which enables the continuous co-evolution of da",
+    "heat": "29",
+    "github_url": "https://arxiv.org/abs/2603.24533"
+  },
+  {
+    "source": "HuggingFace Papers",
+    "category": "research",
+    "title": "Toward Physically Consistent Driving Video World Models under Challenging Trajectories",
+    "url": "https://huggingface.co/papers/2603.24506",
+    "time": "2026-03-25T16:47:39.000Z",
+    "summary": "Video generation models have shown strong potential as world models for autonomous driving simulation. However, existing approaches are primarily trained on real-world driving datasets, which mostly contain natural and safe driving scenarios. As a result, current models often fail when conditioned on challenging or counterfactual trajectories-such as imperfect trajectories generated by simulators or planning systems-producing videos with severe physical inconsistencies and artifacts. To address ",
+    "heat": "3",
+    "github_url": "https://arxiv.org/abs/2603.24506"
+  },
+  {
+    "source": "HuggingFace Papers",
+    "category": "research",
+    "title": "Why Does Self-Distillation (Sometimes) Degrade the Reasoning Capability of LLMs?",
+    "url": "https://huggingface.co/papers/2603.24472",
+    "time": "2026-03-25T16:14:52.000Z",
+    "summary": "Self-distillation has emerged as an effective post-training paradigm for LLMs, often improving performance while shortening reasoning traces. However, in mathematical reasoning, we find that it can reduce response length while degrading performance. We trace this degradation to the suppression of epistemic verbalization - the model's expression of uncertainty during reasoning. Through controlled experiments varying conditioning context richness and task coverage, we show that conditioning the te",
+    "heat": "27",
+    "github_url": "https://arxiv.org/abs/2603.24472"
+  },
+  {
+    "source": "HuggingFace Papers",
+    "category": "research",
+    "title": "OmniWeaving: Towards Unified Video Generation with Free-form Composition and Reasoning",
+    "url": "https://huggingface.co/papers/2603.24458",
+    "time": "2026-03-25T16:08:18.000Z",
+    "summary": "While proprietary systems such as Seedance-2.0 have achieved remarkable success in omni-capable video generation, open-source alternatives significantly lag behind. Most academic models remain heavily fragmented, and the few existing efforts toward unified video generation still struggle to seamlessly integrate diverse tasks within a single framework. To bridge this gap, we propose OmniWeaving, an omni-level video generation model featuring powerful multimodal composition and reasoning-informed ",
+    "heat": "4",
+    "github_url": "https://arxiv.org/abs/2603.24458"
+  },
+  {
+    "source": "HuggingFace Papers",
+    "category": "research",
+    "title": "CUA-Suite: Massive Human-annotated Video Demonstrations for Computer-Use Agents",
+    "url": "https://huggingface.co/papers/2603.24440",
+    "time": "2026-03-25T15:52:56.000Z",
+    "summary": "Computer-use agents (CUAs) hold great promise for automating complex desktop workflows, yet progress toward general-purpose agents is bottlenecked by the scarcity of continuous, high-quality human demonstration videos. Recent work emphasizes that continuous video, not sparse screenshots, is the critical missing ingredient for scaling these agents. However, the largest existing open dataset, ScaleCUA, contains only 2 million screenshots, equating to less than 20 hours of video. To address this bo",
+    "heat": "69",
+    "github_url": "https://arxiv.org/abs/2603.24440"
+  },
+  {
+    "source": "HuggingFace Papers",
+    "category": "research",
+    "title": "GameplayQA: A Benchmarking Framework for Decision-Dense POV-Synced Multi-Video Understanding of 3D Virtual Agents",
+    "url": "https://huggingface.co/papers/2603.24329",
+    "time": "2026-03-25T14:10:45.000Z",
+    "summary": "Multimodal LLMs are increasingly deployed as perceptual backbones for autonomous agents in 3D environments, from robotics to virtual worlds. These applications require agents to perceive rapid state changes, attribute actions to the correct entities, and reason about concurrent multi-agent behaviors from a first-person perspective, capabilities that existing benchmarks do not adequately evaluate. We introduce GameplayQA, a framework for evaluating agentic-centric perception and reasoning through",
+    "heat": "16",
+    "github_url": "https://arxiv.org/abs/2603.24329"
+  },
+  {
+    "source": "HuggingFace Papers",
+    "category": "research",
+    "title": "SpectralSplats: Robust Differentiable Tracking via Spectral Moment Supervision",
+    "url": "https://huggingface.co/papers/2603.24036",
+    "time": "2026-03-25T07:48:22.000Z",
+    "summary": "3D Gaussian Splatting (3DGS) enables real-time, photorealistic novel view synthesis, making it a highly attractive representation for model-based video tracking. However, leveraging the differentiability of the 3DGS renderer \"in the wild\" remains notoriously fragile. A fundamental bottleneck lies in the compact, local support of the Gaussian primitives. Standard photometric objectives implicitly rely on spatial overlap; if severe camera misalignment places the rendered object outside the target'",
+    "heat": "10",
+    "github_url": "https://arxiv.org/abs/2603.24036"
+  },
+  {
+    "source": "HuggingFace Papers",
+    "category": "research",
+    "title": "Understanding the Challenges in Iterative Generative Optimization with LLMs",
+    "url": "https://huggingface.co/papers/2603.23994",
+    "time": "2026-03-25T06:49:24.000Z",
+    "summary": "Generative optimization uses large language models (LLMs) to iteratively improve artifacts (such as code, workflows or prompts) using execution feedback. It is a promising approach to building self-improving agents, yet in practice remains brittle: despite active research, only 9% of surveyed agents used any automated optimization. We argue that this brittleness arises because, to set up a learning loop, an engineer must make ``hidden'' design choices: What can the optimizer edit and what is the",
+    "heat": "13",
+    "github_url": "https://arxiv.org/abs/2603.23994"
+  },
+  {
+    "source": "HuggingFace Papers",
+    "category": "research",
+    "title": "UniFunc3D: Unified Active Spatial-Temporal Grounding for 3D Functionality Segmentation",
+    "url": "https://huggingface.co/papers/2603.23478",
+    "time": "2026-03-24T17:42:31.000Z",
+    "summary": "Functionality segmentation in 3D scenes requires an agent to ground implicit natural-language instructions into precise masks of fine-grained interactive elements. Existing methods rely on fragmented pipelines that suffer from visual blindness during initial task parsing. We observe that these methods are limited by single-scale, passive and heuristic frame selection. We present UniFunc3D, a unified and training-free framework that treats the multimodal large language model as an active observer",
+    "heat": "1",
+    "github_url": "https://arxiv.org/abs/2603.23478"
+  },
+  {
+    "source": "HuggingFace Papers",
+    "category": "research",
+    "title": "Unleashing Spatial Reasoning in Multimodal Large Language Models via Textual Representation Guided Reasoning",
+    "url": "https://huggingface.co/papers/2603.23404",
+    "time": "2026-03-24T16:38:09.000Z",
+    "summary": "Existing Multimodal Large Language Models (MLLMs) struggle with 3D spatial reasoning, as they fail to construct structured abstractions of the 3D environment depicted in video inputs. To bridge this gap, drawing inspiration from cognitive theories of allocentric spatial reasoning, we investigate how to enable MLLMs to model and reason over text-based spatial representations of video. Specifically, we introduce Textual Representation of Allocentric Context from Egocentric Video (TRACE), a prompti",
+    "heat": "2",
+    "github_url": "https://arxiv.org/abs/2603.23404"
+  },
+  {
+    "source": "HuggingFace Papers",
+    "category": "research",
+    "title": "EVA: Efficient Reinforcement Learning for End-to-End Video Agent",
+    "url": "https://huggingface.co/papers/2603.22918",
+    "time": "2026-03-24T08:06:29.000Z",
+    "summary": "Video understanding with multimodal large language models (MLLMs) remains challenging due to the long token sequences of videos, which contain extensive temporal dependencies and redundant frames. Existing approaches typically treat MLLMs as passive recognizers, processing entire videos or uniformly sampled frames without adaptive reasoning. Recent agent-based methods introduce external tools, yet still depend on manually designed workflows and perception-first strategies, resulting in inefficie",
+    "heat": "34",
+    "github_url": "https://arxiv.org/abs/2603.22918"
+  },
+  {
+    "source": "HuggingFace Papers",
+    "category": "research",
+    "title": "StreamingClaw Technical Report",
+    "url": "https://huggingface.co/papers/2603.22120",
+    "time": "2026-03-23T15:43:52.000Z",
+    "summary": "Applications such as embodied intelligence rely on a real-time perception-decision-action closed loop, posing stringent challenges for streaming video understanding. However, current agents suffer from fragmented capabilities, such as supporting only offline video understanding, lacking long-term multimodal memory mechanisms, or struggling to achieve real-time reasoning and proactive interaction under streaming inputs. These shortcomings have become a key bottleneck for preventing them from sust",
+    "heat": "3",
+    "github_url": "https://arxiv.org/abs/2603.22120"
+  },
+  {
+    "source": "HuggingFace Papers",
+    "category": "research",
+    "title": "4DGS360: 360° Gaussian Reconstruction of Dynamic Objects from a Single Video",
+    "url": "https://huggingface.co/papers/2603.21618",
+    "time": "2026-03-23T06:30:46.000Z",
+    "summary": "We introduce 4DGS360, a diffusion-free framework for 360^{circ} dynamic object reconstruction from casual monocular video. Existing methods often fail to reconstruct consistent 360^{circ} geometry, as their heavy reliance on 2D-native priors causes initial points to overfit to visible surface in each training view. 4DGS360 addresses this challenge through a advanced 3D-native initialization that mitigates the geometric ambiguity of occluded regions. Our proposed 3D tracker, AnchorTAP3D, produces",
+    "heat": "9",
+    "github_url": "https://arxiv.org/abs/2603.21618"
+  },
+  {
+    "source": "HuggingFace Papers",
+    "category": "research",
+    "title": "When Models Judge Themselves: Unsupervised Self-Evolution for Multimodal Reasoning",
+    "url": "https://huggingface.co/papers/2603.21289",
+    "time": "2026-03-22T15:22:19.000Z",
+    "summary": "Recent progress in multimodal large language models has led to strong performance on reasoning tasks, but these improvements largely rely on high-quality annotated data or teacher-model distillation, both of which are costly and difficult to scale. To address this, we propose an unsupervised self-evolution training framework for multimodal reasoning that achieves stable performance improvements without using human-annotated answers or external reward models. For each input, we sample multiple re",
+    "heat": "14",
+    "github_url": "https://arxiv.org/abs/2603.21289"
+  },
+  {
+    "source": "HuggingFace Papers",
+    "category": "research",
+    "title": "T-MAP: Red-Teaming LLM Agents with Trajectory-aware Evolutionary Search",
+    "url": "https://huggingface.co/papers/2603.22341",
+    "time": "2026-03-21T12:33:34.000Z",
+    "summary": "While prior red-teaming efforts have focused on eliciting harmful text outputs from large language models (LLMs), such approaches fail to capture agent-specific vulnerabilities that emerge through multi-step tool execution, particularly in rapidly growing ecosystems such as the Model Context Protocol (MCP). To address this gap, we propose a trajectory-aware evolutionary search method, T-MAP, which leverages execution trajectories to guide the discovery of adversarial prompts. Our approach enable",
+    "heat": "30",
+    "github_url": "https://arxiv.org/abs/2603.22341"
+  },
+  {
+    "source": "HuggingFace Papers",
+    "category": "research",
+    "title": "LagerNVS: Latent Geometry for Fully Neural Real-time Novel View Synthesis",
+    "url": "https://huggingface.co/papers/2603.20176",
+    "time": "2026-03-20T17:53:06.000Z",
+    "summary": "Recent work has shown that neural networks can perform 3D tasks such as Novel View Synthesis (NVS) without explicit 3D reconstruction. Even so, we argue that strong 3D inductive biases are still helpful in the design of such networks. We show this point by introducing LagerNVS, an encoder-decoder neural network for NVS that builds on `3D-aware' latent features. The encoder is initialized from a 3D reconstruction network pre-trained using explicit 3D supervision. This is paired with a lightweight",
+    "heat": "7",
+    "github_url": "https://arxiv.org/abs/2603.20176"
+  },
+  {
+    "source": "HuggingFace Papers",
+    "category": "research",
+    "title": "6Bit-Diffusion: Inference-Time Mixed-Precision Quantization for Video Diffusion Models",
+    "url": "https://huggingface.co/papers/2603.18742",
+    "time": "2026-03-19T10:45:11.000Z",
+    "summary": "Diffusion transformers have demonstrated remarkable capabilities in generating videos. However, their practical deployment is severely constrained by high memory usage and computational cost. Post-Training Quantization provides a practical way to reduce memory usage and boost computation speed. Existing quantization methods typically apply a static bit-width allocation, overlooking the quantization difficulty of activations across diffusion timesteps, leading to a suboptimal trade-off between ef",
+    "heat": "3",
+    "github_url": "https://arxiv.org/abs/2603.18742"
+  },
+  {
+    "source": "HuggingFace Papers",
+    "category": "research",
+    "title": "The Pulse of Motion: Measuring Physical Frame Rate from Visual Dynamics",
+    "url": "https://huggingface.co/papers/2603.14375",
+    "time": "2026-03-15T13:29:31.000Z",
+    "summary": "While recent generative video models have achieved remarkable visual realism and are being explored as world models, true physical simulation requires mastering both space and time. Current models can produce visually smooth kinematics, yet they lack a reliable internal motion pulse to ground these motions in a consistent, real-world time scale. This temporal ambiguity stems from the common practice of indiscriminately training on videos with vastly different real-world speeds, forcing them into",
+    "heat": "10",
+    "github_url": "https://arxiv.org/abs/2603.14375"
+  },
+  {
+    "source": "HuggingFace Papers",
+    "category": "research",
+    "title": "PLDR-LLMs Reason At Self-Organized Criticality",
+    "url": "https://huggingface.co/papers/2603.23539",
+    "time": "2026-03-12T19:09:06.000Z",
+    "summary": "We show that PLDR-LLMs pretrained at self-organized criticality exhibit reasoning at inference time. The characteristics of PLDR-LLM deductive outputs at criticality is similar to second-order phase transitions. At criticality, the correlation length diverges, and the deductive outputs attain a metastable steady state. The steady state behaviour suggests that deductive outputs learn representations equivalent to scaling functions, universality classes and renormalization groups from the training",
+    "heat": "1",
+    "github_url": "https://arxiv.org/abs/2603.23539"
+  },
+  {
+    "source": "HuggingFace Papers",
+    "category": "research",
+    "title": "Qworld: Question-Specific Evaluation Criteria for LLMs",
+    "url": "https://huggingface.co/papers/2603.23522",
+    "time": "2026-03-06T15:20:45.000Z",
+    "summary": "Evaluating large language models (LLMs) on open-ended questions is difficult because response quality depends on the question's context. Binary scores and static rubrics fail to capture these context-dependent requirements. Existing methods define criteria at the dataset level or generate them in a single pass, which limits their ability to explore the evaluation space implied by each question. We introduce One-Question-One-World (Qworld), a method that generates question-specific evaluation cri",
+    "heat": "7",
+    "github_url": "https://arxiv.org/abs/2603.23522"
+  }
+]
