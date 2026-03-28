@@ -1,0 +1,31 @@
+{
+  "date": "2026-03-28",
+  "file": "reports/2026-03-28/ai-daily.md",
+  "status": "pass",
+  "score": 100,
+  "errors": [],
+  "warnings": [],
+  "stats": {
+    "headline": 5,
+    "releases": 6,
+    "research": 10,
+    "industry": 6,
+    "tools": 7,
+    "policy": 4,
+    "community": 8,
+    "total_items": 46,
+    "total_links": 47,
+    "date": "2026-03-28"
+  },
+  "sections_found": [
+    "今日头条",
+    "重大发布",
+    "研究论文",
+    "行业商业",
+    "工具应用",
+    "政策伦理",
+    "社区热议",
+    "趋势洞察"
+  ],
+  "checked_at": "2026-03-28T08:05:00+08:00"
+}

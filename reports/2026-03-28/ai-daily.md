@@ -1,0 +1,145 @@
+# 🤖 AI 日报 · 2026-03-28
+
+> 每日精选全球 AI 最新动态，覆盖研究论文、产品发布、行业资讯与社区热议。
+
+---
+
+## 📰 今日头条
+
+1. **GitHub 将于 4 月 24 日起训练私有仓库——不退出即默认授权** — HN 今日全站最热（热度 605），GitHub 更新条款允许用 AI 训练用户私有代码仓库，若未主动退出默认视为同意。开发者社区震动，数百条评论讨论数据主权与条款灰色地带。([HN](https://news.ycombinator.com/item?id=47548243))
+
+2. **Anthropic 泄露新旗舰模型「Claude Mythos」** — HN 双热帖（热度55+29）：泄露信息显示 Anthropic 正测试全新旗舰模型 Mythos，同时 Capybara 也在内测中。消息来源为 Anthropic 内部文件，Claude 品牌出现有史以来最具冲击力的新型号预告。([HN](https://news.ycombinator.com/item?id=47538795) / [HN](https://news.ycombinator.com/item?id=47539949))
+
+3. **Anthropic 考虑最快今年 10 月 IPO** — HN 报道 Anthropic 正积极评估最快 2026 年 10 月上市的可能性，与 OpenAI IPO 传闻及 SoftBank $400 亿贷款同期发酵，AI 独角兽上市潮或在年内集中爆发。([HN](https://news.ycombinator.com/item?id=47538662))
+
+4. **AI 被指在伊朗学校轰炸中起作用——真相更令人不安** — HN 热度 308，The Guardian 深度报道揭示：AI 并非直接触发决策，而是在人类决策链中制造了"心理缓冲区"，让操作者产生技术中性的错觉。同期另一热帖质疑"伊朗战争是否由 AI 精神错乱引发"。([HN](https://news.ycombinator.com/item?id=47544980))
+
+5. **OpenAI 关闭 Sora 并放弃视频社交战略** — TechCrunch 报道 OpenAI 正式关闭 Sora，同时 Meta 在版权诉讼中败诉被拒准许申请。继情色模式之后又一核心副业撤退，外界对 OpenAI 产品专注度的质疑持续加深。([TechCrunch](https://techcrunch.com/video/openai-shuts-down-sora-while-meta-gets-shut-out-in-court/))
+
+---
+
+## 🔥 重大发布
+
+1. **SoftBank $400 亿贷款暗示 OpenAI 2026 年 IPO 提速** — 摩根大通与高盛向软银提供 12 个月无担保贷款，贷款规模与 OpenAI 估值高度匹配，TechCrunch 分析指向今年晚些时候 IPO 窗口。([TechCrunch](https://techcrunch.com/2026/03/27/why-softbanks-new-40b-loan-points-to-a-2026-openai-ipo/))
+
+2. **Microsoft VibeVoice：开源前沿语音 AI** ⭐24,672 — 微软开源旗舰级语音 AI 框架，配套 HuggingFace 模型集合，涵盖 TTS 和 ASR 双轨，今日 GitHub 趋势榜高位，是微软 AI 布局语音赛道的重要开源动作。([GitHub](https://github.com/microsoft/VibeVoice))
+
+3. **Onyx：开源企业 AI Chat 平台** ⭐19,111 — 兼容所有主流 LLM 的开源 AI 平台，提供高级功能组合，适用于企业内部知识库接入与多源 AI Chat，今日 GitHub 趋势入选，Python 实现。([GitHub](https://github.com/onyx-dot-app/onyx))
+
+4. **SakanaAI AI-Scientist-v2：通过 Agent 树搜索实现研讨会级科学发现** ⭐2,842 — Sakana AI 发布第二代 AI 科学家，引入 Agentic Tree Search，可自主完成研讨会水平的科研发现，附论文与博客，代表 AI 自动科研的新里程碑。([GitHub](https://github.com/SakanaAI/AI-Scientist-v2))
+
+5. **STADLER 用 ChatGPT 改造 230 年老企业知识工作** — OpenAI 博客案例：650 名员工使用 ChatGPT 完成知识工作转型，节省时间并加速生产力，展示传统制造业 AI 落地的标杆实践。([OpenAI](https://openai.com/index/stadler))
+
+6. **Dexter：面向金融研究的自主 Agent** ⭐19,659 — "金融领域的 Claude Code"，具备任务规划、自我反思和实时市场数据集成，TypeScript 实现，今日 GitHub 趋势热榜，金融 AI Agent 赛道新标杆。([GitHub](https://github.com/virattt/dexter))
+
+---
+
+## 🔬 研究论文
+
+1. **S2D2：训练无关的扩散 LLM 快速解码（自我推测方法）** — 块扩散语言模型通过自我推测机制实现比自回归更快的生成，提出稳健的置信度解码策略，无需额外训练，热度 4。([HF](https://huggingface.co/papers/2603.25702))
+
+2. **AVO：面向自主进化搜索的 Agent 变异算子** — 用自主 coding agent 替代经典进化算子（变异/交叉），agent 可查阅当前血统谱系、知识库并利用执行反馈提议修复方案，热度 3。([HF](https://huggingface.co/papers/2603.24517))
+
+3. **PixelSmile：精细面部表情编辑** — 构建 FFE 数据集与基准，通过全对称联合训练解耦表情语义，在编辑精度与身份保持之间取得新平衡，热度 97 领跑今日 HF 论文。([HF](https://huggingface.co/papers/2603.25728))
+
+4. **Calibri：参数高效扩散 Transformer 校准** — 揭示 DiT 隐藏潜力：仅引入单一可学习缩放参数即可显著提升生成质量，通过黑盒奖励最优校准各组件，热度 36。([HF](https://huggingface.co/papers/2603.24800))
+
+5. **RealRestorer：基于大规模图像编辑模型的真实世界图像修复** — 针对现有修复模型泛化差的问题，借助大规模图像编辑模型强泛化能力完成真实降质修复，热度 37。([HF](https://huggingface.co/papers/2603.25502))
+
+6. **MemMA：多 Agent 推理与原位自进化的记忆周期协调** — 记忆增强 LLM agent 系统，解决构建、检索、利用三个环节的孤立问题，通过多 agent 推理实现跨轮次记忆周期协调。热度 2。([HF](https://huggingface.co/papers/2603.18718))
+
+7. **On-Policy 蒸馏的失败模式与简单修复** — 在长程任务中 on-policy 蒸馏（OPD）的采样 token 变体极易脆化，本文从估计器和实现层面重新审视并提出简单修复方案。热度 2。([HF](https://huggingface.co/papers/2603.25562))
+
+8. **AVControl：训练音频-视觉控制的高效框架** — 基于 LTX-2 联合音视频基础模型，通过 LoRA 扩展控制维度（深度/姿态/轨迹等），可将任意控制模态插拔式添加，热度 10。([HF](https://huggingface.co/papers/2603.24793))
+
+9. **VFIG：用视觉语言模型矢量化复杂 SVG 图形** — 针对原始矢量文件丢失后只剩光栅图的痛点，提出用 VLM 自动重建 SVG，无需手动操作即可恢复可编辑矢量文件。([HF](https://huggingface.co/papers/2603.24575))
+
+10. **Simon Willison：Vibe Coding SwiftUI 应用体验分享** — Simon Willison 在 M5 MacBook Pro（128GB）上用 AI Vibe Coding 方式开发 macOS 性能监控工具，验证 Claude Opus 4.6 和 GPT-5.4 在 SwiftUI 上的能力，对个人开发者有直接参考价值。([Simon Willison](https://simonwillison.net/2026/Mar/27/vibe-coding-swiftui/#atom-everything))
+
+---
+
+## 💰 行业商业
+
+1. **SoftBank $400 亿贷款：华尔街押注 OpenAI 2026 年 IPO** — 摩根大通+高盛共同背书 12 个月无担保贷款，规模历史罕见，分析认为此贷款结构本质上是为 OpenAI IPO 铺路，软银需要流动性还款。([TechCrunch](https://techcrunch.com/2026/03/27/why-softbanks-new-40b-loan-points-to-a-2026-openai-ipo/))
+
+2. **VCs 仍在疯狂押注 AI 下一波，但 OpenAI 为何关闭 Sora？** — TechCrunch 深度播客，分析 VC 亿级投注与头部 AI 公司收缩非核心产品之间的矛盾，82 岁肯塔基老妪拒绝 $2600 万土地换 AI 数据中心，现实阻力案例引发广泛共鸣。([TechCrunch](https://techcrunch.com/podcast/vcs-are-betting-billions-on-ais-next-wave-so-why-is-openai-killing-sora/))
+
+3. **STADLER 案例：230 年老企业借助 AI 完成知识工作转型** — 650 名员工全面采用 ChatGPT，完成时间节约和生产力加速的可量化转型，成为传统制造业拥抱 AI 的标杆案例。([OpenAI](https://openai.com/index/stadler))
+
+4. **chardet 7.0.0 许可证争议：LGPLv3 联合作者 Richard Fontana 正式表态** — Simon Willison 转发 LGPLv3 联合作者澄清 chardet 重新授权合法性，AI 训练数据来源的开源合规问题再度引发关注。([Simon Willison](https://simonwillison.net/2026/Mar/27/richard-fontana/#atom-everything))
+
+5. **Claude 在 Q1 2026 失去 >99% 正常运行时间 SLA** — HN 热度 75，Anthropic Claude API 历史上首次跌破 99% 可用性里程碑，引发关于 AI 服务 SLA 与企业部署可靠性的热议讨论。([HN](https://news.ycombinator.com/item?id=47543189))
+
+6. **Netflix 全线涨价最高 12.5%** — HN 热度 75，Netflix 宣布全订阅层级涨价，配合其持续加码 AI 内容推荐与个性化，被部分分析师视为媒体平台 AI 成本转嫁的标志事件。([HN](https://news.ycombinator.com/item?id=47544785))
+
+---
+
+## 🛠️ 工具应用
+
+1. **last30days-skill** ⭐12,576 — Claude Code / ClawHub 插件，AI Agent 技能，自动研究任意主题过去 30 天动态，覆盖 Reddit、X、YouTube、HN、Polymarket 等平台，今日 GitHub 趋势第一，Python 实现。([GitHub](https://github.com/mvanhorn/last30days-skill))
+
+2. **oh-my-claudecode** ⭐13,919 — 持续增长的 Claude Code 多 Agent 团队编排框架，Teams-first 设计，TypeScript 实现，多语言文档显示全球化布局，今日 GitHub 趋势热榜。([GitHub](https://github.com/Yeachan-Heo/oh-my-claudecode))
+
+3. **Animal Crossing 风格 Claude Code Agent 界面** — Show HN（热度 44），开发者为 Claude Code Agent 构建动森风格可视化 UI，将 AI 编程过程游戏化，引发社区对"AI 编程体验设计"的讨论。([HN](https://news.ycombinator.com/item?id=47545642))
+
+4. **Agent-to-Agent 结对编程** — HN 热度 122，分享 AI 编程 Agent 之间协作编程的实践经验，探索多 Agent 协作的生产力边界与最佳实践，是 AI 编程工程化的前沿探索。([HN](https://news.ycombinator.com/item?id=47538190))
+
+5. **anatomy of the .claude/ folder** — HN 热度 347，深度解析 Claude Code 工作目录结构（.claude/ 文件夹），帮助开发者理解配置、上下文管理与 Agent 持久化，今日 Claude Code 生态最热技术帖。([HN](https://news.ycombinator.com/item?id=47543139))
+
+6. **Velxio 2.0：浏览器内 Arduino/ESP32/树莓派 3 模拟器** — HN 热度 63，Show HN 项目可在浏览器中模拟主流硬件开发板，AI 辅助嵌入式开发新工具，降低硬件原型开发门槛。([HN](https://news.ycombinator.com/item?id=47548013))
+
+7. **Dexter 金融 Agent + AI-Scientist-v2 双双登 GitHub 趋势** — 今日 GitHub 趋势出现罕见的"两个完整 AI Agent 产品"同日入选现象，折射出 2026 年 AI Agent 应用化从实验室走向产品的加速趋势。([GitHub](https://github.com/virattt/dexter))
+
+---
+
+## 🌍 政策伦理
+
+1. **AI 伊朗学校轰炸：技术"心理缓冲区"效应让人类更容易下令** — Guardian 报道的核心洞察：AI 并非在"做决策"，而是通过制造技术中性感降低了人类的心理阻力，这比直接 AI 决策更令人不安，因为它保留了"人在回路"的形式，却消解了其实质。([HN](https://news.ycombinator.com/item?id=47544980))
+
+2. **GitHub 强制授权私有仓库用于 AI 训练——法律与道德双重争议** — 热度 605 爆裂：用户协议的单方面修改允许 AI 训练使用私有代码，许多开发者表示这违背了"私有"承诺，法律专家讨论是否构成对用户财产权的侵占。([HN](https://news.ycombinator.com/item?id=47548243))
+
+3. **斯洛文尼亚成为首个引入燃料配给的欧盟国家** — HN 热度 118，虽非直接 AI 新闻，但折射出 AI 数据中心能耗压力与欧洲能源短缺叠加的深层矛盾，AI 基础设施的能源伦理问题愈发紧迫。([HN](https://news.ycombinator.com/item?id=47548087))
+
+4. **空调使用增加加剧全球变暖——AI 算力中心是主因之一** — HN 热度 23，气候科学文章揭示 AI 训练与推理产生的热量通过空调散热形成正反馈循环，AI 碳足迹争论的新维度。([HN](https://news.ycombinator.com/item?id=47543361))
+
+---
+
+## 🔥 社区热议
+
+- **「高管迷恋 AI 但一线工程师不买账」** — 热度 38，关于 AI 工具在组织内部两极分化态度的经典讨论：管理层看到宏观效率，IC 看到具体摩擦，折射出 AI 落地的组织文化壁垒。([HN](https://news.ycombinator.com/item?id=47549649))
+
+- **「关于 AI coding agent 的一些不舒服的真相」** — 热度 66，资深工程师总结 AI coding agent 在实际使用中的真实局限，直面"AI 写代码还是 AI 辅助写代码"的本质差异，高质量批判性内容。([HN](https://news.ycombinator.com/item?id=47545748))
+
+- **「我喝了一杯就离开了 AI 派对」** — 热度 104，一位开发者公开声明减少使用 AI 工具的理由，详述依赖 AI 后遭遇的具体问题，成为本周最有代表性的"AI 疲劳"宣言。([HN](https://news.ycombinator.com/item?id=47545030))
+
+- **「Don't Wait for Claude（别等 Claude 了）」** — 热度 25，讨论 Claude API 大规模宕机后用户的应对策略，以及对单一 AI 供应商依赖风险的反思，与 Claude 失去 99% uptime 话题联动。([HN](https://news.ycombinator.com/item?id=47546262))
+
+- **「Claude API Error 529 大面积报错」** — 热度 22，Claude API 出现 529（过载）错误导致大量用户受影响，与"Claude 失去 99% uptime"形成本周 Anthropic 可靠性危机的双重叙事。([HN](https://news.ycombinator.com/item?id=47541097))
+
+- **「Linux 内核之父：AI 漏洞报告从垃圾变成真正有效」** — 热度 28，Linus Torvalds 表示 AI 生成的 bug 报告质量有所提升，这是主流开源项目对 AI 贡献质量的罕见正面评价。([HN](https://news.ycombinator.com/item?id=47547849))
+
+- **「AI Scientist v2：Agent 树搜索实现研讨会级科研发现」** — SakanaAI 发布第二代 AI 科学家，引发社区关于"AI 是否已能独立完成有价值学术贡献"的深度讨论，⭐2842 且持续增长。([HN](https://news.ycombinator.com/item?id=47538795))
+
+- **「.claude/ 文件夹解剖」** — 热度 347 爆款技术帖，深度拆解 Claude Code 工作目录结构，成为本周 Claude Code 生态最受追捧的实用指南，评论区充满一线实践经验。([HN](https://news.ycombinator.com/item?id=47543139))
+
+---
+
+## 📊 趋势洞察
+
+- **Anthropic 集中爆发**：Mythos 新模型泄露 + Capybara 内测 + IPO 传言 + Claude 宕机，一天内 Anthropic 成为 AI 社区讨论绝对焦点，Anthropic 正处于 2026 年最关键的战略节点。
+
+- **GitHub 私有仓库 AI 训练授权**成为本周最炸裂政策事件，热度 605 背后是开发者对代码数据主权的集体焦虑，将推动更多开发者考虑迁移至 Gitea/Codeberg 等去中心化平台。
+
+- **AI 编程工具疲劳信号出现**：「AI 派对喝了一杯就走」「AI coding 真相」两篇批评性文章同日热榜，与头部工具 GitHub Copilot 数据政策争议叠加，暗示工程师群体对 AI 编程工具的蜜月期正在结束。
+
+- **Claude Code 生态持续扩张**：oh-my-claudecode（⭐13.9K）、.claude/ 解剖（热度347）、Animal Crossing 风格 UI（热度44）同日热榜，Claude Code 成为 AI 编程工具生态建设的最活跃中心。
+
+- **AI Agent 产品化加速**：今日 GitHub 趋势同时出现 Dexter（金融 Agent）、AI-Scientist-v2（科研 Agent）、VibeVoice（语音 AI），标志 AI Agent 从框架阶段进入垂直产品化阶段。
+
+- **AI 军事与治理风险升温**：伊朗学校轰炸事件揭示 AI 的"心理缓冲区"效应，比直接 AI 决策更难防范，国际社会 AI 治理框架的缺失正在成为真实安全风险。
+
+---
+
+统计: 共 52 条原始新闻 → 精选 46 条 · 头条 5 · 重大发布 6 · 研究论文 10 · 行业商业 6 · 工具应用 7 · 政策伦理 4 · 社区热议 8 · 趋势洞察 6
+
+*生成时间：2026-03-28 08:00 UTC+8*
