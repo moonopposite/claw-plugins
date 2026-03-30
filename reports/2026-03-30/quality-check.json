@@ -1,0 +1,32 @@
+{
+  "date": "2026-03-30",
+  "status": "pass_with_warnings",
+  "score": 97,
+  "errors": [],
+  "warnings": [
+    "🛠️ 工具应用 篇数不符范围: 8 (期望 4-7)"
+  ],
+  "stats": {
+    "📰 今日头条": 5,
+    "🔥 重大发布": 5,
+    "🔬 研究论文": 10,
+    "💰 行业商业": 6,
+    "🛠️ 工具应用": 8,
+    "🌍 政策伦理": 4,
+    "🔥 社区热议": 8,
+    "total_items": 46,
+    "total_links": 47,
+    "date": "2026-03-30"
+  },
+  "checks": {
+    "file_exists": true,
+    "structure": true,
+    "required_sections": true,
+    "optional_sections": ["重大发布", "政策伦理"],
+    "content_volume": "pass_with_warning",
+    "link_validity": true,
+    "formatting": true,
+    "accuracy": true,
+    "date_timestamp": true
+  }
+}
