@@ -1,0 +1,546 @@
+[
+  {
+    "source": "GitHub Trending",
+    "category": "tools",
+    "title": "asgeirtj/system_prompts_leaks",
+    "url": "https://github.com/asgeirtj/system_prompts_leaks",
+    "time": "2026-04-03T00:01:53.115665+00:00",
+    "summary": "Extracted system prompts from ChatGPT (GPT-5.4, GPT-5.3, Codex), Claude (Opus 4.6, Sonnet 4.6, Claude Code), Gemini (3.1 Pro, 3 Flash, CLI), Grok (4.2, 4), Perplexity, and more. Updated regularly.",
+    "readme": "",
+    "github_url": "https://github.com/asgeirtj/system_prompts_leaks",
+    "lang": "",
+    "stars": "36306"
+  },
+  {
+    "source": "GitHub Trending",
+    "category": "tools",
+    "title": "Yeachan-Heo/oh-my-codex",
+    "url": "https://github.com/Yeachan-Heo/oh-my-codex",
+    "time": "2026-04-03T00:01:51.918990+00:00",
+    "summary": "OmX - Oh My codeX: Your codex is not alone. Add hooks, agent teams, HUDs, and so much more.",
+    "readme": "# oh-my-codex (OMX)\n\n<p align=\"center\">\n  <img src=\"https://yeachan-heo.github.io/oh-my-codex-website/omx-character-nobg.png\" alt=\"oh-my-codex character\" width=\"280\">\n  <br>\n  <em>Start Codex stronger, then let OMX add better prompts, workflows, and runtime help when the work grows.</em>\n</p>\n\n[![npm version](https://img.shields.io/npm/v/oh-my-codex)](https://www.npmjs.com/package/oh-my-codex)\n[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/",
+    "github_url": "https://github.com/Yeachan-Heo/oh-my-codex",
+    "lang": "TypeScript",
+    "stars": "11605"
+  },
+  {
+    "source": "Hacker News",
+    "category": "community",
+    "title": "U.S. Is Burning Through Tomahawk Cruise Missile Stockpile at an Alarming Rate",
+    "url": "https://news.ycombinator.com/item?id=47619879",
+    "time": "2026-04-02T20:40:17Z",
+    "heat": "32",
+    "summary": "",
+    "hn_url": "https://news.ycombinator.com/item?id=47619879"
+  },
+  {
+    "source": "Hacker News",
+    "category": "community",
+    "title": "A $20/month user costs OpenAI $65 in compute. AI video is a money furnace",
+    "url": "https://news.ycombinator.com/item?id=47619322",
+    "time": "2026-04-02T19:49:51Z",
+    "heat": "43",
+    "summary": "",
+    "hn_url": "https://news.ycombinator.com/item?id=47619322"
+  },
+  {
+    "source": "Hacker News",
+    "category": "community",
+    "title": "Mistral secures $830M in debt financing to fund AI data center",
+    "url": "https://news.ycombinator.com/item?id=47618322",
+    "time": "2026-04-02T18:31:00Z",
+    "heat": "26",
+    "summary": "",
+    "hn_url": "https://news.ycombinator.com/item?id=47618322"
+  },
+  {
+    "source": "Hacker News",
+    "category": "community",
+    "title": "OpenAI Acquires TBPN",
+    "url": "https://news.ycombinator.com/item?id=47617376",
+    "time": "2026-04-02T17:26:49Z",
+    "heat": "132",
+    "summary": "",
+    "hn_url": "https://news.ycombinator.com/item?id=47617376"
+  },
+  {
+    "source": "Hacker News",
+    "category": "community",
+    "title": "Group Pushing Age Verification for AI Turns Out to Be Backed by OpenAI",
+    "url": "https://news.ycombinator.com/item?id=47616665",
+    "time": "2026-04-02T16:30:41Z",
+    "heat": "31",
+    "summary": "",
+    "hn_url": "https://news.ycombinator.com/item?id=47616665"
+  },
+  {
+    "source": "Hacker News",
+    "category": "community",
+    "title": "Usefully run 100s of Claudes in parallel with mngr",
+    "url": "https://news.ycombinator.com/item?id=47615926",
+    "time": "2026-04-02T15:39:00Z",
+    "heat": "20",
+    "summary": "",
+    "hn_url": "https://news.ycombinator.com/item?id=47615926"
+  },
+  {
+    "source": "Hacker News",
+    "category": "community",
+    "title": "The case for zero-error horizons in trustworthy LLMs",
+    "url": "https://news.ycombinator.com/item?id=47615876",
+    "time": "2026-04-02T15:35:31Z",
+    "heat": "67",
+    "summary": "",
+    "hn_url": "https://news.ycombinator.com/item?id=47615876"
+  },
+  {
+    "source": "Hacker News",
+    "category": "community",
+    "title": "Show HN: A P2P messenger with dual network modes (Fast and Tor)",
+    "url": "https://news.ycombinator.com/item?id=47615844",
+    "time": "2026-04-02T15:32:45Z",
+    "heat": "27",
+    "summary": "",
+    "hn_url": "https://news.ycombinator.com/item?id=47615844"
+  },
+  {
+    "source": "Hacker News",
+    "category": "community",
+    "title": "Qwen3.6-Plus: Towards real world agents",
+    "url": "https://news.ycombinator.com/item?id=47615002",
+    "time": "2026-04-02T14:28:52Z",
+    "heat": "406",
+    "summary": "",
+    "hn_url": "https://news.ycombinator.com/item?id=47615002"
+  },
+  {
+    "source": "Hacker News",
+    "category": "community",
+    "title": "'Backrooms' and the Rise of the Institutional Gothic",
+    "url": "https://news.ycombinator.com/item?id=47614100",
+    "time": "2026-04-02T13:18:05Z",
+    "heat": "164",
+    "summary": "",
+    "hn_url": "https://news.ycombinator.com/item?id=47614100"
+  },
+  {
+    "source": "Simon Willison",
+    "category": "tools",
+    "title": "Highlights from my conversation about agentic engineering on Lenny's Podcast",
+    "url": "https://simonwillison.net/2026/Apr/2/lennys-podcast/#atom-everything",
+    "time": "2026-04-02T12:40:47+00:00",
+    "summary": "I was a guest on Lenny Rachitsky's podcast, in a new episode titled An AI state of the union: We've passed the inflection point, dark factories are coming, and automation timelines. It's available on YouTube, Spotify, and Apple Podcasts. Here are my highlights from our conversation, with relevant links.\n\nThe November inflection point\nSoftware engineers as bellwethers for other information workers\nWriting code on my phone\nResponsible vibe coding\nDark Factories and StrongDM\nThe bottleneck has move"
+  },
+  {
+    "source": "Hacker News",
+    "category": "community",
+    "title": "Inside Nepal's Fake Rescue Racket",
+    "url": "https://news.ycombinator.com/item?id=47613078",
+    "time": "2026-04-02T11:40:41Z",
+    "heat": "244",
+    "summary": "",
+    "hn_url": "https://news.ycombinator.com/item?id=47613078"
+  },
+  {
+    "source": "TechCrunch AI",
+    "category": "industry",
+    "title": "OpenAI acquires TBPN, the buzzy founder-led business talk show",
+    "url": "https://techcrunch.com/2026/04/02/openai-acquires-tbpn-the-buzzy-founder-led-business-talk-show/",
+    "time": "2026-04-02T11:21:00+00:00",
+    "summary": "TBPN, Silicon Valley's cult-favorite tech podcast, will operate independently, even as it's overseen by chief political operative Chris Lehane."
+  },
+  {
+    "source": "Hacker News",
+    "category": "community",
+    "title": "Lemonade by AMD: a fast and open source local LLM server using GPU and NPU",
+    "url": "https://news.ycombinator.com/item?id=47612724",
+    "time": "2026-04-02T11:04:51Z",
+    "heat": "420",
+    "summary": "",
+    "hn_url": "https://news.ycombinator.com/item?id=47612724"
+  },
+  {
+    "source": "Simon Willison",
+    "category": "tools",
+    "title": "Gemma 4: Byte for byte, the most capable open models",
+    "url": "https://simonwillison.net/2026/Apr/2/gemma-4/#atom-everything",
+    "time": "2026-04-02T10:28:54+00:00",
+    "summary": "Gemma 4: Byte for byte, the most capable open models\nFour new vision-capable Apache 2.0 licensed reasoning LLMs from Google DeepMind, sized at 2B, 4B, 31B, plus a 26B-A4B Mixture-of-Experts.\nGoogle emphasize \"unprecedented level of intelligence-per-parameter\", providing yet more evidence that creating small useful models is one of the hottest areas of research right now.\nThey actually label the two smaller models as E2B and E4B for \"Effective\" parameter size. The system card explains:\n\nThe small"
+  },
+  {
+    "source": "Simon Willison",
+    "category": "tools",
+    "title": "llm-gemini 0.30",
+    "url": "https://simonwillison.net/2026/Apr/2/llm-gemini/#atom-everything",
+    "time": "2026-04-02T10:25:08+00:00",
+    "summary": "Release: llm-gemini 0.30\nNew models gemini-3.1-flash-lite-preview, gemma-4-26b-a4b-it and gemma-4-31b-it. See my notes on Gemma 4.\nTags: gemini, llm, gemma"
+  },
+  {
+    "source": "Hacker News",
+    "category": "community",
+    "title": "Men are ditching TV for YouTube as AI usage and social media fatigue grow",
+    "url": "https://news.ycombinator.com/item?id=47612127",
+    "time": "2026-04-02T09:43:08Z",
+    "heat": "45",
+    "summary": "",
+    "hn_url": "https://news.ycombinator.com/item?id=47612127"
+  },
+  {
+    "source": "Hacker News",
+    "category": "community",
+    "title": "Significant raise of reports",
+    "url": "https://news.ycombinator.com/item?id=47611921",
+    "time": "2026-04-02T09:14:18Z",
+    "heat": "272",
+    "summary": "",
+    "hn_url": "https://news.ycombinator.com/item?id=47611921"
+  },
+  {
+    "source": "Hacker News",
+    "category": "community",
+    "title": "New laws to make it easier to cancel subscriptions and get refunds",
+    "url": "https://news.ycombinator.com/item?id=47611809",
+    "time": "2026-04-02T09:00:26Z",
+    "heat": "146",
+    "summary": "",
+    "hn_url": "https://news.ycombinator.com/item?id=47611809"
+  },
+  {
+    "source": "TechCrunch AI",
+    "category": "industry",
+    "title": "Microsoft takes on AI rivals with three new foundational models",
+    "url": "https://techcrunch.com/2026/04/02/microsoft-takes-on-ai-rivals-with-three-new-foundational-models/",
+    "time": "2026-04-02T08:48:16+00:00",
+    "summary": "MAI released models that can transcribe voice into text as well as generate audio and images after the group's formation six months ago."
+  },
+  {
+    "source": "AI News",
+    "category": "announcements",
+    "title": "KiloClaw targets shadow AI with autonomous agent governance",
+    "url": "https://www.artificialintelligence-news.com/news/kiloclaw-targets-shadow-ai-autonomous-agent-governance/",
+    "time": "2026-04-02T08:30:53+00:00",
+    "summary": "With the launch of KiloClaw, enterprises now have a tool to enforce governance over autonomous agents and manage shadow AI. While businesses spent the last year securing large language models and formalising vendor agreements, developers and knowledge workers started moving on their own. Employees are bypassing official procurement, deploying autonomous agents on personal infrastructure to […]\nThe post KiloClaw targets shadow AI with autonomous agent governance appeared first on AI News."
+  },
+  {
+    "source": "DeepMind Blog",
+    "category": "research",
+    "title": "Gemma 4: Byte for byte, the most capable open models",
+    "url": "https://deepmind.google/blog/gemma-4-byte-for-byte-the-most-capable-open-models/",
+    "time": "2026-04-02T08:00:49+00:00",
+    "summary": "Gemma 4: Our most intelligent open models to date, purpose-built for advanced reasoning and agentic workflows."
+  },
+  {
+    "source": "Google AI Blog",
+    "category": "announcements",
+    "title": "New ways to balance cost and reliability in the Gemini API",
+    "url": "https://blog.google/innovation-and-ai/technology/developers-tools/introducing-flex-and-priority-inference/",
+    "time": "2026-04-02T08:00:00+00:00",
+    "summary": "Gemini API Dials"
+  },
+  {
+    "source": "Google AI Blog",
+    "category": "announcements",
+    "title": "Create, edit and share videos at no cost in Google Vids",
+    "url": "https://blog.google/products-and-platforms/products/workspace/google-vids-updates-lyria-veo/",
+    "time": "2026-04-02T08:00:00+00:00",
+    "summary": "Google Vids logo surrounded by various video editing UI"
+  },
+  {
+    "source": "AI News",
+    "category": "announcements",
+    "title": "5 best practices to secure AI systems",
+    "url": "https://www.artificialintelligence-news.com/news/5-best-practices-to-secure-ai-systems/",
+    "time": "2026-04-02T06:45:03+00:00",
+    "summary": "A decade ago, it would have been hard to believe that artificial intelligence could do what it can do now. However, it is this same power that introduces a new attack surface that traditional security frameworks were not built to address. As this technology becomes embedded in critical operations, companies need a multi-layered defense strategy […]\nThe post 5 best practices to secure AI systems appeared first on AI News."
+  },
+  {
+    "source": "Hacker News",
+    "category": "community",
+    "title": "Vitalik Buterin – \"My self-sovereign / local / private / secure LLM setup\"",
+    "url": "https://news.ycombinator.com/item?id=47610534",
+    "time": "2026-04-02T06:07:27Z",
+    "heat": "21",
+    "summary": "",
+    "hn_url": "https://news.ycombinator.com/item?id=47610534"
+  },
+  {
+    "source": "Hacker News",
+    "category": "community",
+    "title": "r/programming bans all discussion of LLM programming",
+    "url": "https://news.ycombinator.com/item?id=47610336",
+    "time": "2026-04-02T05:33:20Z",
+    "heat": "179",
+    "summary": "",
+    "hn_url": "https://news.ycombinator.com/item?id=47610336"
+  },
+  {
+    "source": "AI News",
+    "category": "announcements",
+    "title": "China’s Five-Year Plan details the targets for AI deployment",
+    "url": "https://www.artificialintelligence-news.com/news/chinas-five-year-plan-details-the-targets-for-ai-deployment/",
+    "time": "2026-04-02T05:23:00+00:00",
+    "summary": "China has approved its 15th Five-Year Plan [PDF] setting out the country’s economic, education, social, and industrial priorities through to 2030. As might be expected, there is a significant number of references to AI, with the technology mentioned in several contexts. AI is grouped alongside quantum computing, biotechnology, and energy as paths that are to […]\nThe post China’s Five-Year Plan details the targets for AI deployment appeared first on AI News."
+  },
+  {
+    "source": "Hacker News",
+    "category": "community",
+    "title": "Things I Think I Think... Preferring Local OSS LLMs",
+    "url": "https://news.ycombinator.com/item?id=47610245",
+    "time": "2026-04-02T05:16:49Z",
+    "heat": "39",
+    "summary": "",
+    "hn_url": "https://news.ycombinator.com/item?id=47610245"
+  },
+  {
+    "source": "Hacker News",
+    "category": "community",
+    "title": "The future of code search is not regex – 100x faster than ripgrep",
+    "url": "https://news.ycombinator.com/item?id=47609752",
+    "time": "2026-04-02T03:45:22Z",
+    "heat": "58",
+    "summary": "",
+    "hn_url": "https://news.ycombinator.com/item?id=47609752"
+  },
+  {
+    "source": "OpenAI Blog",
+    "category": "announcements",
+    "title": "OpenAI acquires TBPN",
+    "url": "https://openai.com/index/openai-acquires-tbpn",
+    "time": "2026-04-02T02:30:00+00:00",
+    "summary": "OpenAI acquires TBPN to accelerate global conversations around AI and support independent media, expanding dialogue with builders, businesses, and the broader tech community."
+  },
+  {
+    "source": "Hacker News",
+    "category": "community",
+    "title": "The Claude Code Leak",
+    "url": "https://news.ycombinator.com/item?id=47609294",
+    "time": "2026-04-02T02:26:05Z",
+    "heat": "188",
+    "summary": "",
+    "hn_url": "https://news.ycombinator.com/item?id=47609294"
+  },
+  {
+    "source": "OpenAI Blog",
+    "category": "announcements",
+    "title": "Codex now offers more flexible pricing for teams",
+    "url": "https://openai.com/index/codex-flexible-pricing-for-teams",
+    "time": "2026-04-02T02:00:00+00:00",
+    "summary": "Codex now includes pay-as-you-go pricing for ChatGPT Business and Enterprise, providing teams a more flexible option to start and scale adoption."
+  },
+  {
+    "source": "AI News",
+    "category": "announcements",
+    "title": "Autonomous AI systems depend on data governance",
+    "url": "https://www.artificialintelligence-news.com/news/autonomous-ai-systems-depend-on-data-governance/",
+    "time": "2026-04-02T02:00:00+00:00",
+    "summary": "Much of the current focus on AI safety has centred on models – how they are trained and monitored. But as systems become more autonomous, attention is changing toward the data those systems depend on. If the data feeding an AI system is fragmented, outdated, or lacks oversight, the system’s behaviour can become more unpredictable. […]\nThe post Autonomous AI systems depend on data governance appeared first on AI News."
+  },
+  {
+    "source": "AI News",
+    "category": "announcements",
+    "title": "Experian uncovers fraud paradox in financial services’ AI adoption",
+    "url": "https://www.artificialintelligence-news.com/news/experian-ai-fraud-detection-financial-services-2026/",
+    "time": "2026-04-02T02:00:00+00:00",
+    "summary": "The same technology that financial institutions deploying is being weaponised against them. That is the core tension running through Experian’s 2026 Future of Fraud Forecast, and it’s a tension the company is in a position to name because it sits on both sides of it. According to FTC data cited in the forecast, consumers lost […]\nThe post Experian uncovers fraud paradox in financial services’ AI adoption appeared first on AI News."
+  },
+  {
+    "source": "HuggingFace Papers",
+    "category": "research",
+    "title": "AgentWatcher: A Rule-based Prompt Injection Monitor",
+    "url": "https://huggingface.co/papers/2604.01194",
+    "time": "2026-04-01T17:40:03.000Z",
+    "summary": "Large language models (LLMs) and their applications, such as agents, are highly vulnerable to prompt injection attacks. State-of-the-art prompt injection detection methods have the following limitations: (1) their effectiveness degrades significantly as context length increases, and (2) they lack explicit rules that define what constitutes prompt injection, causing detection decisions to be implicit, opaque, and difficult to reason about. In this work, we propose AgentWatcher to address the abov",
+    "heat": "",
+    "github_url": "https://arxiv.org/abs/2604.01194"
+  },
+  {
+    "source": "HuggingFace Papers",
+    "category": "research",
+    "title": "S0 Tuning: Zero-Overhead Adaptation of Hybrid Recurrent-Attention Models",
+    "url": "https://huggingface.co/papers/2604.01168",
+    "time": "2026-04-01T17:21:15.000Z",
+    "summary": "Using roughly 48 execution-verified HumanEval training solutions, tuning a single initial state matrix per recurrent layer, with zero inference overhead, outperforms LoRA by +10.8 pp (p < 0.001) on HumanEval. The method, which we call S0 tuning, optimizes one state matrix per recurrent layer while freezing all model weights. On Qwen3.5-4B (GatedDeltaNet hybrid), S0 tuning improves greedy pass@1 by +23.6 +/- 1.7 pp (10 seeds). On FalconH1-7B (Mamba-2 hybrid), S0 reaches 71.8% +/- 1.3 and LoRA rea",
+    "heat": "1",
+    "github_url": "https://arxiv.org/abs/2604.01168"
+  },
+  {
+    "source": "HuggingFace Papers",
+    "category": "research",
+    "title": "Reasoning Shift: How Context Silently Shortens LLM Reasoning",
+    "url": "https://huggingface.co/papers/2604.01161",
+    "time": "2026-04-01T17:14:18.000Z",
+    "summary": "Large language models (LLMs) exhibiting test-time scaling behavior, such as extended reasoning traces and self-verification, have demonstrated remarkable performance on complex, long-term reasoning tasks. However, the robustness of these reasoning behaviors remains underexplored. To investigate this, we conduct a systematic evaluation of multiple reasoning models across three scenarios: (1) problems augmented with lengthy, irrelevant context; (2) multi-turn conversational settings with independe",
+    "heat": "22",
+    "github_url": "https://arxiv.org/abs/2604.01161"
+  },
+  {
+    "source": "HuggingFace Papers",
+    "category": "research",
+    "title": "Paper Reconstruction Evaluation: Evaluating Presentation and Hallucination in AI-written Papers",
+    "url": "https://huggingface.co/papers/2604.01128",
+    "time": "2026-04-01T16:48:04.000Z",
+    "summary": "This paper introduces the first systematic evaluation framework for quantifying the quality and risks of papers written by modern coding agents. While AI-driven paper writing has become a growing concern, rigorous evaluation of the quality and potential risks of AI-written papers remains limited, and a unified understanding of their reliability is still lacking. We introduce Paper Reconstruction Evaluation (PaperRecon), an evaluation framework in which an overview (overview.md) is created from a",
+    "heat": "6",
+    "github_url": "https://arxiv.org/abs/2604.01128"
+  },
+  {
+    "source": "HuggingFace Papers",
+    "category": "research",
+    "title": "Revision or Re-Solving? Decomposing Second-Pass Gains in Multi-LLM Pipelines",
+    "url": "https://huggingface.co/papers/2604.01029",
+    "time": "2026-04-01T15:39:40.000Z",
+    "summary": "Multi-LLM revision pipelines, in which a second model reviews and improves a draft produced by a first, are widely assumed to derive their gains from genuine error correction. We question this assumption with a controlled decomposition experiment that uses four matched conditions to separate second-pass gains into three additive components: re-solving, scaffold, and content. We evaluate this design across two model pairs on three benchmarks spanning knowledge-intensive MCQ and competitive progra",
+    "heat": "2",
+    "github_url": "https://arxiv.org/abs/2604.01029"
+  },
+  {
+    "source": "HuggingFace Papers",
+    "category": "research",
+    "title": "Do Phone-Use Agents Respect Your Privacy?",
+    "url": "https://huggingface.co/papers/2604.00986",
+    "time": "2026-04-01T14:50:50.000Z",
+    "summary": "We study whether phone-use agents respect privacy while completing benign mobile tasks. This question has remained hard to answer because privacy-compliant behavior is not operationalized for phone-use agents, and ordinary apps do not reveal exactly what data agents type into which form entries during execution. To make this question measurable, we introduce MyPhoneBench, a verifiable evaluation framework for privacy behavior in mobile agents. We operationalize privacy-respecting phone use as pe",
+    "heat": "1",
+    "github_url": "https://arxiv.org/abs/2604.00986"
+  },
+  {
+    "source": "HuggingFace Papers",
+    "category": "research",
+    "title": "Benchmarking and Mechanistic Analysis of Vision-Language Models for Cross-Depiction Assembly Instruction Alignment",
+    "url": "https://huggingface.co/papers/2604.00913",
+    "time": "2026-04-01T13:55:28.000Z",
+    "summary": "2D assembly diagrams are often abstract and hard to follow, creating a need for intelligent assistants that can monitor progress, detect errors, and provide step-by-step guidance. In mixed reality settings, such systems must recognize completed and ongoing steps from the camera feed and align them with the diagram instructions. Vision Language Models (VLMs) show promise for this task, but face a depiction gap because assembly diagrams and video frames share few visual features. To systematically",
+    "heat": "2",
+    "github_url": "https://arxiv.org/abs/2604.00913"
+  },
+  {
+    "source": "HuggingFace Papers",
+    "category": "research",
+    "title": "Proactive Agent Research Environment: Simulating Active Users to Evaluate Proactive Assistants",
+    "url": "https://huggingface.co/papers/2604.00842",
+    "time": "2026-04-01T12:53:01.000Z",
+    "summary": "Proactive agents that anticipate user needs and autonomously execute tasks hold great promise as digital assistants, yet the lack of realistic user simulation frameworks hinders their development. Existing approaches model apps as flat tool-calling APIs, failing to capture the stateful and sequential nature of user interaction in digital environments and making realistic user simulation infeasible. We introduce Proactive Agent Research Environment (Pare), a framework for building and evaluating ",
+    "heat": "5",
+    "github_url": "https://arxiv.org/abs/2604.00842"
+  },
+  {
+    "source": "HuggingFace Papers",
+    "category": "research",
+    "title": "A Survey of On-Policy Distillation for Large Language Models",
+    "url": "https://huggingface.co/papers/2604.00626",
+    "time": "2026-04-01T08:32:34.000Z",
+    "summary": "Knowledge distillation has become a primary mechanism for transferring reasoning and domain expertise from frontier Large Language Models (LLMs) to smaller, deployable students. However, the dominant paradigm remains off-policy: students train on static teacher-generated data and never encounter their own errors during learning. This train--test mismatch, an instance of exposure bias, causes prediction errors to compound autoregressively at inference time. On-Policy Distillation (OPD) addresses ",
+    "heat": "4",
+    "github_url": "https://arxiv.org/abs/2604.00626"
+  },
+  {
+    "source": "HuggingFace Papers",
+    "category": "research",
+    "title": "UniMixer: A Unified Architecture for Scaling Laws in Recommendation Systems",
+    "url": "https://huggingface.co/papers/2604.00590",
+    "time": "2026-04-01T07:57:40.000Z",
+    "summary": "In recent years, the scaling laws of recommendation models have attracted increasing attention, which govern the relationship between performance and parameters/FLOPs of recommenders. Currently, there are three mainstream architectures for achieving scaling in recommendation models, namely attention-based, TokenMixer-based, and factorization-machine-based methods, which exhibit fundamental differences in both design philosophy and architectural structure. In this paper, we propose a unified scal",
+    "heat": "3",
+    "github_url": "https://arxiv.org/abs/2604.00590"
+  },
+  {
+    "source": "HuggingFace Papers",
+    "category": "research",
+    "title": "When Users Change Their Mind: Evaluating Interruptible Agents in Long-Horizon Web Navigation",
+    "url": "https://huggingface.co/papers/2604.00892",
+    "time": "2026-04-01T00:00:00.000Z",
+    "summary": "As LLM agents transition from short, static problem solving to executing complex, long-horizon tasks in dynamic environments, the ability to handle user interruptions, such as adding requirement or revising goals, during mid-task execution is becoming a core requirement for realistic deployment. However, existing benchmarks largely assume uninterrupted agent behavior or study interruptions only in short, unconstrained language tasks. In this paper, we present the first systematic study of interr",
+    "heat": "1",
+    "github_url": "https://arxiv.org/abs/2604.00892"
+  },
+  {
+    "source": "HuggingFace Papers",
+    "category": "research",
+    "title": "MemRerank: Preference Memory for Personalized Product Reranking",
+    "url": "https://huggingface.co/papers/2603.29247",
+    "time": "2026-03-31T04:16:18.000Z",
+    "summary": "LLM-based shopping agents increasingly rely on long purchase histories and multi-turn interactions for personalization, yet naively appending raw history to prompts is often ineffective due to noise, length, and relevance mismatch. We propose MemRerank, a preference memory framework that distills user purchase history into concise, query-independent signals for personalized product reranking. To study this problem, we build an end-to-end benchmark and evaluation framework centered on an LLM-base",
+    "heat": "2",
+    "github_url": "https://arxiv.org/abs/2603.29247"
+  },
+  {
+    "source": "HuggingFace Papers",
+    "category": "research",
+    "title": "Understand and Accelerate Memory Processing Pipeline for Disaggregated LLM Inference",
+    "url": "https://huggingface.co/papers/2603.29002",
+    "time": "2026-03-30T21:03:39.000Z",
+    "summary": "Modern large language models (LLMs) increasingly depends on efficient long-context processing and generation mechanisms, including sparse attention, retrieval-augmented generation (RAG), and compressed contextual memory, to support complex reasoning. We show that these optimizations can be unified into a four-step memory processing pipeline: Prepare Memory, Compute Relevancy, Retrieval, and Apply to Inference. Through systematic profiling, we identify a 22%-97% memory processing overhead in LLM ",
+    "heat": "2",
+    "github_url": "https://arxiv.org/abs/2603.29002"
+  },
+  {
+    "source": "HuggingFace Papers",
+    "category": "research",
+    "title": "MiroEval: Benchmarking Multimodal Deep Research Agents in Process and Outcome",
+    "url": "https://huggingface.co/papers/2603.28407",
+    "time": "2026-03-30T13:16:03.000Z",
+    "summary": "Recent progress in deep research systems has been impressive, but evaluation still lags behind real user needs. Existing benchmarks predominantly assess final reports using fixed rubrics, failing to evaluate the underlying research process. Most also offer limited multimodal coverage, rely on synthetic tasks that do not reflect real-world query complexity, and cannot be refreshed as knowledge evolves. To address these gaps, we introduce MiroEval, a benchmark and evaluation framework for deep res",
+    "heat": "52",
+    "github_url": "https://arxiv.org/abs/2603.28407"
+  },
+  {
+    "source": "HuggingFace Papers",
+    "category": "research",
+    "title": "Vision2Web: A Hierarchical Benchmark for Visual Website Development with Agent Verification",
+    "url": "https://huggingface.co/papers/2603.26648",
+    "time": "2026-03-27T17:50:45.000Z",
+    "summary": "Recent advances in large language models have improved the capabilities of coding agents, yet systematic evaluation of complex, end-to-end website development remains limited. To address this gap, we introduce Vision2Web, a hierarchical benchmark for visual website development, spanning from static UI-to-code generation, interactive multi-page frontend reproduction, to long-horizon full-stack website development. The benchmark is constructed from real-world websites and comprises a total of 193 ",
+    "heat": "32",
+    "github_url": "https://arxiv.org/abs/2603.26648"
+  },
+  {
+    "source": "HuggingFace Papers",
+    "category": "research",
+    "title": "QuitoBench: A High-Quality Open Time Series Forecasting Benchmark",
+    "url": "https://huggingface.co/papers/2603.26017",
+    "time": "2026-03-27T02:24:34.000Z",
+    "summary": "Time series forecasting is critical across finance, healthcare, and cloud computing, yet progress is constrained by a fundamental bottleneck: the scarcity of large-scale, high-quality benchmarks. To address this gap, we introduce QuitoBench, a regime-balanced benchmark for time series forecasting with coverage across eight trendtimesseasonalitytimesforecastability (TSF) regimes, designed to capture forecasting-relevant properties rather than application-defined domain labels. The benchmark is bu",
+    "heat": "25",
+    "github_url": "https://arxiv.org/abs/2603.26017"
+  },
+  {
+    "source": "HuggingFace Papers",
+    "category": "research",
+    "title": "Consistency Amplifies: How Behavioral Variance Shapes Agent Accuracy",
+    "url": "https://huggingface.co/papers/2603.25764",
+    "time": "2026-03-26T00:00:00.000Z",
+    "summary": "As LLM-based agents are deployed in production systems, understanding their behavioral consistency (whether they produce similar action sequences when given identical tasks) becomes critical for reliability. We study consistency in the context of SWE-bench, a challenging software engineering benchmark requiring complex, multi-step reasoning. Comparing Claude~4.5~Sonnet, GPT-5, and Llama-3.1-70B across 50 runs each (10 tasks times 5 runs), we find that across models, higher consistency aligns wit",
+    "heat": "2",
+    "github_url": "https://arxiv.org/abs/2603.25764"
+  },
+  {
+    "source": "HuggingFace Papers",
+    "category": "research",
+    "title": "ClawKeeper: Comprehensive Safety Protection for OpenClaw Agents Through Skills, Plugins, and Watchers",
+    "url": "https://huggingface.co/papers/2603.24414",
+    "time": "2026-03-25T15:27:54.000Z",
+    "summary": "OpenClaw has rapidly established itself as a leading open-source autonomous agent runtime, offering powerful capabilities including tool integration, local file access, and shell command execution. However, these broad operational privileges introduce critical security vulnerabilities, transforming model errors into tangible system-level threats such as sensitive data leakage, privilege escalation, and malicious third-party skill execution. Existing security measures for the OpenClaw ecosystem r",
+    "heat": "166",
+    "github_url": "https://arxiv.org/abs/2603.24414"
+  },
+  {
+    "source": "HuggingFace Papers",
+    "category": "research",
+    "title": "AI Generalisation Gap In Comorbid Sleep Disorder Staging",
+    "url": "https://huggingface.co/papers/2603.23582",
+    "time": "2026-03-24T15:02:35.000Z",
+    "summary": "Accurate sleep staging is essential for diagnosing OSA and hypopnea in stroke patients. Although PSG is reliable, it is costly, labor-intensive, and manually scored. While deep learning enables automated EEG-based sleep staging in healthy subjects, our analysis shows poor generalization to clinical populations with disrupted sleep. Using Grad-CAM interpretations, we systematically demonstrate this limitation. We introduce iSLEEPS, a newly clinically annotated ischemic stroke dataset (to be publi",
+    "heat": "",
+    "github_url": "https://arxiv.org/abs/2603.23582"
+  },
+  {
+    "source": "HuggingFace Papers",
+    "category": "research",
+    "title": "Brevity Constraints Reverse Performance Hierarchies in Language Models",
+    "url": "https://huggingface.co/papers/2604.00025",
+    "time": "2026-03-11T06:47:41.000Z",
+    "summary": "Standard evaluation protocols reveal a counterintuitive phenomenon: on 7.7% of benchmark problems spanning five datasets, larger language models underperform smaller ones by 28.4 percentage points despite 10-100x more parameters. Through systematic evaluation of 31 models (0.5B-405B parameters) across 1,485 problems, we identify the mechanism as spontaneous scale-dependent verbosity that introduces errors through overelaboration. Causal intervention experiments demonstrate this reflects correcta",
+    "heat": "16",
+    "github_url": "https://arxiv.org/abs/2604.00025"
+  }
+]
