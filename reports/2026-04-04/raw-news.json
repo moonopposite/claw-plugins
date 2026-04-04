@@ -1,0 +1,574 @@
+[
+  {
+    "source": "GitHub Trending",
+    "category": "tools",
+    "title": "google-research/timesfm",
+    "url": "https://github.com/google-research/timesfm",
+    "time": "2026-04-04T08:08:32.804354+00:00",
+    "summary": "TimesFM (Time Series Foundation Model) is a pretrained time-series foundation model developed by Google Research for time-series forecasting.",
+    "readme": "# TimesFM\n\nTimesFM (Time Series Foundation Model) is a pretrained time-series foundation\nmodel developed by Google Research for time-series forecasting.\n\n*   Paper:\n    [A decoder-only foundation model for time-series forecasting](https://arxiv.org/abs/2310.10688),\n    ICML 2024.\n*   All checkpoints:\n    [TimesFM Hugging Face Collection](https://huggingface.co/collections/google/timesfm-release-66e4be5fdb56e960c1e482a6).\n*   [Google Research blog](https://research.google/blog/a-decoder-only-foun",
+    "github_url": "https://github.com/google-research/timesfm",
+    "lang": "Python",
+    "stars": "14307"
+  },
+  {
+    "source": "GitHub Trending",
+    "category": "tools",
+    "title": "dmtrKovalenko/fff.nvim",
+    "url": "https://github.com/dmtrKovalenko/fff.nvim",
+    "time": "2026-04-04T08:08:31.772736+00:00",
+    "summary": "The fastest and the most accurate file search toolkit for AI agents, Neovim, Rust, C, and NodeJS",
+    "readme": "<p align=\"center\">\n  <h1 align=\"center\">FFF</h1>\n</p>\n\n<p align=\"center\">\n  <a href=\"#mcp\"><strong>AI agents (MCP)</strong></a> &nbsp;&nbsp;|&nbsp;&nbsp; <a href=\"#neovim-guide\"><strong>Neovim users</strong></a>\n</p>\n\n<p align=\"center\">\n  <i>A fast file search for your AI and neovim, with memory built-in</i>\n</p>\n\n<p align=\"center\" style=\"text-decoration: none; border: none;\">\n\t<a href=\"https://github.com/dmtrKovalenko/fff.nvim/stargazers\" style=\"text-decoration: none\">\n\t\t<img alt=\"Stars\" src=\"h",
+    "github_url": "https://github.com/dmtrKovalenko/fff.nvim",
+    "lang": "Rust",
+    "stars": "3380"
+  },
+  {
+    "source": "GitHub Trending",
+    "category": "tools",
+    "title": "f/prompts.chat",
+    "url": "https://github.com/f/prompts.chat",
+    "time": "2026-04-04T08:08:31.742372+00:00",
+    "summary": "f.k.a. Awesome ChatGPT Prompts. Share, discover, and collect prompts from the community. Free and open source — self-host for your organization with complete privacy.",
+    "readme": "<h1 align=\"center\">\n  <a href=\"https://prompts.chat\">\n    <picture>\n      <source media=\"(prefers-color-scheme: dark)\" srcset=\"https://prompts.chat/logo-dark.svg\">\n      <source media=\"(prefers-color-scheme: light)\" srcset=\"https://prompts.chat/logo.svg\">\n      <img height=\"60\" alt=\"prompts.chat\" src=\"https://prompts.chat/logo.svg\">\n    </picture>\n    <br>\n    prompts.chat\n  </a>\n</h1>\n\n<p align=\"center\">\n  <strong>The world's largest open-source prompt library for AI</strong><br>\n  <sub>Works w",
+    "github_url": "https://github.com/f/prompts.chat",
+    "lang": "HTML",
+    "stars": "157320"
+  },
+  {
+    "source": "GitHub Trending",
+    "category": "tools",
+    "title": "Yeachan-Heo/oh-my-codex",
+    "url": "https://github.com/Yeachan-Heo/oh-my-codex",
+    "time": "2026-04-04T08:08:31.721173+00:00",
+    "summary": "OmX - Oh My codeX: Your codex is not alone. Add hooks, agent teams, HUDs, and so much more.",
+    "readme": "# oh-my-codex (OMX)\n\n<p align=\"center\">\n  <img src=\"https://yeachan-heo.github.io/oh-my-codex-website/omx-character-nobg.png\" alt=\"oh-my-codex character\" width=\"280\">\n  <br>\n  <em>Start Codex stronger, then let OMX add better prompts, workflows, and runtime help when the work grows.</em>\n</p>\n\n[![npm version](https://img.shields.io/npm/v/oh-my-codex)](https://www.npmjs.com/package/oh-my-codex)\n[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/",
+    "github_url": "https://github.com/Yeachan-Heo/oh-my-codex",
+    "lang": "TypeScript",
+    "stars": "14614"
+  },
+  {
+    "source": "GitHub Trending",
+    "category": "tools",
+    "title": "onyx-dot-app/onyx",
+    "url": "https://github.com/onyx-dot-app/onyx",
+    "time": "2026-04-04T08:08:31.714640+00:00",
+    "summary": "Open Source AI Platform - AI Chat with advanced features that works with every LLM",
+    "readme": "<a name=\"readme-top\"></a>\n\n<h2 align=\"center\">\n    <a href=\"https://www.onyx.app/?utm_source=onyx_repo&utm_medium=github&utm_campaign=readme\"> <img width=\"50%\" src=\"https://github.com/onyx-dot-app/onyx/blob/logo/OnyxLogoCropped.jpg?raw=true\" /></a>\n</h2>\n\n<p align=\"center\">\n    <a href=\"https://discord.gg/TDJ59cGV2X\" target=\"_blank\">\n        <img src=\"https://img.shields.io/badge/discord-join-blue.svg?logo=discord&logoColor=white\" alt=\"Discord\" />\n    </a>\n    <a href=\"https://docs.onyx.app/?utm",
+    "github_url": "https://github.com/onyx-dot-app/onyx",
+    "lang": "Python",
+    "stars": "23547"
+  },
+  {
+    "source": "Hacker News",
+    "category": "community",
+    "title": "Show HN: Travel Hacking Toolkit – Points search and trip planning with AI",
+    "url": "https://news.ycombinator.com/item?id=47635033",
+    "time": "2026-04-04T02:26:42Z",
+    "heat": "62",
+    "summary": "",
+    "hn_url": "https://news.ycombinator.com/item?id=47635033"
+  },
+  {
+    "source": "Hacker News",
+    "category": "community",
+    "title": "OpenAI Cap Table leak reveals Microsoft's 18x return",
+    "url": "https://news.ycombinator.com/item?id=47634240",
+    "time": "2026-04-04T00:34:49Z",
+    "heat": "22",
+    "summary": "",
+    "hn_url": "https://news.ycombinator.com/item?id=47634240"
+  },
+  {
+    "source": "Hacker News",
+    "category": "community",
+    "title": "Claude Code Found a Linux Vulnerability Hidden for 23 Years",
+    "url": "https://news.ycombinator.com/item?id=47633855",
+    "time": "2026-04-03T23:46:51Z",
+    "heat": "30",
+    "summary": "",
+    "hn_url": "https://news.ycombinator.com/item?id=47633855"
+  },
+  {
+    "source": "Hacker News",
+    "category": "community",
+    "title": "Kids groups say they didn't know OpenAI was behind their child safety coalition",
+    "url": "https://news.ycombinator.com/item?id=47633715",
+    "time": "2026-04-03T23:32:39Z",
+    "heat": "27",
+    "summary": "",
+    "hn_url": "https://news.ycombinator.com/item?id=47633715"
+  },
+  {
+    "source": "Hacker News",
+    "category": "community",
+    "title": "Extra usage credit for Claude to celebrate usage bundles launch (Pro, Max, Team)",
+    "url": "https://news.ycombinator.com/item?id=47633676",
+    "time": "2026-04-03T23:26:44Z",
+    "heat": "55",
+    "summary": "",
+    "hn_url": "https://news.ycombinator.com/item?id=47633676"
+  },
+  {
+    "source": "Hacker News",
+    "category": "community",
+    "title": "Anthropic to limit Using third-party harnesses with Claude subscriptions",
+    "url": "https://news.ycombinator.com/item?id=47633568",
+    "time": "2026-04-03T23:13:58Z",
+    "heat": "16",
+    "summary": "",
+    "hn_url": "https://news.ycombinator.com/item?id=47633568"
+  },
+  {
+    "source": "Hacker News",
+    "category": "community",
+    "title": "Tell HN: Anthropic no longer allowing Claude Code subscriptions to use OpenClaw",
+    "url": "https://news.ycombinator.com/item?id=47633396",
+    "time": "2026-04-03T22:55:24Z",
+    "heat": "603",
+    "summary": "",
+    "hn_url": "https://news.ycombinator.com/item?id=47633396"
+  },
+  {
+    "source": "Hacker News",
+    "category": "community",
+    "title": "The Subprime AI Crisis Is Here",
+    "url": "https://news.ycombinator.com/item?id=47633150",
+    "time": "2026-04-03T22:25:22Z",
+    "heat": "48",
+    "summary": "",
+    "hn_url": "https://news.ycombinator.com/item?id=47633150"
+  },
+  {
+    "source": "Hacker News",
+    "category": "community",
+    "title": "\"Cognitive surrender\" leads AI users to abandon logical thinking, research finds",
+    "url": "https://news.ycombinator.com/item?id=47632504",
+    "time": "2026-04-03T21:26:13Z",
+    "heat": "73",
+    "summary": "",
+    "hn_url": "https://news.ycombinator.com/item?id=47632504"
+  },
+  {
+    "source": "Hacker News",
+    "category": "community",
+    "title": "The danger of military AI isn't killer robots; it's worse human judgement",
+    "url": "https://news.ycombinator.com/item?id=47632016",
+    "time": "2026-04-03T20:44:56Z",
+    "heat": "22",
+    "summary": "",
+    "hn_url": "https://news.ycombinator.com/item?id=47632016"
+  },
+  {
+    "source": "Hacker News",
+    "category": "community",
+    "title": "Show HN: Ismcpdead.com – Live dashboard tracking MCP adoption and sentiment",
+    "url": "https://news.ycombinator.com/item?id=47631030",
+    "time": "2026-04-03T19:28:06Z",
+    "heat": "28",
+    "summary": "",
+    "hn_url": "https://news.ycombinator.com/item?id=47631030"
+  },
+  {
+    "source": "Hacker News",
+    "category": "community",
+    "title": "Three main saturated fats raise your cholesterol",
+    "url": "https://news.ycombinator.com/item?id=47630582",
+    "time": "2026-04-03T18:54:29Z",
+    "heat": "44",
+    "summary": "",
+    "hn_url": "https://news.ycombinator.com/item?id=47630582"
+  },
+  {
+    "source": "Simon Willison",
+    "category": "tools",
+    "title": "Quoting Kyle Daigle",
+    "url": "https://simonwillison.net/2026/Apr/4/kyle-daigle/#atom-everything",
+    "time": "2026-04-03T18:20:17+00:00",
+    "summary": "[GitHub] platform activity is surging. There were 1 billion commits in 2025. Now, it's 275 million per week, on pace for 14 billion this year if growth remains linear (spoiler: it won't.)\nGitHub Actions has grown from 500M minutes/week in 2023 to 1B minutes/week in 2025, and now 2.1B minutes so far this week.\n— Kyle Daigle, COO, GitHub\nTags: github, github-actions"
+  },
+  {
+    "source": "Hacker News",
+    "category": "community",
+    "title": "Tech Companies Are Trying to Neuter Colorado's Landmark Right-to-Repair Law",
+    "url": "https://news.ycombinator.com/item?id=47629608",
+    "time": "2026-04-03T17:35:56Z",
+    "heat": "44",
+    "summary": "",
+    "hn_url": "https://news.ycombinator.com/item?id=47629608"
+  },
+  {
+    "source": "TechCrunch AI",
+    "category": "industry",
+    "title": "Anthropic is having a moment in the private markets; SpaceX could spoil the party",
+    "url": "https://techcrunch.com/2026/04/03/anthropic-is-having-a-moment-in-the-private-markets-spacex-could-spoil-the-party/",
+    "time": "2026-04-03T17:31:00+00:00",
+    "summary": "Glen Anderson, president of Rainmaker Securities, says the secondary market for private shares has never been more active — with Anthropic the hottest trade around, OpenAI losing ground, and SpaceX's looming IPO poised to reshape the landscape for everyone."
+  },
+  {
+    "source": "Simon Willison",
+    "category": "tools",
+    "title": "Vulnerability Research Is Cooked",
+    "url": "https://simonwillison.net/2026/Apr/3/vulnerability-research-is-cooked/#atom-everything",
+    "time": "2026-04-03T15:59:08+00:00",
+    "summary": "Vulnerability Research Is Cooked\nThomas Ptacek's take on the sudden and enormous impact the latest frontier models are having on the field of vulnerability research.\n\nWithin the next few months, coding agents will drastically alter both the practice and the economics of exploit development. Frontier model improvement won’t be a slow burn, but rather a step function. Substantial amounts of high-impact vulnerability research (maybe even most of it) will happen simply by pointing an agent at a sour"
+  },
+  {
+    "source": "Simon Willison",
+    "category": "tools",
+    "title": "The cognitive impact of coding agents",
+    "url": "https://simonwillison.net/2026/Apr/3/cognitive-cost/#atom-everything",
+    "time": "2026-04-03T15:57:04+00:00",
+    "summary": "A fun thing about recording a podcast with a professional like Lenny Rachitsky is that his team know how to slice the resulting video up into TikTok-sized short form vertical videos. Here's one he shared on Twitter today which ended up attracting over 1.1m views!\n\n\nThat was 48 seconds. Our full conversation lasted 1 hour 40 minutes.\nTags: ai-ethics, coding-agents, agentic-engineering, generative-ai, podcast-appearances, ai, llms, cognitive-debt"
+  },
+  {
+    "source": "Hacker News",
+    "category": "community",
+    "title": "Build your own Dial-up ISP with a Raspberry Pi",
+    "url": "https://news.ycombinator.com/item?id=47627527",
+    "time": "2026-04-03T15:08:16Z",
+    "heat": "144",
+    "summary": "",
+    "hn_url": "https://news.ycombinator.com/item?id=47627527"
+  },
+  {
+    "source": "Latent Space AINews",
+    "category": "industry",
+    "title": "[AINews] Good Friday",
+    "url": "https://www.latent.space/p/ainews-good-friday",
+    "time": "2026-04-03T14:03:37+00:00",
+    "summary": "a quiet day."
+  },
+  {
+    "source": "Simon Willison",
+    "category": "tools",
+    "title": "Quoting Willy Tarreau",
+    "url": "https://simonwillison.net/2026/Apr/3/willy-tarreau/#atom-everything",
+    "time": "2026-04-03T13:48:22+00:00",
+    "summary": "On the kernel security list we've seen a huge bump of reports. We were between 2 and 3 per week maybe two years ago, then reached probably 10 a week over the last year with the only difference being only AI slop, and now since the beginning of the year we're around 5-10 per day depending on the days (fridays and tuesdays seem the worst). Now most of these reports are correct, to the point that we had to bring in more maintainers to help us.\nAnd we're now seeing on a daily basis something that ne"
+  },
+  {
+    "source": "Simon Willison",
+    "category": "tools",
+    "title": "Quoting Daniel Stenberg",
+    "url": "https://simonwillison.net/2026/Apr/3/daniel-stenberg/#atom-everything",
+    "time": "2026-04-03T13:46:07+00:00",
+    "summary": "The challenge with AI in open source security has transitioned from an AI slop tsunami into more of a ... plain security report tsunami. Less slop but lots of reports. Many of them really good.\nI'm spending hours per day on this now. It's intense.\n— Daniel Stenberg, lead developer of cURL\nTags: daniel-stenberg, security, curl, generative-ai, ai, llms, ai-security-research"
+  },
+  {
+    "source": "Hacker News",
+    "category": "community",
+    "title": "Show HN: ctx – an Agentic Development Environment (ADE)",
+    "url": "https://news.ycombinator.com/item?id=47626598",
+    "time": "2026-04-03T13:45:02Z",
+    "heat": "40",
+    "summary": "",
+    "hn_url": "https://news.ycombinator.com/item?id=47626598"
+  },
+  {
+    "source": "Simon Willison",
+    "category": "tools",
+    "title": "Quoting Greg Kroah-Hartman",
+    "url": "https://simonwillison.net/2026/Apr/3/greg-kroah-hartman/#atom-everything",
+    "time": "2026-04-03T13:44:41+00:00",
+    "summary": "Months ago, we were getting what we called 'AI slop,' AI-generated security reports that were obviously wrong or low quality. It was kind of funny. It didn't really worry us.\nSomething happened a month ago, and the world switched. Now we have real reports. All open source projects have real reports that are made with AI, but they're good, and they're real.\n— Greg Kroah-Hartman, Linux kernel maintainer (bio), in conversation with Steven J. Vaughan-Nichols\nTags: security, linux, generative-ai, ai,"
+  },
+  {
+    "source": "Hacker News",
+    "category": "community",
+    "title": "Claude 4.6 Jailbroken",
+    "url": "https://news.ycombinator.com/item?id=47626434",
+    "time": "2026-04-03T13:26:10Z",
+    "heat": "22",
+    "summary": "",
+    "hn_url": "https://news.ycombinator.com/item?id=47626434"
+  },
+  {
+    "source": "TechCrunch AI",
+    "category": "industry",
+    "title": "OpenAI executive shuffle includes new role for COO Brad Lightcap to lead ‘special projects’",
+    "url": "https://techcrunch.com/2026/04/03/openai-executive-shuffle-new-roles-coo-brad-lightcap-fidji-simo-kate-rouch/",
+    "time": "2026-04-03T12:35:34+00:00",
+    "summary": "In addition to Lightcap's new role, OpenAI CMO Kate Rouch will be stepping away from the company to focus on cancer recovery, with a plan to return when her health allows."
+  },
+  {
+    "source": "TechCrunch AI",
+    "category": "industry",
+    "title": "Anthropic buys biotech startup Coefficient Bio in $400M deal: Reports",
+    "url": "https://techcrunch.com/2026/04/03/anthropic-buys-biotech-startup-coefficient-bio-in-400m-deal-reports/",
+    "time": "2026-04-03T12:28:40+00:00",
+    "summary": "Anthropic has purchased the stealth biotech AI startup Coefficient Bio in a $400 million stock deal, according to The Information and Eric Newcomer."
+  },
+  {
+    "source": "TechCrunch AI",
+    "category": "industry",
+    "title": "Anthropic ramps up its political activities with a new PAC",
+    "url": "https://techcrunch.com/2026/04/03/anthropic-ramps-up-its-political-activities-with-a-new-pac/",
+    "time": "2026-04-03T12:22:18+00:00",
+    "summary": "With the midterms right around the corner, the new group is positioned to back candidates who support the AI company's policy agenda."
+  },
+  {
+    "source": "TechCrunch AI",
+    "category": "industry",
+    "title": "AI companies are building huge natural gas plants to power data centers. What could go wrong?",
+    "url": "https://techcrunch.com/2026/04/03/ai-companies-are-building-huge-natural-gas-plants-to-power-data-centers-what-could-go-wrong/",
+    "time": "2026-04-03T11:48:22+00:00",
+    "summary": "Meta, Microsoft, and Google are all betting big on new natural gas power plants to run their AI data centers. They may regret it."
+  },
+  {
+    "source": "Hacker News",
+    "category": "community",
+    "title": "United States Code (federal laws) in Git",
+    "url": "https://news.ycombinator.com/item?id=47625366",
+    "time": "2026-04-03T11:18:10Z",
+    "heat": "42",
+    "summary": "",
+    "hn_url": "https://news.ycombinator.com/item?id=47625366"
+  },
+  {
+    "source": "Product Hunt",
+    "category": "tools",
+    "title": "Sleek Analytics",
+    "url": "https://www.producthunt.com/products/sleek-analytics",
+    "time": "2026-04-03T09:38:32+00:00",
+    "summary": "\n            See who's on your site. Right now.\n          \n\nDiscussion\n            |\n            Link\n"
+  },
+  {
+    "source": "Hacker News",
+    "category": "community",
+    "title": "April 2026 TLDR Setup for Ollama and Gemma 4 26B on a Mac mini",
+    "url": "https://news.ycombinator.com/item?id=47624731",
+    "time": "2026-04-03T09:35:16Z",
+    "heat": "302",
+    "summary": "",
+    "hn_url": "https://news.ycombinator.com/item?id=47624731"
+  },
+  {
+    "source": "Hacker News",
+    "category": "community",
+    "title": "Show HN: Apfel – The free AI already on your Mac",
+    "url": "https://news.ycombinator.com/item?id=47624645",
+    "time": "2026-04-03T09:15:34Z",
+    "heat": "669",
+    "summary": "",
+    "hn_url": "https://news.ycombinator.com/item?id=47624645"
+  },
+  {
+    "source": "Interconnects",
+    "category": "industry",
+    "title": "Gemma 4 and what makes an open model succeed",
+    "url": "https://www.interconnects.ai/p/gemma-4-and-what-makes-an-open-model",
+    "time": "2026-04-03T08:57:36+00:00",
+    "summary": "Hint: it's not benchmark scores."
+  },
+  {
+    "source": "Hacker News",
+    "category": "community",
+    "title": "New Rowhammer attacks give complete control of machines running Nvidia GPUs",
+    "url": "https://news.ycombinator.com/item?id=47624317",
+    "time": "2026-04-03T08:15:12Z",
+    "heat": "128",
+    "summary": "",
+    "hn_url": "https://news.ycombinator.com/item?id=47624317"
+  },
+  {
+    "source": "HuggingFace Papers",
+    "category": "research",
+    "title": "CORAL: Towards Autonomous Multi-Agent Evolution for Open-Ended Discovery",
+    "url": "https://huggingface.co/papers/2604.01658",
+    "time": "2026-04-02T00:00:00.000Z",
+    "summary": "Large language model (LLM)-based evolution is a promising approach for open-ended discovery, where progress requires sustained search and knowledge accumulation. Existing methods still rely heavily on fixed heuristics and hard-coded exploration rules, which limit the autonomy of LLM agents. We present CORAL, the first framework for autonomous multi-agent evolution on open-ended problems. CORAL replaces rigid control with long-running agents that explore, reflect, and collaborate through shared p",
+    "heat": "28",
+    "github_url": "https://arxiv.org/abs/2604.01658"
+  },
+  {
+    "source": "HuggingFace Papers",
+    "category": "research",
+    "title": "Therefore I am. I Think",
+    "url": "https://huggingface.co/papers/2604.01202",
+    "time": "2026-04-02T00:00:00.000Z",
+    "summary": "We consider the question: when a large language reasoning model makes a choice, did it think first and then decide to, or decide first and then think? In this paper, we present evidence that detectable, early-encoded decisions shape chain-of-thought in reasoning models. Specifically, we show that a simple linear probe successfully decodes tool-calling decisions from pre-generation activations with very high confidence, and in some cases, even before a single reasoning token is produced. Activati",
+    "heat": "16",
+    "github_url": "https://arxiv.org/abs/2604.01202"
+  },
+  {
+    "source": "HuggingFace Papers",
+    "category": "research",
+    "title": "NearID: Identity Representation Learning via Near-identity Distractors",
+    "url": "https://huggingface.co/papers/2604.01973",
+    "time": "2026-04-02T00:00:00.000Z",
+    "summary": "When evaluating identity-focused tasks such as personalized generation and image editing, existing vision encoders entangle object identity with background context, leading to unreliable representations and metrics. We introduce the first principled framework to address this vulnerability using Near-identity (NearID) distractors, where semantically similar but distinct instances are placed on the exact same background as a reference image, eliminating contextual shortcuts and isolating identity ",
+    "heat": "22",
+    "github_url": "https://arxiv.org/abs/2604.01973"
+  },
+  {
+    "source": "HuggingFace Papers",
+    "category": "research",
+    "title": "ActionParty: Multi-Subject Action Binding in Generative Video Games",
+    "url": "https://huggingface.co/papers/2604.02330",
+    "time": "2026-04-02T00:00:00.000Z",
+    "summary": "Recent advances in video diffusion have enabled the development of \"world models\" capable of simulating interactive environments. However, these models are largely restricted to single-agent settings, failing to control multiple agents simultaneously in a scene. In this work, we tackle a fundamental issue of action binding in existing video diffusion models, which struggle to associate specific actions with their corresponding subjects. For this purpose, we propose ActionParty, an action control",
+    "heat": "2",
+    "github_url": "https://arxiv.org/abs/2604.02330"
+  },
+  {
+    "source": "HuggingFace Papers",
+    "category": "research",
+    "title": "Steerable Visual Representations",
+    "url": "https://huggingface.co/papers/2604.02327",
+    "time": "2026-04-02T00:00:00.000Z",
+    "summary": "Pretrained Vision Transformers (ViTs) such as DINOv2 and MAE provide generic image features that can be applied to a variety of downstream tasks such as retrieval, classification, and segmentation. However, such representations tend to focus on the most salient visual cues in the image, with no way to direct them toward less prominent concepts of interest. In contrast, Multimodal LLMs can be guided with textual prompts, but the resulting representations tend to be language-centric and lose their",
+    "heat": "33",
+    "github_url": "https://arxiv.org/abs/2604.02327"
+  },
+  {
+    "source": "HuggingFace Papers",
+    "category": "research",
+    "title": "Tex3D: Objects as Attack Surfaces via Adversarial 3D Textures for Vision-Language-Action Models",
+    "url": "https://huggingface.co/papers/2604.01618",
+    "time": "2026-04-02T00:00:00.000Z",
+    "summary": "Vision-language-action (VLA) models have shown strong performance in robotic manipulation, yet their robustness to physically realizable adversarial attacks remains underexplored. Existing studies reveal vulnerabilities through language perturbations and 2D visual attacks, but these attack surfaces are either less representative of real deployment or limited in physical realism. In contrast, adversarial 3D textures pose a more physically plausible and damaging threat, as they are naturally attac",
+    "heat": "7",
+    "github_url": "https://arxiv.org/abs/2604.01618"
+  },
+  {
+    "source": "HuggingFace Papers",
+    "category": "research",
+    "title": "Brainstacks: Cross-Domain Cognitive Capabilities via Frozen MoE-LoRA Stacks for Continual LLM Learning",
+    "url": "https://huggingface.co/papers/2604.01152",
+    "time": "2026-04-01T17:08:25.000Z",
+    "summary": "We present Brainstacks, a modular architecture for continual multi-domain fine-tuning of large language models that packages domain expertise as frozen adapter stacks composing additively on a shared frozen base at inference. Five interlocking components: (1) MoE-LoRA with Shazeer-style noisy top-2 routing across all seven transformer projections under QLoRA 4-bit quantization with rsLoRA scaling; (2) an inner loop performing residual boosting by freezing trained stacks and adding new ones; (3) ",
+    "heat": "",
+    "github_url": "https://arxiv.org/abs/2604.01152"
+  },
+  {
+    "source": "HuggingFace Papers",
+    "category": "research",
+    "title": "Signals: Trajectory Sampling and Triage for Agentic Interactions",
+    "url": "https://huggingface.co/papers/2604.00356",
+    "time": "2026-04-01T00:00:00.000Z",
+    "summary": "Agentic applications based on large language models increasingly rely on multi-step interaction loops involving planning, action execution, and environment feedback. While such systems are now deployed at scale, improving them post-deployment remains challenging. Agent trajectories are voluminous and non-deterministic, and reviewing each one, whether through human review or auxiliary LLMs, is slow and cost-prohibitive. We propose a lightweight, signal-based framework for triaging agentic interac",
+    "heat": "1",
+    "github_url": "https://arxiv.org/abs/2604.00356"
+  },
+  {
+    "source": "HuggingFace Papers",
+    "category": "research",
+    "title": "Forecasting Supply Chain Disruptions with Foresight Learning",
+    "url": "https://huggingface.co/papers/2604.01298",
+    "time": "2026-04-01T00:00:00.000Z",
+    "summary": "Anticipating supply chain disruptions before they materialize is a core challenge for firms and policymakers alike. A key difficulty is learning to reason reliably about infrequent, high-impact events from noisy and unstructured inputs - a setting where general-purpose models struggle without task-specific adaptation. We introduce an end-to-end framework that trains LLMs to produce calibrated probabilistic forecasts using realized disruption outcomes as supervision. The resulting model substanti",
+    "heat": "4",
+    "github_url": "https://arxiv.org/abs/2604.01298"
+  },
+  {
+    "source": "HuggingFace Papers",
+    "category": "research",
+    "title": "Efficient and Principled Scientific Discovery through Bayesian Optimization: A Tutorial",
+    "url": "https://huggingface.co/papers/2604.01328",
+    "time": "2026-04-01T00:00:00.000Z",
+    "summary": "Traditional scientific discovery relies on an iterative hypothesise-experiment-refine cycle that has driven progress for centuries, but its intuitive, ad-hoc implementation often wastes resources, yields inefficient designs, and misses critical insights. This tutorial presents Bayesian Optimisation (BO), a principled probability-driven framework that formalises and automates this core scientific cycle. BO uses surrogate models (e.g., Gaussian processes) to model empirical observations as evolvin",
+    "heat": "4",
+    "github_url": "https://arxiv.org/abs/2604.01328"
+  },
+  {
+    "source": "HuggingFace Papers",
+    "category": "research",
+    "title": "Video Models Reason Early: Exploiting Plan Commitment for Maze Solving",
+    "url": "https://huggingface.co/papers/2603.30043",
+    "time": "2026-03-31T00:00:00.000Z",
+    "summary": "Video diffusion models exhibit emergent reasoning capabilities like solving mazes and puzzles, yet little is understood about how they reason during generation. We take a first step towards understanding this and study the internal planning dynamics of video models using 2D maze solving as a controlled testbed. Our investigations reveal two findings. Our first finding is early plan commitment: video diffusion models commit to a high-level motion plan within the first few denoising steps, after w",
+    "heat": "6",
+    "github_url": "https://arxiv.org/abs/2603.30043"
+  },
+  {
+    "source": "HuggingFace Papers",
+    "category": "research",
+    "title": "AIBench: Evaluating Visual-Logical Consistency in Academic Illustration Generation",
+    "url": "https://huggingface.co/papers/2603.28068",
+    "time": "2026-03-31T00:00:00.000Z",
+    "summary": "Although image generation has boosted various applications via its rapid evolution, whether the state-of-the-art models are able to produce ready-to-use academic illustrations for papers is still largely unexplored. Directly comparing or evaluating the illustration with VLM is native but requires oracle multi-modal understanding ability, which is unreliable for long and complex texts and illustrations. To address this, we propose AIBench, the first benchmark using VQA for evaluating logic correc",
+    "heat": "8",
+    "github_url": "https://arxiv.org/abs/2603.28068"
+  },
+  {
+    "source": "HuggingFace Papers",
+    "category": "research",
+    "title": "ASI-Evolve: AI Accelerates AI",
+    "url": "https://huggingface.co/papers/2603.29640",
+    "time": "2026-03-31T00:00:00.000Z",
+    "summary": "Can AI accelerate the development of AI itself? While recent agentic systems have shown strong performance on well-scoped tasks with rapid feedback, it remains unclear whether they can tackle the costly, long-horizon, and weakly supervised research loops that drive real AI progress. We present ASI-Evolve, an agentic framework for AI-for-AI research that closes this loop through a learn-design-experiment-analyze cycle. ASI-Evolve augments standard evolutionary agents with two key components: a co",
+    "heat": "11",
+    "github_url": "https://arxiv.org/abs/2603.29640"
+  },
+  {
+    "source": "HuggingFace Papers",
+    "category": "research",
+    "title": "MDPBench: A Benchmark for Multilingual Document Parsing in Real-World Scenarios",
+    "url": "https://huggingface.co/papers/2603.28130",
+    "time": "2026-03-30T07:47:46.000Z",
+    "summary": "We introduce Multilingual Document Parsing Benchmark, the first benchmark for multilingual digital and photographed document parsing. Document parsing has made remarkable strides, yet almost exclusively on clean, digital, well-formatted pages in a handful of dominant languages. No systematic benchmark exists to evaluate how models perform on digital and photographed documents across diverse scripts and low-resource languages. MDPBench comprises 3,400 document images spanning 17 languages, divers",
+    "heat": "5",
+    "github_url": "https://arxiv.org/abs/2603.28130"
+  },
+  {
+    "source": "HuggingFace Papers",
+    "category": "research",
+    "title": "An Empirical Recipe for Universal Phone Recognition",
+    "url": "https://huggingface.co/papers/2603.29042",
+    "time": "2026-03-30T00:00:00.000Z",
+    "summary": "Phone recognition (PR) is a key enabler of multilingual and low-resource speech processing tasks, yet robust performance remains elusive. Highly performant English-focused models do not generalize across languages, while multilingual models underutilize pretrained representations. It also remains unclear how data scale, architecture, and training objective contribute to multilingual PR. We present PhoneticXEUS -- trained on large-scale multilingual data and achieving state-of-the-art performance",
+    "heat": "",
+    "github_url": "https://arxiv.org/abs/2603.29042"
+  },
+  {
+    "source": "HuggingFace Papers",
+    "category": "research",
+    "title": "MultiGen: Level-Design for Editable Multiplayer Worlds in Diffusion Game Engines",
+    "url": "https://huggingface.co/papers/2603.06679",
+    "time": "2026-03-30T00:00:00.000Z",
+    "summary": "Video world models have shown immense promise for interactive simulation and entertainment, but current systems still struggle with two important aspects of interactivity: user control over the environment for reproducible, editable experiences, and shared inference where players hold influence over a common world. To address these limitations, we introduce an explicit external memory into the system, a persistent state operating independent of the model's context window, that is continually upd",
+    "heat": "",
+    "github_url": "https://arxiv.org/abs/2603.06679"
+  },
+  {
+    "source": "HuggingFace Papers",
+    "category": "research",
+    "title": "Memory-Augmented Vision-Language Agents for Persistent and Semantically Consistent Object Captioning",
+    "url": "https://huggingface.co/papers/2603.24257",
+    "time": "2026-03-30T00:00:00.000Z",
+    "summary": "Vision-Language Models (VLMs) often yield inconsistent descriptions of the same object across viewpoints, hindering the ability of embodied agents to construct consistent semantic representations over time. Previous methods resolved inconsistencies using offline multi-view aggregation or multi-stage pipelines that decouple exploration, data association, and caption learning, with limited capacity to reason over previously observed objects. In this paper, we introduce a unified, memory-augmented ",
+    "heat": "2",
+    "github_url": "https://arxiv.org/abs/2603.24257"
+  },
+  {
+    "source": "HuggingFace Papers",
+    "category": "research",
+    "title": "LOME: Learning Human-Object Manipulation with Action-Conditioned Egocentric World Model",
+    "url": "https://huggingface.co/papers/2603.27449",
+    "time": "2026-03-28T00:00:00.000Z",
+    "summary": "Learning human-object manipulation presents significant challenges due to its fine-grained and contact-rich nature of the motions involved. Traditional physics-based animation requires extensive modeling and manual setup, and more importantly, it neither generalizes well across diverse object morphologies nor scales effectively to real-world environment. To address these limitations, we introduce LOME, an egocentric world model that can generate realistic human-object interactions as videos cond",
+    "heat": "",
+    "github_url": "https://arxiv.org/abs/2603.27449"
+  },
+  {
+    "source": "HuggingFace Papers",
+    "category": "research",
+    "title": "Ask or Assume? Uncertainty-Aware Clarification-Seeking in Coding Agents",
+    "url": "https://huggingface.co/papers/2603.26233",
+    "time": "2026-03-27T09:56:26.000Z",
+    "summary": "As Large Language Model (LLM) agents are increasingly deployed in open-ended domains like software engineering, they frequently encounter underspecified instructions that lack crucial context. While human developers naturally resolve underspecification by asking clarifying questions, current agents are largely optimized for autonomous execution. In this work, we systematically evaluate the clarification-seeking abilities of LLM agents on an underspecified variant of SWE-bench Verified. We propos",
+    "heat": "2",
+    "github_url": "https://arxiv.org/abs/2603.26233"
+  },
+  {
+    "source": "HuggingFace Papers",
+    "category": "research",
+    "title": "Working Notes on Late Interaction Dynamics: Analyzing Targeted Behaviors of Late Interaction Models",
+    "url": "https://huggingface.co/papers/2603.26259",
+    "time": "2026-03-27T00:00:00.000Z",
+    "summary": "While Late Interaction models exhibit strong retrieval performance, many of their underlying dynamics remain understudied, potentially hiding performance bottlenecks. In this work, we focus on two topics in Late Interaction retrieval: a length bias that arises when using multi-vector scoring, and the similarity distribution beyond the best scores pooled by the MaxSim operator. We analyze these behaviors for state-of-the-art models on the NanoBEIR benchmark. Results show that while the theoretica",
+    "heat": "3",
+    "github_url": "https://arxiv.org/abs/2603.26259"
+  }
+]
