@@ -1,0 +1,11 @@
+HTML 已生成: reports\2026-04-05\ai-daily.html
+已同步 → public\index.html
+  [1] 📰 今日头条 → ai-daily-01-今日头条.png
+  [2] 🔥 重大发布 → ai-daily-02-重大发布.png
+  [3] 🔬 研究论文 → ai-daily-03-研究论文.png
+  [4] 💰 行业商业 → ai-daily-04-行业商业.png
+  [5] 🛠️ 工具应用 → ai-daily-05-工具应用.png
+  [6] 🌍 政策伦理 → ai-daily-06-政策伦理.png
+  [7] 🔥 社区热议 → ai-daily-07-社区热议.png
+  [8] 📊 趋势洞察 → ai-daily-08-趋势洞察.png
+共生成 8 张分节图片
