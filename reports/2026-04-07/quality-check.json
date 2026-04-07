@@ -1,0 +1,20 @@
+{
+  "date": "2026-04-07",
+  "status": "passed_with_warnings",
+  "errors": 0,
+  "warnings": 1,
+  "warning_details": ["未找到标准链接格式: [text](url)（历史性非关键警告）"],
+  "sections": {
+    "今日头条": 5,
+    "重大发布": 6,
+    "研究论文": 10,
+    "行业商业": 5,
+    "工具应用": 7,
+    "政策伦理": 4,
+    "社区热议": 10
+  },
+  "total_items": 47,
+  "total_links": 0,
+  "date_consistent": true,
+  "has_stats_line": true
+}

@@ -1,0 +1,594 @@
+[
+  {
+    "source": "GitHub Trending",
+    "category": "tools",
+    "title": "ggml-org/llama.cpp",
+    "url": "https://github.com/ggml-org/llama.cpp",
+    "time": "2026-04-07T00:01:02.290537+00:00",
+    "summary": "LLM inference in C/C++",
+    "readme": "# llama.cpp\n\n![llama](https://user-images.githubusercontent.com/1991296/230134379-7181e485-c521-4d23-a0d6-f7b3b61ba524.png)\n\n[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)\n[![Release](https://img.shields.io/github/v/release/ggml-org/llama.cpp)](https://github.com/ggml-org/llama.cpp/releases)\n[![Server](https://github.com/ggml-org/llama.cpp/actions/workflows/server.yml/badge.svg)](https://github.com/ggml-org/llama.cpp/actions/workflows/se",
+    "github_url": "https://github.com/ggml-org/llama.cpp",
+    "lang": "C++",
+    "stars": "102018"
+  },
+  {
+    "source": "GitHub Trending",
+    "category": "tools",
+    "title": "ollama/ollama",
+    "url": "https://github.com/ollama/ollama",
+    "time": "2026-04-07T00:01:01.427946+00:00",
+    "summary": "Get up and running with Kimi-K2.5, GLM-5, MiniMax, DeepSeek, gpt-oss, Qwen, Gemma and other models.",
+    "readme": "<p align=\"center\">\n  <a href=\"https://ollama.com\">\n    <img src=\"https://github.com/ollama/ollama/assets/3325447/0d0b44e2-8f4a-4e99-9b52-a5c1c741c8f7\" alt=\"ollama\" width=\"200\"/>\n  </a>\n</p>\n\n# Ollama\n\nStart building with open models.\n\n## Download\n\n### macOS\n\n```shell\ncurl -fsSL https://ollama.com/install.sh | sh\n```\n\nor [download manually](https://ollama.com/download/Ollama.dmg)\n\n### Windows\n\n```shell\nirm https://ollama.com/install.ps1 | iex\n```\n\nor [download manually](https://ollama.com/downloa",
+    "github_url": "https://github.com/ollama/ollama",
+    "lang": "Go",
+    "stars": "167669"
+  },
+  {
+    "source": "GitHub Trending",
+    "category": "tools",
+    "title": "kepano/obsidian-skills",
+    "url": "https://github.com/kepano/obsidian-skills",
+    "time": "2026-04-07T00:01:01.276101+00:00",
+    "summary": "Agent skills for Obsidian. Teach your agent to use Markdown, Bases, JSON Canvas, and use the CLI.",
+    "readme": "Agent Skills for use with Obsidian.\n\nThese skills follow the [Agent Skills specification](https://agentskills.io/specification) so they can be used by any skills-compatible agent, including Claude Code and Codex CLI.\n\n## Installation\n\n### Marketplace\n\n```\n/plugin marketplace add kepano/obsidian-skills\n/plugin install obsidian@obsidian-skills\n```\n\n### npx skills\n\n```\nnpx skills add git@github.com:kepano/obsidian-skills.git\n```\n\n### Manually\n\n#### Claude Code\n\nAdd the contents of this repo to a `/",
+    "github_url": "https://github.com/kepano/obsidian-skills",
+    "lang": "",
+    "stars": "20493"
+  },
+  {
+    "source": "GitHub Trending",
+    "category": "tools",
+    "title": "NousResearch/hermes-agent",
+    "url": "https://github.com/NousResearch/hermes-agent",
+    "time": "2026-04-07T00:01:00.718211+00:00",
+    "summary": "The agent that grows with you",
+    "readme": "<p align=\"center\">\n  <img src=\"assets/banner.png\" alt=\"Hermes Agent\" width=\"100%\">\n</p>\n\n# Hermes Agent ☤\n\n<p align=\"center\">\n  <a href=\"https://hermes-agent.nousresearch.com/docs/\"><img src=\"https://img.shields.io/badge/Docs-hermes--agent.nousresearch.com-FFD700?style=for-the-badge\" alt=\"Documentation\"></a>\n  <a href=\"https://discord.gg/NousResearch\"><img src=\"https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white\" alt=\"Discord\"></a>\n  <a href=\"https://gith",
+    "github_url": "https://github.com/NousResearch/hermes-agent",
+    "lang": "Python",
+    "stars": "28031"
+  },
+  {
+    "source": "GitHub Trending",
+    "category": "tools",
+    "title": "abhigyanpatwari/GitNexus",
+    "url": "https://github.com/abhigyanpatwari/GitNexus",
+    "time": "2026-04-07T00:01:00.618076+00:00",
+    "summary": "GitNexus: The Zero-Server Code Intelligence Engine - GitNexus is a client-side knowledge graph creator that runs entirely in your browser. Drop in a GitHub repo or ZIP file, and get an interactive knowledge graph wit a built in Graph RAG Agent. Perfect for code exploration",
+    "readme": "# GitNexus\n⚠️ Important Notice:** GitNexus has NO official cryptocurrency, token, or coin. Any token/coin using the GitNexus name on Pump.fun or any other platform is **not affiliated with, endorsed by, or created by** this project or its maintainers. Do not purchase any cryptocurrency claiming association with GitNexus.\n\n<div align=\"center\">\n\n  <a href=\"https://trendshift.io/repositories/19809\" target=\"_blank\">\n    <img src=\"https://trendshift.io/api/badge/repositories/19809\" alt=\"abhigyanpatwa",
+    "github_url": "https://github.com/abhigyanpatwari/GitNexus",
+    "lang": "TypeScript",
+    "stars": "23407"
+  },
+  {
+    "source": "GitHub Trending",
+    "category": "tools",
+    "title": "block/goose",
+    "url": "https://github.com/block/goose",
+    "time": "2026-04-07T00:01:00.613305+00:00",
+    "summary": "an open source, extensible AI agent that goes beyond code suggestions - install, execute, edit, and test with any LLM",
+    "readme": "<div align=\"center\">\n\n# goose\n\n_a local, extensible, open source AI agent that automates engineering tasks_\n\n<p align=\"center\">\n  <a href=\"https://opensource.org/licenses/Apache-2.0\"\n    ><img src=\"https://img.shields.io/badge/License-Apache_2.0-blue.svg\"></a>\n  <a href=\"https://discord.gg/goose-oss\"\n    ><img src=\"https://img.shields.io/discord/1287729918100246654?logo=discord&logoColor=white&label=Join+Us&color=blueviolet\" alt=\"Discord\"></a>\n  <a href=\"https://github.com/block/goose/actions/wo",
+    "github_url": "https://github.com/block/goose",
+    "lang": "Rust",
+    "stars": "38095"
+  },
+  {
+    "source": "GitHub Trending",
+    "category": "tools",
+    "title": "KeygraphHQ/shannon",
+    "url": "https://github.com/KeygraphHQ/shannon",
+    "time": "2026-04-07T00:01:00.493792+00:00",
+    "summary": "Shannon Lite is an autonomous, white-box AI pentester for web applications and APIs. It analyzes your source code, identifies attack vectors, and executes real exploits to prove vulnerabilities before they reach production.",
+    "readme": ">[!NOTE]\n> **[📢 New: Shannon is now available via `npx @keygraph/shannon`. →](https://github.com/KeygraphHQ/shannon/discussions/249)**\n\n<div align=\"center\">\n\n<img src=\"./assets/github-banner.png\" alt=\"Shannon — AI Pentester for Web Applications and APIs\" width=\"100%\">\n\n# Shannon — AI Pentester by Keygraph\n\n<a href=\"https://trendshift.io/repositories/15604\" target=\"_blank\"><img src=\"https://trendshift.io/api/badge/repositories/15604\" alt=\"KeygraphHQ%2Fshannon | Trendshift\" style=\"width: 250px; he",
+    "github_url": "https://github.com/KeygraphHQ/shannon",
+    "lang": "TypeScript",
+    "stars": "36483"
+  },
+  {
+    "source": "GitHub Trending",
+    "category": "tools",
+    "title": "google-ai-edge/gallery",
+    "url": "https://github.com/google-ai-edge/gallery",
+    "time": "2026-04-07T00:01:00.489755+00:00",
+    "summary": "A gallery that showcases on-device ML/GenAI use cases and allows people to try and use models locally.",
+    "readme": "# Google AI Edge Gallery ✨\n\n[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)\n[![GitHub release (latest by date)](https://img.shields.io/github/v/release/google-ai-edge/gallery)](https://github.com/google-ai-edge/gallery/releases)\n\n**Explore, Experience, and Evaluate the Future of On-Device Generative AI with Google AI Edge.**\n\nAI Edge Gallery is the premier destination for running the world's most powerful open-source Large Language Models (LLMs) on your mobile d",
+    "github_url": "https://github.com/google-ai-edge/gallery",
+    "lang": "Kotlin",
+    "stars": "17842"
+  },
+  {
+    "source": "Hacker News",
+    "category": "community",
+    "title": "Anthropic expands partnership w Google and Broadcom for multiple GW of compute",
+    "url": "https://news.ycombinator.com/item?id=47667717",
+    "time": "2026-04-06T21:52:08Z",
+    "heat": "31",
+    "summary": "",
+    "hn_url": "https://news.ycombinator.com/item?id=47667717"
+  },
+  {
+    "source": "Hacker News",
+    "category": "community",
+    "title": "Show HN: Hippo, biologically inspired memory for AI agents",
+    "url": "https://news.ycombinator.com/item?id=47667672",
+    "time": "2026-04-06T21:49:34Z",
+    "heat": "30",
+    "summary": "",
+    "hn_url": "https://news.ycombinator.com/item?id=47667672"
+  },
+  {
+    "source": "Hacker News",
+    "category": "community",
+    "title": "Wikipedia's AI agent row likely just the beginning of the bot-ocalypse",
+    "url": "https://news.ycombinator.com/item?id=47665902",
+    "time": "2026-04-06T19:41:39Z",
+    "heat": "46",
+    "summary": "",
+    "hn_url": "https://news.ycombinator.com/item?id=47665902"
+  },
+  {
+    "source": "Hacker News",
+    "category": "community",
+    "title": "Agent Reading Test",
+    "url": "https://news.ycombinator.com/item?id=47665245",
+    "time": "2026-04-06T18:56:57Z",
+    "heat": "41",
+    "summary": "",
+    "hn_url": "https://news.ycombinator.com/item?id=47665245"
+  },
+  {
+    "source": "Hacker News",
+    "category": "community",
+    "title": "Got kicked out of uni and had the cops called for a social media website I made",
+    "url": "https://news.ycombinator.com/item?id=47664647",
+    "time": "2026-04-06T18:10:41Z",
+    "heat": "60",
+    "summary": "",
+    "hn_url": "https://news.ycombinator.com/item?id=47664647"
+  },
+  {
+    "source": "Hacker News",
+    "category": "community",
+    "title": "Launch HN: Freestyle – Sandboxes for Coding Agents",
+    "url": "https://news.ycombinator.com/item?id=47663147",
+    "time": "2026-04-06T16:32:11Z",
+    "heat": "192",
+    "summary": "",
+    "hn_url": "https://news.ycombinator.com/item?id=47663147"
+  },
+  {
+    "source": "Hacker News",
+    "category": "community",
+    "title": "81yo Dodgers fan can no longer get tickets because he doesn't have a smartphone",
+    "url": "https://news.ycombinator.com/item?id=47662857",
+    "time": "2026-04-06T16:15:41Z",
+    "heat": "326",
+    "summary": "",
+    "hn_url": "https://news.ycombinator.com/item?id=47662857"
+  },
+  {
+    "source": "Hacker News",
+    "category": "community",
+    "title": "AI singer now occupies eleven spots on iTunes singles chart",
+    "url": "https://news.ycombinator.com/item?id=47662596",
+    "time": "2026-04-06T15:57:07Z",
+    "heat": "77",
+    "summary": "",
+    "hn_url": "https://news.ycombinator.com/item?id=47662596"
+  },
+  {
+    "source": "Hacker News",
+    "category": "community",
+    "title": "Anthropic is burning more and more dev goodwill",
+    "url": "https://news.ycombinator.com/item?id=47662350",
+    "time": "2026-04-06T15:40:49Z",
+    "heat": "49",
+    "summary": "",
+    "hn_url": "https://news.ycombinator.com/item?id=47662350"
+  },
+  {
+    "source": "Hacker News",
+    "category": "community",
+    "title": "Claude Code Down",
+    "url": "https://news.ycombinator.com/item?id=47662112",
+    "time": "2026-04-06T15:22:41Z",
+    "heat": "79",
+    "summary": "",
+    "hn_url": "https://news.ycombinator.com/item?id=47662112"
+  },
+  {
+    "source": "Hacker News",
+    "category": "community",
+    "title": "When Virality Is the Message: The New Age of AI Propaganda",
+    "url": "https://news.ycombinator.com/item?id=47661231",
+    "time": "2026-04-06T14:16:35Z",
+    "heat": "58",
+    "summary": "",
+    "hn_url": "https://news.ycombinator.com/item?id=47661231"
+  },
+  {
+    "source": "TechCrunch AI",
+    "category": "industry",
+    "title": "OpenAI alums have been quietly investing from a new, potentially $100M fund",
+    "url": "https://techcrunch.com/2026/04/06/openai-alums-have-been-quietly-investing-from-a-new-potentially-100m-fund/",
+    "time": "2026-04-06T13:54:26+00:00",
+    "summary": "Zero Shot, a new venture capital fund with deep ties to OpenAI, is aiming to raise $100 million for its first fund. It has already written some checks."
+  },
+  {
+    "source": "Hacker News",
+    "category": "community",
+    "title": "German police name alleged leaders of GandCrab and REvil ransomware groups",
+    "url": "https://news.ycombinator.com/item?id=47660954",
+    "time": "2026-04-06T13:52:37Z",
+    "heat": "251",
+    "summary": "",
+    "hn_url": "https://news.ycombinator.com/item?id=47660954"
+  },
+  {
+    "source": "Hacker News",
+    "category": "community",
+    "title": "Issue: Claude Code is unusable for complex engineering tasks with Feb updates",
+    "url": "https://news.ycombinator.com/item?id=47660925",
+    "time": "2026-04-06T13:50:35Z",
+    "heat": "709",
+    "summary": "",
+    "hn_url": "https://news.ycombinator.com/item?id=47660925"
+  },
+  {
+    "source": "Hacker News",
+    "category": "community",
+    "title": "Ask HN: How do systems (or people) detect when a text is written by an LLM",
+    "url": "https://news.ycombinator.com/item?id=47659807",
+    "time": "2026-04-06T12:03:00Z",
+    "heat": "41",
+    "summary": "",
+    "hn_url": "https://news.ycombinator.com/item?id=47659807"
+  },
+  {
+    "source": "TechCrunch AI",
+    "category": "industry",
+    "title": "Google quietly launched an AI dictation app that works offline",
+    "url": "https://techcrunch.com/2026/04/06/google-quietly-releases-an-offline-first-ai-dictation-app-on-ios/",
+    "time": "2026-04-06T10:54:33+00:00",
+    "summary": "Google's new offline-first dictation app uses Gemma AI models to take on the apps like Wispr Flow."
+  },
+  {
+    "source": "TechCrunch AI",
+    "category": "industry",
+    "title": "Iran threatens ‘Stargate’ AI data centers",
+    "url": "https://techcrunch.com/2026/04/06/iran-threatens-stargate-ai-data-centers/",
+    "time": "2026-04-06T10:06:28+00:00",
+    "summary": "Iran said it will target U.S.-linked data centers with new missile strikes, as the war between the U.S. and Iran escalates."
+  },
+  {
+    "source": "Hacker News",
+    "category": "community",
+    "title": "How Paris swapped cars for bikes – and transformed its streets",
+    "url": "https://news.ycombinator.com/item?id=47658772",
+    "time": "2026-04-06T09:44:03Z",
+    "heat": "43",
+    "summary": "",
+    "hn_url": "https://news.ycombinator.com/item?id=47658772"
+  },
+  {
+    "source": "Hacker News",
+    "category": "community",
+    "title": "NIMBY Rails",
+    "url": "https://news.ycombinator.com/item?id=47658388",
+    "time": "2026-04-06T08:48:42Z",
+    "heat": "38",
+    "summary": "",
+    "hn_url": "https://news.ycombinator.com/item?id=47658388"
+  },
+  {
+    "source": "MIT Technology Review AI",
+    "category": "research",
+    "title": "The one piece of data that could actually shed light on your job and AI",
+    "url": "https://www.technologyreview.com/2026/04/06/1135187/the-one-piece-of-data-that-could-actually-shed-light-on-your-job-and-ai/",
+    "time": "2026-04-06T08:33:35+00:00",
+    "summary": "This story originally appeared in The Algorithm, our weekly newsletter on AI. To get stories like this in your inbox first, sign up here. Within Silicon Valley’s orbit, an AI-fueled jobs apocalypse is spoken about as a given. The mood is so grim that a societal impacts researcher at Anthropic, responding Wednesday to a call for…"
+  },
+  {
+    "source": "Gary Marcus",
+    "category": "policy",
+    "title": "Sam Altman, unconstrained by the truth",
+    "url": "https://garymarcus.substack.com/p/sam-altman-unconstrained-by-the-truth",
+    "time": "2026-04-06T08:06:31+00:00",
+    "summary": "New reporting from the New Yorker vindicates concerns that were first raised here"
+  },
+  {
+    "source": "TechCrunch AI",
+    "category": "industry",
+    "title": "OpenAI’s vision for the AI economy: public wealth funds, robot taxes, and a four-day workweek",
+    "url": "https://techcrunch.com/2026/04/06/openais-vision-for-the-ai-economy-public-wealth-funds-robot-taxes-and-a-four-day-work-week/",
+    "time": "2026-04-06T07:55:55+00:00",
+    "summary": "OpenAI proposes taxes on AI profits, public wealth funds, and expanded safety nets to address job loss and inequality, blending redistribution with capitalism as policymakers debate AI’s economic impact."
+  },
+  {
+    "source": "TechCrunch AI",
+    "category": "industry",
+    "title": "How to use the new ChatGPT app integrations, including DoorDash, Spotify, Uber, and others",
+    "url": "https://techcrunch.com/2026/04/06/how-to-use-chatgpt-apps-doordash-spotify-uber/",
+    "time": "2026-04-06T06:11:42+00:00",
+    "summary": "Learn how to use Spotify, Canva, Figma, Expedia, and other apps directly in ChatGPT."
+  },
+  {
+    "source": "TechCrunch AI",
+    "category": "industry",
+    "title": "Spain’s Xoople raises $130 million Series B to map the Earth for AI",
+    "url": "https://techcrunch.com/2026/04/06/spains-xoople-raises-130-million-series-b-to-map-the-earth-for-ai/",
+    "time": "2026-04-06T05:00:00+00:00",
+    "summary": "The company is also announcing a deal with L3Harris to build the sensors for Xoople's spacecraft."
+  },
+  {
+    "source": "ChinAI",
+    "category": "policy",
+    "title": "ChinAI #353: Year 8 of ChinAI",
+    "url": "https://chinai.substack.com/p/chinai-353-year-8-of-chinai",
+    "time": "2026-04-06T03:27:17+00:00",
+    "summary": "Eight things I learned about China's AI ecosystem over the past year of newsletter notes"
+  },
+  {
+    "source": "MIT Technology Review AI",
+    "category": "research",
+    "title": "AI is changing how small online sellers decide what to make",
+    "url": "https://www.technologyreview.com/2026/04/06/1135118/ai-online-seller-alibaba-accio/",
+    "time": "2026-04-06T03:00:00+00:00",
+    "summary": "For years Mike McClary sold the Guardian LTE Flashlight, a heavy-duty black model, online through his small outdoor brand. The product, designed for brightness and durability, became one of his most popular items ever. Even after he stopped offering it around 2017, customers kept sending him emails asking where they could buy it.  When McClary…"
+  },
+  {
+    "source": "Hacker News",
+    "category": "community",
+    "title": "Does coding with LLMs mean more microservices?",
+    "url": "https://news.ycombinator.com/item?id=47656335",
+    "time": "2026-04-06T02:33:21Z",
+    "heat": "58",
+    "summary": "",
+    "hn_url": "https://news.ycombinator.com/item?id=47656335"
+  },
+  {
+    "source": "Hacker News",
+    "category": "community",
+    "title": "New Copilot for Windows 11 includes a full Microsoft Edge package, uses more RAM",
+    "url": "https://news.ycombinator.com/item?id=47656146",
+    "time": "2026-04-06T02:03:11Z",
+    "heat": "36",
+    "summary": "",
+    "hn_url": "https://news.ycombinator.com/item?id=47656146"
+  },
+  {
+    "source": "OpenAI Blog",
+    "category": "announcements",
+    "title": "Announcing the OpenAI Safety Fellowship",
+    "url": "https://openai.com/index/introducing-openai-safety-fellowship",
+    "time": "2026-04-06T02:00:00+00:00",
+    "summary": "A pilot program to support independent safety and alignment research and develop the next generation of talent"
+  },
+  {
+    "source": "AI News",
+    "category": "announcements",
+    "title": "As AI agents take on more tasks, governance becomes a priority",
+    "url": "https://www.artificialintelligence-news.com/news/as-ai-agents-take-on-more-tasks-governance-becomes-a-priority/",
+    "time": "2026-04-06T02:00:00+00:00",
+    "summary": "AI systems are starting to move beyond simple responses. In many organisations, AI agents are now being tested to plan tasks, make decisions, and carry out actions with limited human input. It is no longer just about whether a model gives the right answer. It is about what happens when that model is allowed to […]\nThe post As AI agents take on more tasks, governance becomes a priority appeared first on AI News."
+  },
+  {
+    "source": "Hacker News",
+    "category": "community",
+    "title": "Show HN: I built a tiny LLM to demystify how language models work",
+    "url": "https://news.ycombinator.com/item?id=47655408",
+    "time": "2026-04-06T00:20:12Z",
+    "heat": "837",
+    "summary": "",
+    "hn_url": "https://news.ycombinator.com/item?id=47655408"
+  },
+  {
+    "source": "Hacker News",
+    "category": "community",
+    "title": "Show HN: Gemma Gem – AI model embedded in a browser – no API keys, no cloud",
+    "url": "https://news.ycombinator.com/item?id=47655367",
+    "time": "2026-04-06T00:14:37Z",
+    "heat": "141",
+    "summary": "",
+    "hn_url": "https://news.ycombinator.com/item?id=47655367"
+  },
+  {
+    "source": "HuggingFace Papers",
+    "category": "research",
+    "title": "Salt: Self-Consistent Distribution Matching with Cache-Aware Training for Fast Video Generation",
+    "url": "https://huggingface.co/papers/2604.03118",
+    "time": "2026-04-03T00:00:00.000Z",
+    "summary": "Distilling video generation models to extremely low inference budgets (e.g., 2--4 NFEs) is crucial for real-time deployment, yet remains challenging. Trajectory-style consistency distillation often becomes conservative under complex video dynamics, yielding an over-smoothed appearance and weak motion. Distribution matching distillation (DMD) can recover sharp, mode-seeking samples, but its local training signals do not explicitly regularize how denoising updates compose across timesteps, making ",
+    "heat": "1",
+    "github_url": "https://arxiv.org/abs/2604.03118"
+  },
+  {
+    "source": "HuggingFace Papers",
+    "category": "research",
+    "title": "Token Warping Helps MLLMs Look from Nearby Viewpoints",
+    "url": "https://huggingface.co/papers/2604.02870",
+    "time": "2026-04-03T00:00:00.000Z",
+    "summary": "Can warping tokens, rather than pixels, help multimodal large language models (MLLMs) understand how a scene appears from a nearby viewpoint? While MLLMs perform well on visual reasoning, they remain fragile to viewpoint changes, as pixel-wise warping is highly sensitive to small depth errors and often introduces geometric distortions. Drawing on theories of mental imagery that posit part-level structural representations as the basis for human perspective transformation, we examine whether image",
+    "heat": "22",
+    "github_url": "https://arxiv.org/abs/2604.02870"
+  },
+  {
+    "source": "HuggingFace Papers",
+    "category": "research",
+    "title": "Self-Distilled RLVR",
+    "url": "https://huggingface.co/papers/2604.03128",
+    "time": "2026-04-03T00:00:00.000Z",
+    "summary": "On-policy distillation (OPD) has become a popular training paradigm in the LLM community. This paradigm selects a larger model as the teacher to provide dense, fine-grained signals for each sampled trajectory, in contrast to reinforcement learning with verifiable rewards (RLVR), which only obtains sparse signals from verifiable outcomes in the environment. Recently, the community has explored on-policy self-distillation (OPSD), where the same model serves as both teacher and student, with the te",
+    "heat": "79",
+    "github_url": "https://arxiv.org/abs/2604.03128"
+  },
+  {
+    "source": "HuggingFace Papers",
+    "category": "research",
+    "title": "Agentic-MME: What Agentic Capability Really Brings to Multimodal Intelligence?",
+    "url": "https://huggingface.co/papers/2604.03016",
+    "time": "2026-04-03T00:00:00.000Z",
+    "summary": "Multimodal Large Language Models (MLLMs) are evolving from passive observers into active agents, solving problems through Visual Expansion (invoking visual tools) and Knowledge Expansion (open-web search). However, existing evaluations fall short: they lack flexible tool integration, test visual and search tools separately, and evaluate primarily by final answers. Consequently, they cannot verify if tools were actually invoked, applied correctly, or used efficiently. To address this, we introduc",
+    "heat": "21",
+    "github_url": "https://arxiv.org/abs/2604.03016"
+  },
+  {
+    "source": "HuggingFace Papers",
+    "category": "research",
+    "title": "AgentHazard: A Benchmark for Evaluating Harmful Behavior in Computer-Use Agents",
+    "url": "https://huggingface.co/papers/2604.02947",
+    "time": "2026-04-03T00:00:00.000Z",
+    "summary": "Computer-use agents extend language models from text generation to persistent action over tools, files, and execution environments. Unlike chat systems, they maintain state across interactions and translate intermediate outputs into concrete actions. This creates a distinct safety challenge in that harmful behavior may emerge through sequences of individually plausible steps, including intermediate actions that appear locally acceptable but collectively lead to unauthorized actions. We present A",
+    "heat": "2",
+    "github_url": "https://arxiv.org/abs/2604.02947"
+  },
+  {
+    "source": "HuggingFace Papers",
+    "category": "research",
+    "title": "CoME-VL: Scaling Complementary Multi-Encoder Vision-Language Learning",
+    "url": "https://huggingface.co/papers/2604.03231",
+    "time": "2026-04-03T00:00:00.000Z",
+    "summary": "Recent vision-language models (VLMs) typically rely on a single vision encoder trained with contrastive image-text objectives, such as CLIP-style pretraining. While contrastive encoders are effective for cross-modal alignment and retrieval, self-supervised visual encoders often capture richer dense semantics and exhibit stronger robustness on recognition and understanding tasks. In this work, we investigate how to scale the fusion of these complementary visual representations for vision-language",
+    "heat": "1",
+    "github_url": "https://arxiv.org/abs/2604.03231"
+  },
+  {
+    "source": "HuggingFace Papers",
+    "category": "research",
+    "title": "InCoder-32B-Thinking: Industrial Code World Model for Thinking",
+    "url": "https://huggingface.co/papers/2604.03144",
+    "time": "2026-04-03T00:00:00.000Z",
+    "summary": "Industrial software development across chip design, GPU optimization, and embedded systems lacks expert reasoning traces showing how engineers reason about hardware constraints and timing semantics. In this work, we propose InCoder-32B-Thinking, trained on the data from the Error-driven Chain-of-Thought (ECoT) synthesis framework with an industrial code world model (ICWM) to generate reasoning traces. Specifically, ECoT generates reasoning chains by synthesizing the thinking content from multi-t",
+    "heat": "6",
+    "github_url": "https://arxiv.org/abs/2604.03144"
+  },
+  {
+    "source": "HuggingFace Papers",
+    "category": "research",
+    "title": "VLMs Need Words: Vision Language Models Ignore Visual Detail In Favor of Semantic Anchors",
+    "url": "https://huggingface.co/papers/2604.02486",
+    "time": "2026-04-02T00:00:00.000Z",
+    "summary": "Vision Language Models (VLMs) achieve impressive performance across a wide range of multimodal tasks. However, on some tasks that demand fine-grained visual perception, they often fail even when the required information is present in their internal representations. In this work, we demonstrate that this gap arises from their narrow training pipeline which focuses on moving visual information to the textual space. Consequently, VLMs can only reason about visual entities that can be mapped to know",
+    "heat": "2",
+    "github_url": "https://arxiv.org/abs/2604.02486"
+  },
+  {
+    "source": "HuggingFace Papers",
+    "category": "research",
+    "title": "Swift-SVD: Theoretical Optimality Meets Practical Efficiency in Low-Rank LLM Compression",
+    "url": "https://huggingface.co/papers/2604.01609",
+    "time": "2026-04-02T00:00:00.000Z",
+    "summary": "The deployment of Large Language Models is constrained by the memory and bandwidth demands of static weights and dynamic Key-Value cache. SVD-based compression provides a hardware-friendly solution to reduce these costs. However, existing methods suffer from two key limitations: some are suboptimal in reconstruction error, while others are theoretically optimal but practically inefficient. In this paper, we propose Swift-SVD, an activation-aware, closed-form compression framework that simultaneo",
+    "heat": "3",
+    "github_url": "https://arxiv.org/abs/2604.01609"
+  },
+  {
+    "source": "HuggingFace Papers",
+    "category": "research",
+    "title": "A Simple Baseline for Streaming Video Understanding",
+    "url": "https://huggingface.co/papers/2604.02317",
+    "time": "2026-04-02T00:00:00.000Z",
+    "summary": "Recent streaming video understanding methods increasingly rely on complex memory mechanisms to handle long video streams. We challenge this trend with a simple finding: a sliding-window baseline that feeds only the most recent N frames to an off-the-shelf VLM already matches or surpasses published streaming models. We formalize this baseline as SimpleStream and evaluate it against 13 major offline and online video LLM baselines on OVO-Bench and StreamingBench. Despite its simplicity, SimpleStrea",
+    "heat": "53",
+    "github_url": "https://arxiv.org/abs/2604.02317"
+  },
+  {
+    "source": "HuggingFace Papers",
+    "category": "research",
+    "title": "CORAL: Towards Autonomous Multi-Agent Evolution for Open-Ended Discovery",
+    "url": "https://huggingface.co/papers/2604.01658",
+    "time": "2026-04-02T00:00:00.000Z",
+    "summary": "Large language model (LLM)-based evolution is a promising approach for open-ended discovery, where progress requires sustained search and knowledge accumulation. Existing methods still rely heavily on fixed heuristics and hard-coded exploration rules, which limit the autonomy of LLM agents. We present CORAL, the first framework for autonomous multi-agent evolution on open-ended problems. CORAL replaces rigid control with long-running agents that explore, reflect, and collaborate through shared p",
+    "heat": "43",
+    "github_url": "https://arxiv.org/abs/2604.01658"
+  },
+  {
+    "source": "HuggingFace Papers",
+    "category": "research",
+    "title": "Test-Time Scaling Makes Overtraining Compute-Optimal",
+    "url": "https://huggingface.co/papers/2604.01411",
+    "time": "2026-04-01T00:00:00.000Z",
+    "summary": "Modern LLMs scale at test-time, e.g. via repeated sampling, where inference cost grows with model size and the number of samples. This creates a trade-off that pretraining scaling laws, such as Chinchilla, do not address. We present Train-to-Test (T^2) scaling laws that jointly optimize model size, training tokens, and number of inference samples under fixed end-to-end budgets. T^2 modernizes pretraining scaling laws with pass@k modeling used for test-time scaling, then jointly optimizes pretrai",
+    "heat": "14",
+    "github_url": "https://arxiv.org/abs/2604.01411"
+  },
+  {
+    "source": "HuggingFace Papers",
+    "category": "research",
+    "title": "Do World Action Models Generalize Better than VLAs? A Robustness Study",
+    "url": "https://huggingface.co/papers/2603.22078",
+    "time": "2026-04-01T00:00:00.000Z",
+    "summary": "Robot action planning in the real world is challenging as it requires not only understanding the current state of the environment but also predicting how it will evolve in response to actions. Vision-language-action (VLA), which repurpose large-scale vision-language models for robot action generation using action experts, have achieved notable success across a variety of robotic tasks. Nevertheless, their performance remains constrained by the scope of their training data, exhibiting limited gen",
+    "heat": "1",
+    "github_url": "https://arxiv.org/abs/2603.22078"
+  },
+  {
+    "source": "HuggingFace Papers",
+    "category": "research",
+    "title": "AgentSocialBench: Evaluating Privacy Risks in Human-Centered Agentic Social Networks",
+    "url": "https://huggingface.co/papers/2604.01487",
+    "time": "2026-04-01T00:00:00.000Z",
+    "summary": "With the rise of personalized, persistent LLM agent frameworks such as OpenClaw, human-centered agentic social networks in which teams of collaborative AI agents serve individual users in a social network across multiple domains are becoming a reality. This setting creates novel privacy challenges: agents must coordinate across domain boundaries, mediate between humans, and interact with other users' agents, all while protecting sensitive personal information. While prior work has evaluated mult",
+    "heat": "4",
+    "github_url": "https://arxiv.org/abs/2604.01487"
+  },
+  {
+    "source": "HuggingFace Papers",
+    "category": "research",
+    "title": "Signals: Trajectory Sampling and Triage for Agentic Interactions",
+    "url": "https://huggingface.co/papers/2604.00356",
+    "time": "2026-04-01T00:00:00.000Z",
+    "summary": "Agentic applications based on large language models increasingly rely on multi-step interaction loops involving planning, action execution, and environment feedback. While such systems are now deployed at scale, improving them post-deployment remains challenging. Agent trajectories are voluminous and non-deterministic, and reviewing each one, whether through human review or auxiliary LLMs, is slow and cost-prohibitive. We propose a lightweight, signal-based framework for triaging agentic interac",
+    "heat": "3",
+    "github_url": "https://arxiv.org/abs/2604.00356"
+  },
+  {
+    "source": "HuggingFace Papers",
+    "category": "research",
+    "title": "Forecasting Supply Chain Disruptions with Foresight Learning",
+    "url": "https://huggingface.co/papers/2604.01298",
+    "time": "2026-04-01T00:00:00.000Z",
+    "summary": "Anticipating supply chain disruptions before they materialize is a core challenge for firms and policymakers alike. A key difficulty is learning to reason reliably about infrequent, high-impact events from noisy and unstructured inputs - a setting where general-purpose models struggle without task-specific adaptation. We introduce an end-to-end framework that trains LLMs to produce calibrated probabilistic forecasts using realized disruption outcomes as supervision. The resulting model substanti",
+    "heat": "6",
+    "github_url": "https://arxiv.org/abs/2604.01298"
+  },
+  {
+    "source": "HuggingFace Papers",
+    "category": "research",
+    "title": "An Empirical Recipe for Universal Phone Recognition",
+    "url": "https://huggingface.co/papers/2603.29042",
+    "time": "2026-03-30T00:00:00.000Z",
+    "summary": "Phone recognition (PR) is a key enabler of multilingual and low-resource speech processing tasks, yet robust performance remains elusive. Highly performant English-focused models do not generalize across languages, while multilingual models underutilize pretrained representations. It also remains unclear how data scale, architecture, and training objective contribute to multilingual PR. We present PhoneticXEUS -- trained on large-scale multilingual data and achieving state-of-the-art performance",
+    "heat": "1",
+    "github_url": "https://arxiv.org/abs/2603.29042"
+  },
+  {
+    "source": "HuggingFace Papers",
+    "category": "research",
+    "title": "Communicating about Space: Language-Mediated Spatial Integration Across Partial Views",
+    "url": "https://huggingface.co/papers/2603.27183",
+    "time": "2026-03-28T08:01:50.000Z",
+    "summary": "Humans build shared spatial understanding by communicating partial, viewpoint-dependent observations. We ask whether Multimodal Large Language Models (MLLMs) can do the same, aligning distinct egocentric views through dialogue to form a coherent, allocentric mental model of a shared environment. To study this systematically, we introduce COSMIC, a benchmark for Collaborative Spatial Communication. In this setting, two static MLLM agents observe a 3D indoor environment from different viewpoints a",
+    "heat": "12",
+    "github_url": "https://arxiv.org/abs/2603.27183"
+  },
+  {
+    "source": "HuggingFace Papers",
+    "category": "research",
+    "title": "LOME: Learning Human-Object Manipulation with Action-Conditioned Egocentric World Model",
+    "url": "https://huggingface.co/papers/2603.27449",
+    "time": "2026-03-28T00:00:00.000Z",
+    "summary": "Learning human-object manipulation presents significant challenges due to its fine-grained and contact-rich nature of the motions involved. Traditional physics-based animation requires extensive modeling and manual setup, and more importantly, it neither generalizes well across diverse object morphologies nor scales effectively to real-world environment. To address these limitations, we introduce LOME, an egocentric world model that can generate realistic human-object interactions as videos cond",
+    "heat": "3",
+    "github_url": "https://arxiv.org/abs/2603.27449"
+  },
+  {
+    "source": "HuggingFace Papers",
+    "category": "research",
+    "title": "Xpertbench: Expert Level Tasks with Rubrics-Based Evaluation",
+    "url": "https://huggingface.co/papers/2604.02368",
+    "time": "2026-03-27T00:00:00.000Z",
+    "summary": "As Large Language Models (LLMs) exhibit plateauing performance on conventional benchmarks, a pivotal challenge persists: evaluating their proficiency in complex, open-ended tasks characterizing genuine expert-level cognition. Existing frameworks suffer from narrow domain coverage, reliance on generalist tasks, or self-evaluation biases. To bridge this gap, we present XpertBench, a high-fidelity benchmark engineered to assess LLMs across authentic professional domains. XpertBench consists of 1,34",
+    "heat": "2",
+    "github_url": "https://arxiv.org/abs/2604.02368"
+  }
+]
